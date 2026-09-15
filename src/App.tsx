@@ -2,12 +2,16 @@ import { useEffect, useMemo, useState } from 'react'
 import { BoardPreview } from './components/BoardPreview'
 import { CompRow } from './components/CompRow'
 import { EntityGrid } from './components/EntityGrid'
+import { TraitMeter } from './components/TraitMeter'
 import catalogJson from './data/catalog.json'
 import metaJson from './data/meta.json'
-import { difficultyEs, styleEs } from './lib/es'
+import { compsFromAcademyGuides, fetchAcademyGuides } from './lib/academy'
+import { augmentTierEs, difficultyEs, styleEs } from './lib/es'
+import { recipeParts, recipeTitle } from './lib/recipes'
 import { addCount, craftableFrom, recommendComps, totalCount } from './lib/recommend'
 import { buildShareUrl, formatCompText, isPinnedApp, loadSavedSession, parseShare, saveSession } from './lib/share'
-import type { Catalog, Champion, CompMatch, Inventory, MetaSnapshot, RankSort, Trait } from './lib/types'
+import { traitCounts } from './lib/traits'
+import type { Augment, Catalog, Champion, CompMatch, CompTier, Inventory, MetaSnapshot, RankSort, Trait } from './lib/types'
 import './App.css'
 
 const catalog = catalogJson as Catalog
@@ -46,6 +50,22 @@ function persistMode(mode: Mode) {
 
 const bootShare = parseShare(window.location.search, catalog)
 const bootSaved = loadSavedSession()
+const ALL_TIERS: CompTier[] = ['S', 'A', 'B', 'C']
+const META_CACHE = 'tefete-meta'
+
+function loadCachedMeta(): MetaSnapshot | null {
+  try {
+    const raw = window.localStorage.getItem(META_CACHE)
+    if (!raw) return null
+    const parsed = JSON.parse(raw) as MetaSnapshot
+    if (!parsed?.comps?.length) return null
+    return parsed
+  } catch {
+    return null
+  }
+}
+
+type AugmentScope = 'all' | 1 | 2 | 3 | 'new'
 
 
 export default function App() {
@@ -71,6 +91,14 @@ export default function App() {
   const [openComp, setOpenComp] = useState<string | null>(() => bootShare.compId)
   const [invOpen, setInvOpen] = useState(() => readMode() === 'desk')
   const [toast, setToast] = useState('')
+  const [liveMeta, setLiveMeta] = useState<MetaSnapshot>(() => loadCachedMeta() ?? meta)
+  const [refreshing, setRefreshing] = useState(false)
+  const [pins, setPins] = useState<string[]>(() => bootSaved?.pins ?? [])
+  const [tiers, setTiers] = useState<CompTier[]>(() =>
+    bootSaved?.tiers?.length ? bootSaved.tiers.filter((tier): tier is CompTier => ALL_TIERS.includes(tier)) : [...ALL_TIERS],
+  )
+  const [traitFilter, setTraitFilter] = useState<string | null>(() => bootSaved?.traitFilter ?? null)
+  const [augmentScope, setAugmentScope] = useState<AugmentScope>('all')
 
   const inventory: Inventory = { items: itemCounts, augments, units }
   const play = mode === 'play'
@@ -102,8 +130,8 @@ export default function App() {
   }, [mode])
 
   useEffect(() => {
-    saveSession({ items: itemCounts, augments, units, sort, onlyMatches })
-  }, [itemCounts, augments, units, sort, onlyMatches])
+    saveSession({ items: itemCounts, augments, units, sort, onlyMatches, pins, tiers, traitFilter })
+  }, [itemCounts, augments, units, sort, onlyMatches, pins, tiers, traitFilter])
 
   useEffect(() => {
     if (!isPinnedApp()) return
@@ -130,13 +158,36 @@ export default function App() {
   }, [mode, panelOpen])
 
   const craftable = useMemo(() => craftableFrom(itemCounts, catalog), [itemCounts])
+  const boardTraits = useMemo(() => traitCounts(units, catalog), [units])
   const ranked = useMemo(
-    () => recommendComps({ items: itemCounts, augments, units }, catalog, meta, sort),
-    [itemCounts, augments, units, sort],
+    () => recommendComps({ items: itemCounts, augments, units }, catalog, liveMeta, sort),
+    [itemCounts, augments, units, sort, liveMeta],
   )
-  const visible = onlyMatches && hasInventory(inventory)
-    ? ranked.filter((entry) => entry.itemHits.length + entry.craftHits.length + entry.augmentHits.length + entry.unitHits.length > 0)
-    : ranked
+  const visible = useMemo(() => {
+    const activeTiers = new Set(tiers.length ? tiers : ALL_TIERS)
+    let list = onlyMatches && hasInventory(inventory)
+      ? ranked.filter((entry) => entry.itemHits.length + entry.craftHits.length + entry.augmentHits.length + entry.unitHits.length > 0)
+      : ranked
+    list = list.filter((entry) => activeTiers.has(entry.comp.tier))
+    if (traitFilter) list = list.filter((entry) => entry.comp.traitIds.includes(traitFilter))
+    const pinned = new Set(pins)
+    return [...list].sort((a, b) => Number(pinned.has(b.comp.id)) - Number(pinned.has(a.comp.id)))
+  }, [ranked, onlyMatches, inventory, tiers, traitFilter, pins])
+  const traitOptions = useMemo(() => {
+    const counts = new Map<string, number>()
+    for (const comp of liveMeta.comps) {
+      for (const id of comp.traitIds) counts.set(id, (counts.get(id) ?? 0) + 1)
+    }
+    return [...counts.entries()]
+      .sort((a, b) => b[1] - a[1])
+      .map(([id]) => traitsById.get(id))
+      .filter((trait): trait is Trait => Boolean(trait))
+  }, [liveMeta])
+  const visibleAugments = useMemo(() => {
+    if (augmentScope === 'all') return catalog.augments
+    if (augmentScope === 'new') return catalog.augments.filter((aug) => aug.id.startsWith('DA_18_'))
+    return catalog.augments.filter((aug) => aug.tier === augmentScope)
+  }, [augmentScope])
   const headline = rankingHeadline(visible)
   const active =
     visible.find((entry) => entry.comp.id === openComp) ?? visible[0] ?? null
@@ -177,6 +228,41 @@ export default function App() {
     setUnits((current) => (current.includes(id) ? current.filter((value) => value !== id) : [...current, id]))
   }
 
+  function togglePin(id: string) {
+    setPins((current) => (current.includes(id) ? current.filter((value) => value !== id) : [...current, id]))
+  }
+
+  function toggleTier(tier: CompTier) {
+    setTiers((current) => {
+      const next = current.includes(tier) ? current.filter((value) => value !== tier) : [...current, tier]
+      return next.length ? next : [tier]
+    })
+  }
+
+  async function refreshMeta() {
+    setRefreshing(true)
+    try {
+      const guides = await fetchAcademyGuides()
+      const comps = compsFromAcademyGuides(guides, catalog)
+      if (!comps.length) throw new Error('empty')
+      const next: MetaSnapshot = { ...meta, comps, updatedAt: new Date().toISOString() }
+      window.localStorage.setItem(META_CACHE, JSON.stringify(next))
+      setLiveMeta(next)
+      setToast('Meta actualizado')
+    } catch {
+      setToast('No se pudo actualizar el meta')
+    }
+    setRefreshing(false)
+    window.setTimeout(() => setToast(''), 1800)
+  }
+
+  useEffect(() => {
+    if (play) return
+    const age = Date.now() - Date.parse(liveMeta.updatedAt || '')
+    if (!Number.isFinite(age) || age > 6 * 60 * 60 * 1000) void refreshMeta()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [play])
+
   if (play && !panelOpen) {
     return (
       <button type="button" className="play-handle" onClick={() => setPanelOpen(true)} title="Abrir tefete">
@@ -196,6 +282,11 @@ export default function App() {
           <strong>Set {catalog.set}</strong>
           <span>{catalog.setName}</span>
           <span className="badge">Versión {catalog.patch}</span>
+          {play ? null : (
+            <button type="button" className="ghost" onClick={() => void refreshMeta()} disabled={refreshing}>
+              {refreshing ? 'Actualizando…' : 'Actualizar meta'}
+            </button>
+          )}
           <div className="mode-row">
             <button type="button" className={play ? 'chip on' : 'chip'} onClick={() => chooseMode('play')}>
               Partida
@@ -246,16 +337,23 @@ export default function App() {
               onRemoveUnit={(id) => setUnits((current) => current.filter((value) => value !== id))}
             />
             {craftable.length > 0 ? (
-              <p className="craft">
-                Se puede armar:{' '}
+              <div className="craft">
+                <span>Se puede armar</span>
                 {craftable.map((item) => (
-                  <span key={item.id} className="chip faint">
+                  <button
+                    key={item.id}
+                    type="button"
+                    className="chip faint"
+                    onClick={() => toggleItem(item.id)}
+                    title={recipeTitle(item, catalog)}
+                  >
                     <img src={item.icon} alt="" />
-                    {item.name}
-                  </span>
+                    {play ? item.name : recipeTitle(item, catalog)}
+                  </button>
                 ))}
-              </p>
+              </div>
             ) : null}
+            <TraitMeter rows={boardTraits} compact={compact} />
           </section>
 
           <nav className="tabs">
@@ -286,21 +384,49 @@ export default function App() {
                 selected={itemCounts}
                 onToggle={toggleItem}
                 onRemove={removeItem}
+                getTitle={(item) => recipeTitle(item, catalog)}
+                renderExtra={(item) => {
+                  const parts = recipeParts(item, catalog)
+                  if (!parts.length || compact) return null
+                  return parts.map((part) => <img key={part.id} src={part.icon} alt={part.name} title={part.name} />)
+                }}
               />
             </>
           ) : null}
 
           {tab === 'augments' ? (
-            <EntityGrid
-              compact={compact}
-              title="Aumentos"
-              hint={compact ? undefined : 'Todos los del set 18: nuevos y los que volvieron.'}
-              entities={catalog.augments}
-              selected={augments}
-              onToggle={toggleAugment}
-              onRemove={(id) => setAugments((current) => current.filter((value) => value !== id))}
-              renderMeta={(aug) => `T${aug.tier}`}
-            />
+            <>
+              <div className="scope">
+                {(
+                  [
+                    ['all', play ? 'Todos' : 'Todos'],
+                    [1, 'Plata'],
+                    [2, 'Oro'],
+                    [3, play ? 'Prism.' : 'Prismático'],
+                    ['new', 'Nuevos'],
+                  ] as const
+                ).map(([id, label]) => (
+                  <button
+                    key={String(id)}
+                    type="button"
+                    className={augmentScope === id ? 'chip on' : 'chip'}
+                    onClick={() => setAugmentScope(id)}
+                  >
+                    {label}
+                  </button>
+                ))}
+              </div>
+              <EntityGrid
+                compact={compact}
+                title="Aumentos"
+                hint={compact ? undefined : 'Pool del set 18: nuevos y los que volvieron.'}
+                entities={visibleAugments}
+                selected={augments}
+                onToggle={toggleAugment}
+                onRemove={(id) => setAugments((current) => current.filter((value) => value !== id))}
+                renderMeta={(aug: Augment) => augmentTierEs(aug.tier)}
+              />
+            </>
           ) : null}
 
           {tab === 'units' ? (
@@ -321,7 +447,12 @@ export default function App() {
         <header className="recs-head">
           <div>
             <h2>Comps</h2>
-            <p>{visible.length} · TFT Academy 18.2b</p>
+            <p>
+              {visible.length} · Academy {liveMeta.patch}
+              {play
+                ? ''
+                : ` · ${new Date(liveMeta.updatedAt).toLocaleString('es-AR', { day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit' })}`}
+            </p>
           </div>
           <div className="sorts">
             {(['meta', 'pick', 'avg', 'win'] as RankSort[]).map((key) => (
@@ -357,6 +488,31 @@ export default function App() {
           </div>
         </header>
         {headline && !play ? <p className="headline">{headline}</p> : null}
+        <div className="scope filters">
+          {ALL_TIERS.map((tier) => (
+            <button
+              key={tier}
+              type="button"
+              className={tiers.includes(tier) ? `chip on tier-chip tier-${tier}` : `chip tier-chip tier-${tier}`}
+              onClick={() => toggleTier(tier)}
+            >
+              {tier}
+            </button>
+          ))}
+          {play
+            ? null
+            : traitOptions.slice(0, 10).map((trait) => (
+                <button
+                  key={trait.id}
+                  type="button"
+                  className={traitFilter === trait.id ? 'chip on' : 'chip'}
+                  onClick={() => setTraitFilter((current) => (current === trait.id ? null : trait.id))}
+                >
+                  <img src={trait.icon} alt="" />
+                  {trait.name}
+                </button>
+              ))}
+        </div>
         <label className="check">
           <input type="checkbox" checked={onlyMatches} onChange={(event) => setOnlyMatches(event.target.checked)} />
           Solo lo que tengo
@@ -370,6 +526,7 @@ export default function App() {
             const selected = play ? expanded : active?.comp.id === entry.comp.id
             return (
               <li key={entry.comp.id} className={selected ? 'comp-card on' : 'comp-card'}>
+                <div className="comp-top-row">
                 <button
                   type="button"
                   className="comp-top as-button"
@@ -394,6 +551,16 @@ export default function App() {
                     </p>
                   </div>
                 </button>
+                <button
+                  type="button"
+                  className={pins.includes(entry.comp.id) ? 'pin on' : 'pin'}
+                  aria-pressed={pins.includes(entry.comp.id)}
+                  title={pins.includes(entry.comp.id) ? 'Quitar de favoritos' : 'Fijar comp'}
+                  onClick={() => togglePin(entry.comp.id)}
+                >
+                  ★
+                </button>
+                </div>
                 {expanded ? <CompDetail entry={entry} play /> : null}
               </li>
             )

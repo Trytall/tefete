@@ -18,6 +18,7 @@ export type Trait = {
   nameEn?: string
   icon: string
   desc: string
+  breaks?: number[]
 }
 
 export type Item = {
@@ -37,6 +38,7 @@ export type Augment = {
   icon: string
   desc: string
   tier: number
+  label?: string
 }
 
 export type Catalog = {

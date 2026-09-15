@@ -33,6 +33,12 @@ export function difficultyEs(value: string) {
   return DIFFICULTY[value] ?? value
 }
 
+export function augmentTierEs(tier: number) {
+  if (tier >= 3) return 'Prismático'
+  if (tier <= 1) return 'Plata'
+  return 'Oro'
+}
+
 export function matchesSearch(entity: { name: string; nameEn?: string }, needle: string) {
   const q = needle.trim().toLowerCase()
   if (!q) return true

@@ -9,6 +9,9 @@ export type SavedSession = {
   units: string[]
   sort?: RankSort
   onlyMatches?: boolean
+  pins?: string[]
+  tiers?: Array<'S' | 'A' | 'B' | 'C'>
+  traitFilter?: string | null
 }
 
 export function isPinnedApp() {
@@ -27,6 +30,9 @@ export function loadSavedSession(): SavedSession | null {
       units: Array.isArray(parsed.units) ? parsed.units : [],
       sort: parsed.sort,
       onlyMatches: parsed.onlyMatches,
+      pins: Array.isArray(parsed.pins) ? parsed.pins : [],
+      tiers: Array.isArray(parsed.tiers) ? parsed.tiers : undefined,
+      traitFilter: parsed.traitFilter ?? null,
     }
   } catch {
     return null

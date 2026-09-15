@@ -131,9 +131,123 @@
   color: var(--text);
 }
 
-.ghost:hover {
+.ghost:disabled {
+  opacity: 0.55;
+  cursor: wait;
+}
+
+.ghost:hover:not(:disabled) {
   color: var(--text-h);
   border-color: #3a404a;
+}
+
+.tile .sub {
+  font-size: 10px;
+  line-height: 1.2;
+  color: var(--accent);
+  text-align: center;
+}
+
+.tile .extra {
+  display: flex;
+  gap: 2px;
+  justify-content: center;
+}
+
+.tile .extra img {
+  width: 14px;
+  height: 14px;
+  border-radius: 3px;
+}
+
+.trait-meter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.trait-pip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid var(--border);
+  background: var(--surface-2);
+  border-radius: 999px;
+  padding: 3px 8px 3px 4px;
+  font-size: 12px;
+}
+
+.trait-pip.on {
+  border-color: var(--accent);
+  color: var(--text-h);
+}
+
+.trait-pip img {
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+}
+
+.trait-pip strong {
+  font-weight: 600;
+  color: var(--text-h);
+}
+
+.comp-top-row {
+  display: flex;
+  gap: 6px;
+  align-items: stretch;
+}
+
+.comp-top-row .comp-top {
+  flex: 1;
+  min-width: 0;
+}
+
+.pin {
+  flex: 0 0 36px;
+  width: 36px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text);
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.pin.on {
+  color: #e7c57a;
+  border-color: #e7c57a;
+  background: #e7c57a22;
+}
+
+.filters {
+  margin: 8px 0;
+}
+
+.app.desk .filters {
+  display: flex;
+  flex-wrap: wrap;
+  grid-template-columns: none;
+}
+
+.app.desk .filters .chip {
+  width: auto;
+}
+
+.play .trait-meter {
+  gap: 4px;
+}
+
+.play .trait-pip {
+  padding: 2px 6px 2px 3px;
+  font-size: 11px;
+}
+
+.play .pin {
+  flex-basis: 28px;
+  width: 28px;
+  font-size: 13px;
 }
 
 .selected,

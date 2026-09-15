@@ -119,11 +119,53 @@ function uniqueSetAugments(list) {
   return { augments: uniqueById(kept), aliases }
 }
 
-function inferAugmentTier(name) {
-  if (/\+\s*$/.test(name) || /\bIII\b|\b3\b/.test(name) || / III$/.test(name)) return 3
-  if (/\bII\b/.test(name) || / II$/.test(name)) return 2
-  if (/\bI\b/.test(name) || / I$/.test(name)) return 1
+function inferAugmentTier(name, icon = '') {
+  const path = String(icon).toLowerCase()
+  const text = String(name)
+  if (/\+\+|iii|-iii(?:[._-]|$)|t3|prismatic/.test(path) || /\+\+\s*$/.test(text) || /\bIII\b/.test(text)) return 3
+  if (/\+\s*$/.test(text)) return 3
+  if (/-ii(?:[._-]|$)|t2|_ii\./.test(path) || /\bII\b/.test(text)) return 2
+  if (/-i(?:[._-]|$)|t1|_i\./.test(path) || /\bI\b/.test(text)) return 1
   return 2
+}
+
+const AUGMENT_NAME_FIXES = {
+  'Uno, Dosos, ¡Cinco!': 'Uno, dos, ¡cinco!',
+}
+
+function fixAugmentName(name) {
+  return AUGMENT_NAME_FIXES[name] || name
+}
+
+function labelFromApiName(apiName, champs) {
+  const tail = String(apiName).split('_').pop()
+  if (!tail || tail.length < 3) return ''
+  const needle = tail.toLowerCase()
+  const hit = champs.find((champ) => {
+    const en = String(champ.nameEn || champ.name)
+      .replace(/[^a-z]/gi, '')
+      .toLowerCase()
+    const idTail = String(champ.id).split('_').pop()?.toLowerCase()
+    return en === needle || idTail === needle
+  })
+  return hit?.name || ''
+}
+
+function applyAugmentLabels(list, champs) {
+  const groups = new Map()
+  for (const aug of list) {
+    const key = norm(aug.name)
+    if (!groups.has(key)) groups.set(key, [])
+    groups.get(key).push(aug)
+  }
+  for (const group of groups.values()) {
+    if (group.length < 2) continue
+    for (const aug of group) {
+      const label = labelFromApiName(aug.id, champs)
+      if (label) aug.label = label
+    }
+  }
+  return list
 }
 
 function lookup(list, name) {
@@ -201,6 +243,9 @@ const traits = uniqueById(
       ...withEnName(trait.apiName, trait.name),
       icon: iconUrl(trait.icon),
       desc: stripDesc(trait.desc),
+      breaks: [...new Set((trait.effects || []).map((effect) => Number(effect.minUnits)).filter((n) => n > 0))].sort(
+        (a, b) => a - b,
+      ),
     })),
 )
 
@@ -270,15 +315,19 @@ const setAugmentIds = new Set(set.augments ?? [])
 const { augments, aliases: augmentAliases } = uniqueSetAugments(
   raw.items
     .filter((item) => item.isAugment && item.name && setAugmentIds.has(item.apiName))
-    .map((item) => ({
-      id: item.apiName,
-      name: item.name,
-      ...withEnName(item.apiName, item.name),
-      icon: iconUrl(item.icon),
-      desc: stripDesc(item.desc),
-      tier: inferAugmentTier(item.name),
-    })),
+    .map((item) => {
+      const name = fixAugmentName(item.name)
+      return {
+        id: item.apiName,
+        name,
+        ...withEnName(item.apiName, name),
+        icon: iconUrl(item.icon),
+        desc: stripDesc(item.desc),
+        tier: inferAugmentTier(name, item.icon),
+      }
+    }),
 )
+applyAugmentLabels(augments, champions)
 augments.sort((a, b) => {
   const aNew = a.id.startsWith('DA_18_') ? 0 : 1
   const bNew = b.id.startsWith('DA_18_') ? 0 : 1

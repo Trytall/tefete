@@ -1,0 +1,17 @@
+{
+  "name": "tefete",
+  "short_name": "tefete",
+  "description": "Companion de TFT Set 18 en español latino.",
+  "start_url": "/?mode=desk",
+  "display": "standalone",
+  "background_color": "#111214",
+  "theme_color": "#111214",
+  "lang": "es-AR",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

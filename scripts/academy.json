@@ -1,0 +1,4320 @@
+[
+  {
+    "slug": "set-18-ahri-morgana",
+    "name": "Ahri Morgana",
+    "tier": "A",
+    "style": "4-Cost Fast 8",
+    "difficulty": "Medium",
+    "mainChampion": "DA_18_Ahri",
+    "units": [
+      {
+        "champ": "DA_Karma18",
+        "items": [],
+        "boardIndex": 21
+      },
+      {
+        "champ": "DA_Taric18",
+        "items": [],
+        "boardIndex": 10
+      },
+      {
+        "champ": "DA_18_Sett",
+        "items": [],
+        "boardIndex": 9
+      },
+      {
+        "champ": "DA_Sentinel18",
+        "items": [
+          "DA_DragonsClaw",
+          "DA_BrambleVest",
+          "DA_WarmogsArmor"
+        ],
+        "boardIndex": 3
+      },
+      {
+        "champ": "DA_Krug18",
+        "items": [],
+        "boardIndex": 16
+      },
+      {
+        "champ": "DA_18_Morgana",
+        "items": [
+          "DA_VoidStaff",
+          "DA_Morellonomicon"
+        ],
+        "boardIndex": 17
+      },
+      {
+        "champ": "DA_18_Ahri",
+        "items": [
+          "DA_JeweledGauntlet",
+          "DA_StrikersFlail",
+          "DA_SpearOfShojin"
+        ],
+        "boardIndex": 23
+      },
+      {
+        "champ": "DA_18_Sentry",
+        "items": [],
+        "boardIndex": 25
+      }
+    ],
+    "alts": [
+      {
+        "champ": "DA_18_Ahri",
+        "items": [
+          "DA_18_EmblemInvoker"
+        ]
+      }
+    ],
+    "augments": [
+      "DA_JeweledLotus_I",
+      "DA_JeweledLotus_II",
+      "DA_GlassCannon_Silver",
+      "DA_GlassCannon_Gold",
+      "DA_18_FOURcing",
+      "DA_Staffsmith",
+      "DA_CyberneticUplink_Gold",
+      "DA_WandOverflow"
+    ],
+    "carousel": [
+      "DA_SpearOfShojin",
+      "DA_JeweledGauntlet",
+      "DA_Component_GiantsBelt",
+      "DA_Component_TearOfTheGoddess"
+    ]
+  },
+  {
+    "slug": "set-18-dragon-princess",
+    "name": "Dragon 9",
+    "tier": "A",
+    "style": "Fast 9",
+    "difficulty": "Hard",
+    "mainChampion": "DA_18_ElderDragon",
+    "units": [
+      {
+        "champ": "DA_Amumu18",
+        "items": [],
+        "boardIndex": 4
+      },
+      {
+        "champ": "DA_Sentinel18",
+        "items": [
+          "DA_ProtectorsVow"
+        ],
+        "boardIndex": 3
+      },
+      {
+        "champ": "DA_18_Morgana",
+        "items": [
+          "DA_VoidStaff",
+          "DA_RabadonsDeathcap",
+          "DA_JeweledGauntlet"
+        ],
+        "boardIndex": 11
+      },
+      {
+        "champ": "DA_Taric18",
+        "items": [],
+        "boardIndex": 1
+      },
+      {
+        "champ": "DA_18_Kennen",
+        "items": [
+          "DA_ThiefsGloves"
+        ],
+        "boardIndex": 2
+      },
+      {
+        "champ": "DA_18_ElderDragon",
+        "items": [
+          "DA_InfinityEdge",
+          "DA_Deathblade",
+          "DA_StrikersFlail"
+        ],
+        "boardIndex": 20
+      },
+      {
+        "champ": "DA_18_Ivern",
+        "items": [
+          "DA_SpearOfShojin",
+          "DA_AdaptiveHelm",
+          "DA_AdaptiveHelm"
+        ],
+        "boardIndex": 21
+      },
+      {
+        "champ": "DA_18_Maokai",
+        "items": [
+          "DA_WarmogsArmor",
+          "DA_Crownguard",
+          "DA_Evenshroud"
+        ],
+        "boardIndex": 5
+      }
+    ],
+    "alts": [
+      {
+        "champ": "DA_18_ElderDragon",
+        "items": [
+          "DA_Artifact_GoldCollector"
+        ]
+      }
+    ],
+    "augments": [
+      "DA_BirthdayReunion",
+      "DA_BirthdayPresent",
+      "DA_LevelUp",
+      "DA_LuxurySubscription",
+      "DA_18_DuoQueue",
+      "DA_LateGameSpecialist",
+      "DA_LateGameScaling",
+      "DA_Swordsmith"
+    ],
+    "carousel": [
+      "DA_InfinityEdge",
+      "DA_Component_BFSword",
+      "DA_Component_SparringGloves",
+      "DA_Component_GiantsBelt"
+    ]
+  },
+  {
+    "slug": "set-18-elderwood-executioners-copy",
+    "name": "Draven AD 9",
+    "tier": "A",
+    "style": "Fast 9",
+    "difficulty": "Hard",
+    "mainChampion": "DA_Draven18",
+    "units": [
+      {
+        "champ": "DA_Elderwood18_Lifeblossom",
+        "items": [],
+        "boardIndex": 23
+      },
+      {
+        "champ": "DA_Elderwood18_StonebarkTree",
+        "items": [],
+        "boardIndex": 0
+      },
+      {
+        "champ": "DA_18_Alistar",
+        "items": [],
+        "boardIndex": 1
+      },
+      {
+        "champ": "DA_Amumu18",
+        "items": [],
+        "boardIndex": 2
+      },
+      {
+        "champ": "DA_Draven18",
+        "items": [
+          "DA_KrakensFury",
+          "DA_GuinsoosRageblade",
+          "DA_Deathblade"
+        ],
+        "boardIndex": 27
+      },
+      {
+        "champ": "DA_18_Ivern",
+        "items": [],
+        "boardIndex": 21
+      },
+      {
+        "champ": "DA_Taric18",
+        "items": [],
+        "boardIndex": 4
+      },
+      {
+        "champ": "DA_18_GnarSmall",
+        "items": [
+          "DA_ThiefsGloves"
+        ],
+        "boardIndex": 10
+      },
+      {
+        "champ": "DA_18_Kennen",
+        "items": [
+          "DA_ThiefsGloves"
+        ],
+        "boardIndex": 3
+      },
+      {
+        "champ": "DA_18_Maokai",
+        "items": [
+          "DA_WarmogsArmor",
+          "DA_GargoyleStoneplate",
+          "DA_BrambleVest"
+        ],
+        "boardIndex": 5
+      },
+      {
+        "champ": "DA_18_Ezreal",
+        "items": [
+          "DA_SpearOfShojin",
+          "DA_LastWhisper",
+          "DA_Deathblade"
+        ],
+        "boardIndex": 26
+      }
+    ],
+    "alts": [
+      {
+        "champ": "DA_Draven18",
+        "items": [
+          "DA_Artifact_GoldCollector",
+          "DA_Artifact_NavoriFlickerblade",
+          "DA_Artifact_Fishbones"
+        ]
+      },
+      {
+        "champ": "DA_18_Maokai",
+        "items": [
+          "DA_Artifact_MogulsMail",
+          "DA_Artifact_VoidGauntlet",
+          "DA_Artifact_LightshieldCrest"
+        ]
+      }
+    ],
+    "augments": [
+      "DA_LevelUp",
+      "DA_LateGameSpecialist",
+      "DA_InvestedPlusPlus",
+      "DA_LuxurySubscription",
+      "DA_18_DuoQueue",
+      "DA_LateGameScaling",
+      "DA_ExplosiveGrowthPlus",
+      "DA_BirthdayPresent"
+    ],
+    "carousel": [
+      "DA_GuinsoosRageblade",
+      "DA_LastWhisper",
+      "DA_KrakensFury",
+      "DA_Component_GiantsBelt"
+    ]
+  },
+  {
+    "slug": "set-18-blossom-fast-9",
+    "name": "Ashe Fast 9",
+    "tier": "A",
+    "style": "Fast 9",
+    "difficulty": "Hard",
+    "mainChampion": "DA_18_Ashe",
+    "units": [
+      {
+        "champ": "DA_18_Ashe",
+        "items": [
+          "DA_SpearOfShojin",
+          "DA_RedBuff",
+          "DA_LastWhisper"
+        ],
+        "boardIndex": 27
+      },
+      {
+        "champ": "DA_Cinderling18",
+        "items": [],
+        "boardIndex": 21
+      },
+      {
+        "champ": "DA_18_ElderDragon",
+        "items": [
+          "DA_InfinityEdge",
+          "DA_SteraksGage",
+          "DA_StrikersFlail"
+        ],
+        "boardIndex": 19
+      },
+      {
+        "champ": "DA_18_GnarSmall",
+        "items": [],
+        "boardIndex": 17
+      },
+      {
+        "champ": "DA_18_Kennen",
+        "items": [],
+        "boardIndex": 18
+      },
+      {
+        "champ": "DA_18_Yorick",
+        "items": [],
+        "boardIndex": 14
+      },
+      {
+        "champ": "DA_Amumu18",
+        "items": [],
+        "boardIndex": 10
+      },
+      {
+        "champ": "DA_18_Sett",
+        "items": [
+          "DA_WarmogsArmor",
+          "DA_SpiritVisage",
+          "DA_SteadfastHeart"
+        ],
+        "boardIndex": 3
+      }
+    ],
+    "alts": [],
+    "augments": [
+      "DA_LevelUp",
+      "DA_HedgeFund",
+      "DA_LuxurySubscription",
+      "DA_LateGameSpecialist",
+      "DA_LateGameScaling",
+      "DA_PatientStudy",
+      "DA_Swordsmith",
+      "DA_SwordOverflow"
+    ],
+    "carousel": [
+      "DA_LastWhisper",
+      "DA_SpearOfShojin",
+      "DA_RedBuff",
+      "DA_Component_GiantsBelt"
+    ]
+  },
+  {
+    "slug": "set-18-invoker-nidalee-copy",
+    "name": "Primal Jungle",
+    "tier": "A",
+    "style": "4-Cost Fast 8",
+    "difficulty": "Medium",
+    "mainChampion": "DA_18_Sivir",
+    "units": [
+      {
+        "champ": "DA_Cinderling18",
+        "items": [],
+        "boardIndex": 27
+      },
+      {
+        "champ": "DA_18_RekSai",
+        "items": [],
+        "boardIndex": 20
+      },
+      {
+        "champ": "DA_KogMaw18_AD",
+        "items": [],
+        "boardIndex": 22
+      },
+      {
+        "champ": "DA_Krug18",
+        "items": [],
+        "boardIndex": 17
+      },
+      {
+        "champ": "DA_Sentinel18",
+        "items": [],
+        "boardIndex": 19
+      },
+      {
+        "champ": "DA_18_Malphite",
+        "items": [
+          "DA_GargoyleStoneplate",
+          "DA_WarmogsArmor",
+          "DA_Crownguard"
+        ],
+        "boardIndex": 3
+      },
+      {
+        "champ": "DA_Nidalee18_AP",
+        "items": [
+          "DA_InfinityEdge",
+          "DA_SteraksGage",
+          "DA_SpearOfShojin"
+        ],
+        "boardIndex": 14
+      },
+      {
+        "champ": "DA_18_Sivir",
+        "items": [
+          "DA_InfinityEdge",
+          "DA_RedBuff",
+          "DA_StrikersFlail"
+        ],
+        "boardIndex": 21
+      }
+    ],
+    "alts": [
+      {
+        "champ": "DA_Nidalee18_AP",
+        "items": [
+          "DA_SpearOfShojin",
+          "DA_18_EmblemHunter",
+          "DA_SteraksGage"
+        ]
+      },
+      {
+        "champ": "DA_Nidalee18_AP",
+        "items": [
+          "DA_BlueBuff",
+          "DA_Artifact_SilvermereDawn",
+          "DA_SteraksGage"
+        ]
+      }
+    ],
+    "augments": [
+      "DA_18_BigGrabBag",
+      "DA_18_PrimalAugmentPlus_Nidalee",
+      "DA_CaretakersFavor",
+      "DA_Swordsmith",
+      "DA_18_PrimalAugmentPlus_Sivir",
+      "DA_CarveAPath",
+      "DA_18_FOURcing",
+      "DA_DeadlierBlades"
+    ],
+    "carousel": [
+      "DA_InfinityEdge",
+      "DA_Component_BFSword",
+      "DA_Component_SparringGloves",
+      "DA_Component_GiantsBelt"
+    ]
+  },
+  {
+    "slug": "set-18-aphelios-nidalee",
+    "name": "Aphelios Nidalee",
+    "tier": "A",
+    "style": "4-Cost Fast 8",
+    "difficulty": "Medium",
+    "mainChampion": "DA_18_Aphelios",
+    "units": [
+      {
+        "champ": "DA_18_Varus",
+        "items": [],
+        "boardIndex": 27
+      },
+      {
+        "champ": "DA_18_Diana",
+        "items": [],
+        "boardIndex": 9
+      },
+      {
+        "champ": "DA_KogMaw18_AD",
+        "items": [],
+        "boardIndex": 22
+      },
+      {
+        "champ": "DA_Vi18",
+        "items": [],
+        "boardIndex": 10
+      },
+      {
+        "champ": "DA_Amumu18",
+        "items": [],
+        "boardIndex": 3
+      },
+      {
+        "champ": "DA_18_Aphelios",
+        "items": [
+          "DA_RedBuff",
+          "DA_Deathblade",
+          "DA_GiantSlayer"
+        ],
+        "boardIndex": 21
+      },
+      {
+        "champ": "DA_Nidalee18_AP",
+        "items": [
+          "DA_InfinityEdge",
+          "DA_SpearOfShojin",
+          "DA_SteraksGage"
+        ],
+        "boardIndex": 14
+      },
+      {
+        "champ": "DA_Sentinel18",
+        "items": [
+          "DA_ProtectorsVow",
+          "DA_ProtectorsVow",
+          "DA_WarmogsArmor"
+        ],
+        "boardIndex": 2
+      }
+    ],
+    "alts": [
+      {
+        "champ": "DA_18_Aphelios",
+        "items": [
+          "DA_Artifact_GoldCollector"
+        ]
+      },
+      {
+        "champ": "DA_18_Aphelios",
+        "items": [
+          "DA_GuinsoosRageblade",
+          "DA_InfinityEdge",
+          "DA_KrakensFury"
+        ]
+      }
+    ],
+    "augments": [
+      "DA_BackupBows",
+      "DA_OneBuffTwoBuff",
+      "DA_Swordsmith",
+      "DA_CarveAPath",
+      "DA_SwordOverflow",
+      "DA_CaretakersFavor",
+      "DA_BuriedTreasuresIII",
+      "DA_18_FOURcing"
+    ],
+    "carousel": [
+      "DA_Component_RecurveBow",
+      "DA_Component_BFSword",
+      "DA_Component_SparringGloves",
+      "DA_Component_ChainVest"
+    ]
+  },
+  {
+    "slug": "set-18-soraka-flex",
+    "name": "Malphite AP Flex",
+    "tier": "A",
+    "style": "4-Cost Fast 8",
+    "difficulty": "Medium",
+    "mainChampion": "DA_18_Malphite",
+    "units": [
+      {
+        "champ": "DA_18_Yorick",
+        "items": [],
+        "boardIndex": 19
+      },
+      {
+        "champ": "DA_18_Azir",
+        "items": [],
+        "boardIndex": 21
+      },
+      {
+        "champ": "DA_Fiddlesticks18",
+        "items": [],
+        "boardIndex": 17
+      },
+      {
+        "champ": "DA_Amumu18",
+        "items": [],
+        "boardIndex": 15
+      },
+      {
+        "champ": "DA_18_Malphite",
+        "items": [
+          "DA_GargoyleStoneplate",
+          "DA_WarmogsArmor",
+          "DA_Crownguard"
+        ],
+        "boardIndex": 3
+      },
+      {
+        "champ": "DA_18_Soraka",
+        "items": [
+          "DA_RabadonsDeathcap",
+          "DA_AdaptiveHelm",
+          "DA_JeweledGauntlet"
+        ],
+        "boardIndex": 26
+      },
+      {
+        "champ": "DA_18_Zyra",
+        "items": [
+          "DA_SpearOfShojin",
+          "DA_VoidStaff",
+          "DA_ArchangelsStaff"
+        ],
+        "boardIndex": 27
+      },
+      {
+        "champ": "DA_18_Kennen",
+        "items": [],
+        "boardIndex": 16
+      }
+    ],
+    "alts": [
+      {
+        "champ": "DA_18_Malphite",
+        "items": [
+          "DA_Artifact_MogulsMail",
+          "DA_Artifact_LightshieldCrest",
+          "DA_Artifact_TheIndomitable"
+        ]
+      }
+    ],
+    "augments": [
+      "DA_BlackthornTraitAugment",
+      "DA_FlowingTears",
+      "DA_SoloPlate",
+      "DA_SmallGrabBag",
+      "DA_18_BigGrabBag",
+      "DA_CyberneticUplink_Gold",
+      "DA_BuriedTreasuresIII",
+      "DA_CommerceCore"
+    ],
+    "carousel": [
+      "DA_GargoyleStoneplate",
+      "DA_Component_TearOfTheGoddess",
+      "DA_Component_NeedlesslyLargeRod",
+      "DA_Component_RecurveBow"
+    ]
+  },
+  {
+    "slug": "set-18-caitlyn-hunters",
+    "name": "Caitlyn Hunters",
+    "tier": "B",
+    "style": "2-Cost Reroll",
+    "difficulty": "Easy",
+    "mainChampion": "DA_18_Caitlyn",
+    "units": [
+      {
+        "champ": "DA_18_Rakan",
+        "items": [],
+        "boardIndex": 16
+      },
+      {
+        "champ": "DA_18_Sejuani",
+        "items": [],
+        "boardIndex": 15
+      },
+      {
+        "champ": "DA_18_Caitlyn",
+        "items": [
+          "DA_GuinsoosRageblade",
+          "DA_KrakensFury",
+          "DA_HextechGunblade"
+        ],
+        "boardIndex": 27
+      },
+      {
+        "champ": "DA_Scuttlecrab18",
+        "items": [
+          "DA_SpiritVisage",
+          "DA_GargoyleStoneplate",
+          "DA_WarmogsArmor"
+        ],
+        "boardIndex": 4
+      },
+      {
+        "champ": "DA_18_Tristana",
+        "items": [],
+        "boardIndex": 25
+      },
+      {
+        "champ": "DA_Vi18",
+        "items": [],
+        "boardIndex": 17
+      },
+      {
+        "champ": "DA_18_Sivir",
+        "items": [
+          "DA_InfinityEdge",
+          "DA_LastWhisper",
+          "DA_RedBuff"
+        ],
+        "boardIndex": 26
+      }
+    ],
+    "alts": [
+      {
+        "champ": "DA_18_Caitlyn",
+        "items": [
+          "DA_GuinsoosRagebladeRadiant",
+          "DA_HextechGunblade",
+          "DA_KrakensFury"
+        ]
+      },
+      {
+        "champ": "DA_18_Caitlyn",
+        "items": [
+          "DA_Artifact_NavoriFlickerblade",
+          "DA_Artifact_GamblersBlade",
+          "DA_Artifact_GoldCollector"
+        ]
+      }
+    ],
+    "augments": [
+      "DA_Expedition",
+      "DA_SpeedyDoubleKill",
+      "DA_BackupBows",
+      "DA_PrismaticTicket",
+      "DA_Replication",
+      "DA_ShimmerscaleEssence",
+      "DA_TradeSector",
+      "DA_HeroicGrabBag"
+    ],
+    "carousel": [
+      "DA_GuinsoosRageblade",
+      "DA_KrakensFury",
+      "DA_Component_RecurveBow",
+      "DA_Component_GiantsBelt"
+    ]
+  },
+  {
+    "slug": "set-18-riftbeast-reroll",
+    "name": "Riftbeast Reroll",
+    "tier": "B",
+    "style": "1-Cost Reroll",
+    "difficulty": "Easy",
+    "mainChampion": "DA_Cinderling18",
+    "units": [
+      {
+        "champ": "DA_Cinderling18",
+        "items": [
+          "DA_InfinityEdge",
+          "DA_BlueBuff",
+          "DA_LastWhisper"
+        ],
+        "boardIndex": 27
+      },
+      {
+        "champ": "DA_18_Sentry",
+        "items": [
+          "DA_BlueBuff",
+          "DA_RabadonsDeathcap",
+          "DA_JeweledGauntlet"
+        ],
+        "boardIndex": 26
+      },
+      {
+        "champ": "DA_Murkwolf18",
+        "items": [],
+        "boardIndex": 17
+      },
+      {
+        "champ": "DA_Scuttlecrab18",
+        "items": [],
+        "boardIndex": 18
+      },
+      {
+        "champ": "DA_Krug18",
+        "items": [
+          "DA_WarmogsArmor",
+          "DA_GargoyleStoneplate",
+          "DA_SpiritVisage"
+        ],
+        "boardIndex": 4
+      },
+      {
+        "champ": "DA_Sentinel18",
+        "items": [],
+        "boardIndex": 16
+      },
+      {
+        "champ": "DA_Brambleback18",
+        "items": [
+          "DA_ThiefsGloves"
+        ],
+        "boardIndex": 20
+      },
+      {
+        "champ": "DA_18_GnarSmall",
+        "items": [],
+        "boardIndex": 19
+      }
+    ],
+    "alts": [],
+    "augments": [
+      "DA_18_RiftbeastTraitAugment",
+      "DA_18_RiftbeastTraitAugmentStampede",
+      "DA_JeweledLotus_I",
+      "DA_GlassCannon_Silver",
+      "DA_WorththeWaitII",
+      "DA_18_CaretakersAlly",
+      "DA_LuckyGlovesPlus",
+      "DA_NestingDolls"
+    ],
+    "carousel": [
+      "DA_LastWhisper",
+      "DA_Component_BFSword",
+      "DA_Component_TearOfTheGoddess",
+      "DA_Component_GiantsBelt"
+    ]
+  },
+  {
+    "slug": "set-18-adaptor-reroll-copy",
+    "name": "Yi Rengar",
+    "tier": "B",
+    "style": "3-Cost Reroll",
+    "difficulty": "Medium",
+    "mainChampion": "DA_18_MasterYi_AD",
+    "units": [
+      {
+        "champ": "DA_18_Yorick",
+        "items": [],
+        "boardIndex": 14
+      },
+      {
+        "champ": "DA_Krug18",
+        "items": [],
+        "boardIndex": 1
+      },
+      {
+        "champ": "DA_18_MasterYi_AD",
+        "items": [
+          "DA_EdgeOfNight",
+          "DA_TitansResolve",
+          "DA_KrakensFury"
+        ],
+        "boardIndex": 20
+      },
+      {
+        "champ": "DA_18_Rengar",
+        "items": [
+          "DA_TitansResolve",
+          "DA_EdgeOfNight",
+          "DA_GuinsoosRageblade"
+        ],
+        "boardIndex": 19
+      },
+      {
+        "champ": "DA_Vi18",
+        "items": [
+          "DA_WarmogsArmor",
+          "DA_GargoyleStoneplate",
+          "DA_Evenshroud"
+        ],
+        "boardIndex": 5
+      },
+      {
+        "champ": "DA_18_Sett",
+        "items": [],
+        "boardIndex": 0
+      },
+      {
+        "champ": "DA_Nidalee18_AP",
+        "items": [
+          "DA_GuinsoosRageblade",
+          "DA_SpearOfShojin",
+          "DA_RabadonsDeathcap"
+        ],
+        "boardIndex": 27
+      }
+    ],
+    "alts": [
+      {
+        "champ": "DA_18_MasterYi_AD",
+        "items": [
+          "DA_18_EmblemBrawler",
+          "DA_GuinsoosRageblade",
+          "DA_EdgeOfNight"
+        ]
+      },
+      {
+        "champ": "DA_18_MasterYi_AD",
+        "items": [
+          "DA_Artifact_WitsEnd",
+          "DA_Artifact_NavoriFlickerblade",
+          "DA_Artifact_RapidFireCannon"
+        ]
+      }
+    ],
+    "augments": [
+      "DA_LatentForge",
+      "DA_PortableForge",
+      "DA_ForgedInStrength",
+      "DA_LivingForge",
+      "DA_NestingAnvils",
+      "DA_HeroicGrabBag",
+      "DA_LegionOfThrees",
+      "DA_18_BigGrabBag"
+    ],
+    "carousel": [
+      "DA_GuinsoosRageblade",
+      "DA_Component_RecurveBow",
+      "DA_Component_ChainVest",
+      "DA_Component_BFSword"
+    ]
+  },
+  {
+    "slug": "set-18-6-juggernaut-ap",
+    "name": "6 Juggernaut AP",
+    "tier": "B",
+    "style": "4-Cost Fast 8",
+    "difficulty": "Hard",
+    "mainChampion": "DA_Amumu18",
+    "units": [
+      {
+        "champ": "DA_18_Yorick",
+        "items": [],
+        "boardIndex": 0
+      },
+      {
+        "champ": "DA_Scuttlecrab18",
+        "items": [],
+        "boardIndex": 2
+      },
+      {
+        "champ": "DA_18_Azir",
+        "items": [],
+        "boardIndex": 21
+      },
+      {
+        "champ": "DA_Vi18",
+        "items": [],
+        "boardIndex": 3
+      },
+      {
+        "champ": "DA_Amumu18",
+        "items": [
+          "DA_WarmogsArmor",
+          "DA_BrambleVest",
+          "DA_DragonsClaw"
+        ],
+        "boardIndex": 5
+      },
+      {
+        "champ": "DA_18_Zyra",
+        "items": [
+          "DA_SpearOfShojin",
+          "DA_ArchangelsStaff",
+          "DA_HextechGunblade"
+        ],
+        "boardIndex": 27
+      },
+      {
+        "champ": "DA_18_Maokai",
+        "items": [],
+        "boardIndex": 4
+      },
+      {
+        "champ": "DA_18_Ivern",
+        "items": [
+          "DA_AdaptiveHelm",
+          "DA_SpearOfShojin",
+          "DA_AdaptiveHelm"
+        ],
+        "boardIndex": 24
+      },
+      {
+        "champ": "DA_18_Kennen",
+        "items": [
+          "DA_18_EmblemJuggernaut",
+          "DA_VoidStaff",
+          "DA_EdgeOfNight"
+        ],
+        "boardIndex": 10
+      }
+    ],
+    "alts": [],
+    "augments": [
+      "DA_BlackthornTraitAugment",
+      "DA_18_BigGrabBag",
+      "DA_CyberneticUplink_Gold",
+      "DA_CommerceCore",
+      "DA_SeraphimsStaff",
+      "DA_SpreadingRoots",
+      "DA_TheTraitTree",
+      "DA_BoxingLessons"
+    ],
+    "carousel": [
+      "DA_ArchangelsStaff",
+      "DA_WarmogsArmor",
+      "DA_Component_TearOfTheGoddess",
+      "DA_Component_NeedlesslyLargeRod"
+    ]
+  },
+  {
+    "slug": "set-18-cashout-morgana",
+    "name": "Invoker Morgana",
+    "tier": "B",
+    "style": "Lose Streak",
+    "difficulty": "Hard",
+    "mainChampion": "DA_18_Morgana",
+    "units": [
+      {
+        "champ": "DA_18_Sentry",
+        "items": [],
+        "boardIndex": 23
+      },
+      {
+        "champ": "DA_18_Diana",
+        "items": [],
+        "boardIndex": 3
+      },
+      {
+        "champ": "DA_18_Hecarim",
+        "items": [],
+        "boardIndex": 1
+      },
+      {
+        "champ": "DA_KogMaw18_AD",
+        "items": [],
+        "boardIndex": 26
+      },
+      {
+        "champ": "DA_Brambleback18",
+        "items": [
+          "DA_EdgeOfNight",
+          "DA_GiantSlayer",
+          "DA_Quicksilver"
+        ],
+        "boardIndex": 19
+      },
+      {
+        "champ": "DA_18_Morgana",
+        "items": [
+          "DA_Morellonomicon",
+          "DA_RabadonsDeathcap",
+          "DA_VoidStaff"
+        ],
+        "boardIndex": 18
+      },
+      {
+        "champ": "DA_Sentinel18",
+        "items": [
+          "DA_ProtectorsVow",
+          "DA_WarmogsArmor",
+          "DA_AdaptiveHelm"
+        ],
+        "boardIndex": 4
+      },
+      {
+        "champ": "DA_Taric18",
+        "items": [],
+        "boardIndex": 2
+      },
+      {
+        "champ": "DA_18_Alune",
+        "items": [
+          "DA_18_EmblemInvoker"
+        ],
+        "boardIndex": 25
+      }
+    ],
+    "alts": [
+      {
+        "champ": "DA_18_Morgana",
+        "items": [
+          "DA_Artifact_BlightingJewel"
+        ]
+      }
+    ],
+    "augments": [
+      "DA_18_CovenTraitAugment_LootToAP",
+      "DA_18_CovenTraitAugment",
+      "DA_WandOverflow",
+      "DA_SeraphimsStaff",
+      "DA_Staffsmith",
+      "DA_DeadlierCaps",
+      "DA_BoosterPack",
+      "DA_18_OnesTwosThree"
+    ],
+    "carousel": [
+      "DA_Morellonomicon",
+      "DA_VoidStaff",
+      "DA_Component_NeedlesslyLargeRod",
+      "DA_Component_TearOfTheGoddess"
+    ]
+  },
+  {
+    "slug": "set-18-solar-melee",
+    "name": "Solar Melee",
+    "tier": "B",
+    "style": "1-Cost Reroll",
+    "difficulty": "Easy",
+    "mainChampion": "DA_18_Akali_AD",
+    "units": [
+      {
+        "champ": "DA_18_Leona",
+        "items": [],
+        "boardIndex": 17
+      },
+      {
+        "champ": "DA_18_Ornn",
+        "items": [
+          "DA_GargoyleStoneplate",
+          "DA_Crownguard",
+          "DA_WarmogsArmor"
+        ],
+        "boardIndex": 3
+      },
+      {
+        "champ": "DA_18_Akali_AD",
+        "items": [
+          "DA_JeweledGauntlet",
+          "DA_HandOfJustice",
+          "DA_EdgeOfNight"
+        ],
+        "boardIndex": 14
+      },
+      {
+        "champ": "DA_18_Camille",
+        "items": [
+          "DA_SteraksGage",
+          "DA_Quicksilver",
+          "DA_InfinityEdge"
+        ],
+        "boardIndex": 15
+      },
+      {
+        "champ": "DA_18_Varus",
+        "items": [
+          "DA_SpearOfShojin",
+          "DA_LastWhisper",
+          "DA_InfinityEdge"
+        ],
+        "boardIndex": 21
+      },
+      {
+        "champ": "DA_18_Kayle",
+        "items": [],
+        "boardIndex": 27
+      },
+      {
+        "champ": "DA_18_Sejuani",
+        "items": [],
+        "boardIndex": 20
+      }
+    ],
+    "alts": [
+      {
+        "champ": "DA_18_Camille",
+        "items": [
+          "DA_Artifact_Fishbones"
+        ]
+      },
+      {
+        "champ": "DA_18_Akali_AD",
+        "items": [
+          "DA_Artifact_LichBane",
+          "DA_Artifact_Dawncore",
+          "DA_Artifact_RapidFireCannon"
+        ]
+      }
+    ],
+    "augments": [
+      "DA_PandorasBench",
+      "DA_PrismaticTicket",
+      "DA_NoScoutNoPivot",
+      "DA_EarlyLearnings",
+      "DA_WorththeWait",
+      "DA_LuckyGlovesPlus",
+      "DA_SoloPlate",
+      "DA_CursedCrown"
+    ],
+    "carousel": [
+      "DA_InfinityEdge",
+      "DA_GargoyleStoneplate",
+      "DA_Component_SparringGloves",
+      "DA_Component_BFSword"
+    ]
+  },
+  {
+    "slug": "set-18-pebbles-3-tempo",
+    "name": "Pebbles 3 Tempo",
+    "tier": "B",
+    "style": "1-Cost Reroll",
+    "difficulty": "Easy",
+    "mainChampion": "DA_18_Sentry",
+    "units": [
+      {
+        "champ": "DA_18_Sentry",
+        "items": [
+          "DA_BlueBuff",
+          "DA_RabadonsDeathcap",
+          "DA_HextechGunblade"
+        ],
+        "boardIndex": 27
+      },
+      {
+        "champ": "DA_Scuttlecrab18",
+        "items": [],
+        "boardIndex": 3
+      },
+      {
+        "champ": "DA_18_Teemo",
+        "items": [],
+        "boardIndex": 23
+      },
+      {
+        "champ": "DA_KogMaw18_AD",
+        "items": [],
+        "boardIndex": 25
+      },
+      {
+        "champ": "DA_18_Morgana",
+        "items": [
+          "DA_Morellonomicon",
+          "DA_RabadonsDeathcap"
+        ],
+        "boardIndex": 18
+      },
+      {
+        "champ": "DA_Sentinel18",
+        "items": [
+          "DA_ProtectorsVow",
+          "DA_WarmogsArmor",
+          "DA_AdaptiveHelm"
+        ],
+        "boardIndex": 4
+      },
+      {
+        "champ": "DA_18_Ivern",
+        "items": [],
+        "boardIndex": 21
+      },
+      {
+        "champ": "DA_18_Maokai",
+        "items": [],
+        "boardIndex": 2
+      },
+      {
+        "champ": "DA_Taric18",
+        "items": [],
+        "boardIndex": 1
+      }
+    ],
+    "alts": [
+      {
+        "champ": "DA_18_Morgana",
+        "items": [
+          "DA_Artifact_BlightingJewel"
+        ]
+      },
+      {
+        "champ": "DA_18_Sentry",
+        "items": [
+          "DA_ArchangelsStaff",
+          "DA_ArchangelsStaff",
+          "DA_ArchangelsStaff"
+        ]
+      }
+    ],
+    "augments": [
+      "DA_SeraphimsStaff",
+      "DA_DeadlierCaps",
+      "DA_WandOverflow",
+      "DA_Replication",
+      "DA_FlowingTears",
+      "DA_MissedConnections",
+      "DA_18_RiftbeastTraitAugment",
+      "DA_WorththeWait"
+    ],
+    "carousel": [
+      "DA_BlueBuff",
+      "DA_RabadonsDeathcap",
+      "DA_Component_NeedlesslyLargeRod",
+      "DA_Component_GiantsBelt"
+    ]
+  },
+  {
+    "slug": "set-18-ap-95",
+    "name": "Legendary Ap Flex",
+    "tier": "B",
+    "style": "Fast 9",
+    "difficulty": "Hard",
+    "mainChampion": "DA_18_Alune",
+    "units": [
+      {
+        "champ": "DA_18_Alune",
+        "items": [
+          "DA_SpearOfShojin",
+          "DA_ArchangelsStaff",
+          "DA_JeweledGauntlet"
+        ],
+        "boardIndex": 27
+      },
+      {
+        "champ": "DA_Taric18",
+        "items": [],
+        "boardIndex": 1
+      },
+      {
+        "champ": "DA_18_Diana",
+        "items": [],
+        "boardIndex": 3
+      },
+      {
+        "champ": "DA_18_Kennen",
+        "items": [
+          "DA_VoidStaff",
+          "DA_EdgeOfNight",
+          "DA_HandOfJustice"
+        ],
+        "boardIndex": 4
+      },
+      {
+        "champ": "DA_Amumu18",
+        "items": [],
+        "boardIndex": 2
+      },
+      {
+        "champ": "DA_18_Ivern",
+        "items": [],
+        "boardIndex": 21
+      },
+      {
+        "champ": "DA_18_Maokai",
+        "items": [
+          "DA_WarmogsArmor",
+          "DA_GargoyleStoneplate",
+          "DA_Crownguard"
+        ],
+        "boardIndex": 5
+      },
+      {
+        "champ": "DA_18_Soraka",
+        "items": [
+          "DA_StrikersFlail",
+          "DA_NashorsTooth",
+          "DA_NashorsTooth"
+        ],
+        "boardIndex": 25
+      },
+      {
+        "champ": "DA_Fiddlesticks18",
+        "items": [],
+        "boardIndex": 0
+      }
+    ],
+    "alts": [],
+    "augments": [],
+    "carousel": []
+  },
+  {
+    "slug": "set-18-defender-cassio",
+    "name": "Defender Cassio",
+    "tier": "B",
+    "style": "3-Cost Reroll",
+    "difficulty": "Easy",
+    "mainChampion": "DA_18_Cassiopeia",
+    "units": [
+      {
+        "champ": "DA_18_Leona",
+        "items": [],
+        "boardIndex": 2
+      },
+      {
+        "champ": "DA_18_Ornn",
+        "items": [],
+        "boardIndex": 1
+      },
+      {
+        "champ": "DA_18_Shen",
+        "items": [],
+        "boardIndex": 3
+      },
+      {
+        "champ": "DA_18_Cassiopeia",
+        "items": [
+          "DA_SpearOfShojin",
+          "DA_HextechGunblade",
+          "DA_ArchangelsStaff"
+        ],
+        "boardIndex": 27
+      },
+      {
+        "champ": "DA_Fiddlesticks18",
+        "items": [
+          "DA_TitansResolve",
+          "DA_AdaptiveHelm",
+          "DA_Crownguard"
+        ],
+        "boardIndex": 4
+      },
+      {
+        "champ": "DA_18_Rammus",
+        "items": [
+          "DA_IonicSpark",
+          "DA_SunfireCape",
+          "DA_SteadfastHeart"
+        ],
+        "boardIndex": 5
+      },
+      {
+        "champ": "DA_18_Lillia",
+        "items": [
+          "DA_ThiefsGloves"
+        ],
+        "boardIndex": 0
+      }
+    ],
+    "alts": [
+      {
+        "champ": "DA_18_Cassiopeia",
+        "items": [
+          "DA_Artifact_Manazane",
+          "DA_18_EmblemFloraFatalisAugment"
+        ]
+      },
+      {
+        "champ": "DA_18_Cassiopeia",
+        "items": [
+          "DA_Artifact_Dawncore",
+          "DA_Artifact_BlightingJewel",
+          "DA_Artifact_EternalPact"
+        ]
+      }
+    ],
+    "augments": [
+      "DA_Ascension",
+      "DA_18_FloraFatalisAugment",
+      "DA_SpiritOfRedemption",
+      "DA_ItsMeBaby",
+      "DA_WovenMagic",
+      "DA_HeroicGrabBagPlusPlus",
+      "DA_FlowingTears",
+      "DA_CookingPot"
+    ],
+    "carousel": [
+      "DA_SpearOfShojin",
+      "DA_HextechGunblade",
+      "DA_Component_ChainVest",
+      "DA_Component_NeedlesslyLargeRod"
+    ]
+  },
+  {
+    "slug": "set-18-lunarwood-khazix",
+    "name": "Lunarwood Kha'zix",
+    "tier": "B",
+    "style": "3-Cost Reroll",
+    "difficulty": "Medium",
+    "mainChampion": "DA_18_KhaZix",
+    "units": [
+      {
+        "champ": "DA_Elderwood18_Lifeblossom",
+        "items": [],
+        "boardIndex": 24
+      },
+      {
+        "champ": "DA_Elderwood18_StonebarkTree",
+        "items": [],
+        "boardIndex": 27
+      },
+      {
+        "champ": "DA_18_Ornn",
+        "items": [],
+        "boardIndex": 18
+      },
+      {
+        "champ": "DA_Fiddlesticks18",
+        "items": [],
+        "boardIndex": 9
+      },
+      {
+        "champ": "DA_18_Diana",
+        "items": [
+          "DA_JeweledGauntlet",
+          "DA_HandOfJustice",
+          "DA_IonicSpark"
+        ],
+        "boardIndex": 8
+      },
+      {
+        "champ": "DA_18_Hecarim",
+        "items": [
+          "DA_WarmogsArmor",
+          "DA_GargoyleStoneplate",
+          "DA_SpiritVisage"
+        ],
+        "boardIndex": 2
+      },
+      {
+        "champ": "DA_18_KhaZix",
+        "items": [
+          "DA_HandOfJustice",
+          "DA_RabadonsDeathcap",
+          "DA_EdgeOfNight"
+        ],
+        "boardIndex": 1
+      },
+      {
+        "champ": "DA_18_Soraka",
+        "items": [],
+        "boardIndex": 23
+      },
+      {
+        "champ": "DA_18_Ezreal",
+        "items": [
+          "DA_RedBuff",
+          "DA_SpearOfShojin",
+          "DA_Deathblade"
+        ],
+        "boardIndex": 21
+      },
+      {
+        "champ": "DA_18_Alune",
+        "items": [],
+        "boardIndex": 22
+      }
+    ],
+    "alts": [
+      {
+        "champ": "DA_18_KhaZix",
+        "items": [
+          "DA_Artifact_LichBane",
+          "DA_Artifact_WitsEnd",
+          "DA_Artifact_SeekersArmguard"
+        ]
+      },
+      {
+        "champ": "DA_18_KhaZix",
+        "items": [
+          "DA_Artifact_LudensTempest",
+          "DA_Artifact_Dawncore",
+          "DA_Artifact_ZhonyasParadox"
+        ]
+      }
+    ],
+    "augments": [
+      "DA_ChampDelivery",
+      "DA_PandorasBench",
+      "DA_FlowingTears",
+      "DA_AdvancedLoanPlus",
+      "DA_HeroicGrabBagPlusPlus",
+      "DA_LegionOfThrees",
+      "DA_LuckyGlovesPlus",
+      "DA_PrismaticTicket"
+    ],
+    "carousel": [
+      "DA_EdgeOfNight",
+      "DA_RabadonsDeathcap",
+      "DA_HandOfJustice",
+      "DA_Component_NeedlesslyLargeRod"
+    ]
+  },
+  {
+    "slug": "set-18-woodblossom",
+    "name": "Woodblossom",
+    "tier": "B",
+    "style": "4-Cost Fast 8",
+    "difficulty": "Medium",
+    "mainChampion": "DA_18_Ezreal",
+    "units": [
+      {
+        "champ": "DA_18_Soraka",
+        "items": [],
+        "boardIndex": 23
+      },
+      {
+        "champ": "DA_18_Ornn",
+        "items": [],
+        "boardIndex": 1
+      },
+      {
+        "champ": "DA_18_Alistar",
+        "items": [],
+        "boardIndex": 2
+      },
+      {
+        "champ": "DA_18_Ezreal",
+        "items": [
+          "DA_SpearOfShojin",
+          "DA_LastWhisper",
+          "DA_Deathblade"
+        ],
+        "boardIndex": 27
+      },
+      {
+        "champ": "DA_18_Ahri",
+        "items": [
+          "DA_18_EmblemExecutioner",
+          "DA_Morellonomicon",
+          "DA_SpearOfShojin"
+        ],
+        "boardIndex": 25
+      },
+      {
+        "champ": "DA_18_Sett",
+        "items": [
+          "DA_WarmogsArmor",
+          "DA_GargoyleStoneplate",
+          "DA_GargoyleStoneplate"
+        ],
+        "boardIndex": 4
+      },
+      {
+        "champ": "DA_Elderwood18_Lifeblossom",
+        "items": [],
+        "boardIndex": 14
+      },
+      {
+        "champ": "DA_18_Yunara",
+        "items": [],
+        "boardIndex": 21
+      },
+      {
+        "champ": "DA_Fiddlesticks18",
+        "items": [],
+        "boardIndex": 3
+      },
+      {
+        "champ": "DA_Elderwood18_StonebarkTree",
+        "items": [],
+        "boardIndex": 0
+      }
+    ],
+    "alts": [],
+    "augments": [
+      "DA_18_ElderwoodTraitAugment",
+      "DA_BodyguardTraining",
+      "DA_18_LuxAugmentII",
+      "DA_SwordOverflow",
+      "DA_Swordsmith",
+      "DA_Staffsmith",
+      "DA_WandOverflow",
+      "DA_CommerceCore"
+    ],
+    "carousel": [
+      "DA_SpearOfShojin",
+      "DA_Component_BFSword",
+      "DA_Component_SparringGloves",
+      "DA_Component_RecurveBow"
+    ]
+  },
+  {
+    "slug": "set-18-veigar-consuming-flora-copy",
+    "name": "Elderwood Veigar",
+    "tier": "C",
+    "style": "1-Cost Reroll",
+    "difficulty": "Easy",
+    "mainChampion": "DA_18_Veigar",
+    "units": [
+      {
+        "champ": "DA_Elderwood18_Lifeblossom",
+        "items": [],
+        "boardIndex": 17
+      },
+      {
+        "champ": "DA_Elderwood18_StonebarkTree",
+        "items": [],
+        "boardIndex": 6
+      },
+      {
+        "champ": "DA_18_RekSai",
+        "items": [],
+        "boardIndex": 16
+      },
+      {
+        "champ": "DA_18_Ornn",
+        "items": [
+          "DA_WarmogsArmor",
+          "DA_Crownguard",
+          "DA_GargoyleStoneplate"
+        ],
+        "boardIndex": 3
+      },
+      {
+        "champ": "DA_18_Veigar",
+        "items": [
+          "DA_JeweledGauntlet",
+          "DA_BlueBuff",
+          "DA_HextechGunblade"
+        ],
+        "boardIndex": 21
+      },
+      {
+        "champ": "DA_18_Alistar",
+        "items": [],
+        "boardIndex": 19
+      },
+      {
+        "champ": "DA_18_LeBlanc",
+        "items": [
+          "DA_VoidStaff",
+          "DA_Morellonomicon"
+        ],
+        "boardIndex": 23
+      },
+      {
+        "champ": "DA_18_Cassiopeia",
+        "items": [],
+        "boardIndex": 25
+      },
+      {
+        "champ": "DA_Fiddlesticks18",
+        "items": [],
+        "boardIndex": 18
+      }
+    ],
+    "alts": [
+      {
+        "champ": "DA_18_Veigar",
+        "items": [
+          "DA_BlueBuff",
+          "DA_JeweledGauntlet",
+          "DA_Artifact_Dawncore"
+        ]
+      },
+      {
+        "champ": "DA_18_Veigar",
+        "items": [
+          "DA_JeweledGauntlet",
+          "DA_Artifact_LudensTempest",
+          "DA_18_EmblemFloraFatalisAugment"
+        ]
+      }
+    ],
+    "augments": [
+      "DA_LivingForge",
+      "DA_ForgedInStrength",
+      "DA_PortableForge",
+      "DA_LatentForge",
+      "DA_18_FloraFatalisAugment",
+      "DA_MissedConnections",
+      "DA_PandorasBench",
+      "DA_DeadlierCaps"
+    ],
+    "carousel": [
+      "DA_BlueBuff",
+      "DA_JeweledGauntlet",
+      "DA_GargoyleStoneplate",
+      "DA_Component_GiantsBelt"
+    ]
+  },
+  {
+    "slug": "set-18-solar-kayle",
+    "name": "Solar Kayle",
+    "tier": "C",
+    "style": "2-Cost Reroll",
+    "difficulty": "Easy",
+    "mainChampion": "DA_18_Kayle",
+    "units": [
+      {
+        "champ": "DA_Elderwood18_Lifeblossom",
+        "items": [],
+        "boardIndex": 22
+      },
+      {
+        "champ": "DA_Elderwood18_StonebarkTree",
+        "items": [],
+        "boardIndex": 0
+      },
+      {
+        "champ": "DA_18_Leona",
+        "items": [],
+        "boardIndex": 11
+      },
+      {
+        "champ": "DA_18_Rakan",
+        "items": [],
+        "boardIndex": 17
+      },
+      {
+        "champ": "DA_18_Ornn",
+        "items": [
+          "DA_GargoyleStoneplate",
+          "DA_WarmogsArmor",
+          "DA_SpiritVisage"
+        ],
+        "boardIndex": 4
+      },
+      {
+        "champ": "DA_18_Xayah",
+        "items": [
+          "DA_GuinsoosRageblade",
+          "DA_RedBuff",
+          "DA_Deathblade"
+        ],
+        "boardIndex": 26
+      },
+      {
+        "champ": "DA_18_Sejuani",
+        "items": [],
+        "boardIndex": 10
+      },
+      {
+        "champ": "DA_18_Kayle",
+        "items": [
+          "DA_GuinsoosRageblade",
+          "DA_Artifact_NavoriFlickerblade",
+          "DA_RabadonsDeathcap"
+        ],
+        "boardIndex": 27
+      },
+      {
+        "champ": "DA_18_Hecarim",
+        "items": [],
+        "boardIndex": 18
+      }
+    ],
+    "alts": [
+      {
+        "champ": "DA_18_Kayle",
+        "items": [
+          "DA_Artifact_WitsEnd",
+          "DA_Artifact_StatikkShiv",
+          "DA_Artifact_Mittens"
+        ]
+      },
+      {
+        "champ": "DA_18_Kayle",
+        "items": [
+          "DA_Artifact_RapidFireCannon",
+          "DA_Item_Artifact_TalismanOfAscension",
+          "DA_Artifact_ZhonyasParadox"
+        ]
+      }
+    ],
+    "augments": [
+      "DA_18_SolarTraitAugment",
+      "DA_PandorasBench",
+      "DA_PrismaticTicket",
+      "DA_NoScoutNoPivot",
+      "DA_HeroicGrabBagPlus",
+      "DA_MissedConnections",
+      "DA_PortableForge",
+      "DA_18_ElderwoodTraitAugment"
+    ],
+    "carousel": [
+      "DA_GuinsoosRageblade",
+      "DA_GargoyleStoneplate",
+      "DA_Component_NeedlesslyLargeRod",
+      "DA_Component_SparringGloves"
+    ]
+  },
+  {
+    "slug": "set-18-adaptor-nidalee",
+    "name": "Invoker Nidalee",
+    "tier": "C",
+    "style": "4-Cost Fast 8",
+    "difficulty": "Medium",
+    "mainChampion": "DA_Nidalee18_AP",
+    "units": [
+      {
+        "champ": "DA_18_Sentry",
+        "items": [],
+        "boardIndex": 27
+      },
+      {
+        "champ": "DA_Scuttlecrab18",
+        "items": [],
+        "boardIndex": 4
+      },
+      {
+        "champ": "DA_KogMaw18_AD",
+        "items": [],
+        "boardIndex": 22
+      },
+      {
+        "champ": "DA_Vi18",
+        "items": [],
+        "boardIndex": 5
+      },
+      {
+        "champ": "DA_18_Morgana",
+        "items": [
+          "DA_Morellonomicon",
+          "DA_ArchangelsStaff",
+          "DA_AdaptiveHelm"
+        ],
+        "boardIndex": 9
+      },
+      {
+        "champ": "DA_Nidalee18_AP",
+        "items": [
+          "DA_JeweledGauntlet",
+          "DA_GuinsoosRageblade",
+          "DA_StrikersFlail"
+        ],
+        "boardIndex": 21
+      },
+      {
+        "champ": "DA_Sentinel18",
+        "items": [
+          "DA_ProtectorsVow",
+          "DA_WarmogsArmor",
+          "DA_AdaptiveHelm"
+        ],
+        "boardIndex": 3
+      },
+      {
+        "champ": "DA_Taric18",
+        "items": [],
+        "boardIndex": 2
+      }
+    ],
+    "alts": [
+      {
+        "champ": "DA_18_Morgana",
+        "items": [
+          "DA_Artifact_BlightingJewel"
+        ]
+      },
+      {
+        "champ": "DA_Nidalee18_AP",
+        "items": [
+          "DA_Artifact_NavoriFlickerblade",
+          "DA_Artifact_StatikkShiv"
+        ]
+      }
+    ],
+    "augments": [
+      "DA_WandOverflow",
+      "DA_SpeedyDoubleKill",
+      "DA_Staffsmith",
+      "DA_18_BigGrabBag",
+      "DA_18_PrimalAugmentPlus_Nidalee",
+      "DA_CaretakersFavor",
+      "DA_BuriedTreasuresIII",
+      "DA_TimeSkip"
+    ],
+    "carousel": [
+      "DA_GuinsoosRageblade",
+      "DA_JeweledGauntlet",
+      "DA_Morellonomicon",
+      "DA_Component_GiantsBelt"
+    ]
+  },
+  {
+    "slug": "set-18-rengar-rr",
+    "name": "Rengar Reroll",
+    "tier": "C",
+    "style": "3-Cost Reroll",
+    "difficulty": "Medium",
+    "mainChampion": "DA_18_Rengar",
+    "units": [
+      {
+        "champ": "DA_18_Diana",
+        "items": [
+          "DA_ThiefsGloves"
+        ],
+        "boardIndex": 7
+      },
+      {
+        "champ": "DA_18_Hecarim",
+        "items": [
+          "DA_ProtectorsVow",
+          "DA_SunfireCape",
+          "DA_WarmogsArmor"
+        ],
+        "boardIndex": 1
+      },
+      {
+        "champ": "DA_CrimsonRaptor18",
+        "items": [
+          "DA_LastWhisper",
+          "DA_KrakensFury",
+          "DA_GuinsoosRageblade"
+        ],
+        "boardIndex": 21
+      },
+      {
+        "champ": "DA_18_Rengar",
+        "items": [
+          "DA_EdgeOfNight",
+          "DA_TitansResolve",
+          "DA_GuinsoosRageblade"
+        ],
+        "boardIndex": 0
+      },
+      {
+        "champ": "DA_18_Aphelios",
+        "items": [],
+        "boardIndex": 22
+      },
+      {
+        "champ": "DA_Brambleback18",
+        "items": [],
+        "boardIndex": 8
+      },
+      {
+        "champ": "DA_Sentinel18",
+        "items": [],
+        "boardIndex": 6
+      },
+      {
+        "champ": "DA_Taric18",
+        "items": [],
+        "boardIndex": 13
+      }
+    ],
+    "alts": [
+      {
+        "champ": "DA_18_Rengar",
+        "items": [
+          "DA_Artifact_Mittens",
+          "DA_Artifact_RapidFireCannon",
+          "DA_Artifact_HellfireHatchet"
+        ]
+      },
+      {
+        "champ": "DA_18_Rengar",
+        "items": [
+          "DA_Artifact_NavoriFlickerblade",
+          "DA_Artifact_InfinityForce",
+          "DA_Artifact_TitanicHydra"
+        ]
+      }
+    ],
+    "augments": [
+      "DA_ChampDelivery",
+      "DA_SpeedyDoubleKill",
+      "DA_HeroicGrabBagPlus",
+      "DA_TradeSector",
+      "DA_BoosterPack",
+      "DA_ExclusiveCustomization",
+      "DA_LatentForge",
+      "DA_LegionOfThrees"
+    ],
+    "carousel": [
+      "DA_GuinsoosRageblade",
+      "DA_EdgeOfNight",
+      "DA_TitansResolve",
+      "DA_Component_RecurveBow"
+    ]
+  },
+  {
+    "slug": "set-18-solara-yunara",
+    "name": "Solara Yunara",
+    "tier": "B",
+    "style": "2-Cost Reroll",
+    "difficulty": "Medium",
+    "mainChampion": "DA_18_Yunara",
+    "units": [
+      {
+        "champ": "DA_18_LeBlanc",
+        "items": [],
+        "boardIndex": 25
+      },
+      {
+        "champ": "DA_18_Leona",
+        "items": [],
+        "boardIndex": 21
+      },
+      {
+        "champ": "DA_18_Yorick",
+        "items": [],
+        "boardIndex": 17
+      },
+      {
+        "champ": "DA_18_Kayle",
+        "items": [],
+        "boardIndex": 23
+      },
+      {
+        "champ": "DA_Karma18",
+        "items": [
+          "DA_SpearOfShojin",
+          "DA_VoidStaff",
+          "DA_JeweledGauntlet"
+        ],
+        "boardIndex": 26
+      },
+      {
+        "champ": "DA_18_Sejuani",
+        "items": [
+          "DA_GargoyleStoneplate",
+          "DA_WarmogsArmor",
+          "DA_GargoyleStoneplate"
+        ],
+        "boardIndex": 3
+      },
+      {
+        "champ": "DA_18_Yunara",
+        "items": [
+          "DA_Deathblade",
+          "DA_SpearOfShojin",
+          "DA_LastWhisper"
+        ],
+        "boardIndex": 27
+      },
+      {
+        "champ": "DA_18_Azir",
+        "items": [],
+        "boardIndex": 22
+      }
+    ],
+    "alts": [
+      {
+        "champ": "DA_18_Yunara",
+        "items": [
+          "DA_Artifact_Dawncore",
+          "DA_SpearOfShojin",
+          "DA_Deathblade"
+        ]
+      }
+    ],
+    "augments": [
+      "DA_18_CaretakersAlly",
+      "DA_Swordsmith",
+      "DA_SwordOverflow",
+      "DA_HeroicGrabBag",
+      "DA_SoloPlate",
+      "DA_PandorasBench",
+      "DA_PrismaticTicket",
+      "DA_KickStart"
+    ],
+    "carousel": [
+      "DA_SpearOfShojin",
+      "DA_GargoyleStoneplate",
+      "DA_LastWhisper",
+      "DA_Component_BFSword"
+    ]
+  },
+  {
+    "slug": "set-18-warwick-rr",
+    "name": "Warwick Reroll",
+    "tier": "C",
+    "style": "2-Cost Reroll",
+    "difficulty": "Medium",
+    "mainChampion": "DA_18_Warwick",
+    "units": [
+      {
+        "champ": "DA_18_RekSai",
+        "items": [],
+        "boardIndex": 20
+      },
+      {
+        "champ": "DA_Murkwolf18",
+        "items": [
+          "DA_Deathblade",
+          "DA_EdgeOfNight",
+          "DA_HandOfJustice"
+        ],
+        "boardIndex": 22
+      },
+      {
+        "champ": "DA_18_Warwick",
+        "items": [
+          "DA_SteraksGage",
+          "DA_TitansResolve",
+          "DA_SpearOfShojin"
+        ],
+        "boardIndex": 21
+      },
+      {
+        "champ": "DA_18_Azir",
+        "items": [],
+        "boardIndex": 23
+      },
+      {
+        "champ": "DA_Krug18",
+        "items": [],
+        "boardIndex": 17
+      },
+      {
+        "champ": "DA_Brambleback18",
+        "items": [],
+        "boardIndex": 16
+      },
+      {
+        "champ": "DA_18_Malphite",
+        "items": [
+          "DA_WarmogsArmor",
+          "DA_GargoyleStoneplate",
+          "DA_Crownguard"
+        ],
+        "boardIndex": 3
+      }
+    ],
+    "alts": [
+      {
+        "champ": "DA_18_Warwick",
+        "items": [
+          "DA_Artifact_RapidFireCannon",
+          "DA_Quicksilver",
+          "DA_InfinityEdge"
+        ]
+      },
+      {
+        "champ": "DA_18_Warwick",
+        "items": [
+          "DA_Artifact_Mittens",
+          "DA_Artifact_HellfireHatchet",
+          "DA_Artifact_DeathsDefiance"
+        ]
+      }
+    ],
+    "augments": [
+      "DA_18_CaretakersAlly",
+      "DA_WorththeWaitII",
+      "DA_LatentForge",
+      "DA_PortableForge",
+      "DA_ForgedInStrength",
+      "DA_LivingForge",
+      "DA_HeroicGrabBagPlus",
+      "DA_NestingAnvils"
+    ],
+    "carousel": [
+      "DA_SpearOfShojin",
+      "DA_TitansResolve",
+      "DA_Component_BFSword",
+      "DA_Component_GiantsBelt"
+    ]
+  },
+  {
+    "slug": "set-18-fae-xayah",
+    "name": "Fae Xayah",
+    "tier": "C",
+    "style": "1-Cost Reroll",
+    "difficulty": "Easy",
+    "mainChampion": "DA_18_Xayah",
+    "units": [
+      {
+        "champ": "DA_Elderwood18_Lifeblossom",
+        "items": [],
+        "boardIndex": 21
+      },
+      {
+        "champ": "DA_Elderwood18_StonebarkTree",
+        "items": [],
+        "boardIndex": 0
+      },
+      {
+        "champ": "DA_18_Rakan",
+        "items": [],
+        "boardIndex": 3
+      },
+      {
+        "champ": "DA_18_Ornn",
+        "items": [
+          "DA_WarmogsArmor",
+          "DA_SpiritVisage",
+          "DA_GargoyleStoneplate"
+        ],
+        "boardIndex": 4
+      },
+      {
+        "champ": "DA_18_Xayah",
+        "items": [
+          "DA_KrakensFury",
+          "DA_GuinsoosRageblade",
+          "DA_HextechGunblade"
+        ],
+        "boardIndex": 27
+      },
+      {
+        "champ": "DA_18_Diana",
+        "items": [],
+        "boardIndex": 10
+      },
+      {
+        "champ": "DA_18_Tristana",
+        "items": [],
+        "boardIndex": 25
+      },
+      {
+        "champ": "DA_18_Lillia",
+        "items": [],
+        "boardIndex": 9
+      },
+      {
+        "champ": "DA_18_Aphelios",
+        "items": [
+          "DA_LastWhisper",
+          "DA_RedBuff"
+        ],
+        "boardIndex": 26
+      },
+      {
+        "champ": "DA_18_GnarSmall",
+        "items": [],
+        "boardIndex": 18
+      }
+    ],
+    "alts": [
+      {
+        "champ": "DA_18_Ornn",
+        "items": [
+          "DA_Artifact_AegisOfDawn",
+          "DA_Artifact_LightshieldCrest",
+          "DA_Artifact_ForbiddenIdol"
+        ]
+      },
+      {
+        "champ": "DA_18_Xayah",
+        "items": [
+          "DA_Artifact_NavoriFlickerblade",
+          "DA_Artifact_Fishbones",
+          "DA_Artifact_TitanicHydra"
+        ]
+      }
+    ],
+    "augments": [
+      "DA_EarlyLearnings",
+      "DA_NoScoutNoPivot",
+      "DA_MissedConnections",
+      "DA_PandorasBench",
+      "DA_SoloPlate",
+      "DA_PrismaticTicket",
+      "DA_18_ElderwoodTraitAugment",
+      "DA_WorththeWait"
+    ],
+    "carousel": [
+      "DA_GuinsoosRageblade",
+      "DA_KrakensFury",
+      "DA_GargoyleStoneplate",
+      "DA_HextechGunblade"
+    ]
+  },
+  {
+    "slug": "set-18-sprykin-teemo-copy",
+    "name": "Teemowood",
+    "tier": "C",
+    "style": "2-Cost Reroll",
+    "difficulty": "Easy",
+    "mainChampion": "DA_18_Teemo",
+    "units": [
+      {
+        "champ": "DA_18_Teemo",
+        "items": [
+          "DA_VoidStaff",
+          "DA_Morellonomicon",
+          "DA_SpearOfShojin"
+        ],
+        "boardIndex": 27
+      },
+      {
+        "champ": "DA_18_LeBlanc",
+        "items": [
+          "DA_SpearOfShojin",
+          "DA_JeweledGauntlet",
+          "DA_StrikersFlail"
+        ],
+        "boardIndex": 26
+      },
+      {
+        "champ": "DA_Elderwood18_StonebarkTree",
+        "items": [],
+        "boardIndex": 0
+      },
+      {
+        "champ": "DA_18_Hecarim",
+        "items": [],
+        "boardIndex": 17
+      },
+      {
+        "champ": "DA_Sentinel18",
+        "items": [],
+        "boardIndex": 18
+      },
+      {
+        "champ": "DA_18_Alistar",
+        "items": [
+          "DA_WarmogsArmor",
+          "DA_GargoyleStoneplate",
+          "DA_GargoyleStoneplate"
+        ],
+        "boardIndex": 4
+      },
+      {
+        "champ": "DA_Elderwood18_Lifeblossom",
+        "items": [],
+        "boardIndex": 23
+      },
+      {
+        "champ": "DA_18_Kobuko",
+        "items": [],
+        "boardIndex": 15
+      },
+      {
+        "champ": "DA_18_Veigar",
+        "items": [],
+        "boardIndex": 21
+      }
+    ],
+    "alts": [],
+    "augments": [
+      "DA_WorththeWaitII",
+      "DA_18_CaretakersAlly",
+      "DA_DeadlierCaps",
+      "DA_18_SprykinAugment",
+      "DA_SoloPlate",
+      "DA_TradeSector",
+      "DA_PandorasBench",
+      "DA_NoScoutNoPivot"
+    ],
+    "carousel": [
+      "DA_SpearOfShojin",
+      "DA_RabadonsDeathcap",
+      "DA_GargoyleStoneplate",
+      "DA_Component_NeedlesslyLargeRod"
+    ]
+  },
+  {
+    "slug": "set-18-infinite-elise",
+    "name": "Infinite Elise",
+    "tier": "C",
+    "style": "2-Cost Reroll",
+    "difficulty": "Medium",
+    "mainChampion": "DA_18_Elise",
+    "units": [
+      {
+        "champ": "DA_18_Rakan",
+        "items": [],
+        "boardIndex": 5
+      },
+      {
+        "champ": "DA_18_Elise",
+        "items": [
+          "DA_TitansResolve",
+          "DA_GuinsoosRageblade",
+          "DA_ArchangelsStaff"
+        ],
+        "boardIndex": 7
+      },
+      {
+        "champ": "DA_18_Diana",
+        "items": [
+          "DA_JeweledGauntlet",
+          "DA_StrikersFlail",
+          "DA_HandOfJustice"
+        ],
+        "boardIndex": 8
+      },
+      {
+        "champ": "DA_18_Hecarim",
+        "items": [
+          "DA_WarmogsArmor",
+          "DA_ProtectorsVow",
+          "DA_DragonsClaw"
+        ],
+        "boardIndex": 1
+      },
+      {
+        "champ": "DA_18_Aphelios",
+        "items": [],
+        "boardIndex": 22
+      },
+      {
+        "champ": "DA_Sentinel18",
+        "items": [],
+        "boardIndex": 3
+      },
+      {
+        "champ": "DA_18_Morgana",
+        "items": [
+          "DA_VoidStaff",
+          "DA_Morellonomicon"
+        ],
+        "boardIndex": 15
+      },
+      {
+        "champ": "DA_18_Alune",
+        "items": [],
+        "boardIndex": 21
+      },
+      {
+        "champ": "DA_Taric18",
+        "items": [],
+        "boardIndex": 4
+      }
+    ],
+    "alts": [],
+    "augments": [],
+    "carousel": []
+  },
+  {
+    "slug": "set-18-riftbeasts",
+    "name": "Riftbeasts",
+    "tier": "C",
+    "style": "Fast 9",
+    "difficulty": "Easy",
+    "mainChampion": "DA_Brambleback18",
+    "units": [
+      {
+        "champ": "DA_18_Sentry",
+        "items": [],
+        "boardIndex": 21
+      },
+      {
+        "champ": "DA_Murkwolf18",
+        "items": [],
+        "boardIndex": 16
+      },
+      {
+        "champ": "DA_Krug18",
+        "items": [
+          "DA_WarmogsArmor",
+          "DA_SpiritVisage",
+          "DA_GargoyleStoneplate"
+        ],
+        "boardIndex": 4
+      },
+      {
+        "champ": "DA_Brambleback18",
+        "items": [
+          "DA_EdgeOfNight",
+          "DA_GiantSlayer",
+          "DA_Quicksilver"
+        ],
+        "boardIndex": 20
+      },
+      {
+        "champ": "DA_Sentinel18",
+        "items": [
+          "DA_ProtectorsVow",
+          "DA_SunfireCape",
+          "DA_Evenshroud"
+        ],
+        "boardIndex": 19
+      },
+      {
+        "champ": "DA_18_GnarSmall",
+        "items": [],
+        "boardIndex": 17
+      },
+      {
+        "champ": "DA_Taric18",
+        "items": [],
+        "boardIndex": 15
+      },
+      {
+        "champ": "DA_18_ElderDragon",
+        "items": [
+          "DA_SteraksGage",
+          "DA_Bloodthirster",
+          "DA_InfinityEdge"
+        ],
+        "boardIndex": 18
+      }
+    ],
+    "alts": [],
+    "augments": [],
+    "carousel": []
+  },
+  {
+    "slug": "",
+    "name": "LeBlanc Weavers",
+    "tier": "C",
+    "style": "2-Cost Reroll",
+    "difficulty": "Easy",
+    "mainChampion": "DA_18_LeBlanc",
+    "units": [
+      {
+        "champ": "DA_18_LeBlanc",
+        "items": [
+          "DA_SpearOfShojin",
+          "DA_JeweledGauntlet",
+          "DA_StrikersFlail"
+        ],
+        "boardIndex": 21
+      },
+      {
+        "champ": "DA_18_Hecarim",
+        "items": [
+          "DA_WarmogsArmor",
+          "DA_SunfireCape",
+          "DA_ProtectorsVow"
+        ],
+        "boardIndex": 2
+      },
+      {
+        "champ": "DA_18_Ornn",
+        "items": [],
+        "boardIndex": 3
+      },
+      {
+        "champ": "DA_Fiddlesticks18",
+        "items": [],
+        "boardIndex": 4
+      },
+      {
+        "champ": "DA_18_Alistar",
+        "items": [],
+        "boardIndex": 5
+      },
+      {
+        "champ": "DA_18_Alune",
+        "items": [],
+        "boardIndex": 22
+      },
+      {
+        "champ": "DA_18_GnarSmall",
+        "items": [],
+        "boardIndex": 9
+      }
+    ],
+    "alts": [],
+    "augments": [],
+    "carousel": []
+  },
+  {
+    "slug": "set-18-elderwood-executioners",
+    "name": "Elderwood Executioners",
+    "tier": "C",
+    "style": "4-Cost Fast 8",
+    "difficulty": "Medium",
+    "mainChampion": "DA_18_Ezreal",
+    "units": [
+      {
+        "champ": "DA_18_Ornn",
+        "items": [],
+        "boardIndex": 1
+      },
+      {
+        "champ": "DA_18_Alistar",
+        "items": [],
+        "boardIndex": 2
+      },
+      {
+        "champ": "DA_Taric18",
+        "items": [],
+        "boardIndex": 4
+      },
+      {
+        "champ": "DA_Fiddlesticks18",
+        "items": [],
+        "boardIndex": 5
+      },
+      {
+        "champ": "DA_18_Ezreal",
+        "items": [
+          "DA_SpearOfShojin",
+          "DA_LastWhisper",
+          "DA_Deathblade"
+        ],
+        "boardIndex": 27
+      },
+      {
+        "champ": "DA_18_Soraka",
+        "items": [
+          "DA_SpearOfShojin",
+          "DA_RabadonsDeathcap",
+          "DA_VoidStaff"
+        ],
+        "boardIndex": 25
+      },
+      {
+        "champ": "DA_Lux18_Base",
+        "items": [
+          "DA_18_EmblemExecutioner",
+          "DA_SpearOfShojin"
+        ],
+        "boardIndex": 21
+      },
+      {
+        "champ": "DA_Elderwood18_StonebarkTree",
+        "items": [],
+        "boardIndex": 0
+      },
+      {
+        "champ": "DA_Elderwood18_StonebarkTree",
+        "items": [],
+        "boardIndex": 6
+      },
+      {
+        "champ": "DA_18_GnarSmall",
+        "items": [],
+        "boardIndex": 10
+      },
+      {
+        "champ": "DA_18_Hecarim",
+        "items": [
+          "DA_DragonsClaw",
+          "DA_BrambleVest",
+          "DA_SunfireCape"
+        ],
+        "boardIndex": 3
+      },
+      {
+        "champ": "DA_Elderwood18_Lifeblossom",
+        "items": [],
+        "boardIndex": 23
+      }
+    ],
+    "alts": [],
+    "augments": [
+      "DA_18_ElderwoodTraitAugment",
+      "DA_BodyguardTraining",
+      "DA_18_LuxAugmentII",
+      "DA_SwordOverflow",
+      "DA_Swordsmith",
+      "DA_Staffsmith",
+      "DA_WandOverflow",
+      "DA_CommerceCore"
+    ],
+    "carousel": [
+      "DA_SpearOfShojin",
+      "DA_Component_BFSword",
+      "DA_Component_SparringGloves",
+      "DA_Component_RecurveBow"
+    ]
+  },
+  {
+    "slug": "set-18-spirit-blossom",
+    "name": "Spirit Blossom",
+    "tier": "A",
+    "style": "4-Cost Fast 8",
+    "difficulty": "Easy",
+    "mainChampion": "DA_18_Ahri",
+    "units": [
+      {
+        "champ": "DA_Karma18",
+        "items": [],
+        "boardIndex": 21
+      },
+      {
+        "champ": "DA_18_Yorick",
+        "items": [],
+        "boardIndex": 1
+      },
+      {
+        "champ": "DA_Vi18",
+        "items": [],
+        "boardIndex": 3
+      },
+      {
+        "champ": "DA_18_Sivir",
+        "items": [],
+        "boardIndex": 24
+      },
+      {
+        "champ": "DA_18_Zyra",
+        "items": [],
+        "boardIndex": 23
+      },
+      {
+        "champ": "DA_18_Ahri",
+        "items": [
+          "DA_SpearOfShojin",
+          "DA_JeweledGauntlet",
+          "DA_StrikersFlail"
+        ],
+        "boardIndex": 27
+      },
+      {
+        "champ": "DA_18_Sett",
+        "items": [
+          "DA_BrambleVest",
+          "DA_DragonsClaw",
+          "DA_WarmogsArmor"
+        ],
+        "boardIndex": 5
+      },
+      {
+        "champ": "DA_18_GnarSmall",
+        "items": [],
+        "boardIndex": 10
+      },
+      {
+        "champ": "DA_18_Ashe",
+        "items": [
+          "DA_RedBuff",
+          "DA_SpearOfShojin",
+          "DA_LastWhisper"
+        ],
+        "boardIndex": 25
+      }
+    ],
+    "alts": [
+      {
+        "champ": "DA_18_Ahri",
+        "items": [
+          "DA_18_EmblemExecutioner",
+          "DA_SpearOfShojin",
+          "DA_StrikersFlail"
+        ]
+      }
+    ],
+    "augments": [
+      "DA_Slammin",
+      "DA_JeweledLotus_I",
+      "DA_CommerceCore",
+      "DA_18_BigGrabBag",
+      "DA_FeelingLucky",
+      "DA_ExclusiveCustomization",
+      "DA_Staffsmith",
+      "DA_18_WispRebatePlus"
+    ],
+    "carousel": [
+      "DA_SpearOfShojin",
+      "DA_JeweledGauntlet",
+      "DA_Component_GiantsBelt",
+      "DA_Component_SparringGloves"
+    ]
+  },
+  {
+    "slug": "set-18-forest-fire",
+    "name": "Forest Fire",
+    "tier": "C",
+    "style": "1-Cost Reroll",
+    "difficulty": "Easy",
+    "mainChampion": "DA_18_Xayah",
+    "units": [
+      {
+        "champ": "DA_18_Rakan",
+        "items": [],
+        "boardIndex": 11
+      },
+      {
+        "champ": "DA_18_Ornn",
+        "items": [
+          "DA_WarmogsArmor",
+          "DA_SpiritVisage",
+          "DA_GargoyleStoneplate"
+        ],
+        "boardIndex": 3
+      },
+      {
+        "champ": "DA_18_Varus",
+        "items": [
+          "DA_InfinityEdge",
+          "DA_SpearOfShojin",
+          "DA_LastWhisper"
+        ],
+        "boardIndex": 26
+      },
+      {
+        "champ": "DA_18_Xayah",
+        "items": [
+          "DA_KrakensFury",
+          "DA_GuinsoosRageblade",
+          "DA_Deathblade"
+        ],
+        "boardIndex": 27
+      },
+      {
+        "champ": "DA_18_Hecarim",
+        "items": [],
+        "boardIndex": 9
+      },
+      {
+        "champ": "DA_18_Tristana",
+        "items": [],
+        "boardIndex": 25
+      },
+      {
+        "champ": "DA_Amumu18",
+        "items": [],
+        "boardIndex": 8
+      },
+      {
+        "champ": "DA_18_Lillia",
+        "items": [],
+        "boardIndex": 10
+      }
+    ],
+    "alts": [
+      {
+        "champ": "DA_18_Xayah",
+        "items": [
+          "DA_Artifact_NavoriFlickerblade",
+          "DA_Artifact_Fishbones",
+          "DA_Artifact_TitanicHydra"
+        ]
+      },
+      {
+        "champ": "DA_18_Ornn",
+        "items": [
+          "DA_Artifact_AegisOfDawn",
+          "DA_Artifact_LightshieldCrest",
+          "DA_Artifact_ForbiddenIdol"
+        ]
+      }
+    ],
+    "augments": [
+      "DA_EarlyLearnings",
+      "DA_NoScoutNoPivot",
+      "DA_MissedConnections",
+      "DA_PandorasBench",
+      "DA_SoloPlate",
+      "DA_PrismaticTicket",
+      "DA_18_ElderwoodTraitAugment",
+      "DA_WorththeWait"
+    ],
+    "carousel": [
+      "DA_GuinsoosRageblade",
+      "DA_KrakensFury",
+      "DA_GargoyleStoneplate",
+      "DA_Deathblade"
+    ]
+  },
+  {
+    "slug": "set-18-infernal-khazix",
+    "name": "Infernal Khazix",
+    "tier": "C",
+    "style": "3-Cost Reroll",
+    "difficulty": "Medium",
+    "mainChampion": "DA_18_KhaZix",
+    "units": [
+      {
+        "champ": "DA_18_Akali_AD",
+        "items": [],
+        "boardIndex": 3
+      },
+      {
+        "champ": "DA_18_Varus",
+        "items": [],
+        "boardIndex": 21
+      },
+      {
+        "champ": "DA_18_Shen",
+        "items": [],
+        "boardIndex": 4
+      },
+      {
+        "champ": "DA_Vi18",
+        "items": [],
+        "boardIndex": 6
+      },
+      {
+        "champ": "DA_Fiddlesticks18",
+        "items": [
+          "DA_Crownguard",
+          "DA_WarmogsArmor",
+          "DA_IonicSpark"
+        ],
+        "boardIndex": 1
+      },
+      {
+        "champ": "DA_18_KhaZix",
+        "items": [
+          "DA_JeweledGauntlet",
+          "DA_HandOfJustice",
+          "DA_RabadonsDeathcap"
+        ],
+        "boardIndex": 0
+      },
+      {
+        "champ": "DA_Amumu18",
+        "items": [],
+        "boardIndex": 5
+      },
+      {
+        "champ": "DA_Nidalee18_AP",
+        "items": [],
+        "boardIndex": 27
+      },
+      {
+        "champ": "DA_18_Kennen",
+        "items": [],
+        "boardIndex": 2
+      }
+    ],
+    "alts": [],
+    "augments": [],
+    "carousel": []
+  },
+  {
+    "slug": "set-18-adaptor-reroll",
+    "name": "Adaptor Reroll",
+    "tier": "B",
+    "style": "3-Cost Reroll",
+    "difficulty": "Medium",
+    "mainChampion": "DA_18_MasterYi_AD",
+    "units": [
+      {
+        "champ": "DA_18_Yorick",
+        "items": [],
+        "boardIndex": 14
+      },
+      {
+        "champ": "DA_Krug18",
+        "items": [],
+        "boardIndex": 1
+      },
+      {
+        "champ": "DA_KogMaw18_AD",
+        "items": [
+          "DA_SpearOfShojin",
+          "DA_RabadonsDeathcap",
+          "DA_JeweledGauntlet"
+        ],
+        "boardIndex": 27
+      },
+      {
+        "champ": "DA_18_MasterYi_AD",
+        "items": [
+          "DA_GuinsoosRageblade",
+          "DA_EdgeOfNight",
+          "DA_TitansResolve"
+        ],
+        "boardIndex": 20
+      },
+      {
+        "champ": "DA_Vi18",
+        "items": [
+          "DA_WarmogsArmor",
+          "DA_GargoyleStoneplate",
+          "DA_GargoyleStoneplate"
+        ],
+        "boardIndex": 5
+      },
+      {
+        "champ": "DA_18_Sett",
+        "items": [],
+        "boardIndex": 0
+      },
+      {
+        "champ": "DA_Nidalee18_AP",
+        "items": [
+          "DA_GuinsoosRageblade",
+          "DA_SpearOfShojin",
+          "DA_RabadonsDeathcap"
+        ],
+        "boardIndex": 26
+      }
+    ],
+    "alts": [
+      {
+        "champ": "DA_18_MasterYi_AD",
+        "items": [
+          "DA_18_EmblemBrawler",
+          "DA_GuinsoosRageblade",
+          "DA_EdgeOfNight"
+        ]
+      },
+      {
+        "champ": "DA_18_MasterYi_AD",
+        "items": [
+          "DA_Artifact_WitsEnd",
+          "DA_Artifact_NavoriFlickerblade",
+          "DA_Artifact_RapidFireCannon"
+        ]
+      }
+    ],
+    "augments": [
+      "DA_LatentForge",
+      "DA_PortableForge",
+      "DA_ForgedInStrength",
+      "DA_LivingForge",
+      "DA_URF",
+      "DA_NestingAnvils",
+      "DA_HeroicGrabBag",
+      "DA_LegionOfThrees"
+    ],
+    "carousel": [
+      "DA_GuinsoosRageblade",
+      "DA_EdgeOfNight",
+      "DA_Component_ChainVest",
+      "DA_Component_RecurveBow"
+    ]
+  },
+  {
+    "slug": "set-18-sprykin-teemo",
+    "name": "Sprykin Teemo",
+    "tier": "C",
+    "style": "2-Cost Reroll",
+    "difficulty": "Easy",
+    "mainChampion": "DA_18_Teemo",
+    "units": [
+      {
+        "champ": "DA_18_Rammus",
+        "items": [],
+        "boardIndex": 18
+      },
+      {
+        "champ": "DA_Fiddlesticks18",
+        "items": [],
+        "boardIndex": 16
+      },
+      {
+        "champ": "DA_18_Veigar",
+        "items": [],
+        "boardIndex": 25
+      },
+      {
+        "champ": "DA_18_Teemo",
+        "items": [
+          "DA_SpearOfShojin",
+          "DA_RabadonsDeathcap",
+          "DA_JeweledGauntlet"
+        ],
+        "boardIndex": 27
+      },
+      {
+        "champ": "DA_KogMaw18_AD",
+        "items": [
+          "DA_Morellonomicon"
+        ],
+        "boardIndex": 26
+      },
+      {
+        "champ": "DA_18_Kobuko",
+        "items": [],
+        "boardIndex": 17
+      },
+      {
+        "champ": "DA_18_RekSai",
+        "items": [
+          "DA_18_EmblemSprykin",
+          "DA_GargoyleStoneplate",
+          "DA_WarmogsArmor"
+        ],
+        "boardIndex": 3
+      }
+    ],
+    "alts": [],
+    "augments": [
+      "DA_WorththeWaitII",
+      "DA_18_CaretakersAlly",
+      "DA_DeadlierCaps",
+      "DA_18_SprykinAugment",
+      "DA_SoloPlate",
+      "DA_TradeSector",
+      "DA_URF",
+      "DA_UrfsGrabBag"
+    ],
+    "carousel": [
+      "DA_SpearOfShojin",
+      "DA_RabadonsDeathcap",
+      "DA_GargoyleStoneplate",
+      "DA_Component_NeedlesslyLargeRod"
+    ]
+  },
+  {
+    "slug": "set-18-moo-nara",
+    "name": "Moo-nara",
+    "tier": "C",
+    "style": "2-Cost Reroll",
+    "difficulty": "Medium",
+    "mainChampion": "DA_18_Yunara",
+    "units": [
+      {
+        "champ": "DA_18_Alistar",
+        "items": [
+          "DA_GargoyleStoneplate",
+          "DA_SpiritVisage",
+          "DA_WarmogsArmor"
+        ],
+        "boardIndex": 4
+      },
+      {
+        "champ": "DA_18_Yunara",
+        "items": [
+          "DA_Deathblade",
+          "DA_SpearOfShojin",
+          "DA_StrikersFlail"
+        ],
+        "boardIndex": 27
+      },
+      {
+        "champ": "DA_18_Ezreal",
+        "items": [
+          "DA_LastWhisper",
+          "DA_SpearOfShojin",
+          "DA_RedBuff"
+        ],
+        "boardIndex": 26
+      },
+      {
+        "champ": "DA_18_Azir",
+        "items": [],
+        "boardIndex": 21
+      },
+      {
+        "champ": "DA_18_GnarSmall",
+        "items": [],
+        "boardIndex": 18
+      },
+      {
+        "champ": "DA_18_Yorick",
+        "items": [],
+        "boardIndex": 0
+      },
+      {
+        "champ": "DA_Elderwood18_Lifeblossom",
+        "items": [],
+        "boardIndex": 17
+      },
+      {
+        "champ": "DA_18_Sett",
+        "items": [],
+        "boardIndex": 3
+      },
+      {
+        "champ": "DA_18_RekSai",
+        "items": [],
+        "boardIndex": 2
+      },
+      {
+        "champ": "DA_Elderwood18_StonebarkTree",
+        "items": [],
+        "boardIndex": 1
+      }
+    ],
+    "alts": [
+      {
+        "champ": "DA_18_Yunara",
+        "items": [
+          "DA_Artifact_Dawncore",
+          "DA_SpearOfShojin",
+          "DA_Deathblade"
+        ]
+      }
+    ],
+    "augments": [
+      "DA_WorththeWaitII",
+      "DA_18_CaretakersAlly",
+      "DA_KickStart",
+      "DA_Swordsmith",
+      "DA_GlassCannon_Silver",
+      "DA_SwordOverflow",
+      "DA_HeroicGrabBag",
+      "DA_SoloPlate"
+    ],
+    "carousel": [
+      "DA_SpearOfShojin",
+      "DA_GargoyleStoneplate",
+      "DA_Deathblade",
+      "DA_Component_SparringGloves"
+    ]
+  },
+  {
+    "slug": "set-18-10-riftbeast",
+    "name": "10 Riftbeast",
+    "tier": "B",
+    "style": "Fast 9",
+    "difficulty": "Medium",
+    "mainChampion": "DA_18_ElderDragon",
+    "units": [
+      {
+        "champ": "DA_18_Sentry",
+        "items": [],
+        "boardIndex": 23
+      },
+      {
+        "champ": "DA_Gromp18_AP",
+        "items": [],
+        "boardIndex": 21
+      },
+      {
+        "champ": "DA_Murkwolf18",
+        "items": [],
+        "boardIndex": 27
+      },
+      {
+        "champ": "DA_Scuttlecrab18",
+        "items": [],
+        "boardIndex": 1
+      },
+      {
+        "champ": "DA_Krug18",
+        "items": [],
+        "boardIndex": 0
+      },
+      {
+        "champ": "DA_CrimsonRaptor18",
+        "items": [],
+        "boardIndex": 25
+      },
+      {
+        "champ": "DA_Brambleback18",
+        "items": [
+          "DA_EdgeOfNight",
+          "DA_Quicksilver",
+          "DA_GiantSlayer"
+        ],
+        "boardIndex": 2
+      },
+      {
+        "champ": "DA_Sentinel18",
+        "items": [
+          "DA_WarmogsArmor",
+          "DA_ProtectorsVow",
+          "DA_Crownguard"
+        ],
+        "boardIndex": 3
+      },
+      {
+        "champ": "DA_Taric18",
+        "items": [],
+        "boardIndex": 4
+      },
+      {
+        "champ": "DA_18_GnarSmall",
+        "items": [
+          "DA_ThiefsGloves"
+        ],
+        "boardIndex": 16
+      },
+      {
+        "champ": "DA_18_ElderDragon",
+        "items": [
+          "DA_InfinityEdge",
+          "DA_StrikersFlail",
+          "DA_Deathblade"
+        ],
+        "boardIndex": 17
+      }
+    ],
+    "alts": [],
+    "augments": [
+      "DA_18_RiftbeastTraitAugment",
+      "DA_18_RiftbeastTraitAugmentStampede",
+      "DA_Coronation",
+      "DA_LevelUp",
+      "DA_LateGameSpecialist",
+      "DA_Swordsmith",
+      "DA_ExplosiveGrowthPlus",
+      "DA_CursedCrown"
+    ],
+    "carousel": [
+      "DA_InfinityEdge",
+      "DA_Component_BFSword",
+      "DA_Component_SparringGloves",
+      "DA_Component_GiantsBelt"
+    ]
+  },
+  {
+    "slug": "set-18-aphelios-rapidfire",
+    "name": "Aphelios Rapidfire",
+    "tier": "A",
+    "style": "4-Cost Fast 8",
+    "difficulty": "Medium",
+    "mainChampion": "DA_18_Aphelios",
+    "units": [
+      {
+        "champ": "DA_18_Rakan",
+        "items": [],
+        "boardIndex": 10
+      },
+      {
+        "champ": "DA_18_Varus",
+        "items": [],
+        "boardIndex": 27
+      },
+      {
+        "champ": "DA_18_Xayah",
+        "items": [],
+        "boardIndex": 23
+      },
+      {
+        "champ": "DA_CrimsonRaptor18",
+        "items": [
+          "DA_LastWhisper"
+        ],
+        "boardIndex": 22
+      },
+      {
+        "champ": "DA_Sentinel18",
+        "items": [
+          "DA_ProtectorsVow"
+        ],
+        "boardIndex": 9
+      },
+      {
+        "champ": "DA_Amumu18",
+        "items": [
+          "DA_WarmogsArmor",
+          "DA_GargoyleStoneplate",
+          "DA_BrambleVest"
+        ],
+        "boardIndex": 3
+      },
+      {
+        "champ": "DA_18_Aphelios",
+        "items": [
+          "DA_InfinityEdge",
+          "DA_KrakensFury",
+          "DA_StrikersFlail"
+        ],
+        "boardIndex": 21
+      },
+      {
+        "champ": "DA_Brambleback18",
+        "items": [
+          "DA_18_EmblemRapidfire",
+          "DA_EdgeOfNight",
+          "DA_Quicksilver"
+        ],
+        "boardIndex": 14
+      }
+    ],
+    "alts": [
+      {
+        "champ": "DA_18_Aphelios",
+        "items": [
+          "DA_Artifact_GoldCollector"
+        ]
+      }
+    ],
+    "augments": [
+      "DA_Swordsmith",
+      "DA_CarveAPath",
+      "DA_SwordOverflow",
+      "DA_BacklineBlueprint",
+      "DA_CookingPot",
+      "DA_SpreadingRoots",
+      "DA_TheTraitTree",
+      "DA_FutureFocused"
+    ],
+    "carousel": [
+      "DA_Component_BFSword",
+      "DA_Component_SparringGloves",
+      "DA_Component_ChainVest",
+      "DA_Component_RecurveBow"
+    ]
+  },
+  {
+    "slug": "set-18-primal-jungle-copy",
+    "name": "Primal Flex",
+    "tier": "A",
+    "style": "4-Cost Fast 8",
+    "difficulty": "Medium",
+    "mainChampion": "DA_18_Sivir",
+    "units": [
+      {
+        "champ": "DA_Cinderling18",
+        "items": [],
+        "boardIndex": 27
+      },
+      {
+        "champ": "DA_KogMaw18_AD",
+        "items": [],
+        "boardIndex": 22
+      },
+      {
+        "champ": "DA_Nidalee18_AP",
+        "items": [
+          "DA_InfinityEdge",
+          "DA_SteraksGage",
+          "DA_SpearOfShojin"
+        ],
+        "boardIndex": 14
+      },
+      {
+        "champ": "DA_18_Sivir",
+        "items": [
+          "DA_InfinityEdge",
+          "DA_RedBuff",
+          "DA_StrikersFlail"
+        ],
+        "boardIndex": 21
+      },
+      {
+        "champ": "DA_Amumu18",
+        "items": [
+          "DA_WarmogsArmor",
+          "DA_GargoyleStoneplate",
+          "DA_BrambleVest"
+        ],
+        "boardIndex": 2
+      },
+      {
+        "champ": "DA_Sentinel18",
+        "items": [
+          "DA_ProtectorsVow"
+        ],
+        "boardIndex": 3
+      },
+      {
+        "champ": "DA_Taric18",
+        "items": [],
+        "boardIndex": 5
+      },
+      {
+        "champ": "DA_Scuttlecrab18",
+        "items": [],
+        "boardIndex": 4
+      }
+    ],
+    "alts": [
+      {
+        "champ": "DA_Nidalee18_AP",
+        "items": [
+          "DA_SpearOfShojin",
+          "DA_18_EmblemHunter",
+          "DA_SteraksGage"
+        ]
+      },
+      {
+        "champ": "DA_Nidalee18_AP",
+        "items": [
+          "DA_BlueBuff",
+          "DA_Artifact_SilvermereDawn",
+          "DA_SteraksGage"
+        ]
+      }
+    ],
+    "augments": [
+      "DA_18_BigGrabBag",
+      "DA_18_PrimalAugmentPlus_Nidalee",
+      "DA_CaretakersFavor",
+      "DA_Swordsmith",
+      "DA_18_PrimalAugmentPlus_Sivir",
+      "DA_CarveAPath",
+      "DA_18_FOURcing",
+      "DA_DeadlierBlades"
+    ],
+    "carousel": [
+      "DA_InfinityEdge",
+      "DA_Component_BFSword",
+      "DA_Component_SparringGloves",
+      "DA_Component_GiantsBelt"
+    ]
+  },
+  {
+    "slug": "set-18-6-juggernaut-ap-copy",
+    "name": "6 Juggernaut AD",
+    "tier": "B",
+    "style": "4-Cost Fast 8",
+    "difficulty": "Hard",
+    "mainChampion": "DA_Amumu18",
+    "units": [
+      {
+        "champ": "DA_18_Yorick",
+        "items": [],
+        "boardIndex": 0
+      },
+      {
+        "champ": "DA_Scuttlecrab18",
+        "items": [],
+        "boardIndex": 2
+      },
+      {
+        "champ": "DA_18_Yunara",
+        "items": [],
+        "boardIndex": 21
+      },
+      {
+        "champ": "DA_Vi18",
+        "items": [],
+        "boardIndex": 3
+      },
+      {
+        "champ": "DA_Amumu18",
+        "items": [
+          "DA_WarmogsArmor",
+          "DA_BrambleVest",
+          "DA_DragonsClaw"
+        ],
+        "boardIndex": 5
+      },
+      {
+        "champ": "DA_18_Sivir",
+        "items": [
+          "DA_InfinityEdge",
+          "DA_StrikersFlail",
+          "DA_SpearOfShojin"
+        ],
+        "boardIndex": 25
+      },
+      {
+        "champ": "DA_18_Maokai",
+        "items": [],
+        "boardIndex": 4
+      },
+      {
+        "champ": "DA_18_Kennen",
+        "items": [
+          "DA_18_EmblemJuggernaut",
+          "DA_EdgeOfNight"
+        ],
+        "boardIndex": 10
+      },
+      {
+        "champ": "DA_18_Ashe",
+        "items": [
+          "DA_SpearOfShojin",
+          "DA_LastWhisper",
+          "DA_RedBuff"
+        ],
+        "boardIndex": 27
+      }
+    ],
+    "alts": [],
+    "augments": [
+      "DA_BlackthornTraitAugment",
+      "DA_18_BigGrabBag",
+      "DA_CyberneticUplink_Gold",
+      "DA_CommerceCore",
+      "DA_SpreadingRoots",
+      "DA_TheTraitTree",
+      "DA_CarveAPath",
+      "DA_BoxingLessons"
+    ],
+    "carousel": [
+      "DA_InfinityEdge",
+      "DA_WarmogsArmor",
+      "DA_Component_RecurveBow",
+      "DA_Component_BFSword"
+    ]
+  },
+  {
+    "slug": "set-18-yazir",
+    "name": "Yazir",
+    "tier": "C",
+    "style": "3-Cost Reroll",
+    "difficulty": "Easy",
+    "mainChampion": "DA_18_MasterYi_AD",
+    "units": [
+      {
+        "champ": "DA_18_Yorick",
+        "items": [],
+        "boardIndex": 13
+      },
+      {
+        "champ": "DA_18_Yunara",
+        "items": [],
+        "boardIndex": 26
+      },
+      {
+        "champ": "DA_18_Azir",
+        "items": [
+          "DA_GuinsoosRageblade",
+          "DA_VoidStaff",
+          "DA_RabadonsDeathcap"
+        ],
+        "boardIndex": 21
+      },
+      {
+        "champ": "DA_18_MasterYi_AD",
+        "items": [
+          "DA_TitansResolve",
+          "DA_GiantSlayer",
+          "DA_EdgeOfNight"
+        ],
+        "boardIndex": 0
+      },
+      {
+        "champ": "DA_Vi18",
+        "items": [
+          "DA_SunfireCape",
+          "DA_WarmogsArmor",
+          "DA_SpiritVisage"
+        ],
+        "boardIndex": 1
+      },
+      {
+        "champ": "DA_18_Malphite",
+        "items": [],
+        "boardIndex": 6
+      },
+      {
+        "champ": "DA_Nidalee18_AP",
+        "items": [],
+        "boardIndex": 27
+      }
+    ],
+    "alts": [],
+    "augments": [],
+    "carousel": []
+  },
+  {
+    "slug": "set-18-moon-fire",
+    "name": "Aphelios Vanguards",
+    "tier": "B",
+    "style": "4-Cost Fast 8",
+    "difficulty": "Medium",
+    "mainChampion": "DA_18_Aphelios",
+    "units": [
+      {
+        "champ": "DA_18_Diana",
+        "items": [],
+        "boardIndex": 9
+      },
+      {
+        "champ": "DA_18_Hecarim",
+        "items": [],
+        "boardIndex": 10
+      },
+      {
+        "champ": "DA_CrimsonRaptor18",
+        "items": [
+          "DA_LastWhisper"
+        ],
+        "boardIndex": 22
+      },
+      {
+        "champ": "DA_18_Zyra",
+        "items": [],
+        "boardIndex": 27
+      },
+      {
+        "champ": "DA_18_Aphelios",
+        "items": [
+          "DA_RedBuff",
+          "DA_Deathblade",
+          "DA_GiantSlayer"
+        ],
+        "boardIndex": 21
+      },
+      {
+        "champ": "DA_Brambleback18",
+        "items": [
+          "DA_EdgeOfNight",
+          "DA_Quicksilver",
+          "DA_SteraksGage"
+        ],
+        "boardIndex": 8
+      },
+      {
+        "champ": "DA_Sentinel18",
+        "items": [
+          "DA_ProtectorsVow",
+          "DA_ProtectorsVow",
+          "DA_WarmogsArmor"
+        ],
+        "boardIndex": 3
+      },
+      {
+        "champ": "DA_Taric18",
+        "items": [],
+        "boardIndex": 2
+      }
+    ],
+    "alts": [
+      {
+        "champ": "DA_18_Aphelios",
+        "items": [
+          "DA_Artifact_GoldCollector"
+        ]
+      },
+      {
+        "champ": "DA_18_Aphelios",
+        "items": [
+          "DA_GuinsoosRageblade",
+          "DA_InfinityEdge",
+          "DA_KrakensFury"
+        ]
+      }
+    ],
+    "augments": [
+      "DA_BackupBows",
+      "DA_OneBuffTwoBuff",
+      "DA_Swordsmith",
+      "DA_CarveAPath",
+      "DA_SwordOverflow",
+      "DA_CaretakersFavor",
+      "DA_BuriedTreasuresIII",
+      "DA_18_FOURcing"
+    ],
+    "carousel": [
+      "DA_Component_RecurveBow",
+      "DA_Component_BFSword",
+      "DA_Component_SparringGloves",
+      "DA_Component_ChainVest"
+    ]
+  },
+  {
+    "slug": "set-18-primal-hunters",
+    "name": "Primal Hunters",
+    "tier": "C",
+    "style": "4-Cost Fast 8",
+    "difficulty": "Medium",
+    "mainChampion": "DA_18_Sivir",
+    "units": [
+      {
+        "champ": "DA_18_Tristana",
+        "items": [],
+        "boardIndex": 25
+      },
+      {
+        "champ": "DA_Amumu18",
+        "items": [
+          "DA_WarmogsArmor",
+          "DA_GargoyleStoneplate",
+          "DA_SpiritVisage"
+        ],
+        "boardIndex": 4
+      },
+      {
+        "champ": "DA_18_Sivir",
+        "items": [
+          "DA_InfinityEdge",
+          "DA_Deathblade",
+          "DA_BlueBuff"
+        ],
+        "boardIndex": 27
+      },
+      {
+        "champ": "DA_18_Ivern",
+        "items": [],
+        "boardIndex": 21
+      },
+      {
+        "champ": "DA_18_Ashe",
+        "items": [
+          "DA_SpearOfShojin",
+          "DA_RedBuff",
+          "DA_LastWhisper"
+        ],
+        "boardIndex": 26
+      },
+      {
+        "champ": "DA_18_Lillia",
+        "items": [],
+        "boardIndex": 17
+      },
+      {
+        "champ": "DA_Vi18",
+        "items": [],
+        "boardIndex": 16
+      },
+      {
+        "champ": "DA_18_Shen",
+        "items": [],
+        "boardIndex": 15
+      },
+      {
+        "champ": "DA_18_Kennen",
+        "items": [
+          "DA_ThiefsGloves"
+        ],
+        "boardIndex": 18
+      }
+    ],
+    "alts": [],
+    "augments": [
+      "DA_18_PrimalAugment_Sivir",
+      "DA_Swordsmith",
+      "DA_SwordOverflow",
+      "DA_CarveAPath",
+      "DA_JeweledLotus_II",
+      "DA_GildedSteel",
+      "DA_BoosterPackPlusPlus",
+      "DA_CyberneticImplants_Gold"
+    ],
+    "carousel": [
+      "DA_BlueBuff",
+      "DA_InfinityEdge",
+      "DA_GargoyleStoneplate",
+      "DA_Component_BFSword"
+    ]
+  },
+  {
+    "slug": "set-18-coven-ahri",
+    "name": "Coven Ahri",
+    "tier": "B",
+    "style": "4-Cost Fast 8",
+    "difficulty": "Medium",
+    "mainChampion": "DA_18_Ahri",
+    "units": [
+      {
+        "champ": "DA_Sentinel18",
+        "items": [
+          "DA_Crownguard",
+          "DA_ProtectorsVow",
+          "DA_WarmogsArmor"
+        ],
+        "boardIndex": 3
+      },
+      {
+        "champ": "DA_Taric18",
+        "items": [],
+        "boardIndex": 2
+      },
+      {
+        "champ": "DA_18_Morgana",
+        "items": [
+          "DA_VoidStaff",
+          "DA_Morellonomicon"
+        ],
+        "boardIndex": 16
+      },
+      {
+        "champ": "DA_18_Diana",
+        "items": [],
+        "boardIndex": 9
+      },
+      {
+        "champ": "DA_18_Ahri",
+        "items": [
+          "DA_JeweledGauntlet",
+          "DA_StrikersFlail",
+          "DA_SpearOfShojin"
+        ],
+        "boardIndex": 21
+      },
+      {
+        "champ": "DA_18_Alune",
+        "items": [],
+        "boardIndex": 22
+      },
+      {
+        "champ": "DA_18_Cassiopeia",
+        "items": [],
+        "boardIndex": 23
+      },
+      {
+        "champ": "DA_Fiddlesticks18",
+        "items": [],
+        "boardIndex": 18
+      },
+      {
+        "champ": "DA_18_Elise",
+        "items": [],
+        "boardIndex": 11
+      }
+    ],
+    "alts": [
+      {
+        "champ": "DA_18_Ahri",
+        "items": [
+          "DA_18_EmblemInvoker",
+          "DA_Artifact_Manazane"
+        ]
+      },
+      {
+        "champ": "DA_18_Morgana",
+        "items": [
+          "DA_Artifact_BlightingJewel",
+          "DA_18_EmblemSpellweaver"
+        ]
+      }
+    ],
+    "augments": [
+      "DA_JeweledLotus_I",
+      "DA_JeweledLotus_II",
+      "DA_18_FOURcing",
+      "DA_Staffsmith",
+      "DA_CyberneticUplink_Gold",
+      "DA_WandOverflow",
+      "DA_18_CovenTraitAugment_LootToAP",
+      "DA_TimeSkip"
+    ],
+    "carousel": [
+      "DA_SpearOfShojin",
+      "DA_JeweledGauntlet",
+      "DA_Component_GiantsBelt",
+      "DA_Component_TearOfTheGoddess"
+    ]
+  },
+  {
+    "slug": "set-18-spellweavers",
+    "name": "Ahri Zyra",
+    "tier": "B",
+    "style": "4-Cost Fast 8",
+    "difficulty": "Medium",
+    "mainChampion": "DA_18_Ahri",
+    "units": [
+      {
+        "champ": "DA_18_Ahri",
+        "items": [
+          "DA_JeweledGauntlet",
+          "DA_StrikersFlail",
+          "DA_SpearOfShojin"
+        ],
+        "boardIndex": 27
+      },
+      {
+        "champ": "DA_18_Zyra",
+        "items": [
+          "DA_VoidStaff",
+          "DA_Morellonomicon",
+          "DA_SpearOfShojin"
+        ],
+        "boardIndex": 25
+      },
+      {
+        "champ": "DA_18_GnarSmall",
+        "items": [
+          "DA_ThiefsGloves"
+        ],
+        "boardIndex": 17
+      },
+      {
+        "champ": "DA_18_Sett",
+        "items": [
+          "DA_WarmogsArmor",
+          "DA_DragonsClaw",
+          "DA_BrambleVest"
+        ],
+        "boardIndex": 4
+      },
+      {
+        "champ": "DA_18_Yorick",
+        "items": [],
+        "boardIndex": 0
+      },
+      {
+        "champ": "DA_18_Alune",
+        "items": [],
+        "boardIndex": 26
+      },
+      {
+        "champ": "DA_18_Diana",
+        "items": [],
+        "boardIndex": 10
+      },
+      {
+        "champ": "DA_Taric18",
+        "items": [],
+        "boardIndex": 9
+      },
+      {
+        "champ": "DA_Amumu18",
+        "items": [],
+        "boardIndex": 3
+      }
+    ],
+    "alts": [
+      {
+        "champ": "DA_18_Ahri",
+        "items": [
+          "DA_18_EmblemFloraFatalisAugment",
+          "DA_18_EmblemLunar"
+        ]
+      }
+    ],
+    "augments": [
+      "DA_JeweledLotus_I",
+      "DA_JeweledLotus_II",
+      "DA_GlassCannon_Silver",
+      "DA_GlassCannon_Gold",
+      "DA_18_FOURcing",
+      "DA_Staffsmith",
+      "DA_18_FloraFatalisAugment",
+      "DA_CyberneticUplink_Gold"
+    ],
+    "carousel": [
+      "DA_SpearOfShojin",
+      "DA_JeweledGauntlet",
+      "DA_Component_GiantsBelt",
+      "DA_Component_TearOfTheGoddess"
+    ]
+  },
+  {
+    "slug": "set-18-aphelios-flex",
+    "name": "Aphelios Flex",
+    "tier": "B",
+    "style": "4-Cost Fast 8",
+    "difficulty": "Medium",
+    "mainChampion": "DA_18_Aphelios",
+    "units": [
+      {
+        "champ": "DA_18_Diana",
+        "items": [],
+        "boardIndex": 9
+      },
+      {
+        "champ": "DA_KogMaw18_AD",
+        "items": [],
+        "boardIndex": 23
+      },
+      {
+        "champ": "DA_Krug18",
+        "items": [],
+        "boardIndex": 10
+      },
+      {
+        "champ": "DA_CrimsonRaptor18",
+        "items": [],
+        "boardIndex": 27
+      },
+      {
+        "champ": "DA_18_Zyra",
+        "items": [],
+        "boardIndex": 22
+      },
+      {
+        "champ": "DA_Sentinel18",
+        "items": [
+          "DA_ProtectorsVow"
+        ],
+        "boardIndex": 3
+      },
+      {
+        "champ": "DA_18_Aphelios",
+        "items": [
+          "DA_RedBuff",
+          "DA_Deathblade",
+          "DA_GiantSlayer"
+        ],
+        "boardIndex": 21
+      },
+      {
+        "champ": "DA_18_Sett",
+        "items": [
+          "DA_WarmogsArmor",
+          "DA_BrambleVest",
+          "DA_DragonsClaw"
+        ],
+        "boardIndex": 2
+      }
+    ],
+    "alts": [
+      {
+        "champ": "DA_18_Aphelios",
+        "items": [
+          "DA_Artifact_GoldCollector"
+        ]
+      },
+      {
+        "champ": "DA_18_Aphelios",
+        "items": [
+          "DA_GuinsoosRageblade",
+          "DA_InfinityEdge",
+          "DA_KrakensFury"
+        ]
+      }
+    ],
+    "augments": [
+      "DA_BackupBows",
+      "DA_OneBuffTwoBuff",
+      "DA_Swordsmith",
+      "DA_CarveAPath",
+      "DA_SwordOverflow",
+      "DA_CaretakersFavor",
+      "DA_BuriedTreasuresIII",
+      "DA_18_FOURcing"
+    ],
+    "carousel": [
+      "DA_Component_RecurveBow",
+      "DA_Component_BFSword",
+      "DA_Component_SparringGloves",
+      "DA_Component_ChainVest"
+    ]
+  },
+  {
+    "slug": "set-18-blackthorn-ahri",
+    "name": "Blackthorn Ahri",
+    "tier": "B",
+    "style": "4-Cost Fast 8",
+    "difficulty": "Medium",
+    "mainChampion": "DA_18_Ahri",
+    "units": [
+      {
+        "champ": "DA_18_RekSai",
+        "items": [],
+        "boardIndex": 9
+      },
+      {
+        "champ": "DA_18_Yunara",
+        "items": [
+          "DA_VoidStaff"
+        ],
+        "boardIndex": 22
+      },
+      {
+        "champ": "DA_18_Warwick",
+        "items": [],
+        "boardIndex": 27
+      },
+      {
+        "champ": "DA_18_Azir",
+        "items": [],
+        "boardIndex": 17
+      },
+      {
+        "champ": "DA_18_Sett",
+        "items": [],
+        "boardIndex": 10
+      },
+      {
+        "champ": "DA_18_Ahri",
+        "items": [
+          "DA_18_EmblemBlackthorn",
+          "DA_JeweledGauntlet",
+          "DA_BlueBuff"
+        ],
+        "boardIndex": 21
+      },
+      {
+        "champ": "DA_18_Malphite",
+        "items": [
+          "DA_Crownguard",
+          "DA_WarmogsArmor",
+          "DA_GargoyleStoneplate"
+        ],
+        "boardIndex": 3
+      },
+      {
+        "champ": "DA_18_Veigar",
+        "items": [],
+        "boardIndex": 24
+      }
+    ],
+    "alts": [],
+    "augments": [],
+    "carousel": []
+  },
+  {
+    "slug": "set-18-aphelios-vanguards-copy",
+    "name": "Aphelios Elderwood",
+    "tier": "B",
+    "style": "4-Cost Fast 8",
+    "difficulty": "Medium",
+    "mainChampion": "DA_18_Aphelios",
+    "units": [
+      {
+        "champ": "DA_Elderwood18_Lifeblossom",
+        "items": [],
+        "boardIndex": 18
+      },
+      {
+        "champ": "DA_Elderwood18_StonebarkTree",
+        "items": [],
+        "boardIndex": 6
+      },
+      {
+        "champ": "DA_Elderwood18_StonebarkTree",
+        "items": [],
+        "boardIndex": 1
+      },
+      {
+        "champ": "DA_18_Diana",
+        "items": [],
+        "boardIndex": 4
+      },
+      {
+        "champ": "DA_18_Xayah",
+        "items": [],
+        "boardIndex": 27
+      },
+      {
+        "champ": "DA_18_Alistar",
+        "items": [],
+        "boardIndex": 5
+      },
+      {
+        "champ": "DA_18_Hecarim",
+        "items": [
+          "DA_Crownguard",
+          "DA_WarmogsArmor",
+          "DA_Evenshroud"
+        ],
+        "boardIndex": 2
+      },
+      {
+        "champ": "DA_18_Lillia",
+        "items": [
+          "DA_ProtectorsVow"
+        ],
+        "boardIndex": 0
+      },
+      {
+        "champ": "DA_18_Aphelios",
+        "items": [
+          "DA_18_EmblemElderwood",
+          "DA_GuinsoosRageblade",
+          "DA_KrakensFury"
+        ],
+        "boardIndex": 21
+      },
+      {
+        "champ": "DA_18_GnarSmall",
+        "items": [
+          "DA_ThiefsGloves"
+        ],
+        "boardIndex": 9
+      },
+      {
+        "champ": "DA_18_Ornn",
+        "items": [],
+        "boardIndex": 13
+      },
+      {
+        "champ": "DA_Elderwood18_Protector",
+        "items": [],
+        "boardIndex": 3
+      },
+      {
+        "champ": "DA_18_Ezreal",
+        "items": [
+          "DA_SpearOfShojin",
+          "DA_RedBuff",
+          "DA_LastWhisper"
+        ],
+        "boardIndex": 22
+      }
+    ],
+    "alts": [
+      {
+        "champ": "DA_18_Aphelios",
+        "items": [
+          "DA_Artifact_GoldCollector"
+        ]
+      },
+      {
+        "champ": "DA_18_Aphelios",
+        "items": [
+          "DA_GuinsoosRageblade",
+          "DA_InfinityEdge",
+          "DA_KrakensFury"
+        ]
+      }
+    ],
+    "augments": [
+      "DA_BackupBows",
+      "DA_OneBuffTwoBuff",
+      "DA_Swordsmith",
+      "DA_Replication",
+      "DA_BlackthornTraitAugment",
+      "DA_CaretakersFavor",
+      "DA_SalvageBinPlus",
+      "DA_ShoppingSpree"
+    ],
+    "carousel": [
+      "DA_Component_RecurveBow",
+      "DA_Component_BFSword",
+      "DA_Component_SparringGloves",
+      "DA_Component_ChainVest"
+    ]
+  }
+]

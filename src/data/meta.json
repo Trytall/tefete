@@ -1,0 +1,7276 @@
+{
+  "patch": "18.2b",
+  "set": 18,
+  "setName": "Tierras Encantadas",
+  "sources": {
+    "metatft": "https://www.metatft.com/comps",
+    "tftacademy": "https://tftacademy.com/tierlist/comps"
+  },
+  "notes": [
+    "Comps, unidades, ítems, prioridad y aumentos: API de TFT Academy, versión 18.2b.",
+    "Promedio, pick y win se cruzan con MetaTFT Platino+ cuando hay una línea equivalente.",
+    "Nombres de ítems, campeones, rasgos y aumentos: cliente LAS (es_AR)."
+  ],
+  "updatedAt": "2026-09-15T22:58:24.416Z",
+  "comps": [
+    {
+      "id": "ahri-morgana",
+      "name": "Ahri Morgana",
+      "tier": "A",
+      "style": "4-Cost Fast 8",
+      "difficulty": "Medium",
+      "unitIds": [
+        "DA_Karma18",
+        "DA_Taric18",
+        "DA_18_Sett",
+        "DA_Sentinel18",
+        "DA_Krug18",
+        "DA_18_Morgana",
+        "DA_18_Ahri",
+        "DA_18_Sentry"
+      ],
+      "carryIds": [
+        "DA_18_Ahri",
+        "DA_Sentinel18",
+        "DA_18_Morgana"
+      ],
+      "itemIds": [
+        "DA_DragonsClaw",
+        "DA_BrambleVest",
+        "DA_WarmogsArmor",
+        "DA_VoidStaff",
+        "DA_Morellonomicon",
+        "DA_JeweledGauntlet",
+        "DA_StrikersFlail",
+        "DA_SpearOfShojin",
+        "DA_18_EmblemInvoker"
+      ],
+      "augmentIds": [
+        "DA_JeweledLotus_I",
+        "DA_JeweledLotus_II",
+        "DA_GlassCannon_Silver",
+        "DA_GlassCannon_Gold",
+        "DA_18_FOURcing",
+        "DA_Staffsmith",
+        "DA_CyberneticUplink_Gold",
+        "DA_WandOverflow"
+      ],
+      "traitIds": [
+        "DA_18_Blossom",
+        "DA_Riftbeast18",
+        "DA_18_Invoker"
+      ],
+      "loadouts": [
+        {
+          "championId": "DA_Sentinel18",
+          "itemIds": [
+            "DA_DragonsClaw",
+            "DA_BrambleVest",
+            "DA_WarmogsArmor"
+          ]
+        },
+        {
+          "championId": "DA_18_Morgana",
+          "itemIds": [
+            "DA_VoidStaff",
+            "DA_Morellonomicon"
+          ]
+        },
+        {
+          "championId": "DA_18_Ahri",
+          "itemIds": [
+            "DA_JeweledGauntlet",
+            "DA_StrikersFlail",
+            "DA_SpearOfShojin"
+          ]
+        }
+      ],
+      "altLoadouts": [
+        {
+          "championId": "DA_18_Ahri",
+          "itemIds": [
+            "DA_18_EmblemInvoker"
+          ]
+        }
+      ],
+      "itemPrio": [
+        "DA_SpearOfShojin",
+        "DA_JeweledGauntlet",
+        "DA_Component_GiantsBelt",
+        "DA_Component_TearOfTheGoddess"
+      ],
+      "board": [
+        {
+          "id": "DA_Karma18",
+          "stars": 1,
+          "row": 3,
+          "col": 0
+        },
+        {
+          "id": "DA_Taric18",
+          "stars": 1,
+          "row": 1,
+          "col": 3
+        },
+        {
+          "id": "DA_18_Sett",
+          "stars": 1,
+          "row": 1,
+          "col": 2
+        },
+        {
+          "id": "DA_Sentinel18",
+          "stars": 1,
+          "row": 0,
+          "col": 3
+        },
+        {
+          "id": "DA_Krug18",
+          "stars": 1,
+          "row": 2,
+          "col": 2
+        },
+        {
+          "id": "DA_18_Morgana",
+          "stars": 1,
+          "row": 2,
+          "col": 3
+        },
+        {
+          "id": "DA_18_Ahri",
+          "stars": 1,
+          "row": 3,
+          "col": 2
+        },
+        {
+          "id": "DA_18_Sentry",
+          "stars": 1,
+          "row": 3,
+          "col": 4
+        }
+      ],
+      "avgPlace": 4.24,
+      "pickRate": 0.47,
+      "winRate": 11.3,
+      "top4": 56.1
+    },
+    {
+      "id": "dragon-princess",
+      "name": "Dragón 9",
+      "tier": "A",
+      "style": "Fast 9",
+      "difficulty": "Hard",
+      "unitIds": [
+        "DA_Amumu18",
+        "DA_Sentinel18",
+        "DA_18_Morgana",
+        "DA_Taric18",
+        "DA_18_Kennen",
+        "DA_18_ElderDragon",
+        "DA_18_Ivern",
+        "DA_18_Maokai"
+      ],
+      "carryIds": [
+        "DA_18_ElderDragon",
+        "DA_18_Morgana",
+        "DA_18_Ivern",
+        "DA_18_Maokai"
+      ],
+      "itemIds": [
+        "DA_ProtectorsVow",
+        "DA_VoidStaff",
+        "DA_RabadonsDeathcap",
+        "DA_JeweledGauntlet",
+        "DA_ThiefsGloves",
+        "DA_InfinityEdge",
+        "DA_Deathblade",
+        "DA_StrikersFlail",
+        "DA_SpearOfShojin",
+        "DA_AdaptiveHelm",
+        "DA_WarmogsArmor",
+        "DA_Crownguard",
+        "DA_Evenshroud",
+        "DA_Artifact_GoldCollector"
+      ],
+      "augmentIds": [
+        "DA_BirthdayReunion",
+        "DA_BirthdayPresent",
+        "DA_LevelUp",
+        "DA_LuxurySubscription",
+        "DA_18_DuoQueue",
+        "DA_LateGameSpecialist",
+        "DA_LateGameScaling",
+        "DA_Swordsmith"
+      ],
+      "traitIds": [
+        "DA_18_Inferno",
+        "DA_Juggernaut18",
+        "DA_Riftbeast18"
+      ],
+      "loadouts": [
+        {
+          "championId": "DA_Sentinel18",
+          "itemIds": [
+            "DA_ProtectorsVow"
+          ]
+        },
+        {
+          "championId": "DA_18_Morgana",
+          "itemIds": [
+            "DA_VoidStaff",
+            "DA_RabadonsDeathcap",
+            "DA_JeweledGauntlet"
+          ]
+        },
+        {
+          "championId": "DA_18_Kennen",
+          "itemIds": [
+            "DA_ThiefsGloves"
+          ]
+        },
+        {
+          "championId": "DA_18_ElderDragon",
+          "itemIds": [
+            "DA_InfinityEdge",
+            "DA_Deathblade",
+            "DA_StrikersFlail"
+          ]
+        },
+        {
+          "championId": "DA_18_Ivern",
+          "itemIds": [
+            "DA_SpearOfShojin",
+            "DA_AdaptiveHelm"
+          ]
+        },
+        {
+          "championId": "DA_18_Maokai",
+          "itemIds": [
+            "DA_WarmogsArmor",
+            "DA_Crownguard",
+            "DA_Evenshroud"
+          ]
+        }
+      ],
+      "altLoadouts": [
+        {
+          "championId": "DA_18_ElderDragon",
+          "itemIds": [
+            "DA_Artifact_GoldCollector"
+          ]
+        }
+      ],
+      "itemPrio": [
+        "DA_InfinityEdge",
+        "DA_Component_BFSword",
+        "DA_Component_SparringGloves",
+        "DA_Component_GiantsBelt"
+      ],
+      "board": [
+        {
+          "id": "DA_Amumu18",
+          "stars": 1,
+          "row": 0,
+          "col": 4
+        },
+        {
+          "id": "DA_Sentinel18",
+          "stars": 1,
+          "row": 0,
+          "col": 3
+        },
+        {
+          "id": "DA_18_Morgana",
+          "stars": 1,
+          "row": 1,
+          "col": 4
+        },
+        {
+          "id": "DA_Taric18",
+          "stars": 1,
+          "row": 0,
+          "col": 1
+        },
+        {
+          "id": "DA_18_Kennen",
+          "stars": 1,
+          "row": 0,
+          "col": 2
+        },
+        {
+          "id": "DA_18_ElderDragon",
+          "stars": 1,
+          "row": 2,
+          "col": 6
+        },
+        {
+          "id": "DA_18_Ivern",
+          "stars": 1,
+          "row": 3,
+          "col": 0
+        },
+        {
+          "id": "DA_18_Maokai",
+          "stars": 1,
+          "row": 0,
+          "col": 5
+        }
+      ],
+      "avgPlace": 4.48,
+      "pickRate": 0.19,
+      "winRate": 17.2,
+      "top4": 48
+    },
+    {
+      "id": "elderwood-executioners-copy",
+      "name": "Draven AD 9",
+      "tier": "A",
+      "style": "Fast 9",
+      "difficulty": "Hard",
+      "unitIds": [
+        "DA_Elderwood18_Lifeblossom",
+        "DA_Elderwood18_StonebarkTree",
+        "DA_18_Alistar",
+        "DA_Amumu18",
+        "DA_Draven18",
+        "DA_18_Ivern",
+        "DA_Taric18",
+        "DA_18_GnarSmall",
+        "DA_18_Kennen",
+        "DA_18_Maokai",
+        "DA_18_Ezreal"
+      ],
+      "carryIds": [
+        "DA_Draven18",
+        "DA_18_Maokai",
+        "DA_18_Ezreal"
+      ],
+      "itemIds": [
+        "DA_KrakensFury",
+        "DA_GuinsoosRageblade",
+        "DA_Deathblade",
+        "DA_ThiefsGloves",
+        "DA_WarmogsArmor",
+        "DA_GargoyleStoneplate",
+        "DA_BrambleVest",
+        "DA_SpearOfShojin",
+        "DA_LastWhisper",
+        "DA_Artifact_GoldCollector",
+        "DA_Artifact_NavoriFlickerblade",
+        "DA_Artifact_Fishbones",
+        "DA_Artifact_MogulsMail",
+        "DA_Artifact_VoidGauntlet",
+        "DA_Artifact_LightshieldCrest"
+      ],
+      "augmentIds": [
+        "DA_LevelUp",
+        "DA_LateGameSpecialist",
+        "DA_InvestedPlusPlus",
+        "DA_LuxurySubscription",
+        "DA_18_DuoQueue",
+        "DA_LateGameScaling",
+        "DA_ExplosiveGrowthPlus",
+        "DA_BirthdayPresent"
+      ],
+      "traitIds": [
+        "DA_18_Elderwood",
+        "DA_18_Brawler",
+        "DA_18_Inferno"
+      ],
+      "loadouts": [
+        {
+          "championId": "DA_Draven18",
+          "itemIds": [
+            "DA_KrakensFury",
+            "DA_GuinsoosRageblade",
+            "DA_Deathblade"
+          ]
+        },
+        {
+          "championId": "DA_18_GnarSmall",
+          "itemIds": [
+            "DA_ThiefsGloves"
+          ]
+        },
+        {
+          "championId": "DA_18_Kennen",
+          "itemIds": [
+            "DA_ThiefsGloves"
+          ]
+        },
+        {
+          "championId": "DA_18_Maokai",
+          "itemIds": [
+            "DA_WarmogsArmor",
+            "DA_GargoyleStoneplate",
+            "DA_BrambleVest"
+          ]
+        },
+        {
+          "championId": "DA_18_Ezreal",
+          "itemIds": [
+            "DA_SpearOfShojin",
+            "DA_LastWhisper",
+            "DA_Deathblade"
+          ]
+        }
+      ],
+      "altLoadouts": [
+        {
+          "championId": "DA_Draven18",
+          "itemIds": [
+            "DA_Artifact_GoldCollector",
+            "DA_Artifact_NavoriFlickerblade",
+            "DA_Artifact_Fishbones"
+          ]
+        },
+        {
+          "championId": "DA_18_Maokai",
+          "itemIds": [
+            "DA_Artifact_MogulsMail",
+            "DA_Artifact_VoidGauntlet",
+            "DA_Artifact_LightshieldCrest"
+          ]
+        }
+      ],
+      "itemPrio": [
+        "DA_GuinsoosRageblade",
+        "DA_LastWhisper",
+        "DA_KrakensFury",
+        "DA_Component_GiantsBelt"
+      ],
+      "board": [
+        {
+          "id": "DA_Elderwood18_Lifeblossom",
+          "stars": 1,
+          "row": 3,
+          "col": 2
+        },
+        {
+          "id": "DA_Elderwood18_StonebarkTree",
+          "stars": 1,
+          "row": 0,
+          "col": 0
+        },
+        {
+          "id": "DA_18_Alistar",
+          "stars": 1,
+          "row": 0,
+          "col": 1
+        },
+        {
+          "id": "DA_Amumu18",
+          "stars": 1,
+          "row": 0,
+          "col": 2
+        },
+        {
+          "id": "DA_Draven18",
+          "stars": 1,
+          "row": 3,
+          "col": 6
+        },
+        {
+          "id": "DA_18_Ivern",
+          "stars": 1,
+          "row": 3,
+          "col": 0
+        },
+        {
+          "id": "DA_Taric18",
+          "stars": 1,
+          "row": 0,
+          "col": 4
+        },
+        {
+          "id": "DA_18_GnarSmall",
+          "stars": 1,
+          "row": 1,
+          "col": 3
+        },
+        {
+          "id": "DA_18_Kennen",
+          "stars": 1,
+          "row": 0,
+          "col": 3
+        },
+        {
+          "id": "DA_18_Maokai",
+          "stars": 1,
+          "row": 0,
+          "col": 5
+        },
+        {
+          "id": "DA_18_Ezreal",
+          "stars": 1,
+          "row": 3,
+          "col": 5
+        }
+      ],
+      "avgPlace": 4.29,
+      "pickRate": 1.49,
+      "winRate": 21.2,
+      "top4": 52.1
+    },
+    {
+      "id": "blossom-fast-9",
+      "name": "Ashe Fast 9",
+      "tier": "A",
+      "style": "Fast 9",
+      "difficulty": "Hard",
+      "unitIds": [
+        "DA_18_Ashe",
+        "DA_Cinderling18",
+        "DA_18_ElderDragon",
+        "DA_18_GnarSmall",
+        "DA_18_Kennen",
+        "DA_18_Yorick",
+        "DA_Amumu18",
+        "DA_18_Sett"
+      ],
+      "carryIds": [
+        "DA_18_Ashe",
+        "DA_18_ElderDragon",
+        "DA_18_Sett"
+      ],
+      "itemIds": [
+        "DA_SpearOfShojin",
+        "DA_RedBuff",
+        "DA_LastWhisper",
+        "DA_InfinityEdge",
+        "DA_SteraksGage",
+        "DA_StrikersFlail",
+        "DA_WarmogsArmor",
+        "DA_SpiritVisage",
+        "DA_SteadfastHeart"
+      ],
+      "augmentIds": [
+        "DA_LevelUp",
+        "DA_HedgeFund",
+        "DA_LuxurySubscription",
+        "DA_LateGameSpecialist",
+        "DA_LateGameScaling",
+        "DA_PatientStudy",
+        "DA_Swordsmith",
+        "DA_SwordOverflow"
+      ],
+      "traitIds": [
+        "DA_18_Blossom",
+        "DA_18_Hunter",
+        "DA_Riftbeast18"
+      ],
+      "loadouts": [
+        {
+          "championId": "DA_18_Ashe",
+          "itemIds": [
+            "DA_SpearOfShojin",
+            "DA_RedBuff",
+            "DA_LastWhisper"
+          ]
+        },
+        {
+          "championId": "DA_18_ElderDragon",
+          "itemIds": [
+            "DA_InfinityEdge",
+            "DA_SteraksGage",
+            "DA_StrikersFlail"
+          ]
+        },
+        {
+          "championId": "DA_18_Sett",
+          "itemIds": [
+            "DA_WarmogsArmor",
+            "DA_SpiritVisage",
+            "DA_SteadfastHeart"
+          ]
+        }
+      ],
+      "altLoadouts": [],
+      "itemPrio": [
+        "DA_LastWhisper",
+        "DA_SpearOfShojin",
+        "DA_RedBuff",
+        "DA_Component_GiantsBelt"
+      ],
+      "board": [
+        {
+          "id": "DA_18_Ashe",
+          "stars": 1,
+          "row": 3,
+          "col": 6
+        },
+        {
+          "id": "DA_Cinderling18",
+          "stars": 1,
+          "row": 3,
+          "col": 0
+        },
+        {
+          "id": "DA_18_ElderDragon",
+          "stars": 1,
+          "row": 2,
+          "col": 5
+        },
+        {
+          "id": "DA_18_GnarSmall",
+          "stars": 1,
+          "row": 2,
+          "col": 3
+        },
+        {
+          "id": "DA_18_Kennen",
+          "stars": 1,
+          "row": 2,
+          "col": 4
+        },
+        {
+          "id": "DA_18_Yorick",
+          "stars": 1,
+          "row": 2,
+          "col": 0
+        },
+        {
+          "id": "DA_Amumu18",
+          "stars": 1,
+          "row": 1,
+          "col": 3
+        },
+        {
+          "id": "DA_18_Sett",
+          "stars": 1,
+          "row": 0,
+          "col": 3
+        }
+      ],
+      "avgPlace": 4.53,
+      "pickRate": 0.18,
+      "winRate": 18.6,
+      "top4": 47.8
+    },
+    {
+      "id": "invoker-nidalee-copy",
+      "name": "Jungla Primigenia",
+      "tier": "A",
+      "style": "4-Cost Fast 8",
+      "difficulty": "Medium",
+      "unitIds": [
+        "DA_Cinderling18",
+        "DA_18_RekSai",
+        "DA_KogMaw18_AD",
+        "DA_Krug18",
+        "DA_Sentinel18",
+        "DA_18_Malphite",
+        "DA_Nidalee18_AP",
+        "DA_18_Sivir"
+      ],
+      "carryIds": [
+        "DA_18_Sivir",
+        "DA_18_Malphite",
+        "DA_Nidalee18_AP"
+      ],
+      "itemIds": [
+        "DA_GargoyleStoneplate",
+        "DA_WarmogsArmor",
+        "DA_Crownguard",
+        "DA_InfinityEdge",
+        "DA_SteraksGage",
+        "DA_SpearOfShojin",
+        "DA_RedBuff",
+        "DA_StrikersFlail",
+        "DA_18_EmblemHunter",
+        "DA_BlueBuff",
+        "DA_Artifact_SilvermereDawn"
+      ],
+      "augmentIds": [
+        "DA_18_BigGrabBag",
+        "DA_18_PrimalAugmentPlus_Nidalee",
+        "DA_CaretakersFavor",
+        "DA_Swordsmith",
+        "DA_18_PrimalAugmentPlus_Sivir",
+        "DA_CarveAPath",
+        "DA_18_FOURcing",
+        "DA_DeadlierBlades"
+      ],
+      "traitIds": [
+        "DA_Riftbeast18",
+        "DA_18_Hunter",
+        "DA_18_Blackthorn"
+      ],
+      "loadouts": [
+        {
+          "championId": "DA_18_Malphite",
+          "itemIds": [
+            "DA_GargoyleStoneplate",
+            "DA_WarmogsArmor",
+            "DA_Crownguard"
+          ]
+        },
+        {
+          "championId": "DA_Nidalee18_AP",
+          "itemIds": [
+            "DA_InfinityEdge",
+            "DA_SteraksGage",
+            "DA_SpearOfShojin"
+          ]
+        },
+        {
+          "championId": "DA_18_Sivir",
+          "itemIds": [
+            "DA_InfinityEdge",
+            "DA_RedBuff",
+            "DA_StrikersFlail"
+          ]
+        }
+      ],
+      "altLoadouts": [
+        {
+          "championId": "DA_Nidalee18_AP",
+          "itemIds": [
+            "DA_SpearOfShojin",
+            "DA_18_EmblemHunter",
+            "DA_SteraksGage"
+          ]
+        },
+        {
+          "championId": "DA_Nidalee18_AP",
+          "itemIds": [
+            "DA_BlueBuff",
+            "DA_Artifact_SilvermereDawn",
+            "DA_SteraksGage"
+          ]
+        }
+      ],
+      "itemPrio": [
+        "DA_InfinityEdge",
+        "DA_Component_BFSword",
+        "DA_Component_SparringGloves",
+        "DA_Component_GiantsBelt"
+      ],
+      "board": [
+        {
+          "id": "DA_Cinderling18",
+          "stars": 1,
+          "row": 3,
+          "col": 6
+        },
+        {
+          "id": "DA_18_RekSai",
+          "stars": 1,
+          "row": 2,
+          "col": 6
+        },
+        {
+          "id": "DA_KogMaw18_AD",
+          "stars": 1,
+          "row": 3,
+          "col": 1
+        },
+        {
+          "id": "DA_Krug18",
+          "stars": 1,
+          "row": 2,
+          "col": 3
+        },
+        {
+          "id": "DA_Sentinel18",
+          "stars": 1,
+          "row": 2,
+          "col": 5
+        },
+        {
+          "id": "DA_18_Malphite",
+          "stars": 1,
+          "row": 0,
+          "col": 3
+        },
+        {
+          "id": "DA_Nidalee18_AP",
+          "stars": 1,
+          "row": 2,
+          "col": 0
+        },
+        {
+          "id": "DA_18_Sivir",
+          "stars": 1,
+          "row": 3,
+          "col": 0
+        }
+      ],
+      "avgPlace": 4.22,
+      "pickRate": 0.27,
+      "winRate": 16.9,
+      "top4": 54.5
+    },
+    {
+      "id": "aphelios-nidalee",
+      "name": "Aphelios Nidalee",
+      "tier": "A",
+      "style": "4-Cost Fast 8",
+      "difficulty": "Medium",
+      "unitIds": [
+        "DA_18_Varus",
+        "DA_18_Diana",
+        "DA_KogMaw18_AD",
+        "DA_Vi18",
+        "DA_Amumu18",
+        "DA_18_Aphelios",
+        "DA_Nidalee18_AP",
+        "DA_Sentinel18"
+      ],
+      "carryIds": [
+        "DA_18_Aphelios",
+        "DA_Nidalee18_AP",
+        "DA_Sentinel18"
+      ],
+      "itemIds": [
+        "DA_RedBuff",
+        "DA_Deathblade",
+        "DA_GiantSlayer",
+        "DA_InfinityEdge",
+        "DA_SpearOfShojin",
+        "DA_SteraksGage",
+        "DA_ProtectorsVow",
+        "DA_WarmogsArmor",
+        "DA_Artifact_GoldCollector",
+        "DA_GuinsoosRageblade",
+        "DA_KrakensFury"
+      ],
+      "augmentIds": [
+        "DA_BackupBows",
+        "DA_OneBuffTwoBuff",
+        "DA_Swordsmith",
+        "DA_CarveAPath",
+        "DA_SwordOverflow",
+        "DA_CaretakersFavor",
+        "DA_BuriedTreasuresIII",
+        "DA_18_FOURcing"
+      ],
+      "traitIds": [
+        "DA_18_Inferno",
+        "DA_18_Rapidfire",
+        "DA_18_Lunar"
+      ],
+      "loadouts": [
+        {
+          "championId": "DA_18_Aphelios",
+          "itemIds": [
+            "DA_RedBuff",
+            "DA_Deathblade",
+            "DA_GiantSlayer"
+          ]
+        },
+        {
+          "championId": "DA_Nidalee18_AP",
+          "itemIds": [
+            "DA_InfinityEdge",
+            "DA_SpearOfShojin",
+            "DA_SteraksGage"
+          ]
+        },
+        {
+          "championId": "DA_Sentinel18",
+          "itemIds": [
+            "DA_ProtectorsVow",
+            "DA_WarmogsArmor"
+          ]
+        }
+      ],
+      "altLoadouts": [
+        {
+          "championId": "DA_18_Aphelios",
+          "itemIds": [
+            "DA_Artifact_GoldCollector"
+          ]
+        },
+        {
+          "championId": "DA_18_Aphelios",
+          "itemIds": [
+            "DA_GuinsoosRageblade",
+            "DA_InfinityEdge",
+            "DA_KrakensFury"
+          ]
+        }
+      ],
+      "itemPrio": [
+        "DA_Component_RecurveBow",
+        "DA_Component_BFSword",
+        "DA_Component_SparringGloves",
+        "DA_Component_ChainVest"
+      ],
+      "board": [
+        {
+          "id": "DA_18_Varus",
+          "stars": 1,
+          "row": 3,
+          "col": 6
+        },
+        {
+          "id": "DA_18_Diana",
+          "stars": 1,
+          "row": 1,
+          "col": 2
+        },
+        {
+          "id": "DA_KogMaw18_AD",
+          "stars": 1,
+          "row": 3,
+          "col": 1
+        },
+        {
+          "id": "DA_Vi18",
+          "stars": 1,
+          "row": 1,
+          "col": 3
+        },
+        {
+          "id": "DA_Amumu18",
+          "stars": 1,
+          "row": 0,
+          "col": 3
+        },
+        {
+          "id": "DA_18_Aphelios",
+          "stars": 1,
+          "row": 3,
+          "col": 0
+        },
+        {
+          "id": "DA_Nidalee18_AP",
+          "stars": 1,
+          "row": 2,
+          "col": 0
+        },
+        {
+          "id": "DA_Sentinel18",
+          "stars": 1,
+          "row": 0,
+          "col": 2
+        }
+      ],
+      "avgPlace": 4.16,
+      "pickRate": 0.46,
+      "winRate": 8.4,
+      "top4": 59.1
+    },
+    {
+      "id": "soraka-flex",
+      "name": "Malphite AP Flex",
+      "tier": "A",
+      "style": "4-Cost Fast 8",
+      "difficulty": "Medium",
+      "unitIds": [
+        "DA_18_Yorick",
+        "DA_18_Azir",
+        "DA_Fiddlesticks18",
+        "DA_Amumu18",
+        "DA_18_Malphite",
+        "DA_18_Soraka",
+        "DA_18_Zyra",
+        "DA_18_Kennen"
+      ],
+      "carryIds": [
+        "DA_18_Malphite",
+        "DA_18_Soraka",
+        "DA_18_Zyra"
+      ],
+      "itemIds": [
+        "DA_GargoyleStoneplate",
+        "DA_WarmogsArmor",
+        "DA_Crownguard",
+        "DA_RabadonsDeathcap",
+        "DA_AdaptiveHelm",
+        "DA_JeweledGauntlet",
+        "DA_SpearOfShojin",
+        "DA_VoidStaff",
+        "DA_ArchangelsStaff",
+        "DA_Artifact_MogulsMail",
+        "DA_Artifact_LightshieldCrest",
+        "DA_Artifact_TheIndomitable"
+      ],
+      "augmentIds": [
+        "DA_BlackthornTraitAugment",
+        "DA_FlowingTears",
+        "DA_SoloPlate",
+        "DA_SmallGrabBag",
+        "DA_18_BigGrabBag",
+        "DA_CyberneticUplink_Gold",
+        "DA_BuriedTreasuresIII",
+        "DA_CommerceCore"
+      ],
+      "traitIds": [
+        "DA_18_Summoner",
+        "DA_18_Executioner",
+        "DA_Juggernaut18"
+      ],
+      "loadouts": [
+        {
+          "championId": "DA_18_Malphite",
+          "itemIds": [
+            "DA_GargoyleStoneplate",
+            "DA_WarmogsArmor",
+            "DA_Crownguard"
+          ]
+        },
+        {
+          "championId": "DA_18_Soraka",
+          "itemIds": [
+            "DA_RabadonsDeathcap",
+            "DA_AdaptiveHelm",
+            "DA_JeweledGauntlet"
+          ]
+        },
+        {
+          "championId": "DA_18_Zyra",
+          "itemIds": [
+            "DA_SpearOfShojin",
+            "DA_VoidStaff",
+            "DA_ArchangelsStaff"
+          ]
+        }
+      ],
+      "altLoadouts": [
+        {
+          "championId": "DA_18_Malphite",
+          "itemIds": [
+            "DA_Artifact_MogulsMail",
+            "DA_Artifact_LightshieldCrest",
+            "DA_Artifact_TheIndomitable"
+          ]
+        }
+      ],
+      "itemPrio": [
+        "DA_GargoyleStoneplate",
+        "DA_Component_TearOfTheGoddess",
+        "DA_Component_NeedlesslyLargeRod",
+        "DA_Component_RecurveBow"
+      ],
+      "board": [
+        {
+          "id": "DA_18_Yorick",
+          "stars": 1,
+          "row": 2,
+          "col": 5
+        },
+        {
+          "id": "DA_18_Azir",
+          "stars": 1,
+          "row": 3,
+          "col": 0
+        },
+        {
+          "id": "DA_Fiddlesticks18",
+          "stars": 1,
+          "row": 2,
+          "col": 3
+        },
+        {
+          "id": "DA_Amumu18",
+          "stars": 1,
+          "row": 2,
+          "col": 1
+        },
+        {
+          "id": "DA_18_Malphite",
+          "stars": 1,
+          "row": 0,
+          "col": 3
+        },
+        {
+          "id": "DA_18_Soraka",
+          "stars": 1,
+          "row": 3,
+          "col": 5
+        },
+        {
+          "id": "DA_18_Zyra",
+          "stars": 1,
+          "row": 3,
+          "col": 6
+        },
+        {
+          "id": "DA_18_Kennen",
+          "stars": 1,
+          "row": 2,
+          "col": 2
+        }
+      ],
+      "avgPlace": 4.39,
+      "pickRate": 0.44,
+      "winRate": 10.1,
+      "top4": 52.9
+    },
+    {
+      "id": "caitlyn-hunters",
+      "name": "Caitlyn Cazadores",
+      "tier": "B",
+      "style": "2-Cost Reroll",
+      "difficulty": "Easy",
+      "unitIds": [
+        "DA_18_Rakan",
+        "DA_18_Sejuani",
+        "DA_18_Caitlyn",
+        "DA_Scuttlecrab18",
+        "DA_18_Tristana",
+        "DA_Vi18",
+        "DA_18_Sivir"
+      ],
+      "carryIds": [
+        "DA_18_Caitlyn",
+        "DA_Scuttlecrab18",
+        "DA_18_Sivir"
+      ],
+      "itemIds": [
+        "DA_GuinsoosRageblade",
+        "DA_KrakensFury",
+        "DA_HextechGunblade",
+        "DA_SpiritVisage",
+        "DA_GargoyleStoneplate",
+        "DA_WarmogsArmor",
+        "DA_InfinityEdge",
+        "DA_LastWhisper",
+        "DA_RedBuff",
+        "DA_GuinsoosRagebladeRadiant",
+        "DA_Artifact_NavoriFlickerblade",
+        "DA_Artifact_GamblersBlade",
+        "DA_Artifact_GoldCollector"
+      ],
+      "augmentIds": [
+        "DA_Expedition",
+        "DA_SpeedyDoubleKill",
+        "DA_BackupBows",
+        "DA_PrismaticTicket",
+        "DA_Replication",
+        "DA_ShimmerscaleEssence",
+        "DA_TradeSector",
+        "DA_HeroicGrabBag"
+      ],
+      "traitIds": [
+        "DA_Juggernaut18",
+        "DA_18_Hunter",
+        "DA_18_Fae"
+      ],
+      "loadouts": [
+        {
+          "championId": "DA_18_Caitlyn",
+          "itemIds": [
+            "DA_GuinsoosRageblade",
+            "DA_KrakensFury",
+            "DA_HextechGunblade"
+          ]
+        },
+        {
+          "championId": "DA_Scuttlecrab18",
+          "itemIds": [
+            "DA_SpiritVisage",
+            "DA_GargoyleStoneplate",
+            "DA_WarmogsArmor"
+          ]
+        },
+        {
+          "championId": "DA_18_Sivir",
+          "itemIds": [
+            "DA_InfinityEdge",
+            "DA_LastWhisper",
+            "DA_RedBuff"
+          ]
+        }
+      ],
+      "altLoadouts": [
+        {
+          "championId": "DA_18_Caitlyn",
+          "itemIds": [
+            "DA_GuinsoosRagebladeRadiant",
+            "DA_HextechGunblade",
+            "DA_KrakensFury"
+          ]
+        },
+        {
+          "championId": "DA_18_Caitlyn",
+          "itemIds": [
+            "DA_Artifact_NavoriFlickerblade",
+            "DA_Artifact_GamblersBlade",
+            "DA_Artifact_GoldCollector"
+          ]
+        }
+      ],
+      "itemPrio": [
+        "DA_GuinsoosRageblade",
+        "DA_KrakensFury",
+        "DA_Component_RecurveBow",
+        "DA_Component_GiantsBelt"
+      ],
+      "board": [
+        {
+          "id": "DA_18_Rakan",
+          "stars": 1,
+          "row": 2,
+          "col": 2
+        },
+        {
+          "id": "DA_18_Sejuani",
+          "stars": 1,
+          "row": 2,
+          "col": 1
+        },
+        {
+          "id": "DA_18_Caitlyn",
+          "stars": 1,
+          "row": 3,
+          "col": 6
+        },
+        {
+          "id": "DA_Scuttlecrab18",
+          "stars": 1,
+          "row": 0,
+          "col": 4
+        },
+        {
+          "id": "DA_18_Tristana",
+          "stars": 1,
+          "row": 3,
+          "col": 4
+        },
+        {
+          "id": "DA_Vi18",
+          "stars": 1,
+          "row": 2,
+          "col": 3
+        },
+        {
+          "id": "DA_18_Sivir",
+          "stars": 1,
+          "row": 3,
+          "col": 5
+        }
+      ],
+      "avgPlace": 4.42,
+      "pickRate": 0.12,
+      "winRate": 6.9,
+      "top4": 52.8
+    },
+    {
+      "id": "riftbeast-reroll",
+      "name": "Grietozoico Rerrol",
+      "tier": "B",
+      "style": "1-Cost Reroll",
+      "difficulty": "Easy",
+      "unitIds": [
+        "DA_Cinderling18",
+        "DA_18_Sentry",
+        "DA_Murkwolf18",
+        "DA_Scuttlecrab18",
+        "DA_Krug18",
+        "DA_Sentinel18",
+        "DA_Brambleback18",
+        "DA_18_GnarSmall"
+      ],
+      "carryIds": [
+        "DA_Cinderling18",
+        "DA_18_Sentry",
+        "DA_Krug18"
+      ],
+      "itemIds": [
+        "DA_InfinityEdge",
+        "DA_BlueBuff",
+        "DA_LastWhisper",
+        "DA_RabadonsDeathcap",
+        "DA_JeweledGauntlet",
+        "DA_WarmogsArmor",
+        "DA_GargoyleStoneplate",
+        "DA_SpiritVisage",
+        "DA_ThiefsGloves"
+      ],
+      "augmentIds": [
+        "DA_18_RiftbeastTraitAugment",
+        "DA_JeweledLotus_I",
+        "DA_GlassCannon_Silver",
+        "DA_WorththeWaitII",
+        "DA_18_CaretakersAlly",
+        "DA_LuckyGlovesPlus"
+      ],
+      "traitIds": [
+        "DA_Riftbeast18",
+        "DA_18_Invoker",
+        "DA_18_Slayer"
+      ],
+      "loadouts": [
+        {
+          "championId": "DA_Cinderling18",
+          "itemIds": [
+            "DA_InfinityEdge",
+            "DA_BlueBuff",
+            "DA_LastWhisper"
+          ]
+        },
+        {
+          "championId": "DA_18_Sentry",
+          "itemIds": [
+            "DA_BlueBuff",
+            "DA_RabadonsDeathcap",
+            "DA_JeweledGauntlet"
+          ]
+        },
+        {
+          "championId": "DA_Krug18",
+          "itemIds": [
+            "DA_WarmogsArmor",
+            "DA_GargoyleStoneplate",
+            "DA_SpiritVisage"
+          ]
+        },
+        {
+          "championId": "DA_Brambleback18",
+          "itemIds": [
+            "DA_ThiefsGloves"
+          ]
+        }
+      ],
+      "altLoadouts": [],
+      "itemPrio": [
+        "DA_LastWhisper",
+        "DA_Component_BFSword",
+        "DA_Component_TearOfTheGoddess",
+        "DA_Component_GiantsBelt"
+      ],
+      "board": [
+        {
+          "id": "DA_Cinderling18",
+          "stars": 1,
+          "row": 3,
+          "col": 6
+        },
+        {
+          "id": "DA_18_Sentry",
+          "stars": 1,
+          "row": 3,
+          "col": 5
+        },
+        {
+          "id": "DA_Murkwolf18",
+          "stars": 1,
+          "row": 2,
+          "col": 3
+        },
+        {
+          "id": "DA_Scuttlecrab18",
+          "stars": 1,
+          "row": 2,
+          "col": 4
+        },
+        {
+          "id": "DA_Krug18",
+          "stars": 1,
+          "row": 0,
+          "col": 4
+        },
+        {
+          "id": "DA_Sentinel18",
+          "stars": 1,
+          "row": 2,
+          "col": 2
+        },
+        {
+          "id": "DA_Brambleback18",
+          "stars": 1,
+          "row": 2,
+          "col": 6
+        },
+        {
+          "id": "DA_18_GnarSmall",
+          "stars": 1,
+          "row": 2,
+          "col": 5
+        }
+      ],
+      "avgPlace": 4.53,
+      "pickRate": 0.32,
+      "winRate": 10.1,
+      "top4": 49.5
+    },
+    {
+      "id": "adaptor-reroll-copy",
+      "name": "Yi Rengar",
+      "tier": "B",
+      "style": "3-Cost Reroll",
+      "difficulty": "Medium",
+      "unitIds": [
+        "DA_18_Yorick",
+        "DA_Krug18",
+        "DA_18_MasterYi_AD",
+        "DA_18_Rengar",
+        "DA_Vi18",
+        "DA_18_Sett",
+        "DA_Nidalee18_AP"
+      ],
+      "carryIds": [
+        "DA_18_MasterYi_AD",
+        "DA_18_Rengar",
+        "DA_Vi18",
+        "DA_Nidalee18_AP"
+      ],
+      "itemIds": [
+        "DA_EdgeOfNight",
+        "DA_TitansResolve",
+        "DA_KrakensFury",
+        "DA_GuinsoosRageblade",
+        "DA_WarmogsArmor",
+        "DA_GargoyleStoneplate",
+        "DA_Evenshroud",
+        "DA_SpearOfShojin",
+        "DA_RabadonsDeathcap",
+        "DA_18_EmblemBrawler",
+        "DA_Artifact_WitsEnd",
+        "DA_Artifact_NavoriFlickerblade",
+        "DA_Artifact_RapidFireCannon"
+      ],
+      "augmentIds": [
+        "DA_LatentForge",
+        "DA_PortableForge",
+        "DA_ForgedInStrength",
+        "DA_LivingForge",
+        "DA_NestingAnvils",
+        "DA_HeroicGrabBag",
+        "DA_LegionOfThrees",
+        "DA_18_BigGrabBag"
+      ],
+      "traitIds": [
+        "DA_18_Blossom",
+        "DA_Juggernaut18",
+        "DA_18_Brawler"
+      ],
+      "loadouts": [
+        {
+          "championId": "DA_18_MasterYi_AD",
+          "itemIds": [
+            "DA_EdgeOfNight",
+            "DA_TitansResolve",
+            "DA_KrakensFury"
+          ]
+        },
+        {
+          "championId": "DA_18_Rengar",
+          "itemIds": [
+            "DA_TitansResolve",
+            "DA_EdgeOfNight",
+            "DA_GuinsoosRageblade"
+          ]
+        },
+        {
+          "championId": "DA_Vi18",
+          "itemIds": [
+            "DA_WarmogsArmor",
+            "DA_GargoyleStoneplate",
+            "DA_Evenshroud"
+          ]
+        },
+        {
+          "championId": "DA_Nidalee18_AP",
+          "itemIds": [
+            "DA_GuinsoosRageblade",
+            "DA_SpearOfShojin",
+            "DA_RabadonsDeathcap"
+          ]
+        }
+      ],
+      "altLoadouts": [
+        {
+          "championId": "DA_18_MasterYi_AD",
+          "itemIds": [
+            "DA_18_EmblemBrawler",
+            "DA_GuinsoosRageblade",
+            "DA_EdgeOfNight"
+          ]
+        },
+        {
+          "championId": "DA_18_MasterYi_AD",
+          "itemIds": [
+            "DA_Artifact_WitsEnd",
+            "DA_Artifact_NavoriFlickerblade",
+            "DA_Artifact_RapidFireCannon"
+          ]
+        }
+      ],
+      "itemPrio": [
+        "DA_GuinsoosRageblade",
+        "DA_Component_RecurveBow",
+        "DA_Component_ChainVest",
+        "DA_Component_BFSword"
+      ],
+      "board": [
+        {
+          "id": "DA_18_Yorick",
+          "stars": 1,
+          "row": 2,
+          "col": 0
+        },
+        {
+          "id": "DA_Krug18",
+          "stars": 1,
+          "row": 0,
+          "col": 1
+        },
+        {
+          "id": "DA_18_MasterYi_AD",
+          "stars": 1,
+          "row": 2,
+          "col": 6
+        },
+        {
+          "id": "DA_18_Rengar",
+          "stars": 1,
+          "row": 2,
+          "col": 5
+        },
+        {
+          "id": "DA_Vi18",
+          "stars": 1,
+          "row": 0,
+          "col": 5
+        },
+        {
+          "id": "DA_18_Sett",
+          "stars": 1,
+          "row": 0,
+          "col": 0
+        },
+        {
+          "id": "DA_Nidalee18_AP",
+          "stars": 1,
+          "row": 3,
+          "col": 6
+        }
+      ],
+      "avgPlace": 4.53,
+      "pickRate": 0.17,
+      "winRate": 7.7,
+      "top4": 49.7
+    },
+    {
+      "id": "6-juggernaut-ap",
+      "name": "6 Coloso AP",
+      "tier": "B",
+      "style": "4-Cost Fast 8",
+      "difficulty": "Hard",
+      "unitIds": [
+        "DA_18_Yorick",
+        "DA_Scuttlecrab18",
+        "DA_18_Azir",
+        "DA_Vi18",
+        "DA_Amumu18",
+        "DA_18_Zyra",
+        "DA_18_Maokai",
+        "DA_18_Ivern",
+        "DA_18_Kennen"
+      ],
+      "carryIds": [
+        "DA_Amumu18",
+        "DA_18_Zyra",
+        "DA_18_Ivern",
+        "DA_18_Kennen"
+      ],
+      "itemIds": [
+        "DA_WarmogsArmor",
+        "DA_BrambleVest",
+        "DA_DragonsClaw",
+        "DA_SpearOfShojin",
+        "DA_ArchangelsStaff",
+        "DA_HextechGunblade",
+        "DA_AdaptiveHelm",
+        "DA_18_EmblemJuggernaut",
+        "DA_VoidStaff",
+        "DA_EdgeOfNight"
+      ],
+      "augmentIds": [
+        "DA_BlackthornTraitAugment",
+        "DA_18_BigGrabBag",
+        "DA_CyberneticUplink_Gold",
+        "DA_CommerceCore",
+        "DA_SeraphimsStaff",
+        "DA_SpreadingRoots",
+        "DA_TheTraitTree",
+        "DA_BoxingLessons"
+      ],
+      "traitIds": [
+        "DA_Juggernaut18",
+        "DA_18_Summoner",
+        "DA_18_Executioner"
+      ],
+      "loadouts": [
+        {
+          "championId": "DA_Amumu18",
+          "itemIds": [
+            "DA_WarmogsArmor",
+            "DA_BrambleVest",
+            "DA_DragonsClaw"
+          ]
+        },
+        {
+          "championId": "DA_18_Zyra",
+          "itemIds": [
+            "DA_SpearOfShojin",
+            "DA_ArchangelsStaff",
+            "DA_HextechGunblade"
+          ]
+        },
+        {
+          "championId": "DA_18_Ivern",
+          "itemIds": [
+            "DA_AdaptiveHelm",
+            "DA_SpearOfShojin"
+          ]
+        },
+        {
+          "championId": "DA_18_Kennen",
+          "itemIds": [
+            "DA_18_EmblemJuggernaut",
+            "DA_VoidStaff",
+            "DA_EdgeOfNight"
+          ]
+        }
+      ],
+      "altLoadouts": [],
+      "itemPrio": [
+        "DA_ArchangelsStaff",
+        "DA_WarmogsArmor",
+        "DA_Component_TearOfTheGoddess",
+        "DA_Component_NeedlesslyLargeRod"
+      ],
+      "board": [
+        {
+          "id": "DA_18_Yorick",
+          "stars": 1,
+          "row": 0,
+          "col": 0
+        },
+        {
+          "id": "DA_Scuttlecrab18",
+          "stars": 1,
+          "row": 0,
+          "col": 2
+        },
+        {
+          "id": "DA_18_Azir",
+          "stars": 1,
+          "row": 3,
+          "col": 0
+        },
+        {
+          "id": "DA_Vi18",
+          "stars": 1,
+          "row": 0,
+          "col": 3
+        },
+        {
+          "id": "DA_Amumu18",
+          "stars": 1,
+          "row": 0,
+          "col": 5
+        },
+        {
+          "id": "DA_18_Zyra",
+          "stars": 1,
+          "row": 3,
+          "col": 6
+        },
+        {
+          "id": "DA_18_Maokai",
+          "stars": 1,
+          "row": 0,
+          "col": 4
+        },
+        {
+          "id": "DA_18_Ivern",
+          "stars": 1,
+          "row": 3,
+          "col": 3
+        },
+        {
+          "id": "DA_18_Kennen",
+          "stars": 1,
+          "row": 1,
+          "col": 3
+        }
+      ],
+      "avgPlace": 4.57,
+      "pickRate": 0.11,
+      "winRate": 11.7,
+      "top4": 48.2
+    },
+    {
+      "id": "cashout-morgana",
+      "name": "Conjurador Morgana",
+      "tier": "B",
+      "style": "Lose Streak",
+      "difficulty": "Hard",
+      "unitIds": [
+        "DA_18_Sentry",
+        "DA_18_Diana",
+        "DA_18_Hecarim",
+        "DA_KogMaw18_AD",
+        "DA_Brambleback18",
+        "DA_18_Morgana",
+        "DA_Sentinel18",
+        "DA_Taric18",
+        "DA_18_Alune"
+      ],
+      "carryIds": [
+        "DA_18_Morgana",
+        "DA_Brambleback18",
+        "DA_Sentinel18"
+      ],
+      "itemIds": [
+        "DA_EdgeOfNight",
+        "DA_GiantSlayer",
+        "DA_Quicksilver",
+        "DA_Morellonomicon",
+        "DA_RabadonsDeathcap",
+        "DA_VoidStaff",
+        "DA_ProtectorsVow",
+        "DA_WarmogsArmor",
+        "DA_AdaptiveHelm",
+        "DA_18_EmblemInvoker",
+        "DA_Artifact_BlightingJewel"
+      ],
+      "augmentIds": [
+        "DA_18_CovenTraitAugment_LootToAP",
+        "DA_18_CovenTraitAugment",
+        "DA_WandOverflow",
+        "DA_SeraphimsStaff",
+        "DA_Staffsmith",
+        "DA_DeadlierCaps",
+        "DA_BoosterPack",
+        "DA_18_OnesTwosThree"
+      ],
+      "traitIds": [
+        "DA_18_Invoker",
+        "DA_18_Vanguard",
+        "DA_Riftbeast18"
+      ],
+      "loadouts": [
+        {
+          "championId": "DA_Brambleback18",
+          "itemIds": [
+            "DA_EdgeOfNight",
+            "DA_GiantSlayer",
+            "DA_Quicksilver"
+          ]
+        },
+        {
+          "championId": "DA_18_Morgana",
+          "itemIds": [
+            "DA_Morellonomicon",
+            "DA_RabadonsDeathcap",
+            "DA_VoidStaff"
+          ]
+        },
+        {
+          "championId": "DA_Sentinel18",
+          "itemIds": [
+            "DA_ProtectorsVow",
+            "DA_WarmogsArmor",
+            "DA_AdaptiveHelm"
+          ]
+        },
+        {
+          "championId": "DA_18_Alune",
+          "itemIds": [
+            "DA_18_EmblemInvoker"
+          ]
+        }
+      ],
+      "altLoadouts": [
+        {
+          "championId": "DA_18_Morgana",
+          "itemIds": [
+            "DA_Artifact_BlightingJewel"
+          ]
+        }
+      ],
+      "itemPrio": [
+        "DA_Morellonomicon",
+        "DA_VoidStaff",
+        "DA_Component_NeedlesslyLargeRod",
+        "DA_Component_TearOfTheGoddess"
+      ],
+      "board": [
+        {
+          "id": "DA_18_Sentry",
+          "stars": 1,
+          "row": 3,
+          "col": 2
+        },
+        {
+          "id": "DA_18_Diana",
+          "stars": 1,
+          "row": 0,
+          "col": 3
+        },
+        {
+          "id": "DA_18_Hecarim",
+          "stars": 1,
+          "row": 0,
+          "col": 1
+        },
+        {
+          "id": "DA_KogMaw18_AD",
+          "stars": 1,
+          "row": 3,
+          "col": 5
+        },
+        {
+          "id": "DA_Brambleback18",
+          "stars": 1,
+          "row": 2,
+          "col": 5
+        },
+        {
+          "id": "DA_18_Morgana",
+          "stars": 1,
+          "row": 2,
+          "col": 4
+        },
+        {
+          "id": "DA_Sentinel18",
+          "stars": 1,
+          "row": 0,
+          "col": 4
+        },
+        {
+          "id": "DA_Taric18",
+          "stars": 1,
+          "row": 0,
+          "col": 2
+        },
+        {
+          "id": "DA_18_Alune",
+          "stars": 1,
+          "row": 3,
+          "col": 4
+        }
+      ],
+      "avgPlace": 4.49,
+      "pickRate": 0.06,
+      "winRate": 9.8,
+      "top4": 50.6
+    },
+    {
+      "id": "solar-melee",
+      "name": "Solar Cuerpo a cuerpo",
+      "tier": "B",
+      "style": "1-Cost Reroll",
+      "difficulty": "Easy",
+      "unitIds": [
+        "DA_18_Leona",
+        "DA_18_Ornn",
+        "DA_18_Akali_AD",
+        "DA_18_Camille",
+        "DA_18_Varus",
+        "DA_18_Kayle",
+        "DA_18_Sejuani"
+      ],
+      "carryIds": [
+        "DA_18_Akali_AD",
+        "DA_18_Ornn",
+        "DA_18_Camille",
+        "DA_18_Varus"
+      ],
+      "itemIds": [
+        "DA_GargoyleStoneplate",
+        "DA_Crownguard",
+        "DA_WarmogsArmor",
+        "DA_JeweledGauntlet",
+        "DA_HandOfJustice",
+        "DA_EdgeOfNight",
+        "DA_SteraksGage",
+        "DA_Quicksilver",
+        "DA_InfinityEdge",
+        "DA_SpearOfShojin",
+        "DA_LastWhisper",
+        "DA_Artifact_Fishbones",
+        "DA_Artifact_LichBane",
+        "DA_Artifact_Dawncore",
+        "DA_Artifact_RapidFireCannon"
+      ],
+      "augmentIds": [
+        "DA_PandorasBench",
+        "DA_PrismaticTicket",
+        "DA_NoScoutNoPivot",
+        "DA_EarlyLearnings",
+        "DA_WorththeWait",
+        "DA_LuckyGlovesPlus",
+        "DA_SoloPlate",
+        "DA_CursedCrown"
+      ],
+      "traitIds": [
+        "DA_18_Solar",
+        "DA_18_Defender",
+        "DA_18_Inferno"
+      ],
+      "loadouts": [
+        {
+          "championId": "DA_18_Ornn",
+          "itemIds": [
+            "DA_GargoyleStoneplate",
+            "DA_Crownguard",
+            "DA_WarmogsArmor"
+          ]
+        },
+        {
+          "championId": "DA_18_Akali_AD",
+          "itemIds": [
+            "DA_JeweledGauntlet",
+            "DA_HandOfJustice",
+            "DA_EdgeOfNight"
+          ]
+        },
+        {
+          "championId": "DA_18_Camille",
+          "itemIds": [
+            "DA_SteraksGage",
+            "DA_Quicksilver",
+            "DA_InfinityEdge"
+          ]
+        },
+        {
+          "championId": "DA_18_Varus",
+          "itemIds": [
+            "DA_SpearOfShojin",
+            "DA_LastWhisper",
+            "DA_InfinityEdge"
+          ]
+        }
+      ],
+      "altLoadouts": [
+        {
+          "championId": "DA_18_Camille",
+          "itemIds": [
+            "DA_Artifact_Fishbones"
+          ]
+        },
+        {
+          "championId": "DA_18_Akali_AD",
+          "itemIds": [
+            "DA_Artifact_LichBane",
+            "DA_Artifact_Dawncore",
+            "DA_Artifact_RapidFireCannon"
+          ]
+        }
+      ],
+      "itemPrio": [
+        "DA_InfinityEdge",
+        "DA_GargoyleStoneplate",
+        "DA_Component_SparringGloves",
+        "DA_Component_BFSword"
+      ],
+      "board": [
+        {
+          "id": "DA_18_Leona",
+          "stars": 1,
+          "row": 2,
+          "col": 3
+        },
+        {
+          "id": "DA_18_Ornn",
+          "stars": 1,
+          "row": 0,
+          "col": 3
+        },
+        {
+          "id": "DA_18_Akali_AD",
+          "stars": 1,
+          "row": 2,
+          "col": 0
+        },
+        {
+          "id": "DA_18_Camille",
+          "stars": 1,
+          "row": 2,
+          "col": 1
+        },
+        {
+          "id": "DA_18_Varus",
+          "stars": 1,
+          "row": 3,
+          "col": 0
+        },
+        {
+          "id": "DA_18_Kayle",
+          "stars": 1,
+          "row": 3,
+          "col": 6
+        },
+        {
+          "id": "DA_18_Sejuani",
+          "stars": 1,
+          "row": 2,
+          "col": 6
+        }
+      ],
+      "avgPlace": 4.62,
+      "pickRate": 0.19,
+      "winRate": 7.9,
+      "top4": 49.3
+    },
+    {
+      "id": "pebbles-3-tempo",
+      "name": "Rocardo 3 Tempo",
+      "tier": "B",
+      "style": "1-Cost Reroll",
+      "difficulty": "Easy",
+      "unitIds": [
+        "DA_18_Sentry",
+        "DA_Scuttlecrab18",
+        "DA_18_Teemo",
+        "DA_KogMaw18_AD",
+        "DA_18_Morgana",
+        "DA_Sentinel18",
+        "DA_18_Ivern",
+        "DA_18_Maokai",
+        "DA_Taric18"
+      ],
+      "carryIds": [
+        "DA_18_Sentry",
+        "DA_18_Morgana",
+        "DA_Sentinel18"
+      ],
+      "itemIds": [
+        "DA_BlueBuff",
+        "DA_RabadonsDeathcap",
+        "DA_HextechGunblade",
+        "DA_Morellonomicon",
+        "DA_ProtectorsVow",
+        "DA_WarmogsArmor",
+        "DA_AdaptiveHelm",
+        "DA_Artifact_BlightingJewel",
+        "DA_ArchangelsStaff"
+      ],
+      "augmentIds": [
+        "DA_SeraphimsStaff",
+        "DA_DeadlierCaps",
+        "DA_WandOverflow",
+        "DA_Replication",
+        "DA_FlowingTears",
+        "DA_MissedConnections",
+        "DA_18_RiftbeastTraitAugment",
+        "DA_WorththeWait"
+      ],
+      "traitIds": [
+        "DA_18_Invoker",
+        "DA_Riftbeast18",
+        "DA_Juggernaut18"
+      ],
+      "loadouts": [
+        {
+          "championId": "DA_18_Sentry",
+          "itemIds": [
+            "DA_BlueBuff",
+            "DA_RabadonsDeathcap",
+            "DA_HextechGunblade"
+          ]
+        },
+        {
+          "championId": "DA_18_Morgana",
+          "itemIds": [
+            "DA_Morellonomicon",
+            "DA_RabadonsDeathcap"
+          ]
+        },
+        {
+          "championId": "DA_Sentinel18",
+          "itemIds": [
+            "DA_ProtectorsVow",
+            "DA_WarmogsArmor",
+            "DA_AdaptiveHelm"
+          ]
+        }
+      ],
+      "altLoadouts": [
+        {
+          "championId": "DA_18_Morgana",
+          "itemIds": [
+            "DA_Artifact_BlightingJewel"
+          ]
+        },
+        {
+          "championId": "DA_18_Sentry",
+          "itemIds": [
+            "DA_ArchangelsStaff"
+          ]
+        }
+      ],
+      "itemPrio": [
+        "DA_BlueBuff",
+        "DA_RabadonsDeathcap",
+        "DA_Component_NeedlesslyLargeRod",
+        "DA_Component_GiantsBelt"
+      ],
+      "board": [
+        {
+          "id": "DA_18_Sentry",
+          "stars": 1,
+          "row": 3,
+          "col": 6
+        },
+        {
+          "id": "DA_Scuttlecrab18",
+          "stars": 1,
+          "row": 0,
+          "col": 3
+        },
+        {
+          "id": "DA_18_Teemo",
+          "stars": 1,
+          "row": 3,
+          "col": 2
+        },
+        {
+          "id": "DA_KogMaw18_AD",
+          "stars": 1,
+          "row": 3,
+          "col": 4
+        },
+        {
+          "id": "DA_18_Morgana",
+          "stars": 1,
+          "row": 2,
+          "col": 4
+        },
+        {
+          "id": "DA_Sentinel18",
+          "stars": 1,
+          "row": 0,
+          "col": 4
+        },
+        {
+          "id": "DA_18_Ivern",
+          "stars": 1,
+          "row": 3,
+          "col": 0
+        },
+        {
+          "id": "DA_18_Maokai",
+          "stars": 1,
+          "row": 0,
+          "col": 2
+        },
+        {
+          "id": "DA_Taric18",
+          "stars": 1,
+          "row": 0,
+          "col": 1
+        }
+      ],
+      "avgPlace": 4.55,
+      "pickRate": 0.08,
+      "winRate": 9,
+      "top4": 48
+    },
+    {
+      "id": "ap-95",
+      "name": "Legendary Ap Flex",
+      "tier": "B",
+      "style": "Fast 9",
+      "difficulty": "Hard",
+      "unitIds": [
+        "DA_18_Alune",
+        "DA_Taric18",
+        "DA_18_Diana",
+        "DA_18_Kennen",
+        "DA_Amumu18",
+        "DA_18_Ivern",
+        "DA_18_Maokai",
+        "DA_18_Soraka",
+        "DA_Fiddlesticks18"
+      ],
+      "carryIds": [
+        "DA_18_Alune",
+        "DA_18_Kennen",
+        "DA_18_Maokai",
+        "DA_18_Soraka"
+      ],
+      "itemIds": [
+        "DA_SpearOfShojin",
+        "DA_ArchangelsStaff",
+        "DA_JeweledGauntlet",
+        "DA_VoidStaff",
+        "DA_EdgeOfNight",
+        "DA_HandOfJustice",
+        "DA_WarmogsArmor",
+        "DA_GargoyleStoneplate",
+        "DA_Crownguard",
+        "DA_StrikersFlail",
+        "DA_NashorsTooth"
+      ],
+      "augmentIds": [],
+      "traitIds": [
+        "DA_18_Lunar",
+        "DA_18_Spellweaver",
+        "DA_18_Vanguard"
+      ],
+      "loadouts": [
+        {
+          "championId": "DA_18_Alune",
+          "itemIds": [
+            "DA_SpearOfShojin",
+            "DA_ArchangelsStaff",
+            "DA_JeweledGauntlet"
+          ]
+        },
+        {
+          "championId": "DA_18_Kennen",
+          "itemIds": [
+            "DA_VoidStaff",
+            "DA_EdgeOfNight",
+            "DA_HandOfJustice"
+          ]
+        },
+        {
+          "championId": "DA_18_Maokai",
+          "itemIds": [
+            "DA_WarmogsArmor",
+            "DA_GargoyleStoneplate",
+            "DA_Crownguard"
+          ]
+        },
+        {
+          "championId": "DA_18_Soraka",
+          "itemIds": [
+            "DA_StrikersFlail",
+            "DA_NashorsTooth"
+          ]
+        }
+      ],
+      "altLoadouts": [],
+      "itemPrio": [],
+      "board": [
+        {
+          "id": "DA_18_Alune",
+          "stars": 1,
+          "row": 3,
+          "col": 6
+        },
+        {
+          "id": "DA_Taric18",
+          "stars": 1,
+          "row": 0,
+          "col": 1
+        },
+        {
+          "id": "DA_18_Diana",
+          "stars": 1,
+          "row": 0,
+          "col": 3
+        },
+        {
+          "id": "DA_18_Kennen",
+          "stars": 1,
+          "row": 0,
+          "col": 4
+        },
+        {
+          "id": "DA_Amumu18",
+          "stars": 1,
+          "row": 0,
+          "col": 2
+        },
+        {
+          "id": "DA_18_Ivern",
+          "stars": 1,
+          "row": 3,
+          "col": 0
+        },
+        {
+          "id": "DA_18_Maokai",
+          "stars": 1,
+          "row": 0,
+          "col": 5
+        },
+        {
+          "id": "DA_18_Soraka",
+          "stars": 1,
+          "row": 3,
+          "col": 4
+        },
+        {
+          "id": "DA_Fiddlesticks18",
+          "stars": 1,
+          "row": 0,
+          "col": 0
+        }
+      ],
+      "avgPlace": 4.55,
+      "pickRate": 0.08,
+      "winRate": 9,
+      "top4": 48
+    },
+    {
+      "id": "defender-cassio",
+      "name": "Defensor Cassio",
+      "tier": "B",
+      "style": "3-Cost Reroll",
+      "difficulty": "Easy",
+      "unitIds": [
+        "DA_18_Leona",
+        "DA_18_Ornn",
+        "DA_18_Shen",
+        "DA_18_Cassiopeia",
+        "DA_Fiddlesticks18",
+        "DA_18_Rammus",
+        "DA_18_Lillia"
+      ],
+      "carryIds": [
+        "DA_18_Cassiopeia",
+        "DA_Fiddlesticks18",
+        "DA_18_Rammus"
+      ],
+      "itemIds": [
+        "DA_SpearOfShojin",
+        "DA_HextechGunblade",
+        "DA_ArchangelsStaff",
+        "DA_TitansResolve",
+        "DA_AdaptiveHelm",
+        "DA_Crownguard",
+        "DA_IonicSpark",
+        "DA_SunfireCape",
+        "DA_SteadfastHeart",
+        "DA_ThiefsGloves",
+        "DA_Artifact_Manazane",
+        "DA_18_EmblemFloraFatalisAugment",
+        "DA_Artifact_Dawncore",
+        "DA_Artifact_BlightingJewel",
+        "DA_Artifact_EternalPact"
+      ],
+      "augmentIds": [
+        "DA_Ascension",
+        "DA_18_FloraFatalisAugment",
+        "DA_SpiritOfRedemption",
+        "DA_ItsMeBaby",
+        "DA_WovenMagic",
+        "DA_HeroicGrabBagPlusPlus",
+        "DA_FlowingTears",
+        "DA_CookingPot"
+      ],
+      "traitIds": [
+        "DA_18_Defender",
+        "DA_18_Spellweaver",
+        "DA_18_Solar"
+      ],
+      "loadouts": [
+        {
+          "championId": "DA_18_Cassiopeia",
+          "itemIds": [
+            "DA_SpearOfShojin",
+            "DA_HextechGunblade",
+            "DA_ArchangelsStaff"
+          ]
+        },
+        {
+          "championId": "DA_Fiddlesticks18",
+          "itemIds": [
+            "DA_TitansResolve",
+            "DA_AdaptiveHelm",
+            "DA_Crownguard"
+          ]
+        },
+        {
+          "championId": "DA_18_Rammus",
+          "itemIds": [
+            "DA_IonicSpark",
+            "DA_SunfireCape",
+            "DA_SteadfastHeart"
+          ]
+        },
+        {
+          "championId": "DA_18_Lillia",
+          "itemIds": [
+            "DA_ThiefsGloves"
+          ]
+        }
+      ],
+      "altLoadouts": [
+        {
+          "championId": "DA_18_Cassiopeia",
+          "itemIds": [
+            "DA_Artifact_Manazane",
+            "DA_18_EmblemFloraFatalisAugment"
+          ]
+        },
+        {
+          "championId": "DA_18_Cassiopeia",
+          "itemIds": [
+            "DA_Artifact_Dawncore",
+            "DA_Artifact_BlightingJewel",
+            "DA_Artifact_EternalPact"
+          ]
+        }
+      ],
+      "itemPrio": [
+        "DA_SpearOfShojin",
+        "DA_HextechGunblade",
+        "DA_Component_ChainVest",
+        "DA_Component_NeedlesslyLargeRod"
+      ],
+      "board": [
+        {
+          "id": "DA_18_Leona",
+          "stars": 1,
+          "row": 0,
+          "col": 2
+        },
+        {
+          "id": "DA_18_Ornn",
+          "stars": 1,
+          "row": 0,
+          "col": 1
+        },
+        {
+          "id": "DA_18_Shen",
+          "stars": 1,
+          "row": 0,
+          "col": 3
+        },
+        {
+          "id": "DA_18_Cassiopeia",
+          "stars": 1,
+          "row": 3,
+          "col": 6
+        },
+        {
+          "id": "DA_Fiddlesticks18",
+          "stars": 1,
+          "row": 0,
+          "col": 4
+        },
+        {
+          "id": "DA_18_Rammus",
+          "stars": 1,
+          "row": 0,
+          "col": 5
+        },
+        {
+          "id": "DA_18_Lillia",
+          "stars": 1,
+          "row": 0,
+          "col": 0
+        }
+      ],
+      "avgPlace": 4.52,
+      "pickRate": 0.16,
+      "winRate": 7.6,
+      "top4": 50.8
+    },
+    {
+      "id": "lunarwood-khazix",
+      "name": "Lunar Bosqueviejo Kha'zix",
+      "tier": "B",
+      "style": "3-Cost Reroll",
+      "difficulty": "Medium",
+      "unitIds": [
+        "DA_Elderwood18_Lifeblossom",
+        "DA_Elderwood18_StonebarkTree",
+        "DA_18_Ornn",
+        "DA_Fiddlesticks18",
+        "DA_18_Diana",
+        "DA_18_Hecarim",
+        "DA_18_KhaZix",
+        "DA_18_Soraka",
+        "DA_18_Ezreal",
+        "DA_18_Alune"
+      ],
+      "carryIds": [
+        "DA_18_KhaZix",
+        "DA_18_Diana",
+        "DA_18_Hecarim",
+        "DA_18_Ezreal"
+      ],
+      "itemIds": [
+        "DA_JeweledGauntlet",
+        "DA_HandOfJustice",
+        "DA_IonicSpark",
+        "DA_WarmogsArmor",
+        "DA_GargoyleStoneplate",
+        "DA_SpiritVisage",
+        "DA_RabadonsDeathcap",
+        "DA_EdgeOfNight",
+        "DA_RedBuff",
+        "DA_SpearOfShojin",
+        "DA_Deathblade",
+        "DA_Artifact_LichBane",
+        "DA_Artifact_WitsEnd",
+        "DA_Artifact_SeekersArmguard",
+        "DA_Artifact_LudensTempest",
+        "DA_Artifact_Dawncore",
+        "DA_Artifact_ZhonyasParadox"
+      ],
+      "augmentIds": [
+        "DA_ChampDelivery",
+        "DA_PandorasBench",
+        "DA_FlowingTears",
+        "DA_AdvancedLoanPlus",
+        "DA_HeroicGrabBagPlusPlus",
+        "DA_LegionOfThrees",
+        "DA_LuckyGlovesPlus",
+        "DA_PrismaticTicket"
+      ],
+      "traitIds": [
+        "DA_18_Elderwood",
+        "DA_18_Defender",
+        "DA_FloraFatalis18"
+      ],
+      "loadouts": [
+        {
+          "championId": "DA_18_Diana",
+          "itemIds": [
+            "DA_JeweledGauntlet",
+            "DA_HandOfJustice",
+            "DA_IonicSpark"
+          ]
+        },
+        {
+          "championId": "DA_18_Hecarim",
+          "itemIds": [
+            "DA_WarmogsArmor",
+            "DA_GargoyleStoneplate",
+            "DA_SpiritVisage"
+          ]
+        },
+        {
+          "championId": "DA_18_KhaZix",
+          "itemIds": [
+            "DA_HandOfJustice",
+            "DA_RabadonsDeathcap",
+            "DA_EdgeOfNight"
+          ]
+        },
+        {
+          "championId": "DA_18_Ezreal",
+          "itemIds": [
+            "DA_RedBuff",
+            "DA_SpearOfShojin",
+            "DA_Deathblade"
+          ]
+        }
+      ],
+      "altLoadouts": [
+        {
+          "championId": "DA_18_KhaZix",
+          "itemIds": [
+            "DA_Artifact_LichBane",
+            "DA_Artifact_WitsEnd",
+            "DA_Artifact_SeekersArmguard"
+          ]
+        },
+        {
+          "championId": "DA_18_KhaZix",
+          "itemIds": [
+            "DA_Artifact_LudensTempest",
+            "DA_Artifact_Dawncore",
+            "DA_Artifact_ZhonyasParadox"
+          ]
+        }
+      ],
+      "itemPrio": [
+        "DA_EdgeOfNight",
+        "DA_RabadonsDeathcap",
+        "DA_HandOfJustice",
+        "DA_Component_NeedlesslyLargeRod"
+      ],
+      "board": [
+        {
+          "id": "DA_Elderwood18_Lifeblossom",
+          "stars": 1,
+          "row": 3,
+          "col": 3
+        },
+        {
+          "id": "DA_Elderwood18_StonebarkTree",
+          "stars": 1,
+          "row": 3,
+          "col": 6
+        },
+        {
+          "id": "DA_18_Ornn",
+          "stars": 1,
+          "row": 2,
+          "col": 4
+        },
+        {
+          "id": "DA_Fiddlesticks18",
+          "stars": 1,
+          "row": 1,
+          "col": 2
+        },
+        {
+          "id": "DA_18_Diana",
+          "stars": 1,
+          "row": 1,
+          "col": 1
+        },
+        {
+          "id": "DA_18_Hecarim",
+          "stars": 1,
+          "row": 0,
+          "col": 2
+        },
+        {
+          "id": "DA_18_KhaZix",
+          "stars": 1,
+          "row": 0,
+          "col": 1
+        },
+        {
+          "id": "DA_18_Soraka",
+          "stars": 1,
+          "row": 3,
+          "col": 2
+        },
+        {
+          "id": "DA_18_Ezreal",
+          "stars": 1,
+          "row": 3,
+          "col": 0
+        },
+        {
+          "id": "DA_18_Alune",
+          "stars": 1,
+          "row": 3,
+          "col": 1
+        }
+      ],
+      "avgPlace": 4.55,
+      "pickRate": 0.08,
+      "winRate": 9,
+      "top4": 48
+    },
+    {
+      "id": "woodblossom",
+      "name": "Floración Bosqueviejo",
+      "tier": "B",
+      "style": "4-Cost Fast 8",
+      "difficulty": "Medium",
+      "unitIds": [
+        "DA_18_Soraka",
+        "DA_18_Ornn",
+        "DA_18_Alistar",
+        "DA_18_Ezreal",
+        "DA_18_Ahri",
+        "DA_18_Sett",
+        "DA_Elderwood18_Lifeblossom",
+        "DA_18_Yunara",
+        "DA_Fiddlesticks18",
+        "DA_Elderwood18_StonebarkTree"
+      ],
+      "carryIds": [
+        "DA_18_Ezreal",
+        "DA_18_Ahri",
+        "DA_18_Sett"
+      ],
+      "itemIds": [
+        "DA_SpearOfShojin",
+        "DA_LastWhisper",
+        "DA_Deathblade",
+        "DA_18_EmblemExecutioner",
+        "DA_Morellonomicon",
+        "DA_WarmogsArmor",
+        "DA_GargoyleStoneplate"
+      ],
+      "augmentIds": [
+        "DA_18_ElderwoodTraitAugment",
+        "DA_BodyguardTraining",
+        "DA_18_LuxAugmentII",
+        "DA_SwordOverflow",
+        "DA_Swordsmith",
+        "DA_Staffsmith",
+        "DA_WandOverflow",
+        "DA_CommerceCore"
+      ],
+      "traitIds": [
+        "DA_18_Executioner",
+        "DA_18_Elderwood",
+        "DA_18_Blossom"
+      ],
+      "loadouts": [
+        {
+          "championId": "DA_18_Ezreal",
+          "itemIds": [
+            "DA_SpearOfShojin",
+            "DA_LastWhisper",
+            "DA_Deathblade"
+          ]
+        },
+        {
+          "championId": "DA_18_Ahri",
+          "itemIds": [
+            "DA_18_EmblemExecutioner",
+            "DA_Morellonomicon",
+            "DA_SpearOfShojin"
+          ]
+        },
+        {
+          "championId": "DA_18_Sett",
+          "itemIds": [
+            "DA_WarmogsArmor",
+            "DA_GargoyleStoneplate"
+          ]
+        }
+      ],
+      "altLoadouts": [],
+      "itemPrio": [
+        "DA_SpearOfShojin",
+        "DA_Component_BFSword",
+        "DA_Component_SparringGloves",
+        "DA_Component_RecurveBow"
+      ],
+      "board": [
+        {
+          "id": "DA_18_Soraka",
+          "stars": 1,
+          "row": 3,
+          "col": 2
+        },
+        {
+          "id": "DA_18_Ornn",
+          "stars": 1,
+          "row": 0,
+          "col": 1
+        },
+        {
+          "id": "DA_18_Alistar",
+          "stars": 1,
+          "row": 0,
+          "col": 2
+        },
+        {
+          "id": "DA_18_Ezreal",
+          "stars": 1,
+          "row": 3,
+          "col": 6
+        },
+        {
+          "id": "DA_18_Ahri",
+          "stars": 1,
+          "row": 3,
+          "col": 4
+        },
+        {
+          "id": "DA_18_Sett",
+          "stars": 1,
+          "row": 0,
+          "col": 4
+        },
+        {
+          "id": "DA_Elderwood18_Lifeblossom",
+          "stars": 1,
+          "row": 2,
+          "col": 0
+        },
+        {
+          "id": "DA_18_Yunara",
+          "stars": 1,
+          "row": 3,
+          "col": 0
+        },
+        {
+          "id": "DA_Fiddlesticks18",
+          "stars": 1,
+          "row": 0,
+          "col": 3
+        },
+        {
+          "id": "DA_Elderwood18_StonebarkTree",
+          "stars": 1,
+          "row": 0,
+          "col": 0
+        }
+      ],
+      "avgPlace": 4.84,
+      "pickRate": 0.15,
+      "winRate": 11.4,
+      "top4": 43
+    },
+    {
+      "id": "veigar-consuming-flora-copy",
+      "name": "Bosqueviejo Veigar",
+      "tier": "C",
+      "style": "1-Cost Reroll",
+      "difficulty": "Easy",
+      "unitIds": [
+        "DA_Elderwood18_Lifeblossom",
+        "DA_Elderwood18_StonebarkTree",
+        "DA_18_RekSai",
+        "DA_18_Ornn",
+        "DA_18_Veigar",
+        "DA_18_Alistar",
+        "DA_18_LeBlanc",
+        "DA_18_Cassiopeia",
+        "DA_Fiddlesticks18"
+      ],
+      "carryIds": [
+        "DA_18_Veigar",
+        "DA_18_Ornn",
+        "DA_18_LeBlanc"
+      ],
+      "itemIds": [
+        "DA_WarmogsArmor",
+        "DA_Crownguard",
+        "DA_GargoyleStoneplate",
+        "DA_JeweledGauntlet",
+        "DA_BlueBuff",
+        "DA_HextechGunblade",
+        "DA_VoidStaff",
+        "DA_Morellonomicon",
+        "DA_Artifact_Dawncore",
+        "DA_Artifact_LudensTempest",
+        "DA_18_EmblemFloraFatalisAugment"
+      ],
+      "augmentIds": [
+        "DA_LivingForge",
+        "DA_ForgedInStrength",
+        "DA_PortableForge",
+        "DA_LatentForge",
+        "DA_18_FloraFatalisAugment",
+        "DA_MissedConnections",
+        "DA_PandorasBench",
+        "DA_DeadlierCaps"
+      ],
+      "traitIds": [
+        "DA_18_Spellweaver",
+        "DA_18_Elderwood",
+        "DA_18_Blackthorn"
+      ],
+      "loadouts": [
+        {
+          "championId": "DA_18_Ornn",
+          "itemIds": [
+            "DA_WarmogsArmor",
+            "DA_Crownguard",
+            "DA_GargoyleStoneplate"
+          ]
+        },
+        {
+          "championId": "DA_18_Veigar",
+          "itemIds": [
+            "DA_JeweledGauntlet",
+            "DA_BlueBuff",
+            "DA_HextechGunblade"
+          ]
+        },
+        {
+          "championId": "DA_18_LeBlanc",
+          "itemIds": [
+            "DA_VoidStaff",
+            "DA_Morellonomicon"
+          ]
+        }
+      ],
+      "altLoadouts": [
+        {
+          "championId": "DA_18_Veigar",
+          "itemIds": [
+            "DA_BlueBuff",
+            "DA_JeweledGauntlet",
+            "DA_Artifact_Dawncore"
+          ]
+        },
+        {
+          "championId": "DA_18_Veigar",
+          "itemIds": [
+            "DA_JeweledGauntlet",
+            "DA_Artifact_LudensTempest",
+            "DA_18_EmblemFloraFatalisAugment"
+          ]
+        }
+      ],
+      "itemPrio": [
+        "DA_BlueBuff",
+        "DA_JeweledGauntlet",
+        "DA_GargoyleStoneplate",
+        "DA_Component_GiantsBelt"
+      ],
+      "board": [
+        {
+          "id": "DA_Elderwood18_Lifeblossom",
+          "stars": 1,
+          "row": 2,
+          "col": 3
+        },
+        {
+          "id": "DA_Elderwood18_StonebarkTree",
+          "stars": 1,
+          "row": 0,
+          "col": 6
+        },
+        {
+          "id": "DA_18_RekSai",
+          "stars": 1,
+          "row": 2,
+          "col": 2
+        },
+        {
+          "id": "DA_18_Ornn",
+          "stars": 1,
+          "row": 0,
+          "col": 3
+        },
+        {
+          "id": "DA_18_Veigar",
+          "stars": 1,
+          "row": 3,
+          "col": 0
+        },
+        {
+          "id": "DA_18_Alistar",
+          "stars": 1,
+          "row": 2,
+          "col": 5
+        },
+        {
+          "id": "DA_18_LeBlanc",
+          "stars": 1,
+          "row": 3,
+          "col": 2
+        },
+        {
+          "id": "DA_18_Cassiopeia",
+          "stars": 1,
+          "row": 3,
+          "col": 4
+        },
+        {
+          "id": "DA_Fiddlesticks18",
+          "stars": 1,
+          "row": 2,
+          "col": 4
+        }
+      ],
+      "avgPlace": 4.59,
+      "pickRate": 0.37,
+      "winRate": 10,
+      "top4": 48.5
+    },
+    {
+      "id": "solar-kayle",
+      "name": "Solar Kayle",
+      "tier": "C",
+      "style": "2-Cost Reroll",
+      "difficulty": "Easy",
+      "unitIds": [
+        "DA_Elderwood18_Lifeblossom",
+        "DA_Elderwood18_StonebarkTree",
+        "DA_18_Leona",
+        "DA_18_Rakan",
+        "DA_18_Ornn",
+        "DA_18_Xayah",
+        "DA_18_Sejuani",
+        "DA_18_Kayle",
+        "DA_18_Hecarim"
+      ],
+      "carryIds": [
+        "DA_18_Kayle",
+        "DA_18_Ornn",
+        "DA_18_Xayah"
+      ],
+      "itemIds": [
+        "DA_GargoyleStoneplate",
+        "DA_WarmogsArmor",
+        "DA_SpiritVisage",
+        "DA_GuinsoosRageblade",
+        "DA_RedBuff",
+        "DA_Deathblade",
+        "DA_Artifact_NavoriFlickerblade",
+        "DA_RabadonsDeathcap",
+        "DA_Artifact_WitsEnd",
+        "DA_Artifact_StatikkShiv",
+        "DA_Artifact_Mittens",
+        "DA_Artifact_RapidFireCannon",
+        "DA_Item_Artifact_TalismanOfAscension",
+        "DA_Artifact_ZhonyasParadox"
+      ],
+      "augmentIds": [
+        "DA_18_SolarTraitAugment",
+        "DA_PandorasBench",
+        "DA_PrismaticTicket",
+        "DA_NoScoutNoPivot",
+        "DA_HeroicGrabBagPlus",
+        "DA_MissedConnections",
+        "DA_PortableForge",
+        "DA_18_ElderwoodTraitAugment"
+      ],
+      "traitIds": [
+        "DA_18_Solar",
+        "DA_18_Elderwood",
+        "DA_18_Defender"
+      ],
+      "loadouts": [
+        {
+          "championId": "DA_18_Ornn",
+          "itemIds": [
+            "DA_GargoyleStoneplate",
+            "DA_WarmogsArmor",
+            "DA_SpiritVisage"
+          ]
+        },
+        {
+          "championId": "DA_18_Xayah",
+          "itemIds": [
+            "DA_GuinsoosRageblade",
+            "DA_RedBuff",
+            "DA_Deathblade"
+          ]
+        },
+        {
+          "championId": "DA_18_Kayle",
+          "itemIds": [
+            "DA_GuinsoosRageblade",
+            "DA_Artifact_NavoriFlickerblade",
+            "DA_RabadonsDeathcap"
+          ]
+        }
+      ],
+      "altLoadouts": [
+        {
+          "championId": "DA_18_Kayle",
+          "itemIds": [
+            "DA_Artifact_WitsEnd",
+            "DA_Artifact_StatikkShiv",
+            "DA_Artifact_Mittens"
+          ]
+        },
+        {
+          "championId": "DA_18_Kayle",
+          "itemIds": [
+            "DA_Artifact_RapidFireCannon",
+            "DA_Item_Artifact_TalismanOfAscension",
+            "DA_Artifact_ZhonyasParadox"
+          ]
+        }
+      ],
+      "itemPrio": [
+        "DA_GuinsoosRageblade",
+        "DA_GargoyleStoneplate",
+        "DA_Component_NeedlesslyLargeRod",
+        "DA_Component_SparringGloves"
+      ],
+      "board": [
+        {
+          "id": "DA_Elderwood18_Lifeblossom",
+          "stars": 1,
+          "row": 3,
+          "col": 1
+        },
+        {
+          "id": "DA_Elderwood18_StonebarkTree",
+          "stars": 1,
+          "row": 0,
+          "col": 0
+        },
+        {
+          "id": "DA_18_Leona",
+          "stars": 1,
+          "row": 1,
+          "col": 4
+        },
+        {
+          "id": "DA_18_Rakan",
+          "stars": 1,
+          "row": 2,
+          "col": 3
+        },
+        {
+          "id": "DA_18_Ornn",
+          "stars": 1,
+          "row": 0,
+          "col": 4
+        },
+        {
+          "id": "DA_18_Xayah",
+          "stars": 1,
+          "row": 3,
+          "col": 5
+        },
+        {
+          "id": "DA_18_Sejuani",
+          "stars": 1,
+          "row": 1,
+          "col": 3
+        },
+        {
+          "id": "DA_18_Kayle",
+          "stars": 1,
+          "row": 3,
+          "col": 6
+        },
+        {
+          "id": "DA_18_Hecarim",
+          "stars": 1,
+          "row": 2,
+          "col": 4
+        }
+      ],
+      "avgPlace": 4.73,
+      "pickRate": 0.04,
+      "winRate": 9.1,
+      "top4": 46.9
+    },
+    {
+      "id": "adaptor-nidalee",
+      "name": "Conjurador Nidalee",
+      "tier": "C",
+      "style": "4-Cost Fast 8",
+      "difficulty": "Medium",
+      "unitIds": [
+        "DA_18_Sentry",
+        "DA_Scuttlecrab18",
+        "DA_KogMaw18_AD",
+        "DA_Vi18",
+        "DA_18_Morgana",
+        "DA_Nidalee18_AP",
+        "DA_Sentinel18",
+        "DA_Taric18"
+      ],
+      "carryIds": [
+        "DA_Nidalee18_AP",
+        "DA_18_Morgana",
+        "DA_Sentinel18"
+      ],
+      "itemIds": [
+        "DA_Morellonomicon",
+        "DA_ArchangelsStaff",
+        "DA_AdaptiveHelm",
+        "DA_JeweledGauntlet",
+        "DA_GuinsoosRageblade",
+        "DA_StrikersFlail",
+        "DA_ProtectorsVow",
+        "DA_WarmogsArmor",
+        "DA_Artifact_BlightingJewel",
+        "DA_Artifact_NavoriFlickerblade",
+        "DA_Artifact_StatikkShiv"
+      ],
+      "augmentIds": [
+        "DA_WandOverflow",
+        "DA_SpeedyDoubleKill",
+        "DA_Staffsmith",
+        "DA_18_BigGrabBag",
+        "DA_18_PrimalAugmentPlus_Nidalee",
+        "DA_CaretakersFavor",
+        "DA_BuriedTreasuresIII",
+        "DA_TimeSkip"
+      ],
+      "traitIds": [
+        "DA_18_Invoker",
+        "DA_Riftbeast18",
+        "DA_Juggernaut18"
+      ],
+      "loadouts": [
+        {
+          "championId": "DA_18_Morgana",
+          "itemIds": [
+            "DA_Morellonomicon",
+            "DA_ArchangelsStaff",
+            "DA_AdaptiveHelm"
+          ]
+        },
+        {
+          "championId": "DA_Nidalee18_AP",
+          "itemIds": [
+            "DA_JeweledGauntlet",
+            "DA_GuinsoosRageblade",
+            "DA_StrikersFlail"
+          ]
+        },
+        {
+          "championId": "DA_Sentinel18",
+          "itemIds": [
+            "DA_ProtectorsVow",
+            "DA_WarmogsArmor",
+            "DA_AdaptiveHelm"
+          ]
+        }
+      ],
+      "altLoadouts": [
+        {
+          "championId": "DA_18_Morgana",
+          "itemIds": [
+            "DA_Artifact_BlightingJewel"
+          ]
+        },
+        {
+          "championId": "DA_Nidalee18_AP",
+          "itemIds": [
+            "DA_Artifact_NavoriFlickerblade",
+            "DA_Artifact_StatikkShiv"
+          ]
+        }
+      ],
+      "itemPrio": [
+        "DA_GuinsoosRageblade",
+        "DA_JeweledGauntlet",
+        "DA_Morellonomicon",
+        "DA_Component_GiantsBelt"
+      ],
+      "board": [
+        {
+          "id": "DA_18_Sentry",
+          "stars": 1,
+          "row": 3,
+          "col": 6
+        },
+        {
+          "id": "DA_Scuttlecrab18",
+          "stars": 1,
+          "row": 0,
+          "col": 4
+        },
+        {
+          "id": "DA_KogMaw18_AD",
+          "stars": 1,
+          "row": 3,
+          "col": 1
+        },
+        {
+          "id": "DA_Vi18",
+          "stars": 1,
+          "row": 0,
+          "col": 5
+        },
+        {
+          "id": "DA_18_Morgana",
+          "stars": 1,
+          "row": 1,
+          "col": 2
+        },
+        {
+          "id": "DA_Nidalee18_AP",
+          "stars": 1,
+          "row": 3,
+          "col": 0
+        },
+        {
+          "id": "DA_Sentinel18",
+          "stars": 1,
+          "row": 0,
+          "col": 3
+        },
+        {
+          "id": "DA_Taric18",
+          "stars": 1,
+          "row": 0,
+          "col": 2
+        }
+      ],
+      "avgPlace": 4.58,
+      "pickRate": 0.04,
+      "winRate": 10.1,
+      "top4": 48.9
+    },
+    {
+      "id": "rengar-rr",
+      "name": "Rengar Rerrol",
+      "tier": "C",
+      "style": "3-Cost Reroll",
+      "difficulty": "Medium",
+      "unitIds": [
+        "DA_18_Diana",
+        "DA_18_Hecarim",
+        "DA_CrimsonRaptor18",
+        "DA_18_Rengar",
+        "DA_18_Aphelios",
+        "DA_Brambleback18",
+        "DA_Sentinel18",
+        "DA_Taric18"
+      ],
+      "carryIds": [
+        "DA_18_Rengar",
+        "DA_18_Hecarim",
+        "DA_CrimsonRaptor18"
+      ],
+      "itemIds": [
+        "DA_ThiefsGloves",
+        "DA_ProtectorsVow",
+        "DA_SunfireCape",
+        "DA_WarmogsArmor",
+        "DA_LastWhisper",
+        "DA_KrakensFury",
+        "DA_GuinsoosRageblade",
+        "DA_EdgeOfNight",
+        "DA_TitansResolve",
+        "DA_Artifact_Mittens",
+        "DA_Artifact_RapidFireCannon",
+        "DA_Artifact_HellfireHatchet",
+        "DA_Artifact_NavoriFlickerblade",
+        "DA_Artifact_InfinityForce",
+        "DA_Artifact_TitanicHydra"
+      ],
+      "augmentIds": [
+        "DA_ChampDelivery",
+        "DA_SpeedyDoubleKill",
+        "DA_HeroicGrabBagPlus",
+        "DA_TradeSector",
+        "DA_BoosterPack",
+        "DA_ExclusiveCustomization",
+        "DA_LatentForge",
+        "DA_LegionOfThrees"
+      ],
+      "traitIds": [
+        "DA_18_Vanguard",
+        "DA_Riftbeast18",
+        "DA_18_Lunar"
+      ],
+      "loadouts": [
+        {
+          "championId": "DA_18_Diana",
+          "itemIds": [
+            "DA_ThiefsGloves"
+          ]
+        },
+        {
+          "championId": "DA_18_Hecarim",
+          "itemIds": [
+            "DA_ProtectorsVow",
+            "DA_SunfireCape",
+            "DA_WarmogsArmor"
+          ]
+        },
+        {
+          "championId": "DA_CrimsonRaptor18",
+          "itemIds": [
+            "DA_LastWhisper",
+            "DA_KrakensFury",
+            "DA_GuinsoosRageblade"
+          ]
+        },
+        {
+          "championId": "DA_18_Rengar",
+          "itemIds": [
+            "DA_EdgeOfNight",
+            "DA_TitansResolve",
+            "DA_GuinsoosRageblade"
+          ]
+        }
+      ],
+      "altLoadouts": [
+        {
+          "championId": "DA_18_Rengar",
+          "itemIds": [
+            "DA_Artifact_Mittens",
+            "DA_Artifact_RapidFireCannon",
+            "DA_Artifact_HellfireHatchet"
+          ]
+        },
+        {
+          "championId": "DA_18_Rengar",
+          "itemIds": [
+            "DA_Artifact_NavoriFlickerblade",
+            "DA_Artifact_InfinityForce",
+            "DA_Artifact_TitanicHydra"
+          ]
+        }
+      ],
+      "itemPrio": [
+        "DA_GuinsoosRageblade",
+        "DA_EdgeOfNight",
+        "DA_TitansResolve",
+        "DA_Component_RecurveBow"
+      ],
+      "board": [
+        {
+          "id": "DA_18_Diana",
+          "stars": 1,
+          "row": 1,
+          "col": 0
+        },
+        {
+          "id": "DA_18_Hecarim",
+          "stars": 1,
+          "row": 0,
+          "col": 1
+        },
+        {
+          "id": "DA_CrimsonRaptor18",
+          "stars": 1,
+          "row": 3,
+          "col": 0
+        },
+        {
+          "id": "DA_18_Rengar",
+          "stars": 1,
+          "row": 0,
+          "col": 0
+        },
+        {
+          "id": "DA_18_Aphelios",
+          "stars": 1,
+          "row": 3,
+          "col": 1
+        },
+        {
+          "id": "DA_Brambleback18",
+          "stars": 1,
+          "row": 1,
+          "col": 1
+        },
+        {
+          "id": "DA_Sentinel18",
+          "stars": 1,
+          "row": 0,
+          "col": 6
+        },
+        {
+          "id": "DA_Taric18",
+          "stars": 1,
+          "row": 1,
+          "col": 6
+        }
+      ],
+      "avgPlace": 4.6,
+      "pickRate": 0.08,
+      "winRate": 8.5,
+      "top4": 48
+    },
+    {
+      "id": "solara-yunara",
+      "name": "Solar Yunara",
+      "tier": "B",
+      "style": "2-Cost Reroll",
+      "difficulty": "Medium",
+      "unitIds": [
+        "DA_18_LeBlanc",
+        "DA_18_Leona",
+        "DA_18_Yorick",
+        "DA_18_Kayle",
+        "DA_Karma18",
+        "DA_18_Sejuani",
+        "DA_18_Yunara",
+        "DA_18_Azir"
+      ],
+      "carryIds": [
+        "DA_18_Yunara",
+        "DA_Karma18",
+        "DA_18_Sejuani"
+      ],
+      "itemIds": [
+        "DA_SpearOfShojin",
+        "DA_VoidStaff",
+        "DA_JeweledGauntlet",
+        "DA_GargoyleStoneplate",
+        "DA_WarmogsArmor",
+        "DA_Deathblade",
+        "DA_LastWhisper",
+        "DA_Artifact_Dawncore"
+      ],
+      "augmentIds": [
+        "DA_18_CaretakersAlly",
+        "DA_Swordsmith",
+        "DA_SwordOverflow",
+        "DA_HeroicGrabBag",
+        "DA_SoloPlate",
+        "DA_PandorasBench",
+        "DA_PrismaticTicket",
+        "DA_KickStart"
+      ],
+      "traitIds": [
+        "DA_18_Solar",
+        "DA_18_Blossom",
+        "DA_18_Spellweaver"
+      ],
+      "loadouts": [
+        {
+          "championId": "DA_Karma18",
+          "itemIds": [
+            "DA_SpearOfShojin",
+            "DA_VoidStaff",
+            "DA_JeweledGauntlet"
+          ]
+        },
+        {
+          "championId": "DA_18_Sejuani",
+          "itemIds": [
+            "DA_GargoyleStoneplate",
+            "DA_WarmogsArmor"
+          ]
+        },
+        {
+          "championId": "DA_18_Yunara",
+          "itemIds": [
+            "DA_Deathblade",
+            "DA_SpearOfShojin",
+            "DA_LastWhisper"
+          ]
+        }
+      ],
+      "altLoadouts": [
+        {
+          "championId": "DA_18_Yunara",
+          "itemIds": [
+            "DA_Artifact_Dawncore",
+            "DA_SpearOfShojin",
+            "DA_Deathblade"
+          ]
+        }
+      ],
+      "itemPrio": [
+        "DA_SpearOfShojin",
+        "DA_GargoyleStoneplate",
+        "DA_LastWhisper",
+        "DA_Component_BFSword"
+      ],
+      "board": [
+        {
+          "id": "DA_18_LeBlanc",
+          "stars": 1,
+          "row": 3,
+          "col": 4
+        },
+        {
+          "id": "DA_18_Leona",
+          "stars": 1,
+          "row": 3,
+          "col": 0
+        },
+        {
+          "id": "DA_18_Yorick",
+          "stars": 1,
+          "row": 2,
+          "col": 3
+        },
+        {
+          "id": "DA_18_Kayle",
+          "stars": 1,
+          "row": 3,
+          "col": 2
+        },
+        {
+          "id": "DA_Karma18",
+          "stars": 1,
+          "row": 3,
+          "col": 5
+        },
+        {
+          "id": "DA_18_Sejuani",
+          "stars": 1,
+          "row": 0,
+          "col": 3
+        },
+        {
+          "id": "DA_18_Yunara",
+          "stars": 1,
+          "row": 3,
+          "col": 6
+        },
+        {
+          "id": "DA_18_Azir",
+          "stars": 1,
+          "row": 3,
+          "col": 1
+        }
+      ],
+      "avgPlace": 4.63,
+      "pickRate": 0.05,
+      "winRate": 8.7,
+      "top4": 49.4
+    },
+    {
+      "id": "warwick-rr",
+      "name": "Warwick Rerrol",
+      "tier": "C",
+      "style": "2-Cost Reroll",
+      "difficulty": "Medium",
+      "unitIds": [
+        "DA_18_RekSai",
+        "DA_Murkwolf18",
+        "DA_18_Warwick",
+        "DA_18_Azir",
+        "DA_Krug18",
+        "DA_Brambleback18",
+        "DA_18_Malphite"
+      ],
+      "carryIds": [
+        "DA_18_Warwick",
+        "DA_Murkwolf18",
+        "DA_18_Malphite"
+      ],
+      "itemIds": [
+        "DA_Deathblade",
+        "DA_EdgeOfNight",
+        "DA_HandOfJustice",
+        "DA_SteraksGage",
+        "DA_TitansResolve",
+        "DA_SpearOfShojin",
+        "DA_WarmogsArmor",
+        "DA_GargoyleStoneplate",
+        "DA_Crownguard",
+        "DA_Artifact_RapidFireCannon",
+        "DA_Quicksilver",
+        "DA_InfinityEdge",
+        "DA_Artifact_Mittens",
+        "DA_Artifact_HellfireHatchet",
+        "DA_Artifact_DeathsDefiance"
+      ],
+      "augmentIds": [
+        "DA_18_CaretakersAlly",
+        "DA_WorththeWaitII",
+        "DA_LatentForge",
+        "DA_PortableForge",
+        "DA_ForgedInStrength",
+        "DA_LivingForge",
+        "DA_HeroicGrabBagPlus",
+        "DA_NestingAnvils"
+      ],
+      "traitIds": [
+        "DA_18_Blackthorn",
+        "DA_Riftbeast18",
+        "DA_18_Slayer"
+      ],
+      "loadouts": [
+        {
+          "championId": "DA_Murkwolf18",
+          "itemIds": [
+            "DA_Deathblade",
+            "DA_EdgeOfNight",
+            "DA_HandOfJustice"
+          ]
+        },
+        {
+          "championId": "DA_18_Warwick",
+          "itemIds": [
+            "DA_SteraksGage",
+            "DA_TitansResolve",
+            "DA_SpearOfShojin"
+          ]
+        },
+        {
+          "championId": "DA_18_Malphite",
+          "itemIds": [
+            "DA_WarmogsArmor",
+            "DA_GargoyleStoneplate",
+            "DA_Crownguard"
+          ]
+        }
+      ],
+      "altLoadouts": [
+        {
+          "championId": "DA_18_Warwick",
+          "itemIds": [
+            "DA_Artifact_RapidFireCannon",
+            "DA_Quicksilver",
+            "DA_InfinityEdge"
+          ]
+        },
+        {
+          "championId": "DA_18_Warwick",
+          "itemIds": [
+            "DA_Artifact_Mittens",
+            "DA_Artifact_HellfireHatchet",
+            "DA_Artifact_DeathsDefiance"
+          ]
+        }
+      ],
+      "itemPrio": [
+        "DA_SpearOfShojin",
+        "DA_TitansResolve",
+        "DA_Component_BFSword",
+        "DA_Component_GiantsBelt"
+      ],
+      "board": [
+        {
+          "id": "DA_18_RekSai",
+          "stars": 1,
+          "row": 2,
+          "col": 6
+        },
+        {
+          "id": "DA_Murkwolf18",
+          "stars": 1,
+          "row": 3,
+          "col": 1
+        },
+        {
+          "id": "DA_18_Warwick",
+          "stars": 1,
+          "row": 3,
+          "col": 0
+        },
+        {
+          "id": "DA_18_Azir",
+          "stars": 1,
+          "row": 3,
+          "col": 2
+        },
+        {
+          "id": "DA_Krug18",
+          "stars": 1,
+          "row": 2,
+          "col": 3
+        },
+        {
+          "id": "DA_Brambleback18",
+          "stars": 1,
+          "row": 2,
+          "col": 2
+        },
+        {
+          "id": "DA_18_Malphite",
+          "stars": 1,
+          "row": 0,
+          "col": 3
+        }
+      ],
+      "avgPlace": 4.58,
+      "pickRate": 0.1,
+      "winRate": 9,
+      "top4": 48.5
+    },
+    {
+      "id": "fae-xayah",
+      "name": "Hadístico Xayah",
+      "tier": "C",
+      "style": "1-Cost Reroll",
+      "difficulty": "Easy",
+      "unitIds": [
+        "DA_Elderwood18_Lifeblossom",
+        "DA_Elderwood18_StonebarkTree",
+        "DA_18_Rakan",
+        "DA_18_Ornn",
+        "DA_18_Xayah",
+        "DA_18_Diana",
+        "DA_18_Tristana",
+        "DA_18_Lillia",
+        "DA_18_Aphelios",
+        "DA_18_GnarSmall"
+      ],
+      "carryIds": [
+        "DA_18_Xayah",
+        "DA_18_Ornn",
+        "DA_18_Aphelios"
+      ],
+      "itemIds": [
+        "DA_WarmogsArmor",
+        "DA_SpiritVisage",
+        "DA_GargoyleStoneplate",
+        "DA_KrakensFury",
+        "DA_GuinsoosRageblade",
+        "DA_HextechGunblade",
+        "DA_LastWhisper",
+        "DA_RedBuff",
+        "DA_Artifact_AegisOfDawn",
+        "DA_Artifact_LightshieldCrest",
+        "DA_Artifact_ForbiddenIdol",
+        "DA_Artifact_NavoriFlickerblade",
+        "DA_Artifact_Fishbones",
+        "DA_Artifact_TitanicHydra"
+      ],
+      "augmentIds": [
+        "DA_EarlyLearnings",
+        "DA_NoScoutNoPivot",
+        "DA_MissedConnections",
+        "DA_PandorasBench",
+        "DA_SoloPlate",
+        "DA_PrismaticTicket",
+        "DA_18_ElderwoodTraitAugment",
+        "DA_WorththeWait"
+      ],
+      "traitIds": [
+        "DA_18_Fae",
+        "DA_18_Elderwood",
+        "DA_18_Vanguard"
+      ],
+      "loadouts": [
+        {
+          "championId": "DA_18_Ornn",
+          "itemIds": [
+            "DA_WarmogsArmor",
+            "DA_SpiritVisage",
+            "DA_GargoyleStoneplate"
+          ]
+        },
+        {
+          "championId": "DA_18_Xayah",
+          "itemIds": [
+            "DA_KrakensFury",
+            "DA_GuinsoosRageblade",
+            "DA_HextechGunblade"
+          ]
+        },
+        {
+          "championId": "DA_18_Aphelios",
+          "itemIds": [
+            "DA_LastWhisper",
+            "DA_RedBuff"
+          ]
+        }
+      ],
+      "altLoadouts": [
+        {
+          "championId": "DA_18_Ornn",
+          "itemIds": [
+            "DA_Artifact_AegisOfDawn",
+            "DA_Artifact_LightshieldCrest",
+            "DA_Artifact_ForbiddenIdol"
+          ]
+        },
+        {
+          "championId": "DA_18_Xayah",
+          "itemIds": [
+            "DA_Artifact_NavoriFlickerblade",
+            "DA_Artifact_Fishbones",
+            "DA_Artifact_TitanicHydra"
+          ]
+        }
+      ],
+      "itemPrio": [
+        "DA_GuinsoosRageblade",
+        "DA_KrakensFury",
+        "DA_GargoyleStoneplate",
+        "DA_HextechGunblade"
+      ],
+      "board": [
+        {
+          "id": "DA_Elderwood18_Lifeblossom",
+          "stars": 1,
+          "row": 3,
+          "col": 0
+        },
+        {
+          "id": "DA_Elderwood18_StonebarkTree",
+          "stars": 1,
+          "row": 0,
+          "col": 0
+        },
+        {
+          "id": "DA_18_Rakan",
+          "stars": 1,
+          "row": 0,
+          "col": 3
+        },
+        {
+          "id": "DA_18_Ornn",
+          "stars": 1,
+          "row": 0,
+          "col": 4
+        },
+        {
+          "id": "DA_18_Xayah",
+          "stars": 1,
+          "row": 3,
+          "col": 6
+        },
+        {
+          "id": "DA_18_Diana",
+          "stars": 1,
+          "row": 1,
+          "col": 3
+        },
+        {
+          "id": "DA_18_Tristana",
+          "stars": 1,
+          "row": 3,
+          "col": 4
+        },
+        {
+          "id": "DA_18_Lillia",
+          "stars": 1,
+          "row": 1,
+          "col": 2
+        },
+        {
+          "id": "DA_18_Aphelios",
+          "stars": 1,
+          "row": 3,
+          "col": 5
+        },
+        {
+          "id": "DA_18_GnarSmall",
+          "stars": 1,
+          "row": 2,
+          "col": 4
+        }
+      ],
+      "avgPlace": 4.55,
+      "pickRate": 0.08,
+      "winRate": 9,
+      "top4": 48
+    },
+    {
+      "id": "sprykin-teemo-copy",
+      "name": "Teemo Bosqueviejo",
+      "tier": "C",
+      "style": "2-Cost Reroll",
+      "difficulty": "Easy",
+      "unitIds": [
+        "DA_18_Teemo",
+        "DA_18_LeBlanc",
+        "DA_Elderwood18_StonebarkTree",
+        "DA_18_Hecarim",
+        "DA_Sentinel18",
+        "DA_18_Alistar",
+        "DA_Elderwood18_Lifeblossom",
+        "DA_18_Kobuko",
+        "DA_18_Veigar"
+      ],
+      "carryIds": [
+        "DA_18_Teemo",
+        "DA_18_LeBlanc",
+        "DA_18_Alistar"
+      ],
+      "itemIds": [
+        "DA_VoidStaff",
+        "DA_Morellonomicon",
+        "DA_SpearOfShojin",
+        "DA_JeweledGauntlet",
+        "DA_StrikersFlail",
+        "DA_WarmogsArmor",
+        "DA_GargoyleStoneplate",
+        "DA_RabadonsDeathcap"
+      ],
+      "augmentIds": [
+        "DA_WorththeWaitII",
+        "DA_18_CaretakersAlly",
+        "DA_DeadlierCaps",
+        "DA_18_SprykinAugment",
+        "DA_SoloPlate",
+        "DA_TradeSector",
+        "DA_PandorasBench",
+        "DA_NoScoutNoPivot"
+      ],
+      "traitIds": [
+        "DA_18_Sprykin",
+        "DA_18_Elderwood",
+        "DA_18_Invoker"
+      ],
+      "loadouts": [
+        {
+          "championId": "DA_18_Teemo",
+          "itemIds": [
+            "DA_VoidStaff",
+            "DA_Morellonomicon",
+            "DA_SpearOfShojin"
+          ]
+        },
+        {
+          "championId": "DA_18_LeBlanc",
+          "itemIds": [
+            "DA_SpearOfShojin",
+            "DA_JeweledGauntlet",
+            "DA_StrikersFlail"
+          ]
+        },
+        {
+          "championId": "DA_18_Alistar",
+          "itemIds": [
+            "DA_WarmogsArmor",
+            "DA_GargoyleStoneplate"
+          ]
+        }
+      ],
+      "altLoadouts": [],
+      "itemPrio": [
+        "DA_SpearOfShojin",
+        "DA_RabadonsDeathcap",
+        "DA_GargoyleStoneplate",
+        "DA_Component_NeedlesslyLargeRod"
+      ],
+      "board": [
+        {
+          "id": "DA_18_Teemo",
+          "stars": 1,
+          "row": 3,
+          "col": 6
+        },
+        {
+          "id": "DA_18_LeBlanc",
+          "stars": 1,
+          "row": 3,
+          "col": 5
+        },
+        {
+          "id": "DA_Elderwood18_StonebarkTree",
+          "stars": 1,
+          "row": 0,
+          "col": 0
+        },
+        {
+          "id": "DA_18_Hecarim",
+          "stars": 1,
+          "row": 2,
+          "col": 3
+        },
+        {
+          "id": "DA_Sentinel18",
+          "stars": 1,
+          "row": 2,
+          "col": 4
+        },
+        {
+          "id": "DA_18_Alistar",
+          "stars": 1,
+          "row": 0,
+          "col": 4
+        },
+        {
+          "id": "DA_Elderwood18_Lifeblossom",
+          "stars": 1,
+          "row": 3,
+          "col": 2
+        },
+        {
+          "id": "DA_18_Kobuko",
+          "stars": 1,
+          "row": 2,
+          "col": 1
+        },
+        {
+          "id": "DA_18_Veigar",
+          "stars": 1,
+          "row": 3,
+          "col": 0
+        }
+      ],
+      "avgPlace": 4.65,
+      "pickRate": 0.05,
+      "winRate": 8.8,
+      "top4": 47
+    },
+    {
+      "id": "infinite-elise",
+      "name": "Infinite Elise",
+      "tier": "C",
+      "style": "2-Cost Reroll",
+      "difficulty": "Medium",
+      "unitIds": [
+        "DA_18_Rakan",
+        "DA_18_Elise",
+        "DA_18_Diana",
+        "DA_18_Hecarim",
+        "DA_18_Aphelios",
+        "DA_Sentinel18",
+        "DA_18_Morgana",
+        "DA_18_Alune",
+        "DA_Taric18"
+      ],
+      "carryIds": [
+        "DA_18_Elise",
+        "DA_18_Diana",
+        "DA_18_Hecarim",
+        "DA_18_Morgana"
+      ],
+      "itemIds": [
+        "DA_TitansResolve",
+        "DA_GuinsoosRageblade",
+        "DA_ArchangelsStaff",
+        "DA_JeweledGauntlet",
+        "DA_StrikersFlail",
+        "DA_HandOfJustice",
+        "DA_WarmogsArmor",
+        "DA_ProtectorsVow",
+        "DA_DragonsClaw",
+        "DA_VoidStaff",
+        "DA_Morellonomicon"
+      ],
+      "augmentIds": [],
+      "traitIds": [
+        "DA_18_Vanguard",
+        "DA_18_Lunar",
+        "DA_18_Coven"
+      ],
+      "loadouts": [
+        {
+          "championId": "DA_18_Elise",
+          "itemIds": [
+            "DA_TitansResolve",
+            "DA_GuinsoosRageblade",
+            "DA_ArchangelsStaff"
+          ]
+        },
+        {
+          "championId": "DA_18_Diana",
+          "itemIds": [
+            "DA_JeweledGauntlet",
+            "DA_StrikersFlail",
+            "DA_HandOfJustice"
+          ]
+        },
+        {
+          "championId": "DA_18_Hecarim",
+          "itemIds": [
+            "DA_WarmogsArmor",
+            "DA_ProtectorsVow",
+            "DA_DragonsClaw"
+          ]
+        },
+        {
+          "championId": "DA_18_Morgana",
+          "itemIds": [
+            "DA_VoidStaff",
+            "DA_Morellonomicon"
+          ]
+        }
+      ],
+      "altLoadouts": [],
+      "itemPrio": [],
+      "board": [
+        {
+          "id": "DA_18_Rakan",
+          "stars": 1,
+          "row": 0,
+          "col": 5
+        },
+        {
+          "id": "DA_18_Elise",
+          "stars": 1,
+          "row": 1,
+          "col": 0
+        },
+        {
+          "id": "DA_18_Diana",
+          "stars": 1,
+          "row": 1,
+          "col": 1
+        },
+        {
+          "id": "DA_18_Hecarim",
+          "stars": 1,
+          "row": 0,
+          "col": 1
+        },
+        {
+          "id": "DA_18_Aphelios",
+          "stars": 1,
+          "row": 3,
+          "col": 1
+        },
+        {
+          "id": "DA_Sentinel18",
+          "stars": 1,
+          "row": 0,
+          "col": 3
+        },
+        {
+          "id": "DA_18_Morgana",
+          "stars": 1,
+          "row": 2,
+          "col": 1
+        },
+        {
+          "id": "DA_18_Alune",
+          "stars": 1,
+          "row": 3,
+          "col": 0
+        },
+        {
+          "id": "DA_Taric18",
+          "stars": 1,
+          "row": 0,
+          "col": 4
+        }
+      ],
+      "avgPlace": 4.55,
+      "pickRate": 0.08,
+      "winRate": 9,
+      "top4": 48
+    },
+    {
+      "id": "riftbeasts",
+      "name": "Grietozoicos",
+      "tier": "C",
+      "style": "Fast 9",
+      "difficulty": "Easy",
+      "unitIds": [
+        "DA_18_Sentry",
+        "DA_Murkwolf18",
+        "DA_Krug18",
+        "DA_Brambleback18",
+        "DA_Sentinel18",
+        "DA_18_GnarSmall",
+        "DA_Taric18",
+        "DA_18_ElderDragon"
+      ],
+      "carryIds": [
+        "DA_Brambleback18",
+        "DA_Krug18",
+        "DA_Sentinel18",
+        "DA_18_ElderDragon"
+      ],
+      "itemIds": [
+        "DA_WarmogsArmor",
+        "DA_SpiritVisage",
+        "DA_GargoyleStoneplate",
+        "DA_EdgeOfNight",
+        "DA_GiantSlayer",
+        "DA_Quicksilver",
+        "DA_ProtectorsVow",
+        "DA_SunfireCape",
+        "DA_Evenshroud",
+        "DA_SteraksGage",
+        "DA_Bloodthirster",
+        "DA_InfinityEdge"
+      ],
+      "augmentIds": [],
+      "traitIds": [
+        "DA_Riftbeast18",
+        "DA_18_Invoker",
+        "DA_18_Slayer"
+      ],
+      "loadouts": [
+        {
+          "championId": "DA_Krug18",
+          "itemIds": [
+            "DA_WarmogsArmor",
+            "DA_SpiritVisage",
+            "DA_GargoyleStoneplate"
+          ]
+        },
+        {
+          "championId": "DA_Brambleback18",
+          "itemIds": [
+            "DA_EdgeOfNight",
+            "DA_GiantSlayer",
+            "DA_Quicksilver"
+          ]
+        },
+        {
+          "championId": "DA_Sentinel18",
+          "itemIds": [
+            "DA_ProtectorsVow",
+            "DA_SunfireCape",
+            "DA_Evenshroud"
+          ]
+        },
+        {
+          "championId": "DA_18_ElderDragon",
+          "itemIds": [
+            "DA_SteraksGage",
+            "DA_Bloodthirster",
+            "DA_InfinityEdge"
+          ]
+        }
+      ],
+      "altLoadouts": [],
+      "itemPrio": [],
+      "board": [
+        {
+          "id": "DA_18_Sentry",
+          "stars": 1,
+          "row": 3,
+          "col": 0
+        },
+        {
+          "id": "DA_Murkwolf18",
+          "stars": 1,
+          "row": 2,
+          "col": 2
+        },
+        {
+          "id": "DA_Krug18",
+          "stars": 1,
+          "row": 0,
+          "col": 4
+        },
+        {
+          "id": "DA_Brambleback18",
+          "stars": 1,
+          "row": 2,
+          "col": 6
+        },
+        {
+          "id": "DA_Sentinel18",
+          "stars": 1,
+          "row": 2,
+          "col": 5
+        },
+        {
+          "id": "DA_18_GnarSmall",
+          "stars": 1,
+          "row": 2,
+          "col": 3
+        },
+        {
+          "id": "DA_Taric18",
+          "stars": 1,
+          "row": 2,
+          "col": 1
+        },
+        {
+          "id": "DA_18_ElderDragon",
+          "stars": 1,
+          "row": 2,
+          "col": 4
+        }
+      ],
+      "avgPlace": 4.55,
+      "pickRate": 0.08,
+      "winRate": 9,
+      "top4": 48
+    },
+    {
+      "id": "LeBlanc Weavers",
+      "name": "LeBlanc Forjahechizos",
+      "tier": "C",
+      "style": "2-Cost Reroll",
+      "difficulty": "Easy",
+      "unitIds": [
+        "DA_18_LeBlanc",
+        "DA_18_Hecarim",
+        "DA_18_Ornn",
+        "DA_Fiddlesticks18",
+        "DA_18_Alistar",
+        "DA_18_Alune",
+        "DA_18_GnarSmall"
+      ],
+      "carryIds": [
+        "DA_18_LeBlanc",
+        "DA_18_Hecarim"
+      ],
+      "itemIds": [
+        "DA_SpearOfShojin",
+        "DA_JeweledGauntlet",
+        "DA_StrikersFlail",
+        "DA_WarmogsArmor",
+        "DA_SunfireCape",
+        "DA_ProtectorsVow"
+      ],
+      "augmentIds": [],
+      "traitIds": [
+        "DA_18_Elderwood",
+        "DA_18_Spellweaver",
+        "DA_18_Defender"
+      ],
+      "loadouts": [
+        {
+          "championId": "DA_18_LeBlanc",
+          "itemIds": [
+            "DA_SpearOfShojin",
+            "DA_JeweledGauntlet",
+            "DA_StrikersFlail"
+          ]
+        },
+        {
+          "championId": "DA_18_Hecarim",
+          "itemIds": [
+            "DA_WarmogsArmor",
+            "DA_SunfireCape",
+            "DA_ProtectorsVow"
+          ]
+        }
+      ],
+      "altLoadouts": [],
+      "itemPrio": [],
+      "board": [
+        {
+          "id": "DA_18_LeBlanc",
+          "stars": 1,
+          "row": 3,
+          "col": 0
+        },
+        {
+          "id": "DA_18_Hecarim",
+          "stars": 1,
+          "row": 0,
+          "col": 2
+        },
+        {
+          "id": "DA_18_Ornn",
+          "stars": 1,
+          "row": 0,
+          "col": 3
+        },
+        {
+          "id": "DA_Fiddlesticks18",
+          "stars": 1,
+          "row": 0,
+          "col": 4
+        },
+        {
+          "id": "DA_18_Alistar",
+          "stars": 1,
+          "row": 0,
+          "col": 5
+        },
+        {
+          "id": "DA_18_Alune",
+          "stars": 1,
+          "row": 3,
+          "col": 1
+        },
+        {
+          "id": "DA_18_GnarSmall",
+          "stars": 1,
+          "row": 1,
+          "col": 2
+        }
+      ],
+      "avgPlace": 4.55,
+      "pickRate": 0.08,
+      "winRate": 9,
+      "top4": 48
+    },
+    {
+      "id": "elderwood-executioners",
+      "name": "Bosqueviejo Ejecutores",
+      "tier": "C",
+      "style": "4-Cost Fast 8",
+      "difficulty": "Medium",
+      "unitIds": [
+        "DA_18_Ornn",
+        "DA_18_Alistar",
+        "DA_Taric18",
+        "DA_Fiddlesticks18",
+        "DA_18_Ezreal",
+        "DA_18_Soraka",
+        "DA_Lux18_Base",
+        "DA_Elderwood18_StonebarkTree",
+        "DA_Elderwood18_StonebarkTree",
+        "DA_18_GnarSmall",
+        "DA_18_Hecarim",
+        "DA_Elderwood18_Lifeblossom"
+      ],
+      "carryIds": [
+        "DA_18_Ezreal",
+        "DA_18_Soraka",
+        "DA_Lux18_Base",
+        "DA_18_Hecarim"
+      ],
+      "itemIds": [
+        "DA_SpearOfShojin",
+        "DA_LastWhisper",
+        "DA_Deathblade",
+        "DA_RabadonsDeathcap",
+        "DA_VoidStaff",
+        "DA_18_EmblemExecutioner",
+        "DA_DragonsClaw",
+        "DA_BrambleVest",
+        "DA_SunfireCape"
+      ],
+      "augmentIds": [
+        "DA_18_ElderwoodTraitAugment",
+        "DA_BodyguardTraining",
+        "DA_18_LuxAugmentII",
+        "DA_SwordOverflow",
+        "DA_Swordsmith",
+        "DA_Staffsmith",
+        "DA_WandOverflow",
+        "DA_CommerceCore"
+      ],
+      "traitIds": [
+        "DA_18_Elderwood",
+        "DA_18_Defender",
+        "DA_18_Brawler"
+      ],
+      "loadouts": [
+        {
+          "championId": "DA_18_Ezreal",
+          "itemIds": [
+            "DA_SpearOfShojin",
+            "DA_LastWhisper",
+            "DA_Deathblade"
+          ]
+        },
+        {
+          "championId": "DA_18_Soraka",
+          "itemIds": [
+            "DA_SpearOfShojin",
+            "DA_RabadonsDeathcap",
+            "DA_VoidStaff"
+          ]
+        },
+        {
+          "championId": "DA_Lux18_Base",
+          "itemIds": [
+            "DA_18_EmblemExecutioner",
+            "DA_SpearOfShojin"
+          ]
+        },
+        {
+          "championId": "DA_18_Hecarim",
+          "itemIds": [
+            "DA_DragonsClaw",
+            "DA_BrambleVest",
+            "DA_SunfireCape"
+          ]
+        }
+      ],
+      "altLoadouts": [],
+      "itemPrio": [
+        "DA_SpearOfShojin",
+        "DA_Component_BFSword",
+        "DA_Component_SparringGloves",
+        "DA_Component_RecurveBow"
+      ],
+      "board": [
+        {
+          "id": "DA_18_Ornn",
+          "stars": 1,
+          "row": 0,
+          "col": 1
+        },
+        {
+          "id": "DA_18_Alistar",
+          "stars": 1,
+          "row": 0,
+          "col": 2
+        },
+        {
+          "id": "DA_Taric18",
+          "stars": 1,
+          "row": 0,
+          "col": 4
+        },
+        {
+          "id": "DA_Fiddlesticks18",
+          "stars": 1,
+          "row": 0,
+          "col": 5
+        },
+        {
+          "id": "DA_18_Ezreal",
+          "stars": 1,
+          "row": 3,
+          "col": 6
+        },
+        {
+          "id": "DA_18_Soraka",
+          "stars": 1,
+          "row": 3,
+          "col": 4
+        },
+        {
+          "id": "DA_Lux18_Base",
+          "stars": 1,
+          "row": 3,
+          "col": 0
+        },
+        {
+          "id": "DA_Elderwood18_StonebarkTree",
+          "stars": 1,
+          "row": 0,
+          "col": 0
+        },
+        {
+          "id": "DA_Elderwood18_StonebarkTree",
+          "stars": 1,
+          "row": 0,
+          "col": 6
+        },
+        {
+          "id": "DA_18_GnarSmall",
+          "stars": 1,
+          "row": 1,
+          "col": 3
+        },
+        {
+          "id": "DA_18_Hecarim",
+          "stars": 1,
+          "row": 0,
+          "col": 3
+        },
+        {
+          "id": "DA_Elderwood18_Lifeblossom",
+          "stars": 1,
+          "row": 3,
+          "col": 2
+        }
+      ],
+      "avgPlace": 4.55,
+      "pickRate": 0.08,
+      "winRate": 9,
+      "top4": 48
+    },
+    {
+      "id": "spirit-blossom",
+      "name": "Spirit Floración",
+      "tier": "A",
+      "style": "4-Cost Fast 8",
+      "difficulty": "Easy",
+      "unitIds": [
+        "DA_Karma18",
+        "DA_18_Yorick",
+        "DA_Vi18",
+        "DA_18_Sivir",
+        "DA_18_Zyra",
+        "DA_18_Ahri",
+        "DA_18_Sett",
+        "DA_18_GnarSmall",
+        "DA_18_Ashe"
+      ],
+      "carryIds": [
+        "DA_18_Ahri",
+        "DA_18_Sett",
+        "DA_18_Ashe"
+      ],
+      "itemIds": [
+        "DA_SpearOfShojin",
+        "DA_JeweledGauntlet",
+        "DA_StrikersFlail",
+        "DA_BrambleVest",
+        "DA_DragonsClaw",
+        "DA_WarmogsArmor",
+        "DA_RedBuff",
+        "DA_LastWhisper",
+        "DA_18_EmblemExecutioner"
+      ],
+      "augmentIds": [
+        "DA_Slammin",
+        "DA_JeweledLotus_I",
+        "DA_CommerceCore",
+        "DA_18_BigGrabBag",
+        "DA_FeelingLucky",
+        "DA_ExclusiveCustomization",
+        "DA_Staffsmith",
+        "DA_18_WispRebatePlus"
+      ],
+      "traitIds": [
+        "DA_18_Blossom",
+        "DA_18_Spellweaver",
+        "DA_Juggernaut18"
+      ],
+      "loadouts": [
+        {
+          "championId": "DA_18_Ahri",
+          "itemIds": [
+            "DA_SpearOfShojin",
+            "DA_JeweledGauntlet",
+            "DA_StrikersFlail"
+          ]
+        },
+        {
+          "championId": "DA_18_Sett",
+          "itemIds": [
+            "DA_BrambleVest",
+            "DA_DragonsClaw",
+            "DA_WarmogsArmor"
+          ]
+        },
+        {
+          "championId": "DA_18_Ashe",
+          "itemIds": [
+            "DA_RedBuff",
+            "DA_SpearOfShojin",
+            "DA_LastWhisper"
+          ]
+        }
+      ],
+      "altLoadouts": [
+        {
+          "championId": "DA_18_Ahri",
+          "itemIds": [
+            "DA_18_EmblemExecutioner",
+            "DA_SpearOfShojin",
+            "DA_StrikersFlail"
+          ]
+        }
+      ],
+      "itemPrio": [
+        "DA_SpearOfShojin",
+        "DA_JeweledGauntlet",
+        "DA_Component_GiantsBelt",
+        "DA_Component_SparringGloves"
+      ],
+      "board": [
+        {
+          "id": "DA_Karma18",
+          "stars": 1,
+          "row": 3,
+          "col": 0
+        },
+        {
+          "id": "DA_18_Yorick",
+          "stars": 1,
+          "row": 0,
+          "col": 1
+        },
+        {
+          "id": "DA_Vi18",
+          "stars": 1,
+          "row": 0,
+          "col": 3
+        },
+        {
+          "id": "DA_18_Sivir",
+          "stars": 1,
+          "row": 3,
+          "col": 3
+        },
+        {
+          "id": "DA_18_Zyra",
+          "stars": 1,
+          "row": 3,
+          "col": 2
+        },
+        {
+          "id": "DA_18_Ahri",
+          "stars": 1,
+          "row": 3,
+          "col": 6
+        },
+        {
+          "id": "DA_18_Sett",
+          "stars": 1,
+          "row": 0,
+          "col": 5
+        },
+        {
+          "id": "DA_18_GnarSmall",
+          "stars": 1,
+          "row": 1,
+          "col": 3
+        },
+        {
+          "id": "DA_18_Ashe",
+          "stars": 1,
+          "row": 3,
+          "col": 4
+        }
+      ],
+      "avgPlace": 4.55,
+      "pickRate": 0.08,
+      "winRate": 9,
+      "top4": 48
+    },
+    {
+      "id": "forest-fire",
+      "name": "Forest Fire",
+      "tier": "C",
+      "style": "1-Cost Reroll",
+      "difficulty": "Easy",
+      "unitIds": [
+        "DA_18_Rakan",
+        "DA_18_Ornn",
+        "DA_18_Varus",
+        "DA_18_Xayah",
+        "DA_18_Hecarim",
+        "DA_18_Tristana",
+        "DA_Amumu18",
+        "DA_18_Lillia"
+      ],
+      "carryIds": [
+        "DA_18_Xayah",
+        "DA_18_Ornn",
+        "DA_18_Varus"
+      ],
+      "itemIds": [
+        "DA_WarmogsArmor",
+        "DA_SpiritVisage",
+        "DA_GargoyleStoneplate",
+        "DA_InfinityEdge",
+        "DA_SpearOfShojin",
+        "DA_LastWhisper",
+        "DA_KrakensFury",
+        "DA_GuinsoosRageblade",
+        "DA_Deathblade",
+        "DA_Artifact_NavoriFlickerblade",
+        "DA_Artifact_Fishbones",
+        "DA_Artifact_TitanicHydra",
+        "DA_Artifact_AegisOfDawn",
+        "DA_Artifact_LightshieldCrest",
+        "DA_Artifact_ForbiddenIdol"
+      ],
+      "augmentIds": [
+        "DA_EarlyLearnings",
+        "DA_NoScoutNoPivot",
+        "DA_MissedConnections",
+        "DA_PandorasBench",
+        "DA_SoloPlate",
+        "DA_PrismaticTicket",
+        "DA_18_ElderwoodTraitAugment",
+        "DA_WorththeWait"
+      ],
+      "traitIds": [
+        "DA_18_Fae",
+        "DA_18_Elderwood",
+        "DA_Juggernaut18"
+      ],
+      "loadouts": [
+        {
+          "championId": "DA_18_Ornn",
+          "itemIds": [
+            "DA_WarmogsArmor",
+            "DA_SpiritVisage",
+            "DA_GargoyleStoneplate"
+          ]
+        },
+        {
+          "championId": "DA_18_Varus",
+          "itemIds": [
+            "DA_InfinityEdge",
+            "DA_SpearOfShojin",
+            "DA_LastWhisper"
+          ]
+        },
+        {
+          "championId": "DA_18_Xayah",
+          "itemIds": [
+            "DA_KrakensFury",
+            "DA_GuinsoosRageblade",
+            "DA_Deathblade"
+          ]
+        }
+      ],
+      "altLoadouts": [
+        {
+          "championId": "DA_18_Xayah",
+          "itemIds": [
+            "DA_Artifact_NavoriFlickerblade",
+            "DA_Artifact_Fishbones",
+            "DA_Artifact_TitanicHydra"
+          ]
+        },
+        {
+          "championId": "DA_18_Ornn",
+          "itemIds": [
+            "DA_Artifact_AegisOfDawn",
+            "DA_Artifact_LightshieldCrest",
+            "DA_Artifact_ForbiddenIdol"
+          ]
+        }
+      ],
+      "itemPrio": [
+        "DA_GuinsoosRageblade",
+        "DA_KrakensFury",
+        "DA_GargoyleStoneplate",
+        "DA_Deathblade"
+      ],
+      "board": [
+        {
+          "id": "DA_18_Rakan",
+          "stars": 1,
+          "row": 1,
+          "col": 4
+        },
+        {
+          "id": "DA_18_Ornn",
+          "stars": 1,
+          "row": 0,
+          "col": 3
+        },
+        {
+          "id": "DA_18_Varus",
+          "stars": 1,
+          "row": 3,
+          "col": 5
+        },
+        {
+          "id": "DA_18_Xayah",
+          "stars": 1,
+          "row": 3,
+          "col": 6
+        },
+        {
+          "id": "DA_18_Hecarim",
+          "stars": 1,
+          "row": 1,
+          "col": 2
+        },
+        {
+          "id": "DA_18_Tristana",
+          "stars": 1,
+          "row": 3,
+          "col": 4
+        },
+        {
+          "id": "DA_Amumu18",
+          "stars": 1,
+          "row": 1,
+          "col": 1
+        },
+        {
+          "id": "DA_18_Lillia",
+          "stars": 1,
+          "row": 1,
+          "col": 3
+        }
+      ],
+      "avgPlace": 4.55,
+      "pickRate": 0.08,
+      "winRate": 9,
+      "top4": 48
+    },
+    {
+      "id": "infernal-khazix",
+      "name": "Infernal Khazix",
+      "tier": "C",
+      "style": "3-Cost Reroll",
+      "difficulty": "Medium",
+      "unitIds": [
+        "DA_18_Akali_AD",
+        "DA_18_Varus",
+        "DA_18_Shen",
+        "DA_Vi18",
+        "DA_Fiddlesticks18",
+        "DA_18_KhaZix",
+        "DA_Amumu18",
+        "DA_Nidalee18_AP",
+        "DA_18_Kennen"
+      ],
+      "carryIds": [
+        "DA_18_KhaZix",
+        "DA_Fiddlesticks18"
+      ],
+      "itemIds": [
+        "DA_Crownguard",
+        "DA_WarmogsArmor",
+        "DA_IonicSpark",
+        "DA_JeweledGauntlet",
+        "DA_HandOfJustice",
+        "DA_RabadonsDeathcap"
+      ],
+      "augmentIds": [],
+      "traitIds": [
+        "DA_18_Inferno",
+        "DA_18_Adaptor",
+        "DA_18_Defender"
+      ],
+      "loadouts": [
+        {
+          "championId": "DA_Fiddlesticks18",
+          "itemIds": [
+            "DA_Crownguard",
+            "DA_WarmogsArmor",
+            "DA_IonicSpark"
+          ]
+        },
+        {
+          "championId": "DA_18_KhaZix",
+          "itemIds": [
+            "DA_JeweledGauntlet",
+            "DA_HandOfJustice",
+            "DA_RabadonsDeathcap"
+          ]
+        }
+      ],
+      "altLoadouts": [],
+      "itemPrio": [],
+      "board": [
+        {
+          "id": "DA_18_Akali_AD",
+          "stars": 1,
+          "row": 0,
+          "col": 3
+        },
+        {
+          "id": "DA_18_Varus",
+          "stars": 1,
+          "row": 3,
+          "col": 0
+        },
+        {
+          "id": "DA_18_Shen",
+          "stars": 1,
+          "row": 0,
+          "col": 4
+        },
+        {
+          "id": "DA_Vi18",
+          "stars": 1,
+          "row": 0,
+          "col": 6
+        },
+        {
+          "id": "DA_Fiddlesticks18",
+          "stars": 1,
+          "row": 0,
+          "col": 1
+        },
+        {
+          "id": "DA_18_KhaZix",
+          "stars": 1,
+          "row": 0,
+          "col": 0
+        },
+        {
+          "id": "DA_Amumu18",
+          "stars": 1,
+          "row": 0,
+          "col": 5
+        },
+        {
+          "id": "DA_Nidalee18_AP",
+          "stars": 1,
+          "row": 3,
+          "col": 6
+        },
+        {
+          "id": "DA_18_Kennen",
+          "stars": 1,
+          "row": 0,
+          "col": 2
+        }
+      ],
+      "avgPlace": 4.55,
+      "pickRate": 0.08,
+      "winRate": 9,
+      "top4": 48
+    },
+    {
+      "id": "adaptor-reroll",
+      "name": "Adaptable Rerrol",
+      "tier": "B",
+      "style": "3-Cost Reroll",
+      "difficulty": "Medium",
+      "unitIds": [
+        "DA_18_Yorick",
+        "DA_Krug18",
+        "DA_KogMaw18_AD",
+        "DA_18_MasterYi_AD",
+        "DA_Vi18",
+        "DA_18_Sett",
+        "DA_Nidalee18_AP"
+      ],
+      "carryIds": [
+        "DA_18_MasterYi_AD",
+        "DA_KogMaw18_AD",
+        "DA_Vi18",
+        "DA_Nidalee18_AP"
+      ],
+      "itemIds": [
+        "DA_SpearOfShojin",
+        "DA_RabadonsDeathcap",
+        "DA_JeweledGauntlet",
+        "DA_GuinsoosRageblade",
+        "DA_EdgeOfNight",
+        "DA_TitansResolve",
+        "DA_WarmogsArmor",
+        "DA_GargoyleStoneplate",
+        "DA_18_EmblemBrawler",
+        "DA_Artifact_WitsEnd",
+        "DA_Artifact_NavoriFlickerblade",
+        "DA_Artifact_RapidFireCannon"
+      ],
+      "augmentIds": [
+        "DA_LatentForge",
+        "DA_PortableForge",
+        "DA_ForgedInStrength",
+        "DA_LivingForge",
+        "DA_URF",
+        "DA_NestingAnvils",
+        "DA_HeroicGrabBag",
+        "DA_LegionOfThrees"
+      ],
+      "traitIds": [
+        "DA_18_Blossom",
+        "DA_18_Adaptor",
+        "DA_Juggernaut18"
+      ],
+      "loadouts": [
+        {
+          "championId": "DA_KogMaw18_AD",
+          "itemIds": [
+            "DA_SpearOfShojin",
+            "DA_RabadonsDeathcap",
+            "DA_JeweledGauntlet"
+          ]
+        },
+        {
+          "championId": "DA_18_MasterYi_AD",
+          "itemIds": [
+            "DA_GuinsoosRageblade",
+            "DA_EdgeOfNight",
+            "DA_TitansResolve"
+          ]
+        },
+        {
+          "championId": "DA_Vi18",
+          "itemIds": [
+            "DA_WarmogsArmor",
+            "DA_GargoyleStoneplate"
+          ]
+        },
+        {
+          "championId": "DA_Nidalee18_AP",
+          "itemIds": [
+            "DA_GuinsoosRageblade",
+            "DA_SpearOfShojin",
+            "DA_RabadonsDeathcap"
+          ]
+        }
+      ],
+      "altLoadouts": [
+        {
+          "championId": "DA_18_MasterYi_AD",
+          "itemIds": [
+            "DA_18_EmblemBrawler",
+            "DA_GuinsoosRageblade",
+            "DA_EdgeOfNight"
+          ]
+        },
+        {
+          "championId": "DA_18_MasterYi_AD",
+          "itemIds": [
+            "DA_Artifact_WitsEnd",
+            "DA_Artifact_NavoriFlickerblade",
+            "DA_Artifact_RapidFireCannon"
+          ]
+        }
+      ],
+      "itemPrio": [
+        "DA_GuinsoosRageblade",
+        "DA_EdgeOfNight",
+        "DA_Component_ChainVest",
+        "DA_Component_RecurveBow"
+      ],
+      "board": [
+        {
+          "id": "DA_18_Yorick",
+          "stars": 1,
+          "row": 2,
+          "col": 0
+        },
+        {
+          "id": "DA_Krug18",
+          "stars": 1,
+          "row": 0,
+          "col": 1
+        },
+        {
+          "id": "DA_KogMaw18_AD",
+          "stars": 1,
+          "row": 3,
+          "col": 6
+        },
+        {
+          "id": "DA_18_MasterYi_AD",
+          "stars": 1,
+          "row": 2,
+          "col": 6
+        },
+        {
+          "id": "DA_Vi18",
+          "stars": 1,
+          "row": 0,
+          "col": 5
+        },
+        {
+          "id": "DA_18_Sett",
+          "stars": 1,
+          "row": 0,
+          "col": 0
+        },
+        {
+          "id": "DA_Nidalee18_AP",
+          "stars": 1,
+          "row": 3,
+          "col": 5
+        }
+      ],
+      "avgPlace": 4.55,
+      "pickRate": 0.08,
+      "winRate": 9,
+      "top4": 48
+    },
+    {
+      "id": "sprykin-teemo",
+      "name": "Aluxe Teemo",
+      "tier": "C",
+      "style": "2-Cost Reroll",
+      "difficulty": "Easy",
+      "unitIds": [
+        "DA_18_Rammus",
+        "DA_Fiddlesticks18",
+        "DA_18_Veigar",
+        "DA_18_Teemo",
+        "DA_KogMaw18_AD",
+        "DA_18_Kobuko",
+        "DA_18_RekSai"
+      ],
+      "carryIds": [
+        "DA_18_Teemo",
+        "DA_18_RekSai"
+      ],
+      "itemIds": [
+        "DA_SpearOfShojin",
+        "DA_RabadonsDeathcap",
+        "DA_JeweledGauntlet",
+        "DA_Morellonomicon",
+        "DA_18_EmblemSprykin",
+        "DA_GargoyleStoneplate",
+        "DA_WarmogsArmor"
+      ],
+      "augmentIds": [
+        "DA_WorththeWaitII",
+        "DA_18_CaretakersAlly",
+        "DA_DeadlierCaps",
+        "DA_18_SprykinAugment",
+        "DA_SoloPlate",
+        "DA_TradeSector",
+        "DA_URF",
+        "DA_UrfsGrabBag"
+      ],
+      "traitIds": [
+        "DA_18_Sprykin",
+        "DA_18_Defender",
+        "DA_18_Spellweaver"
+      ],
+      "loadouts": [
+        {
+          "championId": "DA_18_Teemo",
+          "itemIds": [
+            "DA_SpearOfShojin",
+            "DA_RabadonsDeathcap",
+            "DA_JeweledGauntlet"
+          ]
+        },
+        {
+          "championId": "DA_KogMaw18_AD",
+          "itemIds": [
+            "DA_Morellonomicon"
+          ]
+        },
+        {
+          "championId": "DA_18_RekSai",
+          "itemIds": [
+            "DA_18_EmblemSprykin",
+            "DA_GargoyleStoneplate",
+            "DA_WarmogsArmor"
+          ]
+        }
+      ],
+      "altLoadouts": [],
+      "itemPrio": [
+        "DA_SpearOfShojin",
+        "DA_RabadonsDeathcap",
+        "DA_GargoyleStoneplate",
+        "DA_Component_NeedlesslyLargeRod"
+      ],
+      "board": [
+        {
+          "id": "DA_18_Rammus",
+          "stars": 1,
+          "row": 2,
+          "col": 4
+        },
+        {
+          "id": "DA_Fiddlesticks18",
+          "stars": 1,
+          "row": 2,
+          "col": 2
+        },
+        {
+          "id": "DA_18_Veigar",
+          "stars": 1,
+          "row": 3,
+          "col": 4
+        },
+        {
+          "id": "DA_18_Teemo",
+          "stars": 1,
+          "row": 3,
+          "col": 6
+        },
+        {
+          "id": "DA_KogMaw18_AD",
+          "stars": 1,
+          "row": 3,
+          "col": 5
+        },
+        {
+          "id": "DA_18_Kobuko",
+          "stars": 1,
+          "row": 2,
+          "col": 3
+        },
+        {
+          "id": "DA_18_RekSai",
+          "stars": 1,
+          "row": 0,
+          "col": 3
+        }
+      ],
+      "avgPlace": 4.55,
+      "pickRate": 0.08,
+      "winRate": 9,
+      "top4": 48
+    },
+    {
+      "id": "moo-nara",
+      "name": "Moo-nara",
+      "tier": "C",
+      "style": "2-Cost Reroll",
+      "difficulty": "Medium",
+      "unitIds": [
+        "DA_18_Alistar",
+        "DA_18_Yunara",
+        "DA_18_Ezreal",
+        "DA_18_Azir",
+        "DA_18_GnarSmall",
+        "DA_18_Yorick",
+        "DA_Elderwood18_Lifeblossom",
+        "DA_18_Sett",
+        "DA_18_RekSai",
+        "DA_Elderwood18_StonebarkTree"
+      ],
+      "carryIds": [
+        "DA_18_Yunara",
+        "DA_18_Alistar",
+        "DA_18_Ezreal"
+      ],
+      "itemIds": [
+        "DA_GargoyleStoneplate",
+        "DA_SpiritVisage",
+        "DA_WarmogsArmor",
+        "DA_Deathblade",
+        "DA_SpearOfShojin",
+        "DA_StrikersFlail",
+        "DA_LastWhisper",
+        "DA_RedBuff",
+        "DA_Artifact_Dawncore"
+      ],
+      "augmentIds": [
+        "DA_WorththeWaitII",
+        "DA_18_CaretakersAlly",
+        "DA_KickStart",
+        "DA_Swordsmith",
+        "DA_GlassCannon_Silver",
+        "DA_SwordOverflow",
+        "DA_HeroicGrabBag",
+        "DA_SoloPlate"
+      ],
+      "traitIds": [
+        "DA_18_Brawler",
+        "DA_18_Elderwood",
+        "DA_18_Blossom"
+      ],
+      "loadouts": [
+        {
+          "championId": "DA_18_Alistar",
+          "itemIds": [
+            "DA_GargoyleStoneplate",
+            "DA_SpiritVisage",
+            "DA_WarmogsArmor"
+          ]
+        },
+        {
+          "championId": "DA_18_Yunara",
+          "itemIds": [
+            "DA_Deathblade",
+            "DA_SpearOfShojin",
+            "DA_StrikersFlail"
+          ]
+        },
+        {
+          "championId": "DA_18_Ezreal",
+          "itemIds": [
+            "DA_LastWhisper",
+            "DA_SpearOfShojin",
+            "DA_RedBuff"
+          ]
+        }
+      ],
+      "altLoadouts": [
+        {
+          "championId": "DA_18_Yunara",
+          "itemIds": [
+            "DA_Artifact_Dawncore",
+            "DA_SpearOfShojin",
+            "DA_Deathblade"
+          ]
+        }
+      ],
+      "itemPrio": [
+        "DA_SpearOfShojin",
+        "DA_GargoyleStoneplate",
+        "DA_Deathblade",
+        "DA_Component_SparringGloves"
+      ],
+      "board": [
+        {
+          "id": "DA_18_Alistar",
+          "stars": 1,
+          "row": 0,
+          "col": 4
+        },
+        {
+          "id": "DA_18_Yunara",
+          "stars": 1,
+          "row": 3,
+          "col": 6
+        },
+        {
+          "id": "DA_18_Ezreal",
+          "stars": 1,
+          "row": 3,
+          "col": 5
+        },
+        {
+          "id": "DA_18_Azir",
+          "stars": 1,
+          "row": 3,
+          "col": 0
+        },
+        {
+          "id": "DA_18_GnarSmall",
+          "stars": 1,
+          "row": 2,
+          "col": 4
+        },
+        {
+          "id": "DA_18_Yorick",
+          "stars": 1,
+          "row": 0,
+          "col": 0
+        },
+        {
+          "id": "DA_Elderwood18_Lifeblossom",
+          "stars": 1,
+          "row": 2,
+          "col": 3
+        },
+        {
+          "id": "DA_18_Sett",
+          "stars": 1,
+          "row": 0,
+          "col": 3
+        },
+        {
+          "id": "DA_18_RekSai",
+          "stars": 1,
+          "row": 0,
+          "col": 2
+        },
+        {
+          "id": "DA_Elderwood18_StonebarkTree",
+          "stars": 1,
+          "row": 0,
+          "col": 1
+        }
+      ],
+      "avgPlace": 4.55,
+      "pickRate": 0.08,
+      "winRate": 9,
+      "top4": 48
+    },
+    {
+      "id": "10-riftbeast",
+      "name": "10 Grietozoico",
+      "tier": "B",
+      "style": "Fast 9",
+      "difficulty": "Medium",
+      "unitIds": [
+        "DA_18_Sentry",
+        "DA_Gromp18_AP",
+        "DA_Murkwolf18",
+        "DA_Scuttlecrab18",
+        "DA_Krug18",
+        "DA_CrimsonRaptor18",
+        "DA_Brambleback18",
+        "DA_Sentinel18",
+        "DA_Taric18",
+        "DA_18_GnarSmall",
+        "DA_18_ElderDragon"
+      ],
+      "carryIds": [
+        "DA_18_ElderDragon",
+        "DA_Brambleback18",
+        "DA_Sentinel18"
+      ],
+      "itemIds": [
+        "DA_EdgeOfNight",
+        "DA_Quicksilver",
+        "DA_GiantSlayer",
+        "DA_WarmogsArmor",
+        "DA_ProtectorsVow",
+        "DA_Crownguard",
+        "DA_ThiefsGloves",
+        "DA_InfinityEdge",
+        "DA_StrikersFlail",
+        "DA_Deathblade"
+      ],
+      "augmentIds": [
+        "DA_18_RiftbeastTraitAugment",
+        "DA_Coronation",
+        "DA_LevelUp",
+        "DA_LateGameSpecialist",
+        "DA_Swordsmith",
+        "DA_ExplosiveGrowthPlus",
+        "DA_CursedCrown"
+      ],
+      "traitIds": [
+        "DA_Riftbeast18",
+        "DA_18_Invoker",
+        "DA_18_Slayer"
+      ],
+      "loadouts": [
+        {
+          "championId": "DA_Brambleback18",
+          "itemIds": [
+            "DA_EdgeOfNight",
+            "DA_Quicksilver",
+            "DA_GiantSlayer"
+          ]
+        },
+        {
+          "championId": "DA_Sentinel18",
+          "itemIds": [
+            "DA_WarmogsArmor",
+            "DA_ProtectorsVow",
+            "DA_Crownguard"
+          ]
+        },
+        {
+          "championId": "DA_18_GnarSmall",
+          "itemIds": [
+            "DA_ThiefsGloves"
+          ]
+        },
+        {
+          "championId": "DA_18_ElderDragon",
+          "itemIds": [
+            "DA_InfinityEdge",
+            "DA_StrikersFlail",
+            "DA_Deathblade"
+          ]
+        }
+      ],
+      "altLoadouts": [],
+      "itemPrio": [
+        "DA_InfinityEdge",
+        "DA_Component_BFSword",
+        "DA_Component_SparringGloves",
+        "DA_Component_GiantsBelt"
+      ],
+      "board": [
+        {
+          "id": "DA_18_Sentry",
+          "stars": 1,
+          "row": 3,
+          "col": 2
+        },
+        {
+          "id": "DA_Gromp18_AP",
+          "stars": 1,
+          "row": 3,
+          "col": 0
+        },
+        {
+          "id": "DA_Murkwolf18",
+          "stars": 1,
+          "row": 3,
+          "col": 6
+        },
+        {
+          "id": "DA_Scuttlecrab18",
+          "stars": 1,
+          "row": 0,
+          "col": 1
+        },
+        {
+          "id": "DA_Krug18",
+          "stars": 1,
+          "row": 0,
+          "col": 0
+        },
+        {
+          "id": "DA_CrimsonRaptor18",
+          "stars": 1,
+          "row": 3,
+          "col": 4
+        },
+        {
+          "id": "DA_Brambleback18",
+          "stars": 1,
+          "row": 0,
+          "col": 2
+        },
+        {
+          "id": "DA_Sentinel18",
+          "stars": 1,
+          "row": 0,
+          "col": 3
+        },
+        {
+          "id": "DA_Taric18",
+          "stars": 1,
+          "row": 0,
+          "col": 4
+        },
+        {
+          "id": "DA_18_GnarSmall",
+          "stars": 1,
+          "row": 2,
+          "col": 2
+        },
+        {
+          "id": "DA_18_ElderDragon",
+          "stars": 1,
+          "row": 2,
+          "col": 3
+        }
+      ],
+      "avgPlace": 4.55,
+      "pickRate": 0.08,
+      "winRate": 9,
+      "top4": 48
+    },
+    {
+      "id": "aphelios-rapidfire",
+      "name": "Aphelios Fuegorrápido",
+      "tier": "A",
+      "style": "4-Cost Fast 8",
+      "difficulty": "Medium",
+      "unitIds": [
+        "DA_18_Rakan",
+        "DA_18_Varus",
+        "DA_18_Xayah",
+        "DA_CrimsonRaptor18",
+        "DA_Sentinel18",
+        "DA_Amumu18",
+        "DA_18_Aphelios",
+        "DA_Brambleback18"
+      ],
+      "carryIds": [
+        "DA_18_Aphelios",
+        "DA_Amumu18",
+        "DA_Brambleback18"
+      ],
+      "itemIds": [
+        "DA_LastWhisper",
+        "DA_ProtectorsVow",
+        "DA_WarmogsArmor",
+        "DA_GargoyleStoneplate",
+        "DA_BrambleVest",
+        "DA_InfinityEdge",
+        "DA_KrakensFury",
+        "DA_StrikersFlail",
+        "DA_18_EmblemRapidfire",
+        "DA_EdgeOfNight",
+        "DA_Quicksilver",
+        "DA_Artifact_GoldCollector"
+      ],
+      "augmentIds": [
+        "DA_Swordsmith",
+        "DA_CarveAPath",
+        "DA_SwordOverflow",
+        "DA_BacklineBlueprint",
+        "DA_CookingPot",
+        "DA_SpreadingRoots",
+        "DA_TheTraitTree",
+        "DA_FutureFocused"
+      ],
+      "traitIds": [
+        "DA_18_Rapidfire",
+        "DA_Riftbeast18",
+        "DA_18_Fae"
+      ],
+      "loadouts": [
+        {
+          "championId": "DA_CrimsonRaptor18",
+          "itemIds": [
+            "DA_LastWhisper"
+          ]
+        },
+        {
+          "championId": "DA_Sentinel18",
+          "itemIds": [
+            "DA_ProtectorsVow"
+          ]
+        },
+        {
+          "championId": "DA_Amumu18",
+          "itemIds": [
+            "DA_WarmogsArmor",
+            "DA_GargoyleStoneplate",
+            "DA_BrambleVest"
+          ]
+        },
+        {
+          "championId": "DA_18_Aphelios",
+          "itemIds": [
+            "DA_InfinityEdge",
+            "DA_KrakensFury",
+            "DA_StrikersFlail"
+          ]
+        },
+        {
+          "championId": "DA_Brambleback18",
+          "itemIds": [
+            "DA_18_EmblemRapidfire",
+            "DA_EdgeOfNight",
+            "DA_Quicksilver"
+          ]
+        }
+      ],
+      "altLoadouts": [
+        {
+          "championId": "DA_18_Aphelios",
+          "itemIds": [
+            "DA_Artifact_GoldCollector"
+          ]
+        }
+      ],
+      "itemPrio": [
+        "DA_Component_BFSword",
+        "DA_Component_SparringGloves",
+        "DA_Component_ChainVest",
+        "DA_Component_RecurveBow"
+      ],
+      "board": [
+        {
+          "id": "DA_18_Rakan",
+          "stars": 1,
+          "row": 1,
+          "col": 3
+        },
+        {
+          "id": "DA_18_Varus",
+          "stars": 1,
+          "row": 3,
+          "col": 6
+        },
+        {
+          "id": "DA_18_Xayah",
+          "stars": 1,
+          "row": 3,
+          "col": 2
+        },
+        {
+          "id": "DA_CrimsonRaptor18",
+          "stars": 1,
+          "row": 3,
+          "col": 1
+        },
+        {
+          "id": "DA_Sentinel18",
+          "stars": 1,
+          "row": 1,
+          "col": 2
+        },
+        {
+          "id": "DA_Amumu18",
+          "stars": 1,
+          "row": 0,
+          "col": 3
+        },
+        {
+          "id": "DA_18_Aphelios",
+          "stars": 1,
+          "row": 3,
+          "col": 0
+        },
+        {
+          "id": "DA_Brambleback18",
+          "stars": 1,
+          "row": 2,
+          "col": 0
+        }
+      ],
+      "avgPlace": 4.55,
+      "pickRate": 0.08,
+      "winRate": 9,
+      "top4": 48
+    },
+    {
+      "id": "primal-jungle-copy",
+      "name": "Primigenio Flex",
+      "tier": "A",
+      "style": "4-Cost Fast 8",
+      "difficulty": "Medium",
+      "unitIds": [
+        "DA_Cinderling18",
+        "DA_KogMaw18_AD",
+        "DA_Nidalee18_AP",
+        "DA_18_Sivir",
+        "DA_Amumu18",
+        "DA_Sentinel18",
+        "DA_Taric18",
+        "DA_Scuttlecrab18"
+      ],
+      "carryIds": [
+        "DA_18_Sivir",
+        "DA_Nidalee18_AP",
+        "DA_Amumu18"
+      ],
+      "itemIds": [
+        "DA_InfinityEdge",
+        "DA_SteraksGage",
+        "DA_SpearOfShojin",
+        "DA_RedBuff",
+        "DA_StrikersFlail",
+        "DA_WarmogsArmor",
+        "DA_GargoyleStoneplate",
+        "DA_BrambleVest",
+        "DA_ProtectorsVow",
+        "DA_18_EmblemHunter",
+        "DA_BlueBuff",
+        "DA_Artifact_SilvermereDawn"
+      ],
+      "augmentIds": [
+        "DA_18_BigGrabBag",
+        "DA_18_PrimalAugmentPlus_Nidalee",
+        "DA_CaretakersFavor",
+        "DA_Swordsmith",
+        "DA_18_PrimalAugmentPlus_Sivir",
+        "DA_CarveAPath",
+        "DA_18_FOURcing",
+        "DA_DeadlierBlades"
+      ],
+      "traitIds": [
+        "DA_Riftbeast18",
+        "DA_18_Hunter",
+        "DA_18_Adaptor"
+      ],
+      "loadouts": [
+        {
+          "championId": "DA_Nidalee18_AP",
+          "itemIds": [
+            "DA_InfinityEdge",
+            "DA_SteraksGage",
+            "DA_SpearOfShojin"
+          ]
+        },
+        {
+          "championId": "DA_18_Sivir",
+          "itemIds": [
+            "DA_InfinityEdge",
+            "DA_RedBuff",
+            "DA_StrikersFlail"
+          ]
+        },
+        {
+          "championId": "DA_Amumu18",
+          "itemIds": [
+            "DA_WarmogsArmor",
+            "DA_GargoyleStoneplate",
+            "DA_BrambleVest"
+          ]
+        },
+        {
+          "championId": "DA_Sentinel18",
+          "itemIds": [
+            "DA_ProtectorsVow"
+          ]
+        }
+      ],
+      "altLoadouts": [
+        {
+          "championId": "DA_Nidalee18_AP",
+          "itemIds": [
+            "DA_SpearOfShojin",
+            "DA_18_EmblemHunter",
+            "DA_SteraksGage"
+          ]
+        },
+        {
+          "championId": "DA_Nidalee18_AP",
+          "itemIds": [
+            "DA_BlueBuff",
+            "DA_Artifact_SilvermereDawn",
+            "DA_SteraksGage"
+          ]
+        }
+      ],
+      "itemPrio": [
+        "DA_InfinityEdge",
+        "DA_Component_BFSword",
+        "DA_Component_SparringGloves",
+        "DA_Component_GiantsBelt"
+      ],
+      "board": [
+        {
+          "id": "DA_Cinderling18",
+          "stars": 1,
+          "row": 3,
+          "col": 6
+        },
+        {
+          "id": "DA_KogMaw18_AD",
+          "stars": 1,
+          "row": 3,
+          "col": 1
+        },
+        {
+          "id": "DA_Nidalee18_AP",
+          "stars": 1,
+          "row": 2,
+          "col": 0
+        },
+        {
+          "id": "DA_18_Sivir",
+          "stars": 1,
+          "row": 3,
+          "col": 0
+        },
+        {
+          "id": "DA_Amumu18",
+          "stars": 1,
+          "row": 0,
+          "col": 2
+        },
+        {
+          "id": "DA_Sentinel18",
+          "stars": 1,
+          "row": 0,
+          "col": 3
+        },
+        {
+          "id": "DA_Taric18",
+          "stars": 1,
+          "row": 0,
+          "col": 5
+        },
+        {
+          "id": "DA_Scuttlecrab18",
+          "stars": 1,
+          "row": 0,
+          "col": 4
+        }
+      ],
+      "avgPlace": 4.55,
+      "pickRate": 0.08,
+      "winRate": 9,
+      "top4": 48
+    },
+    {
+      "id": "6-juggernaut-ap-copy",
+      "name": "6 Coloso AD",
+      "tier": "B",
+      "style": "4-Cost Fast 8",
+      "difficulty": "Hard",
+      "unitIds": [
+        "DA_18_Yorick",
+        "DA_Scuttlecrab18",
+        "DA_18_Yunara",
+        "DA_Vi18",
+        "DA_Amumu18",
+        "DA_18_Sivir",
+        "DA_18_Maokai",
+        "DA_18_Kennen",
+        "DA_18_Ashe"
+      ],
+      "carryIds": [
+        "DA_Amumu18",
+        "DA_18_Sivir",
+        "DA_18_Kennen",
+        "DA_18_Ashe"
+      ],
+      "itemIds": [
+        "DA_WarmogsArmor",
+        "DA_BrambleVest",
+        "DA_DragonsClaw",
+        "DA_InfinityEdge",
+        "DA_StrikersFlail",
+        "DA_SpearOfShojin",
+        "DA_18_EmblemJuggernaut",
+        "DA_EdgeOfNight",
+        "DA_LastWhisper",
+        "DA_RedBuff"
+      ],
+      "augmentIds": [
+        "DA_BlackthornTraitAugment",
+        "DA_18_BigGrabBag",
+        "DA_CyberneticUplink_Gold",
+        "DA_CommerceCore",
+        "DA_SpreadingRoots",
+        "DA_TheTraitTree",
+        "DA_CarveAPath",
+        "DA_BoxingLessons"
+      ],
+      "traitIds": [
+        "DA_Juggernaut18",
+        "DA_18_Blossom",
+        "DA_18_Executioner"
+      ],
+      "loadouts": [
+        {
+          "championId": "DA_Amumu18",
+          "itemIds": [
+            "DA_WarmogsArmor",
+            "DA_BrambleVest",
+            "DA_DragonsClaw"
+          ]
+        },
+        {
+          "championId": "DA_18_Sivir",
+          "itemIds": [
+            "DA_InfinityEdge",
+            "DA_StrikersFlail",
+            "DA_SpearOfShojin"
+          ]
+        },
+        {
+          "championId": "DA_18_Kennen",
+          "itemIds": [
+            "DA_18_EmblemJuggernaut",
+            "DA_EdgeOfNight"
+          ]
+        },
+        {
+          "championId": "DA_18_Ashe",
+          "itemIds": [
+            "DA_SpearOfShojin",
+            "DA_LastWhisper",
+            "DA_RedBuff"
+          ]
+        }
+      ],
+      "altLoadouts": [],
+      "itemPrio": [
+        "DA_InfinityEdge",
+        "DA_WarmogsArmor",
+        "DA_Component_RecurveBow",
+        "DA_Component_BFSword"
+      ],
+      "board": [
+        {
+          "id": "DA_18_Yorick",
+          "stars": 1,
+          "row": 0,
+          "col": 0
+        },
+        {
+          "id": "DA_Scuttlecrab18",
+          "stars": 1,
+          "row": 0,
+          "col": 2
+        },
+        {
+          "id": "DA_18_Yunara",
+          "stars": 1,
+          "row": 3,
+          "col": 0
+        },
+        {
+          "id": "DA_Vi18",
+          "stars": 1,
+          "row": 0,
+          "col": 3
+        },
+        {
+          "id": "DA_Amumu18",
+          "stars": 1,
+          "row": 0,
+          "col": 5
+        },
+        {
+          "id": "DA_18_Sivir",
+          "stars": 1,
+          "row": 3,
+          "col": 4
+        },
+        {
+          "id": "DA_18_Maokai",
+          "stars": 1,
+          "row": 0,
+          "col": 4
+        },
+        {
+          "id": "DA_18_Kennen",
+          "stars": 1,
+          "row": 1,
+          "col": 3
+        },
+        {
+          "id": "DA_18_Ashe",
+          "stars": 1,
+          "row": 3,
+          "col": 6
+        }
+      ],
+      "avgPlace": 4.55,
+      "pickRate": 0.08,
+      "winRate": 9,
+      "top4": 48
+    },
+    {
+      "id": "yazir",
+      "name": "Yazir",
+      "tier": "C",
+      "style": "3-Cost Reroll",
+      "difficulty": "Easy",
+      "unitIds": [
+        "DA_18_Yorick",
+        "DA_18_Yunara",
+        "DA_18_Azir",
+        "DA_18_MasterYi_AD",
+        "DA_Vi18",
+        "DA_18_Malphite",
+        "DA_Nidalee18_AP"
+      ],
+      "carryIds": [
+        "DA_18_MasterYi_AD",
+        "DA_18_Azir",
+        "DA_Vi18"
+      ],
+      "itemIds": [
+        "DA_GuinsoosRageblade",
+        "DA_VoidStaff",
+        "DA_RabadonsDeathcap",
+        "DA_TitansResolve",
+        "DA_GiantSlayer",
+        "DA_EdgeOfNight",
+        "DA_SunfireCape",
+        "DA_WarmogsArmor",
+        "DA_SpiritVisage"
+      ],
+      "augmentIds": [],
+      "traitIds": [
+        "DA_18_Blossom",
+        "DA_Juggernaut18",
+        "DA_18_Summoner"
+      ],
+      "loadouts": [
+        {
+          "championId": "DA_18_Azir",
+          "itemIds": [
+            "DA_GuinsoosRageblade",
+            "DA_VoidStaff",
+            "DA_RabadonsDeathcap"
+          ]
+        },
+        {
+          "championId": "DA_18_MasterYi_AD",
+          "itemIds": [
+            "DA_TitansResolve",
+            "DA_GiantSlayer",
+            "DA_EdgeOfNight"
+          ]
+        },
+        {
+          "championId": "DA_Vi18",
+          "itemIds": [
+            "DA_SunfireCape",
+            "DA_WarmogsArmor",
+            "DA_SpiritVisage"
+          ]
+        }
+      ],
+      "altLoadouts": [],
+      "itemPrio": [],
+      "board": [
+        {
+          "id": "DA_18_Yorick",
+          "stars": 1,
+          "row": 1,
+          "col": 6
+        },
+        {
+          "id": "DA_18_Yunara",
+          "stars": 1,
+          "row": 3,
+          "col": 5
+        },
+        {
+          "id": "DA_18_Azir",
+          "stars": 1,
+          "row": 3,
+          "col": 0
+        },
+        {
+          "id": "DA_18_MasterYi_AD",
+          "stars": 1,
+          "row": 0,
+          "col": 0
+        },
+        {
+          "id": "DA_Vi18",
+          "stars": 1,
+          "row": 0,
+          "col": 1
+        },
+        {
+          "id": "DA_18_Malphite",
+          "stars": 1,
+          "row": 0,
+          "col": 6
+        },
+        {
+          "id": "DA_Nidalee18_AP",
+          "stars": 1,
+          "row": 3,
+          "col": 6
+        }
+      ],
+      "avgPlace": 4.55,
+      "pickRate": 0.08,
+      "winRate": 9,
+      "top4": 48
+    },
+    {
+      "id": "moon-fire",
+      "name": "Aphelios Vanguardias",
+      "tier": "B",
+      "style": "4-Cost Fast 8",
+      "difficulty": "Medium",
+      "unitIds": [
+        "DA_18_Diana",
+        "DA_18_Hecarim",
+        "DA_CrimsonRaptor18",
+        "DA_18_Zyra",
+        "DA_18_Aphelios",
+        "DA_Brambleback18",
+        "DA_Sentinel18",
+        "DA_Taric18"
+      ],
+      "carryIds": [
+        "DA_18_Aphelios",
+        "DA_Brambleback18",
+        "DA_Sentinel18"
+      ],
+      "itemIds": [
+        "DA_LastWhisper",
+        "DA_RedBuff",
+        "DA_Deathblade",
+        "DA_GiantSlayer",
+        "DA_EdgeOfNight",
+        "DA_Quicksilver",
+        "DA_SteraksGage",
+        "DA_ProtectorsVow",
+        "DA_WarmogsArmor",
+        "DA_Artifact_GoldCollector",
+        "DA_GuinsoosRageblade",
+        "DA_InfinityEdge",
+        "DA_KrakensFury"
+      ],
+      "augmentIds": [
+        "DA_BackupBows",
+        "DA_OneBuffTwoBuff",
+        "DA_Swordsmith",
+        "DA_CarveAPath",
+        "DA_SwordOverflow",
+        "DA_CaretakersFavor",
+        "DA_BuriedTreasuresIII",
+        "DA_18_FOURcing"
+      ],
+      "traitIds": [
+        "DA_18_Vanguard",
+        "DA_Riftbeast18",
+        "DA_18_Lunar"
+      ],
+      "loadouts": [
+        {
+          "championId": "DA_CrimsonRaptor18",
+          "itemIds": [
+            "DA_LastWhisper"
+          ]
+        },
+        {
+          "championId": "DA_18_Aphelios",
+          "itemIds": [
+            "DA_RedBuff",
+            "DA_Deathblade",
+            "DA_GiantSlayer"
+          ]
+        },
+        {
+          "championId": "DA_Brambleback18",
+          "itemIds": [
+            "DA_EdgeOfNight",
+            "DA_Quicksilver",
+            "DA_SteraksGage"
+          ]
+        },
+        {
+          "championId": "DA_Sentinel18",
+          "itemIds": [
+            "DA_ProtectorsVow",
+            "DA_WarmogsArmor"
+          ]
+        }
+      ],
+      "altLoadouts": [
+        {
+          "championId": "DA_18_Aphelios",
+          "itemIds": [
+            "DA_Artifact_GoldCollector"
+          ]
+        },
+        {
+          "championId": "DA_18_Aphelios",
+          "itemIds": [
+            "DA_GuinsoosRageblade",
+            "DA_InfinityEdge",
+            "DA_KrakensFury"
+          ]
+        }
+      ],
+      "itemPrio": [
+        "DA_Component_RecurveBow",
+        "DA_Component_BFSword",
+        "DA_Component_SparringGloves",
+        "DA_Component_ChainVest"
+      ],
+      "board": [
+        {
+          "id": "DA_18_Diana",
+          "stars": 1,
+          "row": 1,
+          "col": 2
+        },
+        {
+          "id": "DA_18_Hecarim",
+          "stars": 1,
+          "row": 1,
+          "col": 3
+        },
+        {
+          "id": "DA_CrimsonRaptor18",
+          "stars": 1,
+          "row": 3,
+          "col": 1
+        },
+        {
+          "id": "DA_18_Zyra",
+          "stars": 1,
+          "row": 3,
+          "col": 6
+        },
+        {
+          "id": "DA_18_Aphelios",
+          "stars": 1,
+          "row": 3,
+          "col": 0
+        },
+        {
+          "id": "DA_Brambleback18",
+          "stars": 1,
+          "row": 1,
+          "col": 1
+        },
+        {
+          "id": "DA_Sentinel18",
+          "stars": 1,
+          "row": 0,
+          "col": 3
+        },
+        {
+          "id": "DA_Taric18",
+          "stars": 1,
+          "row": 0,
+          "col": 2
+        }
+      ],
+      "avgPlace": 4.55,
+      "pickRate": 0.08,
+      "winRate": 9,
+      "top4": 48
+    },
+    {
+      "id": "primal-hunters",
+      "name": "Primigenio Cazadores",
+      "tier": "C",
+      "style": "4-Cost Fast 8",
+      "difficulty": "Medium",
+      "unitIds": [
+        "DA_18_Tristana",
+        "DA_Amumu18",
+        "DA_18_Sivir",
+        "DA_18_Ivern",
+        "DA_18_Ashe",
+        "DA_18_Lillia",
+        "DA_Vi18",
+        "DA_18_Shen",
+        "DA_18_Kennen"
+      ],
+      "carryIds": [
+        "DA_18_Sivir",
+        "DA_Amumu18",
+        "DA_18_Ashe"
+      ],
+      "itemIds": [
+        "DA_WarmogsArmor",
+        "DA_GargoyleStoneplate",
+        "DA_SpiritVisage",
+        "DA_InfinityEdge",
+        "DA_Deathblade",
+        "DA_BlueBuff",
+        "DA_SpearOfShojin",
+        "DA_RedBuff",
+        "DA_LastWhisper",
+        "DA_ThiefsGloves"
+      ],
+      "augmentIds": [
+        "DA_18_PrimalAugment_Sivir",
+        "DA_Swordsmith",
+        "DA_SwordOverflow",
+        "DA_CarveAPath",
+        "DA_JeweledLotus_II",
+        "DA_GildedSteel",
+        "DA_BoosterPackPlusPlus",
+        "DA_CyberneticImplants_Gold"
+      ],
+      "traitIds": [
+        "DA_18_Hunter",
+        "DA_18_Inferno",
+        "DA_18_Fae"
+      ],
+      "loadouts": [
+        {
+          "championId": "DA_Amumu18",
+          "itemIds": [
+            "DA_WarmogsArmor",
+            "DA_GargoyleStoneplate",
+            "DA_SpiritVisage"
+          ]
+        },
+        {
+          "championId": "DA_18_Sivir",
+          "itemIds": [
+            "DA_InfinityEdge",
+            "DA_Deathblade",
+            "DA_BlueBuff"
+          ]
+        },
+        {
+          "championId": "DA_18_Ashe",
+          "itemIds": [
+            "DA_SpearOfShojin",
+            "DA_RedBuff",
+            "DA_LastWhisper"
+          ]
+        },
+        {
+          "championId": "DA_18_Kennen",
+          "itemIds": [
+            "DA_ThiefsGloves"
+          ]
+        }
+      ],
+      "altLoadouts": [],
+      "itemPrio": [
+        "DA_BlueBuff",
+        "DA_InfinityEdge",
+        "DA_GargoyleStoneplate",
+        "DA_Component_BFSword"
+      ],
+      "board": [
+        {
+          "id": "DA_18_Tristana",
+          "stars": 1,
+          "row": 3,
+          "col": 4
+        },
+        {
+          "id": "DA_Amumu18",
+          "stars": 1,
+          "row": 0,
+          "col": 4
+        },
+        {
+          "id": "DA_18_Sivir",
+          "stars": 1,
+          "row": 3,
+          "col": 6
+        },
+        {
+          "id": "DA_18_Ivern",
+          "stars": 1,
+          "row": 3,
+          "col": 0
+        },
+        {
+          "id": "DA_18_Ashe",
+          "stars": 1,
+          "row": 3,
+          "col": 5
+        },
+        {
+          "id": "DA_18_Lillia",
+          "stars": 1,
+          "row": 2,
+          "col": 3
+        },
+        {
+          "id": "DA_Vi18",
+          "stars": 1,
+          "row": 2,
+          "col": 2
+        },
+        {
+          "id": "DA_18_Shen",
+          "stars": 1,
+          "row": 2,
+          "col": 1
+        },
+        {
+          "id": "DA_18_Kennen",
+          "stars": 1,
+          "row": 2,
+          "col": 4
+        }
+      ],
+      "avgPlace": 4.55,
+      "pickRate": 0.08,
+      "winRate": 9,
+      "top4": 48
+    },
+    {
+      "id": "coven-ahri",
+      "name": "Aquelarre Ahri",
+      "tier": "B",
+      "style": "4-Cost Fast 8",
+      "difficulty": "Medium",
+      "unitIds": [
+        "DA_Sentinel18",
+        "DA_Taric18",
+        "DA_18_Morgana",
+        "DA_18_Diana",
+        "DA_18_Ahri",
+        "DA_18_Alune",
+        "DA_18_Cassiopeia",
+        "DA_Fiddlesticks18",
+        "DA_18_Elise"
+      ],
+      "carryIds": [
+        "DA_18_Ahri",
+        "DA_Sentinel18",
+        "DA_18_Morgana"
+      ],
+      "itemIds": [
+        "DA_Crownguard",
+        "DA_ProtectorsVow",
+        "DA_WarmogsArmor",
+        "DA_VoidStaff",
+        "DA_Morellonomicon",
+        "DA_JeweledGauntlet",
+        "DA_StrikersFlail",
+        "DA_SpearOfShojin",
+        "DA_18_EmblemInvoker",
+        "DA_Artifact_Manazane",
+        "DA_Artifact_BlightingJewel",
+        "DA_18_EmblemSpellweaver"
+      ],
+      "augmentIds": [
+        "DA_JeweledLotus_I",
+        "DA_JeweledLotus_II",
+        "DA_18_FOURcing",
+        "DA_Staffsmith",
+        "DA_CyberneticUplink_Gold",
+        "DA_WandOverflow",
+        "DA_18_CovenTraitAugment_LootToAP",
+        "DA_TimeSkip"
+      ],
+      "traitIds": [
+        "DA_18_Vanguard",
+        "DA_18_Spellweaver",
+        "DA_18_Coven"
+      ],
+      "loadouts": [
+        {
+          "championId": "DA_Sentinel18",
+          "itemIds": [
+            "DA_Crownguard",
+            "DA_ProtectorsVow",
+            "DA_WarmogsArmor"
+          ]
+        },
+        {
+          "championId": "DA_18_Morgana",
+          "itemIds": [
+            "DA_VoidStaff",
+            "DA_Morellonomicon"
+          ]
+        },
+        {
+          "championId": "DA_18_Ahri",
+          "itemIds": [
+            "DA_JeweledGauntlet",
+            "DA_StrikersFlail",
+            "DA_SpearOfShojin"
+          ]
+        }
+      ],
+      "altLoadouts": [
+        {
+          "championId": "DA_18_Ahri",
+          "itemIds": [
+            "DA_18_EmblemInvoker",
+            "DA_Artifact_Manazane"
+          ]
+        },
+        {
+          "championId": "DA_18_Morgana",
+          "itemIds": [
+            "DA_Artifact_BlightingJewel",
+            "DA_18_EmblemSpellweaver"
+          ]
+        }
+      ],
+      "itemPrio": [
+        "DA_SpearOfShojin",
+        "DA_JeweledGauntlet",
+        "DA_Component_GiantsBelt",
+        "DA_Component_TearOfTheGoddess"
+      ],
+      "board": [
+        {
+          "id": "DA_Sentinel18",
+          "stars": 1,
+          "row": 0,
+          "col": 3
+        },
+        {
+          "id": "DA_Taric18",
+          "stars": 1,
+          "row": 0,
+          "col": 2
+        },
+        {
+          "id": "DA_18_Morgana",
+          "stars": 1,
+          "row": 2,
+          "col": 2
+        },
+        {
+          "id": "DA_18_Diana",
+          "stars": 1,
+          "row": 1,
+          "col": 2
+        },
+        {
+          "id": "DA_18_Ahri",
+          "stars": 1,
+          "row": 3,
+          "col": 0
+        },
+        {
+          "id": "DA_18_Alune",
+          "stars": 1,
+          "row": 3,
+          "col": 1
+        },
+        {
+          "id": "DA_18_Cassiopeia",
+          "stars": 1,
+          "row": 3,
+          "col": 2
+        },
+        {
+          "id": "DA_Fiddlesticks18",
+          "stars": 1,
+          "row": 2,
+          "col": 4
+        },
+        {
+          "id": "DA_18_Elise",
+          "stars": 1,
+          "row": 1,
+          "col": 4
+        }
+      ],
+      "avgPlace": 4.55,
+      "pickRate": 0.08,
+      "winRate": 9,
+      "top4": 48
+    },
+    {
+      "id": "spellweavers",
+      "name": "Ahri Zyra",
+      "tier": "B",
+      "style": "4-Cost Fast 8",
+      "difficulty": "Medium",
+      "unitIds": [
+        "DA_18_Ahri",
+        "DA_18_Zyra",
+        "DA_18_GnarSmall",
+        "DA_18_Sett",
+        "DA_18_Yorick",
+        "DA_18_Alune",
+        "DA_18_Diana",
+        "DA_Taric18",
+        "DA_Amumu18"
+      ],
+      "carryIds": [
+        "DA_18_Ahri",
+        "DA_18_Zyra",
+        "DA_18_Sett"
+      ],
+      "itemIds": [
+        "DA_JeweledGauntlet",
+        "DA_StrikersFlail",
+        "DA_SpearOfShojin",
+        "DA_VoidStaff",
+        "DA_Morellonomicon",
+        "DA_ThiefsGloves",
+        "DA_WarmogsArmor",
+        "DA_DragonsClaw",
+        "DA_BrambleVest",
+        "DA_18_EmblemFloraFatalisAugment",
+        "DA_18_EmblemLunar"
+      ],
+      "augmentIds": [
+        "DA_JeweledLotus_I",
+        "DA_JeweledLotus_II",
+        "DA_GlassCannon_Silver",
+        "DA_GlassCannon_Gold",
+        "DA_18_FOURcing",
+        "DA_Staffsmith",
+        "DA_18_FloraFatalisAugment",
+        "DA_CyberneticUplink_Gold"
+      ],
+      "traitIds": [
+        "DA_18_Blossom",
+        "DA_18_Spellweaver",
+        "DA_18_Summoner"
+      ],
+      "loadouts": [
+        {
+          "championId": "DA_18_Ahri",
+          "itemIds": [
+            "DA_JeweledGauntlet",
+            "DA_StrikersFlail",
+            "DA_SpearOfShojin"
+          ]
+        },
+        {
+          "championId": "DA_18_Zyra",
+          "itemIds": [
+            "DA_VoidStaff",
+            "DA_Morellonomicon",
+            "DA_SpearOfShojin"
+          ]
+        },
+        {
+          "championId": "DA_18_GnarSmall",
+          "itemIds": [
+            "DA_ThiefsGloves"
+          ]
+        },
+        {
+          "championId": "DA_18_Sett",
+          "itemIds": [
+            "DA_WarmogsArmor",
+            "DA_DragonsClaw",
+            "DA_BrambleVest"
+          ]
+        }
+      ],
+      "altLoadouts": [
+        {
+          "championId": "DA_18_Ahri",
+          "itemIds": [
+            "DA_18_EmblemFloraFatalisAugment",
+            "DA_18_EmblemLunar"
+          ]
+        }
+      ],
+      "itemPrio": [
+        "DA_SpearOfShojin",
+        "DA_JeweledGauntlet",
+        "DA_Component_GiantsBelt",
+        "DA_Component_TearOfTheGoddess"
+      ],
+      "board": [
+        {
+          "id": "DA_18_Ahri",
+          "stars": 1,
+          "row": 3,
+          "col": 6
+        },
+        {
+          "id": "DA_18_Zyra",
+          "stars": 1,
+          "row": 3,
+          "col": 4
+        },
+        {
+          "id": "DA_18_GnarSmall",
+          "stars": 1,
+          "row": 2,
+          "col": 3
+        },
+        {
+          "id": "DA_18_Sett",
+          "stars": 1,
+          "row": 0,
+          "col": 4
+        },
+        {
+          "id": "DA_18_Yorick",
+          "stars": 1,
+          "row": 0,
+          "col": 0
+        },
+        {
+          "id": "DA_18_Alune",
+          "stars": 1,
+          "row": 3,
+          "col": 5
+        },
+        {
+          "id": "DA_18_Diana",
+          "stars": 1,
+          "row": 1,
+          "col": 3
+        },
+        {
+          "id": "DA_Taric18",
+          "stars": 1,
+          "row": 1,
+          "col": 2
+        },
+        {
+          "id": "DA_Amumu18",
+          "stars": 1,
+          "row": 0,
+          "col": 3
+        }
+      ],
+      "avgPlace": 4.55,
+      "pickRate": 0.08,
+      "winRate": 9,
+      "top4": 48
+    },
+    {
+      "id": "aphelios-flex",
+      "name": "Aphelios Flex",
+      "tier": "B",
+      "style": "4-Cost Fast 8",
+      "difficulty": "Medium",
+      "unitIds": [
+        "DA_18_Diana",
+        "DA_KogMaw18_AD",
+        "DA_Krug18",
+        "DA_CrimsonRaptor18",
+        "DA_18_Zyra",
+        "DA_Sentinel18",
+        "DA_18_Aphelios",
+        "DA_18_Sett"
+      ],
+      "carryIds": [
+        "DA_18_Aphelios",
+        "DA_18_Sett"
+      ],
+      "itemIds": [
+        "DA_ProtectorsVow",
+        "DA_RedBuff",
+        "DA_Deathblade",
+        "DA_GiantSlayer",
+        "DA_WarmogsArmor",
+        "DA_BrambleVest",
+        "DA_DragonsClaw",
+        "DA_Artifact_GoldCollector",
+        "DA_GuinsoosRageblade",
+        "DA_InfinityEdge",
+        "DA_KrakensFury"
+      ],
+      "augmentIds": [
+        "DA_BackupBows",
+        "DA_OneBuffTwoBuff",
+        "DA_Swordsmith",
+        "DA_CarveAPath",
+        "DA_SwordOverflow",
+        "DA_CaretakersFavor",
+        "DA_BuriedTreasuresIII",
+        "DA_18_FOURcing"
+      ],
+      "traitIds": [
+        "DA_Riftbeast18",
+        "DA_18_Lunar",
+        "DA_18_Vanguard"
+      ],
+      "loadouts": [
+        {
+          "championId": "DA_Sentinel18",
+          "itemIds": [
+            "DA_ProtectorsVow"
+          ]
+        },
+        {
+          "championId": "DA_18_Aphelios",
+          "itemIds": [
+            "DA_RedBuff",
+            "DA_Deathblade",
+            "DA_GiantSlayer"
+          ]
+        },
+        {
+          "championId": "DA_18_Sett",
+          "itemIds": [
+            "DA_WarmogsArmor",
+            "DA_BrambleVest",
+            "DA_DragonsClaw"
+          ]
+        }
+      ],
+      "altLoadouts": [
+        {
+          "championId": "DA_18_Aphelios",
+          "itemIds": [
+            "DA_Artifact_GoldCollector"
+          ]
+        },
+        {
+          "championId": "DA_18_Aphelios",
+          "itemIds": [
+            "DA_GuinsoosRageblade",
+            "DA_InfinityEdge",
+            "DA_KrakensFury"
+          ]
+        }
+      ],
+      "itemPrio": [
+        "DA_Component_RecurveBow",
+        "DA_Component_BFSword",
+        "DA_Component_SparringGloves",
+        "DA_Component_ChainVest"
+      ],
+      "board": [
+        {
+          "id": "DA_18_Diana",
+          "stars": 1,
+          "row": 1,
+          "col": 2
+        },
+        {
+          "id": "DA_KogMaw18_AD",
+          "stars": 1,
+          "row": 3,
+          "col": 2
+        },
+        {
+          "id": "DA_Krug18",
+          "stars": 1,
+          "row": 1,
+          "col": 3
+        },
+        {
+          "id": "DA_CrimsonRaptor18",
+          "stars": 1,
+          "row": 3,
+          "col": 6
+        },
+        {
+          "id": "DA_18_Zyra",
+          "stars": 1,
+          "row": 3,
+          "col": 1
+        },
+        {
+          "id": "DA_Sentinel18",
+          "stars": 1,
+          "row": 0,
+          "col": 3
+        },
+        {
+          "id": "DA_18_Aphelios",
+          "stars": 1,
+          "row": 3,
+          "col": 0
+        },
+        {
+          "id": "DA_18_Sett",
+          "stars": 1,
+          "row": 0,
+          "col": 2
+        }
+      ],
+      "avgPlace": 4.55,
+      "pickRate": 0.08,
+      "winRate": 9,
+      "top4": 48
+    },
+    {
+      "id": "blackthorn-ahri",
+      "name": "Espina Negra Ahri",
+      "tier": "B",
+      "style": "4-Cost Fast 8",
+      "difficulty": "Medium",
+      "unitIds": [
+        "DA_18_RekSai",
+        "DA_18_Yunara",
+        "DA_18_Warwick",
+        "DA_18_Azir",
+        "DA_18_Sett",
+        "DA_18_Ahri",
+        "DA_18_Malphite",
+        "DA_18_Veigar"
+      ],
+      "carryIds": [
+        "DA_18_Ahri",
+        "DA_18_Malphite"
+      ],
+      "itemIds": [
+        "DA_VoidStaff",
+        "DA_18_EmblemBlackthorn",
+        "DA_JeweledGauntlet",
+        "DA_BlueBuff",
+        "DA_Crownguard",
+        "DA_WarmogsArmor",
+        "DA_GargoyleStoneplate"
+      ],
+      "augmentIds": [],
+      "traitIds": [
+        "DA_18_Blackthorn",
+        "DA_18_Blossom",
+        "DA_18_Brawler"
+      ],
+      "loadouts": [
+        {
+          "championId": "DA_18_Yunara",
+          "itemIds": [
+            "DA_VoidStaff"
+          ]
+        },
+        {
+          "championId": "DA_18_Ahri",
+          "itemIds": [
+            "DA_18_EmblemBlackthorn",
+            "DA_JeweledGauntlet",
+            "DA_BlueBuff"
+          ]
+        },
+        {
+          "championId": "DA_18_Malphite",
+          "itemIds": [
+            "DA_Crownguard",
+            "DA_WarmogsArmor",
+            "DA_GargoyleStoneplate"
+          ]
+        }
+      ],
+      "altLoadouts": [],
+      "itemPrio": [],
+      "board": [
+        {
+          "id": "DA_18_RekSai",
+          "stars": 1,
+          "row": 1,
+          "col": 2
+        },
+        {
+          "id": "DA_18_Yunara",
+          "stars": 1,
+          "row": 3,
+          "col": 1
+        },
+        {
+          "id": "DA_18_Warwick",
+          "stars": 1,
+          "row": 3,
+          "col": 6
+        },
+        {
+          "id": "DA_18_Azir",
+          "stars": 1,
+          "row": 2,
+          "col": 3
+        },
+        {
+          "id": "DA_18_Sett",
+          "stars": 1,
+          "row": 1,
+          "col": 3
+        },
+        {
+          "id": "DA_18_Ahri",
+          "stars": 1,
+          "row": 3,
+          "col": 0
+        },
+        {
+          "id": "DA_18_Malphite",
+          "stars": 1,
+          "row": 0,
+          "col": 3
+        },
+        {
+          "id": "DA_18_Veigar",
+          "stars": 1,
+          "row": 3,
+          "col": 3
+        }
+      ],
+      "avgPlace": 4.55,
+      "pickRate": 0.08,
+      "winRate": 9,
+      "top4": 48
+    },
+    {
+      "id": "aphelios-vanguards-copy",
+      "name": "Aphelios Bosqueviejo",
+      "tier": "B",
+      "style": "4-Cost Fast 8",
+      "difficulty": "Medium",
+      "unitIds": [
+        "DA_Elderwood18_Lifeblossom",
+        "DA_Elderwood18_StonebarkTree",
+        "DA_Elderwood18_StonebarkTree",
+        "DA_18_Diana",
+        "DA_18_Xayah",
+        "DA_18_Alistar",
+        "DA_18_Hecarim",
+        "DA_18_Lillia",
+        "DA_18_Aphelios",
+        "DA_18_GnarSmall",
+        "DA_18_Ornn",
+        "DA_Elderwood18_Protector",
+        "DA_18_Ezreal"
+      ],
+      "carryIds": [
+        "DA_18_Aphelios",
+        "DA_18_Hecarim",
+        "DA_18_Ezreal"
+      ],
+      "itemIds": [
+        "DA_Crownguard",
+        "DA_WarmogsArmor",
+        "DA_Evenshroud",
+        "DA_ProtectorsVow",
+        "DA_18_EmblemElderwood",
+        "DA_GuinsoosRageblade",
+        "DA_KrakensFury",
+        "DA_ThiefsGloves",
+        "DA_SpearOfShojin",
+        "DA_RedBuff",
+        "DA_LastWhisper",
+        "DA_Artifact_GoldCollector",
+        "DA_InfinityEdge"
+      ],
+      "augmentIds": [
+        "DA_BackupBows",
+        "DA_OneBuffTwoBuff",
+        "DA_Swordsmith",
+        "DA_Replication",
+        "DA_BlackthornTraitAugment",
+        "DA_CaretakersFavor",
+        "DA_SalvageBinPlus",
+        "DA_ShoppingSpree"
+      ],
+      "traitIds": [
+        "DA_18_Elderwood",
+        "DA_18_Lunar",
+        "DA_18_Vanguard"
+      ],
+      "loadouts": [
+        {
+          "championId": "DA_18_Hecarim",
+          "itemIds": [
+            "DA_Crownguard",
+            "DA_WarmogsArmor",
+            "DA_Evenshroud"
+          ]
+        },
+        {
+          "championId": "DA_18_Lillia",
+          "itemIds": [
+            "DA_ProtectorsVow"
+          ]
+        },
+        {
+          "championId": "DA_18_Aphelios",
+          "itemIds": [
+            "DA_18_EmblemElderwood",
+            "DA_GuinsoosRageblade",
+            "DA_KrakensFury"
+          ]
+        },
+        {
+          "championId": "DA_18_GnarSmall",
+          "itemIds": [
+            "DA_ThiefsGloves"
+          ]
+        },
+        {
+          "championId": "DA_18_Ezreal",
+          "itemIds": [
+            "DA_SpearOfShojin",
+            "DA_RedBuff",
+            "DA_LastWhisper"
+          ]
+        }
+      ],
+      "altLoadouts": [
+        {
+          "championId": "DA_18_Aphelios",
+          "itemIds": [
+            "DA_Artifact_GoldCollector"
+          ]
+        },
+        {
+          "championId": "DA_18_Aphelios",
+          "itemIds": [
+            "DA_GuinsoosRageblade",
+            "DA_InfinityEdge",
+            "DA_KrakensFury"
+          ]
+        }
+      ],
+      "itemPrio": [
+        "DA_Component_RecurveBow",
+        "DA_Component_BFSword",
+        "DA_Component_SparringGloves",
+        "DA_Component_ChainVest"
+      ],
+      "board": [
+        {
+          "id": "DA_Elderwood18_Lifeblossom",
+          "stars": 1,
+          "row": 2,
+          "col": 4
+        },
+        {
+          "id": "DA_Elderwood18_StonebarkTree",
+          "stars": 1,
+          "row": 0,
+          "col": 6
+        },
+        {
+          "id": "DA_Elderwood18_StonebarkTree",
+          "stars": 1,
+          "row": 0,
+          "col": 1
+        },
+        {
+          "id": "DA_18_Diana",
+          "stars": 1,
+          "row": 0,
+          "col": 4
+        },
+        {
+          "id": "DA_18_Xayah",
+          "stars": 1,
+          "row": 3,
+          "col": 6
+        },
+        {
+          "id": "DA_18_Alistar",
+          "stars": 1,
+          "row": 0,
+          "col": 5
+        },
+        {
+          "id": "DA_18_Hecarim",
+          "stars": 1,
+          "row": 0,
+          "col": 2
+        },
+        {
+          "id": "DA_18_Lillia",
+          "stars": 1,
+          "row": 0,
+          "col": 0
+        },
+        {
+          "id": "DA_18_Aphelios",
+          "stars": 1,
+          "row": 3,
+          "col": 0
+        },
+        {
+          "id": "DA_18_GnarSmall",
+          "stars": 1,
+          "row": 1,
+          "col": 2
+        },
+        {
+          "id": "DA_18_Ornn",
+          "stars": 1,
+          "row": 1,
+          "col": 6
+        },
+        {
+          "id": "DA_Elderwood18_Protector",
+          "stars": 1,
+          "row": 0,
+          "col": 3
+        },
+        {
+          "id": "DA_18_Ezreal",
+          "stars": 1,
+          "row": 3,
+          "col": 1
+        }
+      ],
+      "avgPlace": 4.55,
+      "pickRate": 0.08,
+      "winRate": 9,
+      "top4": 48
+    }
+  ]
+}

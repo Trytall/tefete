@@ -1190,6 +1190,7 @@
 }
 
 .app.desk {
+  position: relative;
   width: 100%;
   max-width: none;
   margin: 0;
@@ -1203,17 +1204,9 @@
 }
 
 .app.desk .inventory-head {
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   align-items: center;
   gap: 8px;
-}
-
-.desk-tools {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-  align-items: center;
-  justify-content: flex-end;
 }
 
 .app.desk .rail {
@@ -1227,6 +1220,10 @@
 
 .app.desk .inventory {
   flex: 0 0 auto;
+}
+
+.app.desk .inventory .empty {
+  margin: 4px 0 0;
 }
 
 .app.desk .tabs,
@@ -1249,10 +1246,27 @@
   text-overflow: ellipsis;
 }
 
+.app.desk .panel,
+.app.desk .comp-list.dock,
+.app.desk .comp-detail.focus {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.app.desk .panel::-webkit-scrollbar,
+.app.desk .comp-list.dock::-webkit-scrollbar,
+.app.desk .comp-detail.focus::-webkit-scrollbar,
+html.desk ::-webkit-scrollbar {
+  width: 0 !important;
+  height: 0 !important;
+  display: none !important;
+}
+
 .app.desk .panel {
-  flex: 1 1 0;
-  min-height: 120px;
-  overflow: auto;
+  flex: 0.9 1 0;
+  min-height: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
   display: flex;
   flex-direction: column;
 }
@@ -1305,14 +1319,114 @@
   flex: 1;
   min-width: 0;
   min-height: 0;
-  overflow: auto;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
+  gap: 8px;
+}
+
+.app.desk .comp-detail.focus > .board-caption {
+  display: none;
+}
+
+.app.desk .comp-detail.focus > .traits,
+.app.desk .comp-detail.focus > .prio-row {
+  padding-right: 112px;
+}
+
+.app.desk .stage {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  gap: 16px;
+  align-items: stretch;
+}
+
+.app.desk .stage .board {
+  flex: 1.35 1 0;
+  width: auto;
+  max-width: none;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.app.desk .stage .hex-row {
+  flex: 1 1 0;
+  min-height: 0;
+  align-items: stretch;
+}
+
+.app.desk .stage .row-label {
+  align-self: center;
+}
+
+.app.desk .stage .hexes {
+  height: 100%;
+  gap: 5px;
+}
+
+.app.desk .stage .hex {
+  aspect-ratio: auto;
+  height: 100%;
+  border-radius: 8px;
+}
+
+.app.desk .stage .hex.empty {
+  opacity: 0.55;
+  background: #15171a;
+  border-color: #32383f;
+}
+
+.app.desk .stage .hex.filled img {
+  object-fit: cover;
+  object-position: top;
+}
+
+.app.desk .stage-side {
+  flex: 0.85 1 0;
+  min-width: 220px;
+  max-width: 360px;
+  min-height: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+
+.app.desk .stage-side::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  display: none;
+}
+
+.app.desk .stage-side .loadouts {
+  grid-template-columns: 1fr;
+  margin: 0;
+  gap: 10px;
+}
+
+.app.desk .trait {
+  font-size: 14px;
+  padding: 5px 10px 5px 5px;
+}
+
+.app.desk .trait img {
+  width: 24px;
+  height: 24px;
+}
+
+.app.desk .prio-row img {
+  width: 30px;
+  height: 30px;
 }
 
 .app.desk .comp-dock {
-  flex: 1 0 36vh;
-  min-height: 260px;
+  flex: 1.2 1 0;
+  min-height: 0;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -1362,11 +1476,21 @@
   gap: 6px;
 }
 
+.app.desk .dock-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+  flex: 0 0 auto;
+}
+
 .app.desk .comp-list.dock {
-  flex: 1 1 auto;
+  flex: 1 1 0;
   min-width: 0;
-  min-height: 0;
-  overflow: auto;
+  min-height: 140px;
+  overflow-x: hidden;
+  overflow-y: auto;
   margin: 0;
   align-content: start;
   position: relative;
@@ -1382,37 +1506,43 @@
 }
 
 .app.desk .board {
-  width: min(100%, 760px);
-  margin-inline: auto;
+  width: 100%;
+  max-width: none;
+  margin: 0;
   gap: 6px;
 }
 
 .app.desk .hex .stars {
-  font-size: 10px;
+  font-size: 12px;
 }
 
 .app.desk .hex-name {
-  font-size: 10px;
+  font-size: 11px;
+  padding: 2px 3px;
 }
 
 .app.desk .hex-items img {
-  width: 16px;
-  height: 16px;
+  width: 20px;
+  height: 20px;
 }
 
 .app.desk .portrait {
-  width: 48px;
-  height: 48px;
+  width: 56px;
+  height: 56px;
 }
 
 .app.desk .item-row img {
-  width: 32px;
-  height: 32px;
+  width: 36px;
+  height: 36px;
 }
 
 .app.desk .loadouts {
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: 1fr;
   display: grid;
+}
+
+.app.desk .loadout-name {
+  font-size: 14px;
 }
 
 .app.desk .comp-list.dock .comp-detail {
@@ -1426,6 +1556,177 @@
 
   .app.desk .grid {
     grid-template-columns: repeat(auto-fill, minmax(84px, 1fr));
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1440px) {
+  .app.desk {
+    grid-template-columns: minmax(300px, 360px) minmax(0, 1fr);
+  }
+}
+
+@media (max-height: 820px) and (min-width: 800px) {
+  .app.desk {
+    padding: 8px 10px;
+    gap: 8px;
+  }
+
+  .app.desk .rail {
+    gap: 6px;
+  }
+
+  .app.desk .inventory,
+  .app.desk .panel,
+  .app.desk .comp-card,
+  .app.desk .recs,
+  .app.desk .comp-dock {
+    padding: 8px;
+    border-radius: 8px;
+  }
+
+  .app.desk .inventory-head {
+    gap: 6px;
+  }
+
+  .app.desk .inventory h2,
+  .app.desk .panel h2,
+  .app.desk .comp-dock .recs-head h2 {
+    font-size: 14px;
+  }
+
+  .app.desk .empty,
+  .app.desk .lede {
+    font-size: 12px;
+  }
+
+  .app.desk .comp-dock .recs-head p {
+    display: none;
+  }
+
+  .app.desk .tab,
+  .app.desk .scope .chip {
+    padding-block: 5px;
+    font-size: 12px;
+  }
+
+  .app.desk .panel {
+    flex: 0 1 30%;
+    max-height: 250px;
+  }
+
+  .app.desk .grid {
+    grid-template-columns: repeat(auto-fill, minmax(72px, 1fr));
+    gap: 6px;
+    margin-top: 6px;
+  }
+
+  .app.desk .tile {
+    min-height: 78px;
+    padding: 6px 4px 4px;
+    gap: 4px;
+  }
+
+  .app.desk .tile img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .app.desk .tile .label {
+    font-size: 10px;
+  }
+
+  .app.desk .comp-dock {
+    gap: 6px;
+    min-height: 0;
+  }
+
+  .app.desk .comp-dock .recs-head {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4px;
+  }
+
+  .app.desk .comp-dock .filters {
+    gap: 4px;
+  }
+
+  .app.desk .comp-dock .trait-chip {
+    font-size: 0;
+    line-height: 0;
+    gap: 0;
+    padding: 4px;
+  }
+
+  .app.desk .comp-dock .trait-chip img {
+    width: 18px;
+    height: 18px;
+  }
+
+  .app.desk .comp-list.dock {
+    min-height: 160px;
+  }
+
+  .app.desk .dock-bar {
+    flex-wrap: nowrap;
+  }
+
+  .app.desk .dock-bar .check {
+    font-size: 12px;
+    white-space: nowrap;
+  }
+
+  .app.desk .dock-bar .ghost {
+    padding: 2px 7px;
+    font-size: 11px;
+    white-space: nowrap;
+  }
+
+  .app.desk .comp-top h3 {
+    font-size: 13px;
+  }
+
+  .app.desk .comp-top p {
+    font-size: 11px;
+  }
+
+  .app.desk .tier {
+    width: 24px;
+    height: 24px;
+    font-size: 11px;
+  }
+
+  .app.desk .stage {
+    gap: 12px;
+  }
+
+  .app.desk .portrait {
+    width: 48px;
+    height: 48px;
+  }
+
+  .app.desk .item-row img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .app.desk .hex-items img {
+    width: 18px;
+    height: 18px;
+  }
+
+  .app.desk .stage-side .loadouts {
+    gap: 8px;
+  }
+
+  .app.desk .prio-row {
+    margin: 0;
+  }
+
+  .app.desk .prio-row img {
+    width: 26px;
+    height: 26px;
   }
 }
 
@@ -1470,7 +1771,7 @@
 
   .app.desk .comp-dock {
     max-height: none;
-    min-height: 280px;
+    min-height: 240px;
   }
 
   .app.desk .comp-detail.focus,
@@ -1484,7 +1785,7 @@
   position: fixed;
   right: 16px;
   bottom: 16px;
-  z-index: 30;
+  z-index: 50;
   margin: 0;
   padding: 8px 12px;
   border-radius: 8px;
@@ -1493,6 +1794,105 @@
   color: var(--text-h);
   font-size: 13px;
   box-shadow: 0 8px 24px #0006;
+}
+
+.settings-btn {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  z-index: 20;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text-h);
+  border-radius: 8px;
+  padding: 6px 10px;
+  font: inherit;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.settings-btn:hover,
+.settings-btn.on {
+  border-color: var(--accent);
+  background: var(--accent-dim);
+}
+
+.settings-btn.on {
+  z-index: 45;
+}
+
+.settings-layer {
+  position: absolute;
+  inset: 0;
+  z-index: 40;
+  background: #0008;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 52px 14px 16px;
+}
+
+.settings-card {
+  width: min(340px, calc(100% - 8px));
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 14px;
+  box-shadow: 0 18px 40px #000a;
+}
+
+.settings-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.settings-head h2 {
+  margin: 0;
+  color: var(--text-h);
+  font-size: 18px;
+}
+
+.settings-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  margin: 10px 0 0;
+  color: var(--text);
+  font-size: 13px;
+}
+
+.settings-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.settings-block > span {
+  color: var(--text);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+@media (max-height: 820px) and (min-width: 800px) {
+  .settings-btn {
+    top: 8px;
+    right: 10px;
+    padding: 4px 8px;
+    font-size: 12px;
+  }
+
+  .settings-layer {
+    padding: 44px 10px 10px;
+  }
 }
 
 .app.desk .sorts .ghost {

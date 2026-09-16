@@ -105,6 +105,7 @@ export default function App() {
   )
   const [traitFilter, setTraitFilter] = useState<string | null>(() => bootSaved?.traitFilter ?? null)
   const [augmentScope, setAugmentScope] = useState<AugmentScope>('all')
+  const [settingsOpen, setSettingsOpen] = useState(false)
 
   const inventory: Inventory = { items: itemCounts, augments, units }
   const play = mode === 'play'
@@ -125,15 +126,20 @@ export default function App() {
 
   useEffect(() => {
     function onKey(event: KeyboardEvent) {
-      if (event.key !== 't' && event.key !== 'T') return
       if (event.target instanceof HTMLInputElement || event.target instanceof HTMLTextAreaElement) return
+      if (event.key === 'Escape' && settingsOpen) {
+        event.preventDefault()
+        setSettingsOpen(false)
+        return
+      }
+      if (event.key !== 't' && event.key !== 'T') return
       if (mode !== 'play') return
       event.preventDefault()
       setPanelOpen((open) => !open)
     }
     window.addEventListener('keydown', onKey)
     return () => window.removeEventListener('keydown', onKey)
-  }, [mode])
+  }, [mode, settingsOpen])
 
   useEffect(() => {
     saveSession({ items: itemCounts, augments, units, sort, onlyMatches, pins, tiers, traitFilter })
@@ -207,6 +213,7 @@ export default function App() {
   function chooseMode(next: Mode) {
     setMode(next)
     setPanelOpen(true)
+    setSettingsOpen(false)
   }
 
   async function copyText(ok: string, text: string) {
@@ -318,33 +325,17 @@ export default function App() {
           <section className="inventory">
             <div className="inventory-head">
               <h2>Inventario</h2>
-              <div className="desk-tools">
-                {play ? null : (
-                  <>
-                    <span className="badge">v{catalog.patch}</span>
-                    <button type="button" className="ghost" onClick={() => void refreshMeta()} disabled={refreshing}>
-                      {refreshing ? '…' : 'Actualizar'}
-                    </button>
-                    <button type="button" className="chip" onClick={() => chooseMode('play')}>
-                      Partida
-                    </button>
-                    <button type="button" className="chip on" onClick={() => chooseMode('desk')}>
-                      Monitor
-                    </button>
-                  </>
-                )}
-                <button
-                  type="button"
-                  className="ghost"
-                  onClick={() => {
-                    setItemCounts({})
-                    setAugments([])
-                    setUnits([])
-                  }}
-                >
-                  Limpiar
-                </button>
-              </div>
+              <button
+                type="button"
+                className="ghost"
+                onClick={() => {
+                  setItemCounts({})
+                  setAugments([])
+                  setUnits([])
+                }}
+              >
+                Limpiar
+              </button>
             </div>
             <SelectedStrip
               catalog={catalog}
@@ -495,20 +486,6 @@ export default function App() {
                 <input type="checkbox" checked={onlyMatches} onChange={(event) => setOnlyMatches(event.target.checked)} />
                 Solo lo que tengo
               </label>
-              <div className="dock-actions">
-                <button
-                  type="button"
-                  className="ghost"
-                  onClick={() => copyText('Link copiado', buildShareUrl({ mode, compId: active?.comp.id, inventory }))}
-                >
-                  Copiar link
-                </button>
-                {active ? (
-                  <button type="button" className="ghost" onClick={() => copyText('Build copiada', formatCompText(active, catalog))}>
-                    Copiar build
-                  </button>
-                ) : null}
-              </div>
               <CompCards
                 visible={visible}
                 play={false}
@@ -583,6 +560,83 @@ export default function App() {
           </p>
         ) : null}
       </section>
+      {play ? null : (
+        <>
+          <button
+            type="button"
+            className={settingsOpen ? 'settings-btn on' : 'settings-btn'}
+            aria-expanded={settingsOpen}
+            aria-controls="desk-settings"
+            onClick={() => setSettingsOpen((open) => !open)}
+          >
+            <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
+              <path
+                fill="currentColor"
+                d="M19.1 12.9a7.6 7.6 0 0 0 0-1.8l2-1.5-1.9-3.3-2.4.5a7.4 7.4 0 0 0-1.6-.9L14.8 3h-3.6l-.4 2.4a7.4 7.4 0 0 0-1.6.9l-2.4-.5-1.9 3.3 2 1.5a7.6 7.6 0 0 0 0 1.8l-2 1.5 1.9 3.3 2.4-.5c.5.4 1 .7 1.6.9l.4 2.4h3.6l.4-2.4c.6-.2 1.1-.5 1.6-.9l-2.4.5 1.9-3.3-2-1.5ZM12 15.2A3.2 3.2 0 1 1 12 8.8a3.2 3.2 0 0 1 0 6.4Z"
+              />
+            </svg>
+            Ajustes
+          </button>
+          {settingsOpen ? (
+            <div className="settings-layer" onClick={() => setSettingsOpen(false)}>
+              <div
+                id="desk-settings"
+                className="settings-card"
+                role="dialog"
+                aria-labelledby="settings-title"
+                onClick={(event) => event.stopPropagation()}
+              >
+                <header className="settings-head">
+                  <div>
+                    <p className="eyebrow">tefete</p>
+                    <h2 id="settings-title">Ajustes</h2>
+                  </div>
+                  <button type="button" className="ghost" onClick={() => setSettingsOpen(false)}>
+                    Cerrar
+                  </button>
+                </header>
+                <p className="settings-meta">
+                  Set {catalog.set} · {catalog.setName} · <span className="badge">v{catalog.patch}</span>
+                </p>
+                <div className="settings-block">
+                  <span>Modo</span>
+                  <div className="mode-row">
+                    <button type="button" className="chip" onClick={() => chooseMode('play')}>
+                      Partida
+                    </button>
+                    <button type="button" className="chip on" onClick={() => chooseMode('desk')}>
+                      Monitor
+                    </button>
+                  </div>
+                </div>
+                <div className="settings-block">
+                  <span>Meta</span>
+                  <button type="button" className="ghost" onClick={() => void refreshMeta()} disabled={refreshing}>
+                    {refreshing ? 'Actualizando…' : 'Actualizar'}
+                  </button>
+                </div>
+                <div className="settings-block">
+                  <span>Compartir</span>
+                  <div className="dock-actions">
+                    <button
+                      type="button"
+                      className="ghost"
+                      onClick={() => copyText('Link copiado', buildShareUrl({ mode, compId: active?.comp.id, inventory }))}
+                    >
+                      Copiar link
+                    </button>
+                    {active ? (
+                      <button type="button" className="ghost" onClick={() => copyText('Build copiada', formatCompText(active, catalog))}>
+                        Copiar build
+                      </button>
+                    ) : null}
+                  </div>
+                </div>
+              </div>
+            </div>
+          ) : null}
+        </>
+      )}
       {toast ? (
         <p className="toast" role="status">
           {toast}
@@ -770,37 +824,48 @@ function CompDetail({ entry, play }: { entry: CompMatch; play: boolean }) {
           ))}
         </div>
       ) : null}
-      <BoardPreview
-        layout={entry.layout}
-        champions={champsById}
-        items={itemsById}
-        loadouts={entry.loadouts}
-        compact={play}
-        named={!play}
-      />
-      {play ? null : (
-        <CompRow
-          catalog={catalog}
+      {play ? (
+        <BoardPreview
+          layout={entry.layout}
+          champions={champsById}
+          items={itemsById}
           loadouts={entry.loadouts}
-          byId={{ items: itemsById, champions: champsById }}
+          compact
         />
-      )}
-      {play || !alts.length ? null : (
-        <>
-          <p className="board-caption">Builds alternativas</p>
-          <CompRow
-            catalog={catalog}
-            loadouts={alts}
-            byId={{ items: itemsById, champions: champsById }}
+      ) : (
+        <div className="stage">
+          <BoardPreview
+            layout={entry.layout}
+            champions={champsById}
+            items={itemsById}
+            loadouts={entry.loadouts}
+            named
           />
-        </>
-      )}
-      {play ? null : (
-        <ul className="reasons">
-          {entry.reasons.map((reason) => (
-            <li key={reason}>{reason}</li>
-          ))}
-        </ul>
+          <div className="stage-side">
+            <CompRow
+              catalog={catalog}
+              loadouts={entry.loadouts}
+              byId={{ items: itemsById, champions: champsById }}
+            />
+            {alts.length ? (
+              <>
+                <p className="board-caption">Builds alternativas</p>
+                <CompRow
+                  catalog={catalog}
+                  loadouts={alts}
+                  byId={{ items: itemsById, champions: champsById }}
+                />
+              </>
+            ) : null}
+            {entry.reasons.length ? (
+              <ul className="reasons">
+                {entry.reasons.map((reason) => (
+                  <li key={reason}>{reason}</li>
+                ))}
+              </ul>
+            ) : null}
+          </div>
+        </div>
       )}
     </div>
   )

@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useMemo, useState, type CSSProperties } from 'react'
 import { BoardPreview } from './components/BoardPreview'
 import { CompRow } from './components/CompRow'
 import { EntityGrid } from './components/EntityGrid'
@@ -66,6 +66,12 @@ function loadCachedMeta(): MetaSnapshot | null {
 }
 
 type AugmentScope = 'all' | 1 | 2 | 3 | 'new'
+
+function traitHue(id: string) {
+  let hash = 0
+  for (const char of id) hash = (hash * 33 + char.charCodeAt(0)) >>> 0
+  return [24, 38, 152, 174, 198, 262, 312, 8][hash % 8]
+}
 
 
 export default function App() {
@@ -519,7 +525,8 @@ export default function App() {
                 <button
                   key={trait.id}
                   type="button"
-                  className={traitFilter === trait.id ? 'chip on' : 'chip'}
+                  className={traitFilter === trait.id ? 'chip trait-chip on' : 'chip trait-chip'}
+                  style={{ '--trait-hue': String(traitHue(trait.id)) } as CSSProperties}
                   onClick={() => setTraitFilter((current) => (current === trait.id ? null : trait.id))}
                 >
                   <img src={trait.icon} alt="" />
@@ -538,8 +545,20 @@ export default function App() {
           {visible.map((entry, index) => {
             const expanded = play && (openComp === entry.comp.id || (!openComp && index === 0))
             const selected = play ? expanded : active?.comp.id === entry.comp.id
+            const fade = selected || index === 0 ? 0 : Math.min(index * 0.035, 0.45)
             return (
-              <li key={entry.comp.id} className={selected ? 'comp-card on' : 'comp-card'}>
+              <li
+                key={entry.comp.id}
+                className={[
+                  'comp-card',
+                  `tone-${entry.comp.tier}`,
+                  selected ? 'on' : '',
+                  index === 0 ? 'hot' : '',
+                ]
+                  .filter(Boolean)
+                  .join(' ')}
+                style={{ '--fade': String(fade) } as CSSProperties}
+              >
                 <div className="comp-top-row">
                 <button
                   type="button"
@@ -612,7 +631,11 @@ function CompDetail({ entry, play }: { entry: CompMatch; play: boolean }) {
     <div className={play ? 'comp-detail' : 'comp-detail focus'}>
       <div className="traits">
         {traits.map((trait) => (
-          <span key={trait.id} className="trait">
+          <span
+            key={trait.id}
+            className="trait"
+            style={{ '--trait-hue': String(traitHue(trait.id)) } as CSSProperties}
+          >
             <img src={trait.icon} alt="" />
             {trait.name}
           </span>

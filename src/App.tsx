@@ -4,7 +4,7 @@ import { CompRow } from './components/CompRow'
 import { DeskPane } from './components/DeskPane'
 import { FlexStrip } from './components/FlexStrip'
 import { HolderStrip } from './components/HolderStrip'
-import { ItemPlaceStrip } from './components/ItemPlaceStrip'
+import { ItemPlaceStrip, CompSlamRow } from './components/ItemPlaceStrip'
 import { EntityGrid } from './components/EntityGrid'
 import { TraitMeter } from './components/TraitMeter'
 import catalogJson from './data/catalog.json'
@@ -297,7 +297,7 @@ export default function App() {
   const shownHolders = useMemo(() => holderItems.slice(0, 3), [holderItems])
 
   useEffect(() => {
-    const ids = shownHolders.map((item) => item.id)
+    const ids = holderItems.map((item) => item.id)
     if (!ids.length) {
       setHolders({})
       return
@@ -313,7 +313,7 @@ export default function App() {
     return () => {
       cancelled = true
     }
-  }, [shownHolders])
+  }, [holderItems])
 
   useEffect(() => {
     if (!units.length) {
@@ -1090,6 +1090,11 @@ function CompCards({
                 ★
               </button>
             </div>
+            <CompSlamRow
+              rows={placeOwnedOnComp(entry.comp, ownedIds, craftableIds, holders, catalog)}
+              items={itemsById}
+              champs={champsById}
+            />
             {expanded ? (
               <CompDetail
                 entry={entry}

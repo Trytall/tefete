@@ -281,35 +281,30 @@ export default function App() {
 
   return (
     <div className={play ? 'app play' : 'app desk'}>
-      <header className="topbar">
-        <div>
-          <p className="eyebrow">{play ? 'Overlay de partida' : 'Segundo monitor'}</p>
-          <h1>tefete</h1>
-        </div>
-        <div className="patch">
-          <strong>Set {catalog.set}</strong>
-          <span>{catalog.setName}</span>
-          <span className="badge">Versión {catalog.patch}</span>
-          {play ? null : (
-            <button type="button" className="ghost" onClick={() => void refreshMeta()} disabled={refreshing}>
-              {refreshing ? 'Actualizando…' : 'Actualizar meta'}
-            </button>
-          )}
-          <div className="mode-row">
-            <button type="button" className={play ? 'chip on' : 'chip'} onClick={() => chooseMode('play')}>
-              Partida
-            </button>
-            <button type="button" className={!play ? 'chip on' : 'chip'} onClick={() => chooseMode('desk')}>
-              Monitor
-            </button>
-            {play ? (
+      {play ? (
+        <header className="topbar">
+          <div>
+            <p className="eyebrow">Overlay de partida</p>
+            <h1>tefete</h1>
+          </div>
+          <div className="patch">
+            <strong>Set {catalog.set}</strong>
+            <span>{catalog.setName}</span>
+            <span className="badge">Versión {catalog.patch}</span>
+            <div className="mode-row">
+              <button type="button" className="chip on" onClick={() => chooseMode('play')}>
+                Partida
+              </button>
+              <button type="button" className="chip" onClick={() => chooseMode('desk')}>
+                Monitor
+              </button>
               <button type="button" className="ghost" onClick={() => setPanelOpen(false)}>
                 T
               </button>
-            ) : null}
+            </div>
           </div>
-        </div>
-      </header>
+        </header>
+      ) : null}
 
       {play ? (
         <button type="button" className="inv-toggle" onClick={() => setInvOpen((open) => !open)}>
@@ -323,17 +318,33 @@ export default function App() {
           <section className="inventory">
             <div className="inventory-head">
               <h2>Inventario</h2>
-              <button
-                type="button"
-                className="ghost"
-                onClick={() => {
-                  setItemCounts({})
-                  setAugments([])
-                  setUnits([])
-                }}
-              >
-                Limpiar
-              </button>
+              <div className="desk-tools">
+                {play ? null : (
+                  <>
+                    <span className="badge">v{catalog.patch}</span>
+                    <button type="button" className="ghost" onClick={() => void refreshMeta()} disabled={refreshing}>
+                      {refreshing ? '…' : 'Actualizar'}
+                    </button>
+                    <button type="button" className="chip" onClick={() => chooseMode('play')}>
+                      Partida
+                    </button>
+                    <button type="button" className="chip on" onClick={() => chooseMode('desk')}>
+                      Monitor
+                    </button>
+                  </>
+                )}
+                <button
+                  type="button"
+                  className="ghost"
+                  onClick={() => {
+                    setItemCounts({})
+                    setAugments([])
+                    setUnits([])
+                  }}
+                >
+                  Limpiar
+                </button>
+              </div>
             </div>
             <SelectedStrip
               catalog={catalog}
@@ -448,158 +459,124 @@ export default function App() {
               renderMeta={(champ) => champ.cost}
             />
           ) : null}
-        </div>
-      ) : null}
-
-      <section className="recs">
-        <header className="recs-head">
-          <div>
-            <h2>Comps</h2>
-            <p>
-              {visible.length} · Academy {liveMeta.patch}
-              {play
-                ? ''
-                : ` · ${new Date(liveMeta.updatedAt).toLocaleString('es-AR', { day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit' })}`}
-            </p>
-          </div>
-          <div className="sorts">
-            {(['meta', 'pick', 'avg', 'win'] as RankSort[]).map((key) => (
-              <button key={key} type="button" className={sort === key ? 'chip on' : 'chip'} onClick={() => setSort(key)}>
-                {key === 'meta' ? 'Meta' : key === 'pick' ? 'Pick' : key === 'avg' ? 'Prom.' : 'Win'}
-              </button>
-            ))}
-            {play ? null : (
-              <>
+          {play ? null : (
+            <div className="comp-dock">
+              <header className="recs-head">
+                <div>
+                  <h2>Comps</h2>
+                  <p>
+                    {visible.length} · Academy {liveMeta.patch} ·{' '}
+                    {new Date(liveMeta.updatedAt).toLocaleString('es-AR', {
+                      day: '2-digit',
+                      month: '2-digit',
+                      hour: '2-digit',
+                      minute: '2-digit',
+                    })}
+                  </p>
+                </div>
+                <div className="sorts">
+                  {(['meta', 'pick', 'avg', 'win'] as RankSort[]).map((key) => (
+                    <button key={key} type="button" className={sort === key ? 'chip on' : 'chip'} onClick={() => setSort(key)}>
+                      {key === 'meta' ? 'Meta' : key === 'pick' ? 'Pick' : key === 'avg' ? 'Prom.' : 'Win'}
+                    </button>
+                  ))}
+                </div>
+              </header>
+              <TierFilters
+                presentTiers={presentTiers}
+                tiers={tiers}
+                traitFilter={traitFilter}
+                traitOptions={traitOptions}
+                play={false}
+                onToggleTier={toggleTier}
+                onTrait={setTraitFilter}
+              />
+              <label className="check">
+                <input type="checkbox" checked={onlyMatches} onChange={(event) => setOnlyMatches(event.target.checked)} />
+                Solo lo que tengo
+              </label>
+              <div className="dock-actions">
                 <button
                   type="button"
                   className="ghost"
-                  onClick={() =>
-                    copyText(
-                      'Link copiado',
-                      buildShareUrl({ mode, compId: active?.comp.id, inventory }),
-                    )
-                  }
+                  onClick={() => copyText('Link copiado', buildShareUrl({ mode, compId: active?.comp.id, inventory }))}
                 >
                   Copiar link
                 </button>
                 {active ? (
-                  <button
-                    type="button"
-                    className="ghost"
-                    onClick={() => copyText('Build copiada', formatCompText(active, catalog))}
-                  >
+                  <button type="button" className="ghost" onClick={() => copyText('Build copiada', formatCompText(active, catalog))}>
                     Copiar build
                   </button>
                 ) : null}
-              </>
-            )}
-          </div>
-        </header>
-        {headline && !play ? <p className="headline">{headline}</p> : null}
-        <div className="scope filters">
-          {ALL_TIERS.map((tier) => {
-            const blocked = tier === 'S' && !presentTiers.has('S')
-            const on = !blocked && tiers.includes(tier)
-            const chip = (
-              <button
-                type="button"
-                className={on ? `chip on tier-chip tier-${tier}` : `chip tier-chip tier-${tier}${blocked ? ' blocked' : ''}`}
-                disabled={blocked}
-                aria-disabled={blocked}
-                aria-label={blocked ? 'No hay ninguna tier s en el patch actual' : `Filtrar tier ${tier}`}
-                onClick={() => toggleTier(tier)}
-              >
-                {tier}
-              </button>
-            )
-            if (!blocked) return <span key={tier}>{chip}</span>
-            return (
-              <span key={tier} className="tier-wrap" data-tip="No hay ninguna tier s en el patch actual">
-                {chip}
-              </span>
-            )
-          })}
-          {play
-            ? null
-            : traitOptions.slice(0, 10).map((trait) => (
-                <button
-                  key={trait.id}
-                  type="button"
-                  className={traitFilter === trait.id ? 'chip trait-chip on' : 'chip trait-chip'}
-                  style={{ '--trait-hue': String(traitHue(trait.id)) } as CSSProperties}
-                  onClick={() => setTraitFilter((current) => (current === trait.id ? null : trait.id))}
-                >
-                  <img src={trait.icon} alt="" />
-                  {trait.name}
-                </button>
-              ))}
+              </div>
+              <CompCards
+                visible={visible}
+                play={false}
+                openComp={openComp}
+                activeId={active?.comp.id ?? null}
+                pins={pins}
+                onOpen={setOpenComp}
+                onPin={togglePin}
+              />
+              {visible.length === 0 ? (
+                <p className="empty">
+                  Nada coincide con ese inventario.
+                  {onlyMatches ? ' Desmarcá “Solo lo que tengo” para ver todas las comps.' : ''}
+                </p>
+              ) : null}
+            </div>
+          )}
         </div>
-        <label className="check">
-          <input type="checkbox" checked={onlyMatches} onChange={(event) => setOnlyMatches(event.target.checked)} />
-          Solo lo que tengo
-        </label>
+      ) : null}
 
-        {!play && active ? <CompDetail key={active.comp.id} entry={active} play={false} /> : null}
-
-        <ol className={play ? 'comp-list' : 'comp-list dock'}>
-          {visible.map((entry, index) => {
-            const expanded = play && (openComp === entry.comp.id || (!openComp && index === 0))
-            const selected = play ? expanded : active?.comp.id === entry.comp.id
-            const fade = selected || index === 0 ? 0 : Math.min(index * 0.035, 0.45)
-            return (
-              <li
-                key={entry.comp.id}
-                className={[
-                  'comp-card',
-                  `tone-${entry.comp.tier}`,
-                  selected ? 'on' : '',
-                  index === 0 ? 'hot' : '',
-                ]
-                  .filter(Boolean)
-                  .join(' ')}
-                style={{ '--fade': String(fade) } as CSSProperties}
-              >
-                <div className="comp-top-row">
-                <button
-                  type="button"
-                  className="comp-top as-button"
-                  aria-pressed={selected}
-                  aria-current={selected ? 'true' : undefined}
-                  onClick={() =>
-                    setOpenComp((current) => {
-                      if (!play) return entry.comp.id
-                      return current === entry.comp.id ? null : entry.comp.id
-                    })
-                  }
-                >
-                  <span className={`tier tier-${entry.comp.tier}`}>{entry.comp.tier}</span>
-                  <div>
-                    <h3>
-                      {index + 1}. {entry.comp.name}
-                    </h3>
-                    <p>
-                      {styleEs(entry.comp.style)} · {difficultyEs(entry.comp.difficulty)} · prom.{' '}
-                      {entry.comp.avgPlace.toFixed(2)} · pick {entry.comp.pickRate.toFixed(2)}% · win{' '}
-                      {entry.comp.winRate.toFixed(1)}%
-                    </p>
-                  </div>
-                </button>
-                <button
-                  type="button"
-                  className={pins.includes(entry.comp.id) ? 'pin on' : 'pin'}
-                  aria-pressed={pins.includes(entry.comp.id)}
-                  title={pins.includes(entry.comp.id) ? 'Quitar de favoritos' : 'Fijar comp'}
-                  onClick={() => togglePin(entry.comp.id)}
-                >
-                  ★
-                </button>
-                </div>
-                {expanded ? <CompDetail entry={entry} play /> : null}
-              </li>
-            )
-          })}
-        </ol>
-        {visible.length === 0 ? (
+      <section className="recs">
+        {play ? (
+          <>
+            <header className="recs-head">
+              <div>
+                <h2>Comps</h2>
+                <p>
+                  {visible.length} · Academy {liveMeta.patch}
+                </p>
+              </div>
+              <div className="sorts">
+                {(['meta', 'pick', 'avg', 'win'] as RankSort[]).map((key) => (
+                  <button key={key} type="button" className={sort === key ? 'chip on' : 'chip'} onClick={() => setSort(key)}>
+                    {key === 'meta' ? 'Meta' : key === 'pick' ? 'Pick' : key === 'avg' ? 'Prom.' : 'Win'}
+                  </button>
+                ))}
+              </div>
+            </header>
+            <TierFilters
+              presentTiers={presentTiers}
+              tiers={tiers}
+              traitFilter={traitFilter}
+              traitOptions={traitOptions}
+              play
+              onToggleTier={toggleTier}
+              onTrait={setTraitFilter}
+            />
+            <label className="check">
+              <input type="checkbox" checked={onlyMatches} onChange={(event) => setOnlyMatches(event.target.checked)} />
+              Solo lo que tengo
+            </label>
+            <CompCards
+              visible={visible}
+              play
+              openComp={openComp}
+              activeId={active?.comp.id ?? null}
+              pins={pins}
+              onOpen={setOpenComp}
+              onPin={togglePin}
+            />
+          </>
+        ) : (
+          <>
+            {headline ? <p className="headline">{headline}</p> : null}
+            {active ? <CompDetail key={active.comp.id} entry={active} play={false} /> : null}
+          </>
+        )}
+        {visible.length === 0 && play ? (
           <p className="empty">
             Nada coincide con ese inventario.
             {onlyMatches ? ' Desmarcá “Solo lo que tengo” para ver todas las comps.' : ''}
@@ -612,6 +589,139 @@ export default function App() {
         </p>
       ) : null}
     </div>
+  )
+}
+
+function TierFilters({
+  presentTiers,
+  tiers,
+  traitFilter,
+  traitOptions,
+  play,
+  onToggleTier,
+  onTrait,
+}: {
+  presentTiers: Set<CompTier>
+  tiers: CompTier[]
+  traitFilter: string | null
+  traitOptions: Trait[]
+  play: boolean
+  onToggleTier: (tier: CompTier) => void
+  onTrait: (id: string | null) => void
+}) {
+  return (
+    <div className="scope filters">
+      {ALL_TIERS.map((tier) => {
+        const blocked = tier === 'S' && !presentTiers.has('S')
+        const on = !blocked && tiers.includes(tier)
+        const chip = (
+          <button
+            type="button"
+            className={on ? `chip on tier-chip tier-${tier}` : `chip tier-chip tier-${tier}${blocked ? ' blocked' : ''}`}
+            disabled={blocked}
+            aria-disabled={blocked}
+            aria-label={blocked ? 'No hay ninguna tier s en el patch actual' : `Filtrar tier ${tier}`}
+            onClick={() => onToggleTier(tier)}
+          >
+            {tier}
+          </button>
+        )
+        if (!blocked) return <span key={tier}>{chip}</span>
+        return (
+          <span key={tier} className="tier-wrap" data-tip="No hay ninguna tier s en el patch actual">
+            {chip}
+          </span>
+        )
+      })}
+      {play
+        ? null
+        : traitOptions.slice(0, 10).map((trait) => (
+            <button
+              key={trait.id}
+              type="button"
+              title={trait.name}
+              className={traitFilter === trait.id ? 'chip trait-chip on' : 'chip trait-chip'}
+              style={{ '--trait-hue': String(traitHue(trait.id)) } as CSSProperties}
+              onClick={() => onTrait(traitFilter === trait.id ? null : trait.id)}
+            >
+              <img src={trait.icon} alt="" />
+              {trait.name}
+            </button>
+          ))}
+    </div>
+  )
+}
+
+function CompCards({
+  visible,
+  play,
+  openComp,
+  activeId,
+  pins,
+  onOpen,
+  onPin,
+}: {
+  visible: CompMatch[]
+  play: boolean
+  openComp: string | null
+  activeId: string | null
+  pins: string[]
+  onOpen: (id: string | null | ((current: string | null) => string | null)) => void
+  onPin: (id: string) => void
+}) {
+  return (
+    <ol className={play ? 'comp-list' : 'comp-list dock'}>
+      {visible.map((entry, index) => {
+        const expanded = play && (openComp === entry.comp.id || (!openComp && index === 0))
+        const selected = play ? expanded : activeId === entry.comp.id
+        const fade = selected || index === 0 ? 0 : Math.min(index * 0.035, 0.45)
+        return (
+          <li
+            key={entry.comp.id}
+            className={['comp-card', `tone-${entry.comp.tier}`, selected ? 'on' : '', index === 0 ? 'hot' : '']
+              .filter(Boolean)
+              .join(' ')}
+            style={{ '--fade': String(fade) } as CSSProperties}
+          >
+            <div className="comp-top-row">
+              <button
+                type="button"
+                className="comp-top as-button"
+                aria-pressed={selected}
+                aria-current={selected ? 'true' : undefined}
+                onClick={() =>
+                  onOpen((current) => {
+                    if (!play) return entry.comp.id
+                    return current === entry.comp.id ? null : entry.comp.id
+                  })
+                }
+              >
+                <span className={`tier tier-${entry.comp.tier}`}>{entry.comp.tier}</span>
+                <div>
+                  <h3>
+                    {index + 1}. {entry.comp.name}
+                  </h3>
+                  <p>
+                    {styleEs(entry.comp.style)} · {difficultyEs(entry.comp.difficulty)} · prom.{' '}
+                    {entry.comp.avgPlace.toFixed(2)} · pick {entry.comp.pickRate.toFixed(2)}% · win {entry.comp.winRate.toFixed(1)}%
+                  </p>
+                </div>
+              </button>
+              <button
+                type="button"
+                className={pins.includes(entry.comp.id) ? 'pin on' : 'pin'}
+                aria-pressed={pins.includes(entry.comp.id)}
+                title={pins.includes(entry.comp.id) ? 'Quitar de favoritos' : 'Fijar comp'}
+                onClick={() => onPin(entry.comp.id)}
+              >
+                ★
+              </button>
+            </div>
+            {expanded ? <CompDetail entry={entry} play /> : null}
+          </li>
+        )
+      })}
+    </ol>
   )
 }
 

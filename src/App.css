@@ -232,13 +232,23 @@
   display: flex;
   flex-wrap: wrap;
   grid-template-columns: none;
-  grid-column: 1 / -1;
+  grid-column: auto;
   align-items: center;
   gap: 8px;
 }
 
-.app.desk .filters .chip {
+.app.desk .scope.filters {
+  display: flex;
+  flex-wrap: wrap;
+  grid-template-columns: none;
+  width: 100%;
+}
+
+.app.desk .filters .chip,
+.app.desk .scope.filters .chip,
+.app.desk .scope.filters .tier-wrap {
   width: auto;
+  flex: 0 0 auto;
   overflow: visible;
   text-overflow: unset;
   white-space: nowrap;
@@ -1188,37 +1198,26 @@
   overflow: hidden;
   display: grid;
   grid-template-columns: minmax(360px, 28%) minmax(0, 1fr);
-  grid-template-rows: auto minmax(0, 1fr);
+  grid-template-rows: minmax(0, 1fr);
   gap: 12px;
 }
 
-.app.desk .topbar {
-  grid-column: 1 / -1;
-  align-items: center;
-  gap: 10px;
-}
-
-.app.desk .eyebrow,
-.app.desk .lede,
-.app.desk .patch span:not(.badge) {
-  display: none;
-}
-
-.app.desk .topbar h1 {
-  font-size: 22px;
-  letter-spacing: -0.03em;
-}
-
-.app.desk .patch {
-  display: flex;
+.app.desk .inventory-head {
   flex-wrap: wrap;
   align-items: center;
-  justify-content: flex-end;
   gap: 8px;
 }
 
+.desk-tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+  justify-content: flex-end;
+}
+
 .app.desk .rail {
-  grid-row: 2;
+  grid-row: 1;
   min-height: 0;
   overflow: hidden;
   display: flex;
@@ -1251,8 +1250,8 @@
 }
 
 .app.desk .panel {
-  flex: 1 1 auto;
-  min-height: 0;
+  flex: 1 1 0;
+  min-height: 120px;
   overflow: auto;
   display: flex;
   flex-direction: column;
@@ -1286,19 +1285,12 @@
 }
 
 .app.desk .recs {
-  grid-row: 2;
+  grid-row: 1;
   min-height: 0;
-  overflow: visible;
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(260px, 32%);
-  grid-template-rows: auto auto minmax(0, 1fr);
-  gap: 8px 12px;
-}
-
-.app.desk .recs-head,
-.app.desk .headline,
-.app.desk .check {
-  grid-column: 1 / -1;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .app.desk .headline {
@@ -1306,12 +1298,11 @@
 }
 
 .app.desk .sorts {
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
 }
 
 .app.desk .comp-detail.focus {
-  grid-column: 1;
-  grid-row: 3;
+  flex: 1;
   min-width: 0;
   min-height: 0;
   overflow: auto;
@@ -1319,9 +1310,60 @@
   flex-direction: column;
 }
 
+.app.desk .comp-dock {
+  flex: 1 0 36vh;
+  min-height: 260px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background: var(--surface);
+  border: 1px solid var(--border-soft);
+  border-radius: 8px;
+  padding: 12px;
+  position: relative;
+  z-index: 4;
+}
+
+.app.desk .comp-dock .recs-head {
+  flex: 0 0 auto;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 8px;
+}
+
+.app.desk .comp-dock .recs-head h2 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.app.desk .comp-dock .recs-head p {
+  font-size: 12px;
+}
+
+.app.desk .comp-dock .trait-chip {
+  padding: 4px 8px 4px 4px;
+  font-size: 12px;
+}
+
+.app.desk .comp-dock .trait-chip img {
+  width: 18px;
+  height: 18px;
+}
+
+.app.desk .comp-dock .filters {
+  grid-column: auto;
+  margin: 0;
+}
+
+.app.desk .dock-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
 .app.desk .comp-list.dock {
-  grid-column: 2;
-  grid-row: 3;
+  flex: 1 1 auto;
   min-width: 0;
   min-height: 0;
   overflow: auto;
@@ -1382,10 +1424,6 @@
     grid-template-columns: minmax(300px, 34%) minmax(0, 1fr);
   }
 
-  .app.desk .recs {
-    grid-template-columns: minmax(0, 1fr) minmax(220px, 280px);
-  }
-
   .app.desk .grid {
     grid-template-columns: repeat(auto-fill, minmax(84px, 1fr));
   }
@@ -1414,21 +1452,25 @@
 @media (max-width: 799px) {
   .app.desk {
     grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto;
+    grid-template-rows: auto auto;
     height: auto;
     min-height: 100vh;
     overflow: auto;
   }
 
   .app.desk .recs {
-    grid-row: 2;
+    grid-row: 1;
     overflow: visible;
-    grid-template-columns: 1fr;
   }
 
   .app.desk .rail {
-    grid-row: 3;
+    grid-row: 2;
     overflow: visible;
+  }
+
+  .app.desk .comp-dock {
+    max-height: none;
+    min-height: 280px;
   }
 
   .app.desk .comp-detail.focus,

@@ -38,8 +38,8 @@ export function BoardPreview({
               return (
                 <span
                   key={col}
-                  className={`hex filled ${COST_CLASS[unit.cost] ?? ''} ${equipped.length ? 'has-items' : ''}`}
-                  title={`${unit.name} ${slot.stars}★`}
+                  className={`hex filled ${COST_CLASS[unit.cost] ?? ''} ${equipped.length ? 'has-items' : ''} ${slot.source === 'owned' ? 'owned' : ''} ${slot.source === 'flex' ? 'flex-in' : ''}`}
+                  title={`${unit.name} ${slot.stars}★${slot.source === 'owned' ? ' · tu unidad' : slot.source === 'flex' ? ' · flex' : ''}`}
                 >
                   <img src={unit.icon} alt={unit.name} />
                   {named ? <span className="hex-name">{unit.name}</span> : null}

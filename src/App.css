@@ -648,6 +648,12 @@
   font-weight: 500;
 }
 
+.loadout-name em {
+  font-style: normal;
+  color: var(--text);
+  font-weight: 500;
+}
+
 .item-row {
   display: flex;
   flex-wrap: wrap;
@@ -1049,6 +1055,14 @@
   display: block;
 }
 
+.hex.filled.owned {
+  box-shadow: inset 0 0 0 2px #7eb8c9;
+}
+
+.hex.filled.flex-in {
+  box-shadow: inset 0 0 0 2px #c9a06a;
+}
+
 .board.compact .hex-row.row-1 .hexes,
 .board.compact .hex-row.row-3 .hexes {
   padding-left: 5px;
@@ -1248,7 +1262,8 @@
 
 .app.desk .panel,
 .app.desk .comp-list.dock,
-.app.desk .comp-detail.focus {
+.app.desk .comp-detail.focus,
+.app.desk .holders {
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
@@ -1256,6 +1271,7 @@
 .app.desk .panel::-webkit-scrollbar,
 .app.desk .comp-list.dock::-webkit-scrollbar,
 .app.desk .comp-detail.focus::-webkit-scrollbar,
+.app.desk .holders::-webkit-scrollbar,
 html.desk ::-webkit-scrollbar {
   width: 0 !important;
   height: 0 !important;
@@ -1904,4 +1920,246 @@ html.desk ::-webkit-scrollbar {
     width: min(360px, calc(100vw - 16px));
     max-height: calc(100vh - 24px);
   }
+}
+
+.holders {
+  display: grid;
+  gap: 6px;
+  min-width: 0;
+  max-height: 168px;
+  overflow: auto;
+  padding: 8px;
+  border: 1px solid var(--border-soft);
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--surface) 82%, #000);
+}
+
+.holders > span,
+.craft > span {
+  width: 100%;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text);
+}
+
+.holder-row {
+  display: grid;
+  grid-template-columns: 28px minmax(0, 1fr);
+  gap: 8px;
+  align-items: start;
+  min-width: 0;
+}
+
+.holder-row > img {
+  width: 28px;
+  height: 28px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.holder-row p {
+  margin: 0 0 4px;
+  font-size: 12px;
+  color: var(--text-h);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.holder-row em {
+  font-style: normal;
+  color: var(--text);
+  font-size: 11px;
+}
+
+.holder-champs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.holder-champ {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  min-width: 0;
+  padding: 2px 7px 2px 2px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+
+.holder-champ:hover {
+  border-color: #7eb8c9;
+  color: var(--text-h);
+}
+
+.holder-champ img {
+  width: 18px;
+  height: 18px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.holder-champ strong {
+  font-size: 11px;
+  font-weight: 600;
+  max-width: 72px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.holder-champ span {
+  font-size: 10px;
+  color: #9ad0b8;
+  font-variant-numeric: tabular-nums;
+}
+
+.holder-empty {
+  font-size: 11px;
+  color: var(--text);
+}
+
+.holders.compact {
+  max-height: 92px;
+  padding: 6px;
+  gap: 4px;
+}
+
+.holders.compact .holder-row {
+  grid-template-columns: 20px minmax(0, 1fr);
+  gap: 6px;
+}
+
+.holders.compact .holder-row > img {
+  width: 20px;
+  height: 20px;
+}
+
+.holders.compact .holder-champ {
+  padding: 1px;
+}
+
+.holders.compact .holder-champ span {
+  display: none;
+}
+
+.app.desk .holders {
+  flex: 0 0 auto;
+  max-height: 180px;
+}
+
+@media (max-height: 820px) and (min-width: 800px) {
+  .app.desk .holders {
+    max-height: 118px;
+    padding: 6px;
+  }
+
+  .app.desk .holder-champ strong {
+    max-width: 54px;
+  }
+}
+
+.flex-units {
+  display: grid;
+  gap: 6px;
+  min-width: 0;
+  padding: 8px;
+  border: 1px solid var(--border-soft);
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--surface) 82%, #000);
+}
+
+.flex-units > span {
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text);
+}
+
+.flex-units > p {
+  margin: 0;
+  font-size: 11px;
+  color: var(--text);
+}
+
+.flex-champs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.flex-champ {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  min-width: 52px;
+  max-width: 72px;
+  padding: 4px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+
+.flex-champ:hover {
+  border-color: #c9a06a;
+  color: var(--text-h);
+}
+
+.flex-champ img {
+  width: 36px;
+  height: 36px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.flex-champ strong {
+  font-size: 10px;
+  font-weight: 600;
+  max-width: 64px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.flex-champ em {
+  font-style: normal;
+  font-size: 9px;
+  color: var(--text);
+  max-width: 64px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.flex-units.compact {
+  padding: 6px;
+}
+
+.flex-units.compact > p {
+  display: none;
+}
+
+.flex-units.compact .flex-champ {
+  min-width: 0;
+  max-width: none;
+  padding: 2px;
+}
+
+.flex-units.compact .flex-champ img {
+  width: 22px;
+  height: 22px;
+}
+
+.app.desk .flex-units {
+  margin-top: 8px;
 }

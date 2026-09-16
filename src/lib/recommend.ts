@@ -1,5 +1,6 @@
 import { assignItems, layoutComp } from './board'
-import type { Catalog, CompMatch, Inventory, Item, MetaComp, MetaSnapshot, RankSort } from './types'
+import { familyIds, fitOwnedOnBoard, flexBench, flexHitsFor } from './flex'
+import type { Catalog, CompMatch, Inventory, Item, MetaComp, MetaSnapshot, RankSort, UnitProfile } from './types'
 
 export function addCount(counts: Record<string, number>, id: string, delta = 1) {
   const next = { ...counts }
@@ -53,6 +54,7 @@ export function recommendComps(
   catalog: Catalog,
   meta: MetaSnapshot,
   sort: RankSort = 'meta',
+  extras: { profiles?: Record<string, UnitProfile>; preferredItems?: string[] } = {},
 ): CompMatch[] {
   const itemIds = new Set(Object.keys(inventory.items))
   const ownedCompleted = new Set(
@@ -60,13 +62,23 @@ export function recommendComps(
   )
   const crafted = craftableFrom(inventory.items, catalog)
   const craftedIds = new Set(crafted.map((item) => item.id))
+  const preferredItems = extras.preferredItems ?? [...ownedCompleted, ...craftedIds]
   const augmentIds = new Set(inventory.augments)
   const unitIds = new Set(inventory.units)
   const hasFilters = itemIds.size > 0 || augmentIds.size > 0 || unitIds.size > 0
 
   return meta.comps
     .map((comp) =>
-      scoreComp(comp, catalog, { ownedCompleted, craftedIds, augmentIds, unitIds, hasFilters, sort }),
+      scoreComp(comp, catalog, {
+        ownedCompleted,
+        craftedIds,
+        preferredItems,
+        augmentIds,
+        unitIds,
+        hasFilters,
+        sort,
+        profiles: extras.profiles ?? {},
+      }),
     )
     .sort((a, b) => b.score - a.score || b.comp.pickRate - a.comp.pickRate || a.comp.avgPlace - b.comp.avgPlace)
 }
@@ -77,37 +89,53 @@ function scoreComp(
   ctx: {
     ownedCompleted: Set<string>
     craftedIds: Set<string>
+    preferredItems: string[]
     augmentIds: Set<string>
     unitIds: Set<string>
     hasFilters: boolean
     sort: RankSort
+    profiles: Record<string, UnitProfile>
   },
 ): CompMatch {
   const itemHits = comp.itemIds.filter((id) => ctx.ownedCompleted.has(id))
   const craftHits = comp.itemIds.filter((id) => !ctx.ownedCompleted.has(id) && ctx.craftedIds.has(id))
   const augmentHits = comp.augmentIds.filter((id) => ctx.augmentIds.has(id))
+  const owned = [...ctx.unitIds]
   const unitHits = comp.unitIds.filter((id) => ctx.unitIds.has(id))
+  const familyHits = owned.filter((id) => !unitHits.includes(id) && [...familyIds(id, catalog)].some((member) => comp.unitIds.includes(member)))
+  const flexHits = flexHitsFor(owned, comp, catalog)
 
   let score = sortValue(comp, ctx.sort)
   score += itemHits.length * 22
   score += craftHits.length * 14
   score += augmentHits.length * 18
-  score += unitHits.length * 9
-  score += Math.min(comp.carryIds.filter((id) => ctx.unitIds.has(id)).length * 8, 16)
+  score += unitHits.length * 48
+  score += familyHits.length * 32
+  score += flexHits.length * 26
+  score += Math.min(comp.carryIds.filter((id) => ctx.unitIds.has(id) || familyHits.some((ownedId) => familyIds(ownedId, catalog).has(id))).length * 18, 36)
 
   if (ctx.hasFilters) {
     if (ctx.ownedCompleted.size + ctx.craftedIds.size > 0 && itemHits.length + craftHits.length === 0) {
       score *= 0.62
     }
     if (ctx.augmentIds.size > 0 && augmentHits.length === 0) score *= 0.82
-    if (ctx.unitIds.size > 0 && unitHits.length === 0) score *= 0.88
+    if (ctx.unitIds.size > 0 && unitHits.length + familyHits.length + flexHits.length === 0) score *= 0.42
   }
+
+  const layout = layoutComp(comp, catalog).map((slot) => ({ ...slot, source: 'ideal' as const }))
+  const loadouts = assignItems(comp).map((entry) => ({ ...entry, kind: 'ideal' as const }))
+  const fitted = owned.length
+    ? fitOwnedOnBoard(layout, loadouts, owned, catalog, comp, ctx.profiles, ctx.preferredItems)
+    : { layout, loadouts }
+  const flexUnits = flexBench(comp, catalog, new Set(fitted.layout.map((slot) => slot.id)), ctx.unitIds)
 
   const reasons: string[] = []
   if (itemHits.length) reasons.push(`Usa ${itemHits.length} objeto${itemHits.length === 1 ? '' : 's'} que ya tenés`)
   if (craftHits.length) reasons.push(`Podés armar ${craftHits.length} objeto${craftHits.length === 1 ? '' : 's'} de la comp`)
   if (augmentHits.length) reasons.push(`Coincide con ${augmentHits.length} aumento${augmentHits.length === 1 ? '' : 's'}`)
-  if (unitHits.length) reasons.push(`Comparte ${unitHits.length} unidad${unitHits.length === 1 ? '' : 'es'}`)
+  if (unitHits.length) reasons.push(`Lleva ${unitHits.length} unidad${unitHits.length === 1 ? '' : 'es'} que tenés`)
+  if (familyHits.length) reasons.push(`Entra tu variante de ${familyHits.length === 1 ? 'la unidad' : 'unidades'} del team`)
+  if (flexHits.length) reasons.push(`${flexHits.length === 1 ? 'Entra como flex' : `${flexHits.length} unidades entran como flex`}`)
   reasons.push(`Pick ${comp.pickRate.toFixed(2)}% · win ${comp.winRate.toFixed(1)}% · prom. ${comp.avgPlace.toFixed(2)}`)
 
   return {
@@ -117,8 +145,10 @@ function scoreComp(
     craftHits,
     augmentHits,
     unitHits,
+    flexHits,
+    flexUnits,
     reasons,
-    layout: layoutComp(comp, catalog),
-    loadouts: assignItems(comp),
+    layout: fitted.layout,
+    loadouts: fitted.loadouts,
   }
 }

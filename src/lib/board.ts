@@ -34,13 +34,13 @@ const BACK_TRAITS = new Set([
   'Cazarrecompensas',
 ])
 
-function roleOf(champ: Champion, isCarry: boolean): UnitRole {
+export function roleOf(champ: Champion, isCarry: boolean): UnitRole {
   if (champ.traits.some((trait) => FRONT_TRAITS.has(trait))) return 'front'
-  if (isCarry || champ.traits.some((trait) => BACK_TRAITS.has(trait))) return 'back'
+  if (isCarry || champ.cost >= 4 || champ.traits.some((trait) => BACK_TRAITS.has(trait))) return 'back'
   return 'flex'
 }
 
-function starsFor(champ: Champion, comp: MetaComp, isCarry: boolean): 1 | 2 | 3 {
+export function starsFor(champ: Champion, comp: MetaComp, isCarry: boolean): 1 | 2 | 3 {
   if (!champ.traits.length || champ.id.startsWith('DA_Elderwood18_')) return 1
   const rerollLevel =
     Number((comp.style.match(/lvl\s*(\d+)/i) ?? [])[1] ?? 0) ||

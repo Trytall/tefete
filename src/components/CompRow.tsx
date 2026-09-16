@@ -26,7 +26,13 @@ export function CompRow({ catalog, loadouts, byId, compact = false }: Props) {
               <img src={unit.icon} alt={unit.name} />
             </span>
             <div className="loadout-meta">
-              {compact ? null : <span className="loadout-name">{unit.name}</span>}
+              {compact ? null : (
+                <span className="loadout-name">
+                  {unit.name}
+                  {loadout.kind === 'owned' ? <em> · tu unidad</em> : null}
+                  {loadout.kind === 'flex' ? <em> · flex</em> : null}
+                </span>
+              )}
               <div className="item-row">
                 {loadout.itemIds.map((id) => {
                   const item = byId.items.get(id)

@@ -82,11 +82,25 @@ export type HexSlot = {
   row: number
   col: number
   role?: UnitRole
+  source?: 'ideal' | 'owned' | 'flex'
 }
 
 export type ItemLoadout = {
   championId: string
   itemIds: string[]
+  kind?: 'ideal' | 'owned' | 'flex'
+  replaces?: string
+}
+
+export type UnitProfile = {
+  itemIds: string[]
+  row: number
+  col: number
+}
+
+export type FlexOption = {
+  id: string
+  replaces: string
 }
 
 export type MetaSnapshot = {
@@ -112,6 +126,8 @@ export type CompMatch = {
   craftHits: string[]
   augmentHits: string[]
   unitHits: string[]
+  flexHits: string[]
+  flexUnits: FlexOption[]
   reasons: string[]
   layout: HexSlot[]
   loadouts: ItemLoadout[]

@@ -1,17 +1,21 @@
 import { useEffect, useMemo, useState, type CSSProperties } from 'react'
 import { BoardPreview } from './components/BoardPreview'
 import { CompRow } from './components/CompRow'
+import { FlexStrip } from './components/FlexStrip'
+import { HolderStrip } from './components/HolderStrip'
 import { EntityGrid } from './components/EntityGrid'
 import { TraitMeter } from './components/TraitMeter'
 import catalogJson from './data/catalog.json'
 import metaJson from './data/meta.json'
 import { compsFromAcademyGuides, fetchAcademyGuides } from './lib/academy'
 import { augmentTierEs, difficultyEs, styleEs } from './lib/es'
+import { fetchHolders, type ItemHolder } from './lib/holders'
+import { fetchUnitProfiles } from './lib/units'
 import { recipeParts, recipeTitle } from './lib/recipes'
 import { addCount, craftableFrom, recommendComps, totalCount } from './lib/recommend'
 import { buildShareUrl, formatCompText, isPinnedApp, loadSavedSession, parseShare, saveSession } from './lib/share'
 import { traitCounts } from './lib/traits'
-import type { Augment, Catalog, Champion, CompMatch, CompTier, Inventory, MetaSnapshot, RankSort, Trait } from './lib/types'
+import type { Augment, Catalog, Champion, CompMatch, CompTier, Inventory, MetaSnapshot, RankSort, Trait, UnitProfile } from './lib/types'
 import './App.css'
 
 const catalog = catalogJson as Catalog
@@ -106,6 +110,8 @@ export default function App() {
   const [traitFilter, setTraitFilter] = useState<string | null>(() => bootSaved?.traitFilter ?? null)
   const [augmentScope, setAugmentScope] = useState<AugmentScope>('all')
   const [settingsOpen, setSettingsOpen] = useState(false)
+  const [holders, setHolders] = useState<Record<string, ItemHolder[]>>({})
+  const [unitProfiles, setUnitProfiles] = useState<Record<string, UnitProfile>>({})
 
   const inventory: Inventory = { items: itemCounts, augments, units }
   const play = mode === 'play'
@@ -170,15 +176,31 @@ export default function App() {
   }, [mode, panelOpen])
 
   const craftable = useMemo(() => craftableFrom(itemCounts, catalog), [itemCounts])
+  const holderItems = useMemo(() => {
+    const owned = catalog.items.filter((item) => item.kind !== 'component' && (itemCounts[item.id] ?? 0) > 0)
+    const ownedIds = new Set(owned.map((item) => item.id))
+    const extra = craftable.filter((item) => !ownedIds.has(item.id))
+    return [...owned, ...extra].slice(0, 8)
+  }, [itemCounts, craftable])
   const boardTraits = useMemo(() => traitCounts(units, catalog), [units])
   const ranked = useMemo(
-    () => recommendComps({ items: itemCounts, augments, units }, catalog, liveMeta, sort),
-    [itemCounts, augments, units, sort, liveMeta],
+    () =>
+      recommendComps({ items: itemCounts, augments, units }, catalog, liveMeta, sort, {
+        profiles: unitProfiles,
+        preferredItems: [
+          ...catalog.items.filter((item) => item.kind !== 'component' && (itemCounts[item.id] ?? 0) > 0).map((item) => item.id),
+          ...craftable.map((item) => item.id),
+        ],
+      }),
+    [itemCounts, augments, units, sort, liveMeta, unitProfiles, craftable],
   )
   const visible = useMemo(() => {
     const activeTiers = new Set(tiers.length ? tiers : ALL_TIERS)
     let list = onlyMatches && hasInventory(inventory)
-      ? ranked.filter((entry) => entry.itemHits.length + entry.craftHits.length + entry.augmentHits.length + entry.unitHits.length > 0)
+      ? ranked.filter(
+          (entry) =>
+            entry.itemHits.length + entry.craftHits.length + entry.augmentHits.length + entry.unitHits.length + entry.flexHits.length > 0,
+        )
       : ranked
     list = list.filter((entry) => activeTiers.has(entry.comp.tier))
     if (traitFilter) list = list.filter((entry) => entry.comp.traitIds.includes(traitFilter))
@@ -204,6 +226,44 @@ export default function App() {
   const headline = rankingHeadline(visible)
   const active =
     visible.find((entry) => entry.comp.id === openComp) ?? visible[0] ?? null
+  const shownHolders = useMemo(() => (play ? holderItems.slice(0, 3) : holderItems), [play, holderItems])
+
+  useEffect(() => {
+    const ids = shownHolders.map((item) => item.id)
+    if (!ids.length) {
+      setHolders({})
+      return
+    }
+    let cancelled = false
+    fetchHolders(ids)
+      .then((next) => {
+        if (!cancelled) setHolders(next)
+      })
+      .catch(() => {
+        if (!cancelled) setHolders({})
+      })
+    return () => {
+      cancelled = true
+    }
+  }, [shownHolders])
+
+  useEffect(() => {
+    if (!units.length) {
+      setUnitProfiles({})
+      return
+    }
+    let cancelled = false
+    fetchUnitProfiles(units, catalog)
+      .then((next) => {
+        if (!cancelled) setUnitProfiles(next)
+      })
+      .catch(() => {
+        if (!cancelled) setUnitProfiles({})
+      })
+    return () => {
+      cancelled = true
+    }
+  }, [units])
 
   useEffect(() => {
     const node = document.querySelector<HTMLElement>('.comp-list .comp-card.on')
@@ -363,6 +423,16 @@ export default function App() {
                 ))}
               </div>
             ) : null}
+            <HolderStrip
+              compact={compact}
+              champs={champsById}
+              onPickUnit={(id) => setUnits((current) => (current.includes(id) ? current : [...current, id]))}
+              rows={shownHolders.map((item) => ({
+                item,
+                craftable: (itemCounts[item.id] ?? 0) === 0,
+                holders: holders[item.id] ?? [],
+              }))}
+            />
             <TraitMeter rows={boardTraits} compact={compact} />
           </section>
 
@@ -494,6 +564,7 @@ export default function App() {
                 pins={pins}
                 onOpen={setOpenComp}
                 onPin={togglePin}
+                onPickUnit={(id) => setUnits((current) => (current.includes(id) ? current : [...current, id]))}
               />
               {visible.length === 0 ? (
                 <p className="empty">
@@ -545,12 +616,20 @@ export default function App() {
               pins={pins}
               onOpen={setOpenComp}
               onPin={togglePin}
+              onPickUnit={(id) => setUnits((current) => (current.includes(id) ? current : [...current, id]))}
             />
           </>
         ) : (
           <>
             {headline ? <p className="headline">{headline}</p> : null}
-            {active ? <CompDetail key={active.comp.id} entry={active} play={false} /> : null}
+            {active ? (
+              <CompDetail
+                key={active.comp.id}
+                entry={active}
+                play={false}
+                onPickUnit={(id) => setUnits((current) => (current.includes(id) ? current : [...current, id]))}
+              />
+            ) : null}
           </>
         )}
         {visible.length === 0 && play ? (
@@ -714,6 +793,7 @@ function CompCards({
   pins,
   onOpen,
   onPin,
+  onPickUnit,
 }: {
   visible: CompMatch[]
   play: boolean
@@ -722,6 +802,7 @@ function CompCards({
   pins: string[]
   onOpen: (id: string | null | ((current: string | null) => string | null)) => void
   onPin: (id: string) => void
+  onPickUnit: (id: string) => void
 }) {
   return (
     <ol className={play ? 'comp-list' : 'comp-list dock'}>
@@ -771,7 +852,7 @@ function CompCards({
                 ★
               </button>
             </div>
-            {expanded ? <CompDetail entry={entry} play /> : null}
+            {expanded ? <CompDetail entry={entry} play onPickUnit={onPickUnit} /> : null}
           </li>
         )
       })}
@@ -779,7 +860,15 @@ function CompCards({
   )
 }
 
-function CompDetail({ entry, play }: { entry: CompMatch; play: boolean }) {
+function CompDetail({
+  entry,
+  play,
+  onPickUnit,
+}: {
+  entry: CompMatch
+  play: boolean
+  onPickUnit: (id: string) => void
+}) {
   const traits = entry.comp.traitIds
     .map((id) => traitsById.get(id))
     .filter((trait): trait is Trait => Boolean(trait))
@@ -806,7 +895,7 @@ function CompDetail({ entry, play }: { entry: CompMatch; play: boolean }) {
         ))}
       </div>
       {play ? null : (
-        <p className="board-caption">Posiciones y objetos de TFT Academy · prioridad y alternativas abajo</p>
+        <p className="board-caption">Tu unidad entra al tablero con posición e ítems · las flex cubren huecos del team ideal</p>
       )}
       {play ? null : prio.length ? (
         <div className="prio-row">
@@ -825,13 +914,16 @@ function CompDetail({ entry, play }: { entry: CompMatch; play: boolean }) {
         </div>
       ) : null}
       {play ? (
-        <BoardPreview
-          layout={entry.layout}
-          champions={champsById}
-          items={itemsById}
-          loadouts={entry.loadouts}
-          compact
-        />
+        <>
+          <BoardPreview
+            layout={entry.layout}
+            champions={champsById}
+            items={itemsById}
+            loadouts={entry.loadouts}
+            compact
+          />
+          <FlexStrip rows={entry.flexUnits} champs={champsById} compact onPickUnit={onPickUnit} />
+        </>
       ) : (
         <div className="stage">
           <BoardPreview
@@ -847,6 +939,7 @@ function CompDetail({ entry, play }: { entry: CompMatch; play: boolean }) {
               loadouts={entry.loadouts}
               byId={{ items: itemsById, champions: champsById }}
             />
+            <FlexStrip rows={entry.flexUnits} champs={champsById} onPickUnit={onPickUnit} />
             {alts.length ? (
               <>
                 <p className="board-caption">Builds alternativas</p>

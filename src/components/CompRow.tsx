@@ -10,10 +10,12 @@ type Props = {
     champions: Map<string, Champion>
   }
   compact?: boolean
+  ownedIds?: string[]
 }
 
-export function CompRow({ catalog, loadouts, byId, compact = false }: Props) {
+export function CompRow({ catalog, loadouts, byId, compact = false, ownedIds = [] }: Props) {
   if (!loadouts.length) return null
+  const have = new Set(ownedIds)
 
   return (
     <div className={compact ? 'loadouts compact' : 'loadouts'}>
@@ -41,12 +43,20 @@ export function CompRow({ catalog, loadouts, byId, compact = false }: Props) {
                     .map((partId) => catalog.items.find((entry) => entry.id === partId)?.name)
                     .filter(Boolean)
                     .join(' + ')
+                  const yours = have.has(id)
                   return (
                     <img
                       key={`${loadout.championId}-${id}`}
+                      className={yours ? 'have' : undefined}
                       src={item.icon}
                       alt={item.name}
-                      title={parts ? `${unit.name}: ${item.name} (${parts})` : `${unit.name}: ${item.name}`}
+                      title={
+                        yours
+                          ? `Tenés ${item.name} → dale a ${unit.name}`
+                          : parts
+                            ? `${unit.name}: ${item.name} (${parts})`
+                            : `${unit.name}: ${item.name}`
+                      }
                     />
                   )
                 })}

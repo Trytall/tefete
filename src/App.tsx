@@ -4,6 +4,7 @@ import { CompRow } from './components/CompRow'
 import { DeskPane } from './components/DeskPane'
 import { FlexStrip } from './components/FlexStrip'
 import { HolderStrip } from './components/HolderStrip'
+import { ItemPlaceStrip } from './components/ItemPlaceStrip'
 import { EntityGrid } from './components/EntityGrid'
 import { TraitMeter } from './components/TraitMeter'
 import catalogJson from './data/catalog.json'
@@ -14,6 +15,8 @@ import { fetchHolders, type ItemHolder } from './lib/holders'
 import { fetchUnitProfiles } from './lib/units'
 import { recipeParts, recipeTitle } from './lib/recipes'
 import { addCount, craftableFrom, recommendComps, totalCount } from './lib/recommend'
+import { placeOwnedOnComp, mergeSlamLoadouts, rosterOf } from './lib/place'
+import { familyIds } from './lib/flex'
 import { buildShareUrl, formatCompText, isPinnedApp, loadSavedSession, parseShare, saveSession } from './lib/share'
 import { traitCounts } from './lib/traits'
 import type { Augment, Catalog, Champion, CompMatch, CompTier, Inventory, MetaSnapshot, RankSort, Trait, UnitProfile } from './lib/types'
@@ -282,6 +285,15 @@ export default function App() {
   const headline = rankingHeadline(visible)
   const active =
     visible.find((entry) => entry.comp.id === openComp) ?? visible[0] ?? null
+  const ownedItemIds = useMemo(
+    () => catalog.items.filter((item) => item.kind !== 'component' && (itemCounts[item.id] ?? 0) > 0).map((item) => item.id),
+    [itemCounts],
+  )
+  const craftableIds = useMemo(() => craftable.map((item) => item.id), [craftable])
+  const activeRoster = useMemo(() => {
+    if (!active) return undefined
+    return new Set(rosterOf(active.comp).flatMap((id) => [id, ...familyIds(id, catalog)]))
+  }, [active])
   const shownHolders = useMemo(() => holderItems.slice(0, 3), [holderItems])
 
   useEffect(() => {
@@ -492,6 +504,8 @@ export default function App() {
             <HolderStrip
               compact={compact}
               champs={champsById}
+              roster={activeRoster}
+              heading={active ? `En ${active.comp.name}` : 'Mejor portador'}
               onPickUnit={(id) => setUnits((current) => (current.includes(id) ? current : [...current, id]))}
               rows={shownHolders.map((item) => ({
                 item,
@@ -541,6 +555,8 @@ export default function App() {
             <HolderStrip
               compact={compact}
               champs={champsById}
+              roster={activeRoster}
+              heading={active ? `En ${active.comp.name}` : 'Mejor portador'}
               onPickUnit={(id) => setUnits((current) => (current.includes(id) ? current : [...current, id]))}
               rows={shownHolders.map((item) => ({
                 item,
@@ -769,6 +785,9 @@ export default function App() {
                 openComp={openComp}
                 activeId={active?.comp.id ?? null}
                 pins={pins}
+                ownedIds={ownedItemIds}
+                craftableIds={craftableIds}
+                holders={holders}
                 onOpen={setOpenComp}
                 onPin={togglePin}
                 onPickUnit={(id) => setUnits((current) => (current.includes(id) ? current : [...current, id]))}
@@ -821,6 +840,9 @@ export default function App() {
               openComp={openComp}
               activeId={active?.comp.id ?? null}
               pins={pins}
+              ownedIds={ownedItemIds}
+              craftableIds={craftableIds}
+              holders={holders}
               onOpen={setOpenComp}
               onPin={togglePin}
               onPickUnit={(id) => setUnits((current) => (current.includes(id) ? current : [...current, id]))}
@@ -834,6 +856,9 @@ export default function App() {
                 key={active.comp.id}
                 entry={active}
                 play={false}
+                ownedIds={ownedItemIds}
+                craftableIds={craftableIds}
+                holders={holders}
                 onPickUnit={(id) => setUnits((current) => (current.includes(id) ? current : [...current, id]))}
               />
             ) : null}
@@ -998,6 +1023,9 @@ function CompCards({
   openComp,
   activeId,
   pins,
+  ownedIds,
+  craftableIds,
+  holders,
   onOpen,
   onPin,
   onPickUnit,
@@ -1007,6 +1035,9 @@ function CompCards({
   openComp: string | null
   activeId: string | null
   pins: string[]
+  ownedIds: string[]
+  craftableIds: string[]
+  holders: Record<string, ItemHolder[]>
   onOpen: (id: string | null | ((current: string | null) => string | null)) => void
   onPin: (id: string) => void
   onPickUnit: (id: string) => void
@@ -1059,7 +1090,16 @@ function CompCards({
                 ★
               </button>
             </div>
-            {expanded ? <CompDetail entry={entry} play onPickUnit={onPickUnit} /> : null}
+            {expanded ? (
+              <CompDetail
+                entry={entry}
+                play
+                ownedIds={ownedIds}
+                craftableIds={craftableIds}
+                holders={holders}
+                onPickUnit={onPickUnit}
+              />
+            ) : null}
           </li>
         )
       })}
@@ -1070,10 +1110,16 @@ function CompCards({
 function CompDetail({
   entry,
   play,
+  ownedIds,
+  craftableIds,
+  holders,
   onPickUnit,
 }: {
   entry: CompMatch
   play: boolean
+  ownedIds: string[]
+  craftableIds: string[]
+  holders: Record<string, ItemHolder[]>
   onPickUnit: (id: string) => void
 }) {
   const traits = entry.comp.traitIds
@@ -1087,6 +1133,18 @@ function CompDetail({
     .filter((aug): aug is NonNullable<typeof aug> => Boolean(aug))
     .slice(0, 8)
   const alts = entry.comp.altLoadouts ?? []
+  const places = placeOwnedOnComp(entry.comp, ownedIds, craftableIds, holders, catalog)
+  const haveIds = [...ownedIds, ...craftableIds]
+  const shownLoadouts = mergeSlamLoadouts(entry.loadouts, places)
+  const placeStrip = (
+    <ItemPlaceStrip
+      rows={places}
+      items={itemsById}
+      champs={champsById}
+      compact={play}
+      onPickUnit={onPickUnit}
+    />
+  )
   return (
     <div className={play ? 'comp-detail' : 'comp-detail focus'}>
       <div className="traits">
@@ -1102,7 +1160,11 @@ function CompDetail({
         ))}
       </div>
       {play ? null : (
-        <p className="board-caption">Tu unidad entra al tablero con posición e ítems · las flex cubren huecos del team ideal</p>
+        <p className="board-caption">
+          {places.length
+            ? 'Tus objetos van a los campeones marcados · el resto es el BiS de la comp'
+            : 'Tu unidad entra al tablero con posición e ítems · las flex cubren huecos del team ideal'}
+        </p>
       )}
       {play ? null : prio.length ? (
         <div className="prio-row">
@@ -1122,11 +1184,13 @@ function CompDetail({
       ) : null}
       {play ? (
         <>
+          {placeStrip}
           <BoardPreview
             layout={entry.layout}
             champions={champsById}
             items={itemsById}
-            loadouts={entry.loadouts}
+            loadouts={shownLoadouts}
+            ownedIds={haveIds}
             compact
           />
           <FlexStrip rows={entry.flexUnits} champs={champsById} compact onPickUnit={onPickUnit} />
@@ -1137,14 +1201,17 @@ function CompDetail({
             layout={entry.layout}
             champions={champsById}
             items={itemsById}
-            loadouts={entry.loadouts}
+            loadouts={shownLoadouts}
+            ownedIds={haveIds}
             named
           />
           <div className="stage-side">
+            {placeStrip}
             <CompRow
               catalog={catalog}
-              loadouts={entry.loadouts}
+              loadouts={shownLoadouts}
               byId={{ items: itemsById, champions: champsById }}
+              ownedIds={haveIds}
             />
             <FlexStrip rows={entry.flexUnits} champs={champsById} onPickUnit={onPickUnit} />
             {alts.length ? (
@@ -1154,6 +1221,7 @@ function CompDetail({
                   catalog={catalog}
                   loadouts={alts}
                   byId={{ items: itemsById, champions: champsById }}
+                  ownedIds={haveIds}
                 />
               </>
             ) : null}

@@ -9,6 +9,7 @@ type Props = {
   loadouts?: ItemLoadout[]
   compact?: boolean
   named?: boolean
+  ownedIds?: string[]
 }
 
 export function BoardPreview({
@@ -18,9 +19,11 @@ export function BoardPreview({
   loadouts = [],
   compact = false,
   named = false,
+  ownedIds = [],
 }: Props) {
   const labels = ['Frente', '', '', 'Atrás']
   const byChamp = new Map(loadouts.map((entry) => [entry.championId, entry.itemIds]))
+  const have = new Set(ownedIds)
 
   return (
     <div className={compact ? 'board compact' : 'board'} aria-label="Posicionamiento">
@@ -47,7 +50,13 @@ export function BoardPreview({
                   {equipped.length ? (
                     <span className="hex-items">
                       {equipped.map((item) => (
-                        <img key={item.id} src={item.icon} alt={item.name} title={`${unit.name}: ${item.name}`} />
+                        <img
+                          key={item.id}
+                          className={have.has(item.id) ? 'have' : undefined}
+                          src={item.icon}
+                          alt={item.name}
+                          title={have.has(item.id) ? `Tenés ${item.name} → dale a ${unit.name}` : `${unit.name}: ${item.name}`}
+                        />
                       ))}
                     </span>
                   ) : null}

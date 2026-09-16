@@ -2132,6 +2132,76 @@ html.desk ::-webkit-scrollbar {
   color: var(--text-h);
 }
 
+.holder-champ.on {
+  border-color: #7eb8c9;
+  background: color-mix(in srgb, #7eb8c9 18%, transparent);
+  color: var(--text-h);
+}
+
+.item-row img.have,
+.hex-items img.have {
+  outline: 2px solid #7eb8c9;
+  outline-offset: 0;
+  box-shadow: 0 0 0 1px #0008;
+}
+
+.item-places {
+  display: grid;
+  gap: 6px;
+  min-width: 0;
+  padding: 8px;
+  border: 1px solid color-mix(in srgb, #7eb8c9 45%, var(--border-soft));
+  border-radius: 8px;
+  background: color-mix(in srgb, #7eb8c9 10%, var(--surface));
+}
+
+.item-places > span {
+  width: 100%;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text);
+}
+
+.item-place {
+  display: grid;
+  grid-template-columns: 28px minmax(0, 1fr);
+  gap: 8px;
+  align-items: start;
+  min-width: 0;
+}
+
+.item-place > img {
+  width: 28px;
+  height: 28px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.item-place p {
+  margin: 0 0 4px;
+  font-size: 12px;
+  color: var(--text-h);
+}
+
+.item-place em {
+  font-style: normal;
+  color: var(--text);
+  font-weight: 500;
+}
+
+.app.desk .item-places {
+  flex: 0 0 auto;
+}
+
+.item-places.compact {
+  padding: 6px;
+}
+
+.play .item-place strong {
+  display: none;
+}
+
 .holder-champ img {
   width: 18px;
   height: 18px;

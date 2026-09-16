@@ -1232,8 +1232,142 @@
   gap: 8px;
 }
 
-.app.desk .inventory {
+.app.desk .desk-pane {
   flex: 0 0 auto;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  isolation: isolate;
+  contain: paint;
+  position: relative;
+  z-index: 2;
+  transform: translateZ(0);
+  background: var(--surface);
+  border: 1px solid var(--border-soft);
+  border-radius: 8px;
+}
+
+.app.desk .desk-pane.shut {
+  height: auto;
+}
+
+.app.desk .desk-pane-bar {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 8px 2px;
+  min-height: 32px;
+}
+
+.app.desk .desk-pane-toggle {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  padding: 4px 2px;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  text-align: left;
+}
+
+.app.desk .desk-pane-toggle span {
+  width: 1em;
+  opacity: 0.7;
+}
+
+.app.desk .desk-pane-body {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow: auto;
+  padding: 0 10px 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  scrollbar-width: none;
+  position: relative;
+  z-index: 0;
+}
+
+.app.desk .desk-pane-body::-webkit-scrollbar {
+  width: 0 !important;
+  height: 0 !important;
+  display: none !important;
+}
+
+.app.desk .desk-pane-grip {
+  flex: 0 0 10px;
+  cursor: ns-resize;
+  touch-action: none;
+  position: relative;
+}
+
+.app.desk .desk-pane-grip::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 3px;
+  width: 44px;
+  height: 4px;
+  margin-left: -22px;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--text) 30%, transparent);
+}
+
+.app.desk .desk-pane-grip:hover::after,
+.app.desk .desk-pane-grip:active::after {
+  background: var(--accent, #7eb8c9);
+}
+
+.app.desk .desk-pane .panel {
+  flex: 1 1 auto;
+  min-height: 120px;
+  max-height: none;
+  overflow: auto;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+}
+
+.app.desk .desk-pane .panel-head {
+  flex-direction: row;
+  align-items: center;
+}
+
+.app.desk .desk-pane .panel-head > div {
+  display: none;
+}
+
+.app.desk .desk-pane .grid {
+  grid-template-columns: repeat(auto-fill, minmax(84px, 1fr));
+  gap: 6px;
+  margin-top: 6px;
+}
+
+.app.desk .desk-pane .tile {
+  min-height: 86px;
+  padding: 8px 6px 6px;
+}
+
+.app.desk .desk-pane .tile img {
+  width: 36px;
+  height: 36px;
+}
+
+.app.desk .craft,
+.app.desk .selected {
+  max-height: none;
+  overflow: visible;
 }
 
 .app.desk .inventory .empty {
@@ -1441,8 +1575,8 @@ html.desk ::-webkit-scrollbar {
 }
 
 .app.desk .comp-dock {
-  flex: 1.2 1 0;
-  min-height: 0;
+  flex: 1 1 0;
+  min-height: 140px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -1452,7 +1586,7 @@ html.desk ::-webkit-scrollbar {
   border-radius: 8px;
   padding: 12px;
   position: relative;
-  z-index: 4;
+  z-index: 1;
 }
 
 .app.desk .comp-dock .recs-head {
@@ -1625,9 +1759,9 @@ html.desk ::-webkit-scrollbar {
     font-size: 12px;
   }
 
-  .app.desk .panel {
-    flex: 0 1 30%;
-    max-height: 250px;
+  .app.desk .desk-pane .panel {
+    min-height: 110px;
+    max-height: none;
   }
 
   .app.desk .grid {
@@ -1653,7 +1787,7 @@ html.desk ::-webkit-scrollbar {
 
   .app.desk .comp-dock {
     gap: 6px;
-    min-height: 0;
+    min-height: 140px;
   }
 
   .app.desk .comp-dock .recs-head {
@@ -2051,12 +2185,18 @@ html.desk ::-webkit-scrollbar {
 
 .app.desk .holders {
   flex: 0 0 auto;
-  max-height: 180px;
 }
 
 @media (max-height: 820px) and (min-width: 800px) {
+  .app.desk .desk-pane-bar {
+    min-height: 28px;
+  }
+
+  .app.desk .desk-pane-toggle {
+    font-size: 13px;
+  }
+
   .app.desk .holders {
-    max-height: 118px;
     padding: 6px;
   }
 

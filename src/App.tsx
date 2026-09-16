@@ -1,6 +1,7 @@
-import { useEffect, useMemo, useState, type CSSProperties } from 'react'
+import { useEffect, useMemo, useRef, useState, type CSSProperties } from 'react'
 import { BoardPreview } from './components/BoardPreview'
 import { CompRow } from './components/CompRow'
+import { DeskPane } from './components/DeskPane'
 import { FlexStrip } from './components/FlexStrip'
 import { HolderStrip } from './components/HolderStrip'
 import { EntityGrid } from './components/EntityGrid'
@@ -36,6 +37,25 @@ const champions = [...catalog.champions]
 type Tab = 'items' | 'augments' | 'units'
 type ItemGroup = 'components' | 'completed' | 'emblems'
 type Mode = 'play' | 'desk'
+type PaneState = { open: boolean; height: number }
+
+const PANE_KEY = 'tefete-panes-v2'
+
+function clampPane(value: number, min: number, max: number) {
+  return Math.min(max, Math.max(min, Math.round(value)))
+}
+
+function loadPanes(): { inv: PaneState; pick: PaneState } {
+  try {
+    const raw = JSON.parse(window.localStorage.getItem(PANE_KEY) || '') as { inv?: PaneState; pick?: PaneState }
+    return {
+      inv: { open: raw.inv?.open !== false, height: clampPane(Number(raw.inv?.height) || 200, 120, 520) },
+      pick: { open: raw.pick?.open !== false, height: clampPane(Number(raw.pick?.height) || 380, 140, 640) },
+    }
+  } catch {
+    return { inv: { open: true, height: 200 }, pick: { open: true, height: 380 } }
+  }
+}
 
 function readMode(): Mode {
   const query = new URLSearchParams(window.location.search).get('mode')
@@ -112,6 +132,11 @@ export default function App() {
   const [settingsOpen, setSettingsOpen] = useState(false)
   const [holders, setHolders] = useState<Record<string, ItemHolder[]>>({})
   const [unitProfiles, setUnitProfiles] = useState<Record<string, UnitProfile>>({})
+  const [invPane, setInvPane] = useState<PaneState>(() => loadPanes().inv)
+  const [pickPane, setPickPane] = useState<PaneState>(() => loadPanes().pick)
+  const railRef = useRef<HTMLDivElement>(null)
+  const panesRef = useRef({ inv: invPane, pick: pickPane })
+  panesRef.current = { inv: invPane, pick: pickPane }
 
   const inventory: Inventory = { items: itemCounts, augments, units }
   const play = mode === 'play'
@@ -150,6 +175,37 @@ export default function App() {
   useEffect(() => {
     saveSession({ items: itemCounts, augments, units, sort, onlyMatches, pins, tiers, traitFilter })
   }, [itemCounts, augments, units, sort, onlyMatches, pins, tiers, traitFilter])
+
+  useEffect(() => {
+    window.localStorage.setItem(PANE_KEY, JSON.stringify({ inv: invPane, pick: pickPane }))
+  }, [invPane, pickPane])
+
+  useEffect(() => {
+    if (play) return
+    function fitPanes() {
+      const rail = railRef.current?.clientHeight ?? 0
+      if (rail < 240) return
+      const budget = rail - 160
+      const { inv, pick } = panesRef.current
+      let overflow = (inv.open ? inv.height : 36) + (pick.open ? pick.height : 36) - budget
+      if (overflow <= 0) return
+      if (inv.open) {
+        const next = Math.max(120, inv.height - overflow)
+        overflow -= inv.height - next
+        if (next !== inv.height) setInvPane({ ...inv, height: next })
+      }
+      if (overflow > 0 && pick.open) {
+        const next = Math.max(140, pick.height - overflow)
+        if (next !== pick.height) setPickPane({ ...pick, height: next })
+      }
+    }
+    const frame = window.requestAnimationFrame(fitPanes)
+    window.addEventListener('resize', fitPanes)
+    return () => {
+      window.cancelAnimationFrame(frame)
+      window.removeEventListener('resize', fitPanes)
+    }
+  }, [play])
 
   useEffect(() => {
     if (!isPinnedApp()) return
@@ -226,7 +282,7 @@ export default function App() {
   const headline = rankingHeadline(visible)
   const active =
     visible.find((entry) => entry.comp.id === openComp) ?? visible[0] ?? null
-  const shownHolders = useMemo(() => (play ? holderItems.slice(0, 3) : holderItems), [play, holderItems])
+  const shownHolders = useMemo(() => holderItems.slice(0, 3), [holderItems])
 
   useEffect(() => {
     const ids = shownHolders.map((item) => item.id)
@@ -338,6 +394,25 @@ export default function App() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [play])
 
+  function paneMax(otherOpen: boolean, otherHeight: number) {
+    const rail = railRef.current?.clientHeight ?? 640
+    return Math.max(140, rail - (otherOpen ? otherHeight : 36) - 160)
+  }
+
+  const clearInventory = (
+    <button
+      type="button"
+      className="ghost"
+      onClick={() => {
+        setItemCounts({})
+        setAugments([])
+        setUnits([])
+      }}
+    >
+      Limpiar
+    </button>
+  )
+
   if (play && !panelOpen) {
     return (
       <button type="button" className="play-handle" onClick={() => setPanelOpen(true)} title="Abrir tefete">
@@ -381,21 +456,12 @@ export default function App() {
       ) : null}
 
       {!play || invOpen ? (
-        <div className="rail">
+        <div className="rail" ref={railRef}>
+          {play ? (
           <section className="inventory">
             <div className="inventory-head">
               <h2>Inventario</h2>
-              <button
-                type="button"
-                className="ghost"
-                onClick={() => {
-                  setItemCounts({})
-                  setAugments([])
-                  setUnits([])
-                }}
-              >
-                Limpiar
-              </button>
+              {clearInventory}
             </div>
             <SelectedStrip
               catalog={catalog}
@@ -418,7 +484,7 @@ export default function App() {
                     title={recipeTitle(item, catalog)}
                   >
                     <img src={item.icon} alt="" />
-                    {play ? item.name : recipeTitle(item, catalog)}
+                    {item.name}
                   </button>
                 ))}
               </div>
@@ -435,7 +501,59 @@ export default function App() {
             />
             <TraitMeter rows={boardTraits} compact={compact} />
           </section>
+          ) : (
+          <DeskPane
+            title="Inventario"
+            extra={clearInventory}
+            open={invPane.open}
+            height={invPane.height}
+            min={120}
+            max={paneMax(pickPane.open, pickPane.height)}
+            onToggle={() => setInvPane((pane) => ({ ...pane, open: !pane.open }))}
+            onHeight={(height) => setInvPane((pane) => ({ ...pane, height }))}
+          >
+            <SelectedStrip
+              catalog={catalog}
+              itemCounts={itemCounts}
+              augments={augments}
+              units={units}
+              onRemoveItem={(id) => setItemCounts((current) => addCount(current, id, -1))}
+              onRemoveAugment={(id) => setAugments((current) => current.filter((value) => value !== id))}
+              onRemoveUnit={(id) => setUnits((current) => current.filter((value) => value !== id))}
+            />
+            {craftable.length > 0 ? (
+              <div className="craft">
+                <span>Se puede armar</span>
+                {craftable.map((item) => (
+                  <button
+                    key={item.id}
+                    type="button"
+                    className="chip faint"
+                    onClick={() => toggleItem(item.id)}
+                    title={recipeTitle(item, catalog)}
+                  >
+                    <img src={item.icon} alt="" />
+                    {item.name}
+                  </button>
+                ))}
+              </div>
+            ) : null}
+            <HolderStrip
+              compact={compact}
+              champs={champsById}
+              onPickUnit={(id) => setUnits((current) => (current.includes(id) ? current : [...current, id]))}
+              rows={shownHolders.map((item) => ({
+                item,
+                craftable: (itemCounts[item.id] ?? 0) === 0,
+                holders: holders[item.id] ?? [],
+              }))}
+            />
+            <TraitMeter rows={boardTraits} compact={compact} />
+          </DeskPane>
+          )}
 
+          {play ? (
+          <>
           <nav className="tabs">
             <TabButton current={tab} id="items" onClick={setTab} label={`Objetos (${totalCount(itemCounts)})`} />
             <TabButton current={tab} id="augments" onClick={setTab} label={`Aumentos (${augments.length})`} />
@@ -520,6 +638,95 @@ export default function App() {
               renderMeta={(champ) => champ.cost}
             />
           ) : null}
+          </>
+          ) : (
+          <DeskPane
+            title={tab === 'items' ? 'Objetos' : tab === 'augments' ? 'Aumentos' : 'Unidades'}
+            open={pickPane.open}
+            height={pickPane.height}
+            min={140}
+            max={paneMax(invPane.open, invPane.height)}
+            onToggle={() => setPickPane((pane) => ({ ...pane, open: !pane.open }))}
+            onHeight={(height) => setPickPane((pane) => ({ ...pane, height }))}
+          >
+            <nav className="tabs">
+              <TabButton current={tab} id="items" onClick={setTab} label={`Objetos (${totalCount(itemCounts)})`} />
+              <TabButton current={tab} id="augments" onClick={setTab} label={`Aumentos (${augments.length})`} />
+              <TabButton current={tab} id="units" onClick={setTab} label={`Unidades (${units.length})`} />
+            </nav>
+            {tab === 'items' ? (
+              <>
+                <div className="scope">
+                  <button type="button" className={itemGroup === 'components' ? 'chip on' : 'chip'} onClick={() => setItemGroup('components')}>
+                    Componentes
+                  </button>
+                  <button type="button" className={itemGroup === 'completed' ? 'chip on' : 'chip'} onClick={() => setItemGroup('completed')}>
+                    Completos
+                  </button>
+                  <button type="button" className={itemGroup === 'emblems' ? 'chip on' : 'chip'} onClick={() => setItemGroup('emblems')}>
+                    Emblemas
+                  </button>
+                </div>
+                <EntityGrid
+                  title={itemGroup === 'components' ? 'Componentes' : itemGroup === 'completed' ? 'Completos' : 'Emblemas'}
+                  entities={itemGroup === 'components' ? components : itemGroup === 'completed' ? completed : emblems}
+                  selected={itemCounts}
+                  onToggle={toggleItem}
+                  onRemove={removeItem}
+                  getTitle={(item) => recipeTitle(item, catalog)}
+                  renderExtra={(item) => {
+                    const parts = recipeParts(item, catalog)
+                    if (!parts.length) return null
+                    return parts.map((part) => <img key={part.id} src={part.icon} alt={part.name} title={part.name} />)
+                  }}
+                />
+              </>
+            ) : null}
+            {tab === 'augments' ? (
+              <>
+                <div className="scope">
+                  {(
+                    [
+                      ['all', 'Todos'],
+                      [1, 'Plata'],
+                      [2, 'Oro'],
+                      [3, 'Prismático'],
+                      ['new', 'Nuevos'],
+                    ] as const
+                  ).map(([id, label]) => (
+                    <button
+                      key={String(id)}
+                      type="button"
+                      className={augmentScope === id ? 'chip on' : 'chip'}
+                      onClick={() => setAugmentScope(id)}
+                    >
+                      {label}
+                    </button>
+                  ))}
+                </div>
+                <EntityGrid
+                  title="Aumentos"
+                  hint="Pool del set 18: nuevos y los que volvieron."
+                  entities={visibleAugments}
+                  selected={augments}
+                  onToggle={toggleAugment}
+                  onRemove={(id) => setAugments((current) => current.filter((value) => value !== id))}
+                  renderMeta={(aug: Augment) => augmentTierEs(aug.tier)}
+                />
+              </>
+            ) : null}
+            {tab === 'units' ? (
+              <EntityGrid
+                title="Unidades"
+                entities={champions}
+                selected={units}
+                onToggle={toggleUnit}
+                onRemove={(id) => setUnits((current) => current.filter((value) => value !== id))}
+                renderMeta={(champ) => champ.cost}
+              />
+            ) : null}
+          </DeskPane>
+          )}
           {play ? null : (
             <div className="comp-dock">
               <header className="recs-head">

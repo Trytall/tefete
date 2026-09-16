@@ -39,8 +39,73 @@ export function augmentTierEs(tier: number) {
   return 'Oro'
 }
 
-export function matchesSearch(entity: { name: string; nameEn?: string }, needle: string) {
-  const q = needle.trim().toLowerCase()
+/** Quita tildes y puntuación para poder buscar “lagrima” o “bf sword”. */
+export function foldSearch(value: string) {
+  return value
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/\p{M}/gu, '')
+    .replace(/['’`´.]/g, '')
+    .replace(/[^a-z0-9]+/g, ' ')
+    .trim()
+}
+
+function aliasesFromId(id?: string) {
+  if (!id) return []
+  const stripped = id.replace(/^(DA_18_|TFT_Augment_|TFT_Item_|TFT18_|DA_|TFT_)/i, '').replace(/_/g, ' ')
+  const spaced = stripped.replace(/([a-z\d])([A-Z])/g, '$1 $2').replace(/([A-Z]+)([A-Z][a-z])/g, '$1 $2')
+  return stripped === spaced ? [stripped] : [stripped, spaced]
+}
+
+const EN_NICKNAMES: Record<string, string[]> = {
+  'bf sword': ['bf', 'bfs'],
+  'infinity edge': ['ie'],
+  'jeweled gauntlet': ['jg'],
+  'bloodthirster': ['bt'],
+  'rapid firecannon': ['rfc'],
+  'rabadons deathcap': ['deathcap', 'rabadon'],
+  'warmogs armor': ['warmog', 'warmogs'],
+  'quicksilver': ['qss'],
+  'edge of night': ['ga', 'guardian angel'],
+  'needlessly large rod': ['nlr'],
+  'sparring gloves': ['gloves'],
+  'tear of the goddess': ['tear'],
+  'hand of justice': ['hoj'],
+  'titans resolve': ['titans'],
+  'dragons claw': ['dc'],
+  'giant slayer': ['gs'],
+  'last whisper': ['lw'],
+  'blue buff': ['bb'],
+  'morellonomicon': ['morello'],
+  'guinsoos rageblade': ['guinsoo', 'rageblade'],
+  'spear of shojin': ['shojin'],
+  'spatula': ['spat'],
+}
+
+function nicknamesFor(nameEn?: string) {
+  if (!nameEn) return []
+  const key = foldSearch(nameEn.replace(/^radiant\s+/i, ''))
+  return EN_NICKNAMES[key] ?? []
+}
+
+function containsQuery(hay: string, q: string) {
+  if (q.length <= 2) {
+    if (hay === q) return true
+    return hay.split(' ').some((token) => token === q)
+  }
+  return hay.includes(q)
+}
+
+export function matchesSearch(
+  entity: { id?: string; name: string; nameEn?: string; label?: string },
+  needle: string,
+) {
+  const q = foldSearch(needle)
   if (!q) return true
-  return entity.name.toLowerCase().includes(q) || Boolean(entity.nameEn?.toLowerCase().includes(q))
+  const haystacks = [entity.name, entity.nameEn, entity.label, ...aliasesFromId(entity.id), ...nicknamesFor(entity.nameEn)]
+    .filter(Boolean)
+    .map((value) => foldSearch(String(value)))
+  if (haystacks.some((hay) => containsQuery(hay, q))) return true
+  const tokens = q.split(' ').filter(Boolean)
+  return tokens.length > 1 && haystacks.some((hay) => tokens.every((token) => containsQuery(hay, token)))
 }

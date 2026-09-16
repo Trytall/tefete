@@ -41,10 +41,7 @@ export function EntityGrid<T extends Entity>({
     ? new Set(selected)
     : new Set(Object.keys(selected))
   const counts = Array.isArray(selected) ? null : selected
-  const needle = query.trim().toLowerCase()
-  const visible = needle
-    ? entities.filter((entity) => matchesSearch(entity, needle) || entity.label?.toLowerCase().includes(needle))
-    : entities
+  const visible = query.trim() ? entities.filter((entity) => matchesSearch(entity, query)) : entities
 
   function handleContext(event: MouseEvent<HTMLButtonElement>, id: string) {
     if (!onRemove) return
@@ -66,7 +63,7 @@ export function EntityGrid<T extends Entity>({
             if (event.key === 'Escape') setQuery('')
           }}
           placeholder={placeholder}
-          aria-label={`Buscar ${title}`}
+          aria-label={`Buscar ${title} en español o en inglés`}
         />
       </header>
       <div className="grid">
@@ -93,7 +90,9 @@ export function EntityGrid<T extends Entity>({
           )
         })}
       </div>
-      {visible.length === 0 ? <p className="empty">No hay resultados. Probá otro nombre o Esc para limpiar.</p> : null}
+      {visible.length === 0 ? (
+        <p className="empty">No hay resultados. Probá el nombre en español o en inglés, o Esc para limpiar.</p>
+      ) : null}
     </section>
   )
 }

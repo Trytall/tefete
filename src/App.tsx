@@ -173,6 +173,7 @@ export default function App() {
     const pinned = new Set(pins)
     return [...list].sort((a, b) => Number(pinned.has(b.comp.id)) - Number(pinned.has(a.comp.id)))
   }, [ranked, onlyMatches, inventory, tiers, traitFilter, pins])
+  const presentTiers = useMemo(() => new Set(liveMeta.comps.map((comp) => comp.tier)), [liveMeta])
   const traitOptions = useMemo(() => {
     const counts = new Map<string, number>()
     for (const comp of liveMeta.comps) {
@@ -233,6 +234,7 @@ export default function App() {
   }
 
   function toggleTier(tier: CompTier) {
+    if (tier === 'S' && !presentTiers.has('S')) return
     setTiers((current) => {
       const next = current.includes(tier) ? current.filter((value) => value !== tier) : [...current, tier]
       return next.length ? next : [tier]
@@ -489,16 +491,28 @@ export default function App() {
         </header>
         {headline && !play ? <p className="headline">{headline}</p> : null}
         <div className="scope filters">
-          {ALL_TIERS.map((tier) => (
-            <button
-              key={tier}
-              type="button"
-              className={tiers.includes(tier) ? `chip on tier-chip tier-${tier}` : `chip tier-chip tier-${tier}`}
-              onClick={() => toggleTier(tier)}
-            >
-              {tier}
-            </button>
-          ))}
+          {ALL_TIERS.map((tier) => {
+            const blocked = tier === 'S' && !presentTiers.has('S')
+            const on = !blocked && tiers.includes(tier)
+            const chip = (
+              <button
+                type="button"
+                className={on ? `chip on tier-chip tier-${tier}` : `chip tier-chip tier-${tier}${blocked ? ' blocked' : ''}`}
+                disabled={blocked}
+                aria-disabled={blocked}
+                aria-label={blocked ? 'No hay ninguna tier s en el patch actual' : `Filtrar tier ${tier}`}
+                onClick={() => toggleTier(tier)}
+              >
+                {tier}
+              </button>
+            )
+            if (!blocked) return <span key={tier}>{chip}</span>
+            return (
+              <span key={tier} className="tier-wrap" data-tip="No hay ninguna tier s en el patch actual">
+                {chip}
+              </span>
+            )
+          })}
           {play
             ? null
             : traitOptions.slice(0, 10).map((trait) => (
